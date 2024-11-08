@@ -27,21 +27,38 @@
 </script>
 
 {#if count == 1}
-    <img alt="1번스토리" src={story1} />
+    <img alt="1번스토리" src={story1} class="story1"/>
 {:else if count == 2}
-    <img alt="2번스토리" src={story2} />
+    <img alt="2번스토리" src={story2} class="story2"/>
 {:else if count == 3}
-    <img alt="3번스토리" src={story3} />
+    <img alt="3번스토리" src={story3} class="story3"/>
 {:else if count == 4}
-    <img alt="4번스토리" src={story4} />
+    <img alt="4번스토리" src={story4} class="story4"/>
 {:else if count == 5}
-    <img alt="5번스토리" src={story5} />
+    <img alt="5번스토리" src={story5} class="story5"/>
 {/if}
 
 <div>
-    <h1>{storyId}</h1>
-    <button on:click|stopPropagation={e => handleClick('button')}>
+    <button on:click|stopPropagation={e => handleClick('button')} class="button">
         Click me
     </button>
 </div>
 
+<style>
+    .story1{
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
+
+        position: relative;
+        z-index: 0;
+    }
+
+    .button{
+        margin: 0;
+
+        position: absolute;
+        z-index: 1;
+    }
+
+</style>
