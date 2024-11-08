@@ -5,9 +5,17 @@
 	const storyId = $page.params.storyId;
     let count = 0;
 
+    import story1 from "/src/public/illustration/game-story/1.png";
+    import story2 from "/src/public/illustration/game-story/2.png";
+    import story3 from "/src/public/illustration/game-story/3.png";
+    import story4 from "/src/public/illustration/game-story/4.png";
+    import story5 from "/src/public/illustration/game-story/6.png";
+
+
+
     function handleClick(e) {
         count++;
-        if (count == 7) {
+        if (count == 6) {
             goto("/");
         } 
         else {
@@ -19,17 +27,15 @@
 </script>
 
 {#if count == 1}
-    <h1>1</h1>
+    <img alt="1번스토리" src={story1} />
 {:else if count == 2}
-    <h1>2</h1>
+    <img alt="2번스토리" src={story2} />
 {:else if count == 3}
-    <h1>3</h1>
+    <img alt="3번스토리" src={story3} />
 {:else if count == 4}
-    <h1>4</h1>
+    <img alt="4번스토리" src={story4} />
 {:else if count == 5}
-    <h1>5</h1>
-{:else if count == 6}
-    <h1>6</h1>
+    <img alt="5번스토리" src={story5} />
 {/if}
 
 <div>
