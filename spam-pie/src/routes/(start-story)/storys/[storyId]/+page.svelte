@@ -12,8 +12,10 @@
 
 <div>
     <h1>{storyId}</h1>
-    <button on:click|stopPropagation={e => handleClick('button')}>
-        Click me
-    </button>
+    <a href="/storys/{count}" role="button">
+        <button on:click|stopPropagation={e => handleClick('button')}>
+            Click me
+        </button>
+    </a>
 </div>
 
