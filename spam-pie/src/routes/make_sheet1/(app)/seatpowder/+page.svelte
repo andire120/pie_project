@@ -1,6 +1,7 @@
 <script>
     const imageUrl1 = "/src/public/element/otherthing/otherelement/background.png";
     const imageUrl2 = "/src/public/element/otherthing/otherelement/nextbotten.png";
+    const imageUrl3 = "/src/public/element/otherthing/otherelement/fly.png";
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,13 +12,19 @@
     <img src={imageUrl1} alt="배경 이미지" class="back" />
 
     <div style="position: absolute; top: 20px; left: 10px; transform: translate(-50%, -50%);">  
+        <img src={imageUrl3} alt="현수막" class="fly" />
+
         <div class="wall"></div>
+        
         <img src={imageUrl2} alt="단추" class="botten" />
-        <butten class="Strong" type="button" onclick = sstrong()>강력분</butten>
+        
+        <butten class="Strong" type="button">강력분</butten>
         <butten class="middle" type="button">중력분</butten>
         <butten class="park" type="button">박력분</butten>
         <butten class="butter" type="button">버터</butten>
         <butten class="margarine" type="button">마가린</butten>
+
+        
     </div>
 </div>
 
@@ -25,6 +32,16 @@
 <slot />
 
 <style>
+    .fly {
+        position: absolute;
+        margin: 0;
+        top: 10px;
+        left: 10px;
+        width: 25vh;
+        height: 50vh;
+        padding: 0;
+        z-index: 1;
+    }
     .back {
         position: relative;
         margin: 0;
@@ -39,8 +56,8 @@
         background-color: #9744BF;
         margin: 0;
         top: 73vh;
-        left: -10px;
-        width: 183vh;
+        left: 10px;
+        width: 179vh;
         height: 18vh;
         padding: 0;
         z-index: 1;
@@ -82,7 +99,7 @@
         );
 
         top: 77vh;
-        left: 100px;
+        left: 60px;
     }
     .middle {
         position: absolute;
@@ -111,7 +128,7 @@
         );
 
         top: 77vh;
-        left: 400px;
+        left: 360px;
     }
     .park {
         position: absolute;
@@ -140,7 +157,7 @@
         );
 
         top: 77vh;
-        left: 700px;
+        left: 660px;
     }
     .butter {
         position: absolute;
@@ -169,7 +186,7 @@
         );
 
         top: 77vh;
-        left: 1000px;
+        left: 960px;
     }
     .margarine {
         position: absolute;
@@ -198,7 +215,7 @@
         );
 
         top: 77vh;
-        left: 1300px;
+        left: 1260px;
     }
 </style>
     
