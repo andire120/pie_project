@@ -43,6 +43,5 @@
         background-color: gray;
         height: 150px;
         width: 1000px;
-        margin-left: 300px;
     }
 </style>
