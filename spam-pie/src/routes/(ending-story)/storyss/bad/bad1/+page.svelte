@@ -4,8 +4,11 @@
 
 </script>
 
-<button class="bad1" style="cursor:pointer" on:click={()=>goto('/storyss/bad/bad2')}><img class="img" src={bad1} alt="진엔딩"></button>
 
+<button class="bad1" style="cursor:pointer" on:click={()=>goto('/storyss/bad/bad2')}><img class="img" src={bad1} alt="진엔딩"></button>
+<div class="caption">대회에서의 우승은 물론,
+    상금도 타지 못한 주인공.......
+</div>
 
 
 <slot/>
@@ -21,12 +24,6 @@
     margin: 0; 
     position: relative; 
     z-index: 0;
-     
-
-    
-
-
-
     } 
 
 
@@ -34,5 +31,18 @@
     height: 100%;
     width: 100%;
     object-fit:cover;
+    }
+
+    .caption{
+        display: flex;
+        position: relative;
+        z-index: 2;
+        margin-top: -150px;
+        justify-content: center;
+        align-items: center;
+        background-color: gray;
+        height: 150px;
+        width: 1000px;
+        margin-left: 300px;
     }
 </style>
