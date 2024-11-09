@@ -30,6 +30,7 @@
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
         <img alt="1번스토리" src={story1} class="story1"/>
     </button>
+    <div class="textbox"></div>
 {:else if count == 2}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
         <img alt="2번스토리" src={story2} class="story2"/>
@@ -47,8 +48,6 @@
         <img alt="5번스토리" src={story5} class="story5"/>
     </button>
 {/if}
-
-<div></div>
 
 <style>
     .story1{
