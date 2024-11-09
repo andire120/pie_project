@@ -17,7 +17,22 @@
         count++;
         if (count == 6) {
             goto("/");
-        } 
+        }
+        else if(count == 5) {
+            goto("/storys/5");
+        }
+        else if(count == 4) {
+            goto("/storys/4");
+        }
+        else if(count == 3) {
+            goto("/storys/3");
+        }
+        else if(count == 2) {
+            goto("/storys/2");
+        }
+        else if(count == 1) {
+            goto("/storys/1");
+        }
         else {
             goto(`/storys/${count}`);
         }
@@ -30,7 +45,9 @@
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
         <img alt="1번스토리" src={story1} class="story1"/>
     </button>
-    <div class="textbox"></div>
+    <div class="textbox">
+        치료제가 없는 불치병에 몸서리를 치는 주인공의 가족들.<br>병원비를 지불하는 주인공의 지갑은 점점<br>텅텅 비어가는데...
+    </div>
 {:else if count == 2}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
         <img alt="2번스토리" src={story2} class="story2"/>
@@ -71,6 +88,10 @@
         align-item: center;
         justify-content: center;
 
+    }
+    .textbox{
+        width: 60vw;
+        height: 25vh;
     }
 
 </style>
