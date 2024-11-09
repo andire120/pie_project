@@ -4,6 +4,7 @@
     const imageUrl3 = "/src/public/element/otherthing/otherelement/fly.png";
     const imageUrl4 = "/src/public/element/otherthing/otherelement/default.png"
     const imageUrl5 = "/src/public/element/otherthing/otherelement/nodelete.png"
+    const imageUrl6 = "/src/public/element/otherthing/otherelement/nodelete1.png"
 
     const bowlImages1 = {
         strong: "/src/public/element/otherthing/otherelement/strong.png",
@@ -12,7 +13,7 @@
 
     };
     const bowlImages2 ={
-        butter: "/src/public/element/otherthing/otherelement/butter.png",
+        butter: "/src/public/element/otherthing/otherelement/butter-nuki.png",
         margarine: "/src/public/element/otherthing/otherelement/margarine.png"        
     }
 
@@ -24,7 +25,7 @@
     }
 
     function addBowlImage(imageSrcc) {
-        document.querySelector('.on').src = imageSrcc;
+        document.querySelector('.on1').src = imageSrcc;
     }
 
     function selectpowder(powderId) {
@@ -37,9 +38,31 @@
         selectedbutter = butterId;
 
         addBowlImage(bowlImages2[butterId]);
-    }
+    }  
     
-
+    function go() {
+        if(selectedbutter == null && selectedpowder == null) {
+            document.querySelector('.on2').src = "/src/public/element/otherthing/otherelement/warning1.png";
+            setTimeout(function(){
+                document.querySelector('.on2').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
+            }, 1000);
+        }
+        else if(selectedbutter != null && selectedpowder == null) {
+            document.querySelector('.on2').src = "/src/public/element/otherthing/otherelement/powderwarning.png";
+            setTimeout(function(){
+                document.querySelector('.on2').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
+            }, 1000);
+        }
+        else if(selectedbutter == null && selectedpowder != null) {
+            document.querySelector('.on2').src = "/src/public/element/otherthing/otherelement/miiwarning.png";
+            setTimeout(function(){
+                document.querySelector('.on2').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
+            }, 1000);
+        }
+        else if(selectedbutter != null && selectedpowder != null) {
+            window.location.href = "/make_sheet2";
+        }
+    }
 
 </script>
 
@@ -55,9 +78,12 @@
 
         <div class="wall"></div>
         
-        <img src={imageUrl2} alt="단추" class="botten" />
-        
-        <img src={imageUrl5} alt="점" class="on" />
+        <botten onclick={go()} class="bot">
+            <img src={imageUrl2} alt="단추" class="botten" />
+        </botten>
+
+        <img src={imageUrl5} alt="점1" class="on1" />
+        <img src={imageUrl6} alt="점2" class="on2" />
         <img src={imageUrl4} alt="그릇" class="default" />
         
         
@@ -110,11 +136,13 @@
 
     .botten {
         position: absolute;
-        margin: 0;
         width: 10vh;
         height: 10vh;
-        padding: 0;
         z-index: 1;
+    }
+
+    .bot {
+        position: absolute;
         top: 60vh;
         left: 164vh;
     }
@@ -129,7 +157,7 @@
         top: -20vh;
         left: 40vh;
     }
-    .on {
+    .on1 {
         position: absolute;
         margin: 0;
         width: 100vh;
@@ -138,6 +166,17 @@
         z-index: 3;
         top: -20vh;
         left: 40vh;
+    }
+
+    .on2 {
+        position: absolute;
+        margin: 0;
+        width: 80vh;
+        height: 45vh;
+        padding: 0;
+        z-index: 3;
+        top: 15vh;
+        left: 51vh;
     }
 
     .Strong {
