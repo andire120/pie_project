@@ -3,6 +3,19 @@
     const imageUrl2 = "/src/public/element/otherthing/otherelement/nextbotten.png";
     const imageUrl3 = "/src/public/element/otherthing/otherelement/fly.png";
 
+    let selectedpowder = null;
+    let selectedbutter = null;
+
+function selectpowder(powderId) {
+    selectedpowder = powderId;
+}
+
+function selectbutter(butterId) {
+    selectedbutter = butterId;
+}
+    
+
+
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -19,11 +32,11 @@
         
         <img src={imageUrl2} alt="단추" class="botten" />
         
-        <button class="Strong" type="button">강력분</button>
-        <button class="middle" type="button">중력분</button>
-        <button class="park" type="button">박력분</button>
-        <button class="butter" type="button">버터</button>
-        <button class="margarine" type="button">마가린</button>
+        <button id="Strong" onclick={() => selectpowder('strong')}   class:active={selectedpowder === 'strong'} class="Strong" type="button">강력분</button>
+        <button id="middle"onclick={() => selectpowder('middle')} class:active={selectedpowder === 'middle'} class="middle" type="button">중력분</button>
+        <button id="park" onclick={() => selectpowder('park')}   class:active={selectedpowder === 'park'} class="park" type="button">박력분</button>
+        <button id="butter" onclick={() => selectbutter('butter')}   class:active={selectedbutter === 'butter'} class="butter" type="button">버터</button>
+        <button id="margarine" onclick={() => selectbutter('margarine')}   class:active={selectedbutter === 'margarine'} class="margarine" type="button">마가린</button>
 
 
     </div>
@@ -111,6 +124,11 @@
         background-color: #FDFECF;
         border: 4px solid yellow;
     }
+    .Strong.active {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
+
 
     .middle {
         position: absolute;
@@ -143,6 +161,10 @@
         left: 390px;
     }
     .middle:hover {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
+    .middle.active {
         background-color: #FDFECF;
         border: 4px solid yellow;
     }
@@ -181,6 +203,11 @@
         background-color: #FDFECF;
         border: 4px solid yellow;
     }
+    .park.active {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
+
 
     .butter {
         position: absolute;
@@ -216,6 +243,10 @@
         background-color: #FDFECF;
         border: 4px solid yellow;
     }
+    .butter.active {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
     
     .margarine {
         position: absolute;
@@ -248,6 +279,10 @@
         left: 1360px;
     }
     .margarine:hover {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
+    .margarine.active {
         background-color: #FDFECF;
         border: 4px solid yellow;
     }
