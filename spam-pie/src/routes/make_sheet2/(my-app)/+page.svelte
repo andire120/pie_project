@@ -1,11 +1,24 @@
 <script>
-    const background1 = "/src/public/element/othering/otherelement/background.png";
-    const next_button = "/src/public/element/othering/otherelement/nextbotten.png";
+    const background1 = "/src/public/element/otherthing/otherelement/background.png";
+    const next_button = "/src/public/element/otherthing/otherelement/nextbotten.png";
 </script>
 
-<div class="relative w-full h-full bg-purple-500 justify-center items-center">
-이건 가운데에 있어야한다.
-<div style="">
+<div class="board">
+    <img src={background1} alt="메인보드" class="paochai">
+</div>
 
-</div>
-</div>
+<style>
+    .board {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #B475D0;
+    }
+    .paochai{
+        height: 99.6%;
+        width: 100%;
+    }
+</style>
