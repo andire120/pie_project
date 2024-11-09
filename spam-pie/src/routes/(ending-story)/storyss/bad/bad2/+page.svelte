@@ -5,7 +5,7 @@
 </script>
 
 <div>
-    <button class="bad2" style="cursor:pointer" on:click={()=>goto('/')}><img class="img" src={bad2} alt="배드엔딩"></button>
+    <button class="bad2" style="cursor:pointer" on:click={()=>goto('/stroyss')}><img class="img" src={bad2} alt="배드엔딩"></button>
 <div class="caption" style="font-size: x-large;">더이상 병원비를 지불 할 수 없던 주인공은<br>결국 병으로 떠난 가족들의 장례식을 지켜본다.</div>
 </div>
 

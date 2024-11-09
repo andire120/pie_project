@@ -9,7 +9,7 @@
 
 
 <div>
-    <button class="best2" style="cursor:pointer" on:click={()=>goto('/')}><img class="img" src={beststory} alt="진엔딩-2"></button>
+    <button class="best2" style="cursor:pointer" on:click={()=>goto('/storyss')}><img class="img" src={beststory} alt="진엔딩-2"></button>
     <div class="caption" style="font-size: x-large;">상금으로 신약을 얻어 가족들을 치료후,<br>유명한 파이 가게 창립에 까지 성공하여<br>출세를 하게 되었다!</div>
 </div>
 
