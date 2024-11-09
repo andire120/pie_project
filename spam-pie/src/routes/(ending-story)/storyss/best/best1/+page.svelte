@@ -2,22 +2,22 @@
 
 <script >
 	import { goto } from "$app/navigation";
-    import beststory from "/src/public/illustration/엔딩/진엔딩-2.png"
+    import beststory from "/src/public/illustration/엔딩/진엔딩-1.png"
 
 </script>
 
 
 
 <div>
-    <button class="best2" style="cursor:pointer" on:click={()=>goto('/')}><img class="img" src={beststory} alt="진엔딩-2"></button>
-    <div class="caption" style="font-size: x-large;">상금으로 신약을 얻어 가족들을 치료후,<br>유명한 파이 가게 창립에 까지 성공하여<br>출세를 하게 되었다!</div>
+    <button class="best1" style="cursor:pointer" on:click={()=>goto('/storyss/best/best2')}><img class="img" src={beststory} alt="진엔딩-1"></button>
+    <div class="caption" style="font-size: x-large;">대회에서 1등을 차지해,<br>큰 돈을 상금으로 거머쥐게 된 주인공!</div>
 </div>
 
 
 <slot/>
 
 <style>
-    .best2{
+    .best1{
     height: 100vh;
     width: 100vw; 
     overflow: hidden;
