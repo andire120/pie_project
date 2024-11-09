@@ -81,7 +81,7 @@
         position: absolute;
         width: 25vh;
         height: 10vh;
-        background-color: #F0CD48;
+        background-color: #FFD400;
         margin: 0;
         padding: 0;
         z-index: 1;
