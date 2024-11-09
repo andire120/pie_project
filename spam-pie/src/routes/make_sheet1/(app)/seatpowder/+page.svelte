@@ -2,17 +2,42 @@
     const imageUrl1 = "/src/public/element/otherthing/otherelement/background.png";
     const imageUrl2 = "/src/public/element/otherthing/otherelement/nextbotten.png";
     const imageUrl3 = "/src/public/element/otherthing/otherelement/fly.png";
+    const imageUrl4 = "/src/public/element/otherthing/otherelement/default.png"
+    const imageUrl5 = "/src/public/element/otherthing/otherelement/nodelete.png"
+
+    const bowlImages1 = {
+        strong: "/src/public/element/otherthing/otherelement/strong.png",
+        middle: "/src/public/element/otherthing/otherelement/middle.png",
+        park: "/src/public/element/otherthing/otherelement/park.png",
+
+    };
+    const bowlImages2 ={
+        butter: "/src/public/element/otherthing/otherelement/butter.png",
+        margarine: "/src/public/element/otherthing/otherelement/margarine.png"        
+    }
 
     let selectedpowder = null;
     let selectedbutter = null;
 
-function selectpowder(powderId) {
-    selectedpowder = powderId;
-}
+    function updateBowlImage(imageSrc) {
+        document.querySelector('.default').src = imageSrc;
+    }
 
-function selectbutter(butterId) {
-    selectedbutter = butterId;
-}
+    function addBowlImage(imageSrcc) {
+        document.querySelector('.on').src = imageSrcc;
+    }
+
+    function selectpowder(powderId) {
+        selectedpowder = powderId;
+
+        updateBowlImage(bowlImages1[powderId]);
+    }
+
+    function selectbutter(butterId) {
+        selectedbutter = butterId;
+
+        addBowlImage(bowlImages2[butterId]);
+    }
     
 
 
@@ -31,6 +56,10 @@ function selectbutter(butterId) {
         <div class="wall"></div>
         
         <img src={imageUrl2} alt="단추" class="botten" />
+        
+        <img src={imageUrl5} alt="점" class="on" />
+        <img src={imageUrl4} alt="그릇" class="default" />
+        
         
         <button id="Strong" onclick={() => selectpowder('strong')}   class:active={selectedpowder === 'strong'} class="Strong" type="button">강력분</button>
         <button id="middle"onclick={() => selectpowder('middle')} class:active={selectedpowder === 'middle'} class="middle" type="button">중력분</button>
@@ -88,6 +117,27 @@ function selectbutter(butterId) {
         z-index: 1;
         top: 60vh;
         left: 164vh;
+    }
+
+    .default {
+        position: absolute;
+        margin: 0;
+        width: 100vh;
+        height: 100vh;
+        padding: 0;
+        z-index: 2;
+        top: -20vh;
+        left: 40vh;
+    }
+    .on {
+        position: absolute;
+        margin: 0;
+        width: 100vh;
+        height: 100vh;
+        padding: 0;
+        z-index: 3;
+        top: -20vh;
+        left: 40vh;
     }
 
     .Strong {
