@@ -2,14 +2,14 @@
 
 <script >
 	import { goto } from "$app/navigation";
-    import beststory from "/src/public/illustration/엔딩/진엔딩.png"
+    import beststory from "/src/public/illustration/엔딩/진엔딩-2.png"
 
 </script>
 
 
 
 <div>
-    <button class="best" style="cursor:pointer" on:click={()=>goto('/')}><img class="img" src={beststory} alt="진엔딩"></button>
+    <button class="best2" style="cursor:pointer" on:click={()=>goto('/')}><img class="img" src={beststory} alt="진엔딩-2"></button>
     <div class="caption" style="font-size: x-large;">상금으로 신약을 얻어 가족들을 치료후,<br>유명한 파이 가게 창립에 까지 성공하여<br>출세를 하게 되었다!</div>
 </div>
 
@@ -17,7 +17,7 @@
 <slot/>
 
 <style>
-    .best{
+    .best2{
     height: 100vh;
     width: 100vw; 
     overflow: hidden;
