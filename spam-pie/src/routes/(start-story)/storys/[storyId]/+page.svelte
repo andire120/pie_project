@@ -18,21 +18,6 @@
         if (count == 6) {
             goto("/");
         }
-        else if(count == 5) {
-            goto("/storys/5");
-        }
-        else if(count == 4) {
-            goto("/storys/4");
-        }
-        else if(count == 3) {
-            goto("/storys/3");
-        }
-        else if(count == 2) {
-            goto("/storys/2");
-        }
-        else if(count == 1) {
-            goto("/storys/1");
-        }
         else {
             goto(`/storys/${count}`);
         }
@@ -43,31 +28,31 @@
 
 {#if count == 1}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="1번스토리" src={story1} class="story1"/>
+        <img alt="1번스토리" src={story1} class="story"/>
     </button>
     <div class="textbox">
         치료제가 없는 불치병에 몸서리를 치는 주인공의 가족들.<br>병원비를 지불하는 주인공의 지갑은 점점<br>텅텅 비어가는데...
     </div>
 {:else if count == 2}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="2번스토리" src={story2} class="story2"/>
+        <img alt="2번스토리" src={story2} class="story"/>
     </button>
 {:else if count == 3}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="3번스토리" src={story3} class="story3"/>
+        <img alt="3번스토리" src={story3} class="story"/>
     </button>
 {:else if count == 4}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="4번스토리" src={story4} class="story4"/>
+        <img alt="4번스토리" src={story4} class="story"/>
     </button>
 {:else if count == 5}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="5번스토리" src={story5} class="story5"/>
+        <img alt="5번스토리" src={story5} class="story"/>
     </button>
 {/if}
 
 <style>
-    .story1{
+    .story{
         margin: 0;
         padding: 0;
 
@@ -75,6 +60,7 @@
         width: 100%;
         height: 100%;
 
+        position: relative;
     }
 
     .button{
@@ -88,10 +74,19 @@
         align-item: center;
         justify-content: center;
 
+        position: relative;
+
     }
     .textbox{
+        margin-left: 20vw;
         width: 60vw;
         height: 25vh;
+
+        background-color: black;
+
+        color: white;
+
+        position: relative;
     }
 
 </style>
