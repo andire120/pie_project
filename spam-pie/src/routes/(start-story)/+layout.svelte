@@ -1,3 +1,3 @@
-<div class="h-full w-full">
+<div style="h-full w-full">
     <slot />
 </div>

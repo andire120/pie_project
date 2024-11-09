@@ -48,21 +48,30 @@
     </button>
 {/if}
 
+<div></div>
+
 <style>
     .story1{
         margin: 0;
-        width: 100vw;
-        height: 100vh;
+        padding: 0;
 
-        position: relative;
-        z-index: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+
     }
 
     .button{
         margin: 0;
+        padding: 0;
 
-        position: absolute;
-        z-index: 1;
+        width: 100vw;
+        height: 100vh;
+
+        display: flex;
+        align-item: center;
+        justify-content: center;
+
     }
 
 </style>
