@@ -10,7 +10,7 @@
     import story3 from "/src/public/illustration/game-story/3.png";
     import story4 from "/src/public/illustration/game-story/4.png";
     import story5 from "/src/public/illustration/game-story/6.png";
-
+    
 
 
     function handleClick(e) {
@@ -19,7 +19,7 @@
             goto("/main_menu");
         }
         else {
-            goto(`/storys/${count}`);
+            goto(`/herring-pie/${count}`);
         }
         console.log(count);
         console.log(e);
