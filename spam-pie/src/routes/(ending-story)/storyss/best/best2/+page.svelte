@@ -29,9 +29,8 @@
     margin: 0; 
     position: relative; 
     z-index: 0;
-    cursor: none;
+    
      
-
 
 
     } 
@@ -39,7 +38,7 @@
     height: 100%;
     width: 100%;
     object-fit:cover;
-    cursor: none;
+    cursor: default;
     }
 
 
