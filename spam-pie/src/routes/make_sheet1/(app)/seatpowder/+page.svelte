@@ -22,6 +22,8 @@
     let selectedpowder = null;
     let selectedbutter = null;
 
+    let id = null;
+
     function updateBowlImage(imageSrc) {
         document.querySelector('.default').src = imageSrc;
     }
@@ -62,7 +64,31 @@
             }, 1000);
         }
         else if(selectedbutter != null && selectedpowder != null) {
-            window.location.href = "/make_sheet2";
+            if(selectedpowder === 'strong') {
+                if(selectedbutter === 'butter') {
+                    id = "strongbutter";
+                }
+                else {
+                    id = "strongmargarine";
+                }
+            }
+            if(selectedpowder === 'middle') {
+                if(selectedbutter === 'butter') {
+                    id = "middlebutter";
+                }
+                else {
+                    id = "middlemargarine";
+                }
+            }
+            if(selectedpowder === 'park') {
+                if(selectedbutter === 'butter') {
+                    id = "parkbutter";
+                }
+                else {
+                    id = "margarine";
+                }
+            }
+            window.location.href = (`/make_sheet2/${id}`);
         }
     }
 
@@ -138,6 +164,7 @@
         position: absolute;
         background-color: #9744BF;
         margin: 0;
+        margin-left: 10px;
         top: 73vh;
         left: 10px;
         width: 179vh;
