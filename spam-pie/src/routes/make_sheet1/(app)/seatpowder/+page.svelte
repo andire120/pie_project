@@ -231,7 +231,7 @@
         padding: 0;
         z-index: 1;
 
-        font-size: 55px;
+        font-size: 45px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
@@ -269,7 +269,7 @@
         padding: 0;
         z-index: 1;
 
-        font-size: 55px;
+        font-size: 45px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
@@ -305,7 +305,7 @@
         padding: 0;
         z-index: 1;
 
-        font-size: 55px;
+        font-size: 45px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
@@ -342,7 +342,7 @@
         padding: 0;
         z-index: 1;
 
-        font-size: 55px;
+        font-size: 45px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
@@ -359,7 +359,6 @@
         rgba(0, 0, 0, 0.2) 30%,
         rgba(0, 0, 0, 0)
         );
-
 
 
     }
@@ -380,7 +379,7 @@
         padding: 0;
         z-index: 1;
 
-        font-size: 55px;
+        font-size: 45px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
