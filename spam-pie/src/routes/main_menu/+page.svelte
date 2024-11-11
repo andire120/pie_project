@@ -5,8 +5,16 @@
 </script>
 
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
 <img class="img" src={mainmenu} alt="메인메뉴">
-<div class="ab" style="font-size: large"><a href="/" style="color: red;">●게임시작</a><br><a href="/" style="color: red;">●게임방법</a><br><a href="/"style="color: red;">●레시피</a><br><a href="/" style="color: red;">●포기하기</a></div>
+<div class="ab" style="font-size: x-large"><a href="/make_sheet1/seatpowder" style="color: red;">●게임시작</a>
+    <br><a href="/" style="color: red;">●게임방법</a>
+    <br><a href="/"style="color: red;">●레시피</a>
+    <br><a href="/storyss/bad/bad1" style="color: red;">●포기하기</a>
+</div>
 
 
 
@@ -35,12 +43,13 @@
         align-items: center;
         background-color:white;    
         opacity: 0.7;
-        height: 200px;
-        width: 300px;
+        height: 250px;
+        width: 400px;
         margin: 0 auto;
         color: red;
         margin-top: -300px;
         text-decoration-line: none;
+        font-family: "Jua", sans-serif;
         text-decoration: none;
     }
 
