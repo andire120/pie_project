@@ -24,6 +24,7 @@
 
     function addingredImage(imageSrc2) {
         document.querySelector('.on1').src = imageSrc2
+        document.querySelector('.bowl').src = ingred[ingredient];
     }
 
     function ingredients(ingredId){
