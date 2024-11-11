@@ -84,7 +84,7 @@
         height: 100vh;
 
         display: flex;
-        align-item: center;
+        align-items: center;
         justify-content: center;
 
         position: absolute;
