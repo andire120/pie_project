@@ -8,43 +8,24 @@
     const dot2 = "/src/public/element/otherthing/otherelement/nodelete1.png";
 
     let ingredient = null;
+
     const ingred = {
-        apple:"/src/public/element/otherthing/otherelement/bowl apple.png",
-        berry:"/src/public/element/otherthing/otherelement/bowl berry.png",
-        mint:"/src/public/element/otherthing/otherelement/bowl mincho.png",
-        inseon:"/src/public/element/otherthing/otherelement/bowl inseon.png",
-        pump:"/src/public/element/otherthing/otherelement/bowl pump.png",
-        spam:"/src/public/element/otherthing/otherelement/bowl spam.png",
-        meat:"/src/public/element/otherthing/otherelement/bowl meat.png"
+        apple:"/src/public/element/otherthing/otherelement/bowlapple.png",
+        berry:"/src/public/element/otherthing/otherelement/bowlberry.png",
+        mint:"/src/public/element/otherthing/otherelement/bowlmincho.png",
+        inseon:"/src/public/element/otherthing/otherelement/bowlinseon.png",
+        pump:"/src/public/element/otherthing/otherelement/bowlpump.png",
+        spam:"/src/public/element/otherthing/otherelement/bowlspam.png",
+        meat:"/src/public/element/otherthing/otherelement/bowlmeat.png"
     };
 
-    function updateingredImage(imageSrc1) {
-        document.querySelector('.defalt').src = imageSrc1;
-    }
-
-    function addingredImage(imageSrc2) {
-        document.querySelector('.on1').src = imageSrc2
+    let selectedIngredient = null;
+    
+    function updateIngredientImage(ingredient) {
+        selectedIngredient = ingredient;
         document.querySelector('.bowl').src = ingred[ingredient];
     }
 
-    function ingredients(ingredId){
-        ingredient = ingredId;
-
-        updateingredImage(ingred[ingredId]);
-    }
-
-    function ch() {
-        if(ingredient == null) {
-            document.querySelector('.on2').src = "/src/public/element/otherthing/otherelement/warning_main.png"
-            setTimeout(function(){
-            document.querySelector('.on2').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
-            }, 1000);
-        }
-        else if(ingredient != null){
-            window.location.href = "/make_sheet2";//파이굽기
-        }
-
-    }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,15 +41,35 @@
     <img class="bowl" src={bowl} alt="뚝배기">
 
     <div class="Button">
-        <button id="sp"onclick={() => ingredient('spam')}   class:active={ingredient === 'spam'}   class="spam">스팸</button>
-        <button id="ap"onclick={() => ingredient('apple')} class:active={ingredient === 'apple'}    class="apple">사과</button>
-        <button id="berry"onclick={() => ingredient('berry')} class:active={ingredient === 'berry'}    class="berry">베리</button>
-        <button id="inseon"onclick={() => ingredient('inseon')} class:active={ingredient === 'inseon'}    class="inseon">정어리</button>
+        <button
+        class="spam {selectedIngredient === 'spam' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('spam')}>스팸</button>
+
+    <button
+        class="apple {selectedIngredient === 'apple' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('apple')}>사과</button>
+
+    <button
+        class="berry {selectedIngredient === 'berry' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('berry')}>베리</button>
+
+    <button
+        class="inseon {selectedIngredient === 'inseon' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('inseon')}>정어리</button>
 </div>
-    <div class="Button2">
-        <button id="mint"onclick={() => ingredient('mincho')} class:active={ingredient === 'mincho'}    class="mincho">민초</button>
-        <button id="mt"onclick={() => ingredient('meat')} class:active={ingredient === 'meat'}    class="meat">고기</button>
-        <button id="pp"onclick={() => ingredient('pump')} class:active={ingredient === 'pump'}    class="pump">호박</button>
+
+<div class="Button2">
+    <button
+        class="mincho {selectedIngredient === 'mint' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('mint')}>민초</button>
+
+    <button
+        class="meat {selectedIngredient === 'meat' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('meat')}>고기</button>
+
+    <button
+        class="pump {selectedIngredient === 'pump' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('pump')}>호박</button>
 </div>
 
 <style>
@@ -317,6 +318,10 @@
 .apple:hover, .inseon:hover, .berry:hover, .pump:hover, .meat:hover, .mincho:hover, .spam:hover,
 .apple:active, .inseon:active, .berry:active, .pump:active, .meat:active, .mincho:active, .spam:active 
 {
+    background-color: #FDFECF;
+    border: 4px solid yellow;
+}
+.selected {
     background-color: #FDFECF;
     border: 4px solid yellow;
 }
