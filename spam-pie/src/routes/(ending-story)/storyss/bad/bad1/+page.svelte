@@ -1,12 +1,17 @@
 <script >
 	import { goto } from "$app/navigation";
     import bad1 from "/src/public/illustration/엔딩/배드엔딩-1.png"
+    
 
 </script>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
 <div>
     <button class="bad1" style="cursor:pointer" on:click={()=>goto('/storyss/bad/bad2')}><img class="img" src={bad1} alt="진엔딩"></button>
-    <div class="caption" style="font-size: x-large;">대회에서의 우승은 물론,<br>상금마저 타지 못한 주인공.......</div>
+    <div class="caption" style="font-size: xx-large;">대회에서의 우승은 물론,<br>상금마저 타지 못한 주인공.......</div>
 </div>
 
 
@@ -31,6 +36,7 @@
     height: 100%;
     width: 100%;
     object-fit:cover;
+    cursor: default;
     }
 
     .caption{
@@ -46,6 +52,7 @@
         width: 1000px;
         margin: 0 auto;
         overflow: hidden;
+        font-family: "Jua", sans-serif;
         color: white;
         margin-top: -190px;
     }

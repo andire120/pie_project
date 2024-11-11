@@ -6,11 +6,13 @@
 
 </script>
 
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
 <div>
     <button class="best1" style="cursor:pointer" on:click={()=>goto('/storyss/best/best2')}><img class="img" src={beststory1} alt="진엔딩-1"></button>
-    <div class="caption" style="font-size: x-large;">대회에서 1등을 차지해,<br>큰 돈을 상금으로 거머쥐게 된 주인공!</div>
+    <div class="caption" style="font-size: xx-large;">대회에서 1등을 차지해,<br>큰 돈을 상금으로 거머쥐게 된 주인공!</div>
 </div>
 
 
@@ -36,6 +38,7 @@
     height: 100%;
     width: 100%;
     object-fit:cover;
+    cursor: default;
     }
 
 
@@ -52,6 +55,7 @@
         width: 1000px;
         margin: 0 auto;
         overflow: hidden;
+        font-family: "Jua", sans-serif;
         color: white;
         margin-top: -190px;
     }

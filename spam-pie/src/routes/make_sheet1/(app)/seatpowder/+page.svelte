@@ -22,6 +22,8 @@
     let selectedpowder = null;
     let selectedbutter = null;
 
+    let id = null;
+
     function updateBowlImage(imageSrc) {
         document.querySelector('.default').src = imageSrc;
     }
@@ -62,7 +64,31 @@
             }, 1000);
         }
         else if(selectedbutter != null && selectedpowder != null) {
-            window.location.href = "/make_sheet2";
+            if(selectedpowder === 'strong') {
+                if(selectedbutter === 'butter') {
+                    id = "strongbutter";
+                }
+                else {
+                    id = "strongmargarine";
+                }
+            }
+            if(selectedpowder === 'middle') {
+                if(selectedbutter === 'butter') {
+                    id = "middlebutter";
+                }
+                else {
+                    id = "middlemargarine";
+                }
+            }
+            if(selectedpowder === 'park') {
+                if(selectedbutter === 'butter') {
+                    id = "parkbutter";
+                }
+                else {
+                    id = "margarine";
+                }
+            }
+            window.location.href = (`/make_sheet2/${id}`);
         }
     }
 
@@ -72,10 +98,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<div style="position: relative; width: 100%; height: 100%;">  
+<div style="position: relative; width: 100%; height: 100%; overflow:hidden">  
     <img src={imageUrl1} alt="배경 이미지" class="back" />
 
-    <div style="position: absolute; top: 20px; left: 10px; transform: translate(-50%, -50%);">  
+    <div style="position: absolute; top: 20px; left: 10px; transform: translate(-50%, -50%)">  
         <img src={imageUrl3} alt="현수막" class="fly" />
 
         <div class="wall"></div>
@@ -88,6 +114,7 @@
         <img src={imageUrl6} alt="점2" class="on2" />
         <img src={imageUrl4} alt="그릇" class="default" />
         
+<<<<<<< HEAD
         <div class="button_a">
             <button id="Strong" onclick={() => selectpowder('strong')}   class:active={selectedpowder === 'strong'} class="Strong" type="button">강력분</button>
         <button id="middle"onclick={() => selectpowder('middle')} class:active={selectedpowder === 'middle'} class="middle" type="button">중력분</button>
@@ -97,6 +124,15 @@
         </div>
 
 
+=======
+        <div class="background">
+            <button id="Strong" onclick={() => selectpowder('strong')}   class:active={selectedpowder === 'strong'} class="Strong" type="button">강력분</button>
+            <button id="middle"onclick={() => selectpowder('middle')} class:active={selectedpowder === 'middle'} class="middle" type="button">중력분</button>
+            <button id="park" onclick={() => selectpowder('park')}   class:active={selectedpowder === 'park'} class="park" type="button">박력분</button>
+            <button id="butter" onclick={() => selectbutter('butter')}   class:active={selectedbutter === 'butter'} class="butter" type="button">버터</button>
+            <button id="margarine" onclick={() => selectbutter('margarine')}   class:active={selectedbutter === 'margarine'} class="margarine" type="button">마가린</button>
+        </div>
+>>>>>>> f4eccc0857aca5fe9a7f8972cd2cd9358a1b6ee8
     </div>
 </div>
 
@@ -117,6 +153,7 @@
     }
 
     .back {
+        overflow: hidden;
         position: relative;
         margin: 0;
         width: 100%;
@@ -124,12 +161,22 @@
         background-color: #B475D0;
         padding: 0;
         z-index: -1; 
-    }
+        display: grid;
 
+    }
+    .background {
+        position: absolute;
+        margin: 0;
+        display: grid;
+        margin-top: 77vh;
+        gap: 10vh;
+        grid-template-rows: 20% 20% 20% 20% 20%;
+    }
     .wall {
         position: absolute;
         background-color: #9744BF;
         margin: 0;
+        margin-left: 10px;
         top: 73vh;
         left: 10px;
         width: 179vh;
@@ -184,13 +231,14 @@
     }
 
     .Strong {
-        position: absolute;
+
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
         z-index: 1;
+        margin-left: 75px;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -210,8 +258,7 @@
         rgba(0, 0, 0, 0)
         );
 
-        top: 77vh;
-        left: 80px;
+        grid-column-start: 1;
     }
     .Strong:hover {
         background-color: #FDFECF;
@@ -224,7 +271,7 @@
 
 
     .middle {
-        position: absolute;
+
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
@@ -250,8 +297,7 @@
         rgba(0, 0, 0, 0)
         );
 
-        top: 77vh;
-        left: 390px;
+        grid-column-start: 2;
     }
     .middle:hover {
         background-color: #FDFECF;
@@ -263,7 +309,6 @@
     }
 
     .park {
-        position: absolute;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
@@ -289,8 +334,7 @@
         rgba(0, 0, 0, 0)
         );
 
-        top: 77vh;
-        left: 710px;
+        grid-column-start: 3;
     }
     .park:hover {
         background-color: #FDFECF;
@@ -303,7 +347,6 @@
 
 
     .butter {
-        position: absolute;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
@@ -329,8 +372,8 @@
         rgba(0, 0, 0, 0)
         );
 
-        top: 77vh;
-        left: 1030px;
+        grid-column-start: 4;
+
     }
     .butter:hover {
         background-color: #FDFECF;
@@ -342,7 +385,6 @@
     }
     
     .margarine {
-        position: absolute;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
@@ -368,8 +410,8 @@
         rgba(0, 0, 0, 0)
         );
 
-        top: 77vh;
-        left: 1360px;
+        grid-column-start: 5;
+
     }
     .margarine:hover {
         background-color: #FDFECF;

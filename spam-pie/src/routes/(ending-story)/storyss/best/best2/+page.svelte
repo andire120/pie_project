@@ -6,11 +6,13 @@
 
 </script>
 
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
 <div>
-    <button class="best2" style="cursor:pointer" on:click={()=>goto('/storyss')}><img class="img" src={beststory2} alt="진엔딩-2"></button>
-    <div class="caption" style="font-size: x-large;">상금으로 신약을 얻어 가족들을 치료후,<br>유명한 파이 가게 창립에 까지 성공하여<br>출세를 하게 되었다!</div>
+    <button class="best2" style="cursor:pointer" on:click={()=>goto('/main_menu')}><img class="img" src={beststory2} alt="진엔딩-2"></button>
+    <div class="caption" style="font-size: xx-large;">상금으로 신약을 얻어 가족들을 치료후,<br>유명한 파이 가게 창립에 까지 성공하여<br>출세를 하게 되었다!</div>
 </div>
 
 
@@ -27,8 +29,8 @@
     margin: 0; 
     position: relative; 
     z-index: 0;
+    
      
-
 
 
     } 
@@ -36,6 +38,7 @@
     height: 100%;
     width: 100%;
     object-fit:cover;
+    cursor: default;
     }
 
 
@@ -52,6 +55,7 @@
         width: 1000px;
         margin: 0 auto;
         overflow: hidden;
+        font-family: "Jua", sans-serif;
         color: white;
         margin-top: -190px;
     }
