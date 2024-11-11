@@ -88,12 +88,13 @@
         <img src={imageUrl6} alt="점2" class="on2" />
         <img src={imageUrl4} alt="그릇" class="default" />
         
-        
-        <button id="Strong" onclick={() => selectpowder('strong')}   class:active={selectedpowder === 'strong'} class="Strong" type="button">강력분</button>
+        <div class="button_a">
+            <button id="Strong" onclick={() => selectpowder('strong')}   class:active={selectedpowder === 'strong'} class="Strong" type="button">강력분</button>
         <button id="middle"onclick={() => selectpowder('middle')} class:active={selectedpowder === 'middle'} class="middle" type="button">중력분</button>
         <button id="park" onclick={() => selectpowder('park')}   class:active={selectedpowder === 'park'} class="park" type="button">박력분</button>
         <button id="butter" onclick={() => selectbutter('butter')}   class:active={selectedbutter === 'butter'} class="butter" type="button">버터</button>
         <button id="margarine" onclick={() => selectbutter('margarine')}   class:active={selectedbutter === 'margarine'} class="margarine" type="button">마가린</button>
+        </div>
 
 
     </div>
