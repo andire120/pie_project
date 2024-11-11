@@ -20,6 +20,11 @@
 
 </script>
 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
 {#if storyId == 1}
     <button on:click|stopPropagation={() => refresh('/storys/2')} class="button">
         <img alt="1번스토리" src={story1} class="story"/>
@@ -87,6 +92,10 @@
 
     }
     .textbox{
+
+
+
+        
         margin-left: 20%;
         margin-top: 75vh;
         padding: 5vh;
@@ -110,6 +119,11 @@
 
         position: absolute;
         z-index: 2;
+
+
+        font-family: "Jua", sans-serif;
+
+        font-size: xx-large;
     }
 
 </style>
