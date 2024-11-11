@@ -98,7 +98,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<div style="position: relative; width: 100%; height: 100%; overflow:hidden">  
+<div class="page">  
     <img src={imageUrl1} alt="배경 이미지" class="back" />
     <img src={imageUrl3} alt="현수막" class="fly" />
     
@@ -124,6 +124,16 @@
 <slot />
 
 <style>
+    .page{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow:hidden;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     .fly {
         position: absolute;
         margin: 0;
@@ -154,7 +164,7 @@
         margin: 0;
         top: 73vh;
         left: 4vw;
-        width: 215vh;
+        width: 203vh;
         height: 20vh;
 
         display: flex;
