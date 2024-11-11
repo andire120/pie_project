@@ -5,6 +5,7 @@
 <h1>야 장승원 왜 내가 쓴거 지움?</h1>
 <h1>위에 100퍼 이윤솔</h1>
 <h1>앙 기모 딱따구리</h1>
+<h1>오늘 급식 뭐지</h1>
 </div>
 <div class="flex justify-center items-center">
 </div>
