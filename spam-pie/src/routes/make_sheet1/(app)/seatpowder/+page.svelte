@@ -164,7 +164,6 @@
         position: absolute;
         background-color: #9744BF;
         margin: 0;
-        margin-left: 10px;
         top: 73vh;
         left: 10px;
         width: 179vh;
