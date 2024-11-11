@@ -112,6 +112,7 @@
         height: 50vh;
         padding: 0;
         z-index: 1;
+        
     }
 
     .back {
