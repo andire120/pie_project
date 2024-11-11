@@ -198,7 +198,7 @@
         padding: 0;
         z-index: 2;
         top: -20vh;
-        left: 40vh;
+        left: 65vh;
     }
     .on1 {
         position: absolute;
@@ -208,7 +208,7 @@
         padding: 0;
         z-index: 3;
         top: -20vh;
-        left: 40vh;
+        left: 65vh;
     }
 
     .on2 {
@@ -219,7 +219,7 @@
         padding: 0;
         z-index: 3;
         top: 15vh;
-        left: 51vh;
+        left: 65vh;
     }
 
     .Strong {
