@@ -169,8 +169,7 @@
 
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 7vw;
+        justify-content: space-around;
         
 
         z-index: 1;
@@ -224,8 +223,8 @@
 
     .Strong {
 
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -262,8 +261,8 @@
 
     .middle {
 
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -298,8 +297,8 @@
     }
 
     .park {
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -335,8 +334,8 @@
 
 
     .butter {
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -361,7 +360,6 @@
         );
 
 
-
     }
     .butter:hover {
         background-color: #FDFECF;
@@ -373,8 +371,8 @@
     }
     
     .margarine {
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
