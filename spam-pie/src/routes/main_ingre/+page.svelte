@@ -50,64 +50,61 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<div class="board" style="position: relative; width: 100%; height: 100%; ">  
     <img src={background1} alt="메인보드" class="paochai">
     <button onclick={ch()} class= "bugton">
         <img src={next_button} alt="버튼" class="buten"/>
     </button>
-    <img src= {dot1} alt="점1" class="on1">
-    <img src= {dot2} alt="점2" class="on2">
+        <div class="sidebar"></div>
+        <img class="pan" src={ganpan} alt="간판">
     <img class="bowl" src={bowl} alt="뚝배기">
-    <div>
 
+    <div class="Button">
         <button id="sp"onclick={() => ingredient('spam')}   class:active={ingredient === 'spam'}   class="spam">스팸</button>
         <button id="ap"onclick={() => ingredient('apple')} class:active={ingredient === 'apple'}    class="apple">사과</button>
-        <button id="berry"onclick={() => ingredient('berry')} class:active={ingredient === 'berry'}    class="berry">블루베리</button>
+        <button id="berry"onclick={() => ingredient('berry')} class:active={ingredient === 'berry'}    class="berry">베리</button>
         <button id="inseon"onclick={() => ingredient('inseon')} class:active={ingredient === 'inseon'}    class="inseon">정어리</button>
-        <button id="mint"onclick={() => ingredient('mincho')} class:active={ingredient === 'mincho'}    class="mincho">민트초코</button>
+</div>
+    <div class="Button2">
+        <button id="mint"onclick={() => ingredient('mincho')} class:active={ingredient === 'mincho'}    class="mincho">민초</button>
         <button id="mt"onclick={() => ingredient('meat')} class:active={ingredient === 'meat'}    class="meat">고기</button>
         <button id="pp"onclick={() => ingredient('pump')} class:active={ingredient === 'pump'}    class="pump">호박</button>
-        <div class="sidebar"></div>
-        <img class="next" src={next_button} alt="다음버튼">
-        <img class="pan" src={ganpan} alt="간판">
-    </div>
 </div>
 
-
-
-
-<style>  
-    .on2{
-        position: absolute;
-        margin: 0;
-        width: 100vh;
-        height: 100vh;
-        padding: 0;
-        z-index: 3;
-        
+<style>
+    .Button2{
+    display: flex;
+    position: absolute;
+    top: 85%; /* 예: 화면 중앙 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-around;
+    gap: 2vh;
+    z-index: 3; 
+    }
+    .Button {
+        display: flex;
+    position: absolute;
+    top: 70%; /* 예: 화면 중앙 */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    justify-content: space-around;
+    gap: 2vh;
+    z-index: 3; 
     }
 
-    .on1 {
-        position: absolute;
-        margin: 0;
-        width: 100vh;
-        height: 100vh;
-        padding: 0;
-        z-index: 3;
-        top: 460px;
-        right: 350px;
-    }
+
     .buten{
-        position: absolute;
-        top: 460px;
-        right: 350px;
-        z-index: 1;
+        width: auto;
+        height: auto;
     }
 
     .paochai{
+        overflow: hidden;
+        position: relative;
         height: 99.6%;
         width: 100%;
         background-color: #B475D0;
+        
     }/*배경 대각선 그거*/
 
     .bowl{
@@ -115,33 +112,36 @@
         width: 100vh;
         height: 100vh;
         top: -20vh;
-        left: 55vh;
+        left: 40vh;
     }
     .pan{
+            position: absolute;
+    top: 25%;
+    transform: translate(-50%, -50%);
         position: absolute;
-        top: 50px;
+        width: 15%;
+
     }
 
     .sidebar{
         position: absolute;
-        width: 70%;
+        width: 80%;
         height: 35%;
+        top: 77%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         background-color: #9744bf;
-        top: 560px;
-        left: 260px;
+        z-index: 2;
     }
 
     .spam{
-        position: absolute;
-        top: 600px;
-        right: 700px;
+        grid-area: g;
 
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-        z-index: 1;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -162,16 +162,12 @@
         )
     }
     .apple{
-        position: absolute;
-        top: 600px;
-        right: 350px;
+        grid-area: a;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-        z-index: 1;
-
         font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
@@ -191,15 +187,11 @@
         )
     }    
     .mincho{
-        position: absolute;
-        top: 600px;
-        right: 1400px;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-        z-index: 1;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -220,15 +212,11 @@
         )
     }   
     .meat{
-        position: absolute;
-        top: 600px;
-        right: 1050px;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-        z-index: 1;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -250,16 +238,11 @@
     }
 
     .berry{
-        position: absolute;
-        top: 750px;
-        right: 1230px;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-        z-index: 1;
-
         font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
@@ -279,15 +262,11 @@
         )
     }
     .inseon{
-        position: absolute;
-        top: 750px;
-        right: 875px;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-        z-index: 1;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -308,15 +287,11 @@
         )
     }
     .pump{
-        position: absolute;
-        top: 750px;
-        right: 525px;
         width: 25vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-        z-index: 1;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -337,63 +312,11 @@
         )
     }
 
-
 /*버튼 반짝*/
-    .mincho:hover{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .mincho.active{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .meat:hover{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .meat:active{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .inseon:hover{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .inseon:active{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .berry:hover{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .berry:active{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .pump:hover{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .pump:active{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .apple:hover{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .apple:active{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .spam:hover{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-    .spam:active{
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-
+.apple:hover, .inseon:hover, .berry:hover, .pump:hover, .meat:hover, .mincho:hover, .spam:hover,
+.apple:active, .inseon:active, .berry:active, .pump:active, .meat:active, .mincho:active, .spam:active 
+{
+    background-color: #FDFECF;
+    border: 4px solid yellow;
+}
 </style>
