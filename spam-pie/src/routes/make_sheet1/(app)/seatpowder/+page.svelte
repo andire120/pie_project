@@ -72,7 +72,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<div style="position: relative; width: 100%; height: 100%;">  
+<div style="position: relative; width: 100%; height: 100%; overflow:hidden">  
     <img src={imageUrl1} alt="배경 이미지" class="back" />
 
     <div style="position: absolute; top: 20px; left: 10px; transform: translate(-50%, -50%);">  
@@ -116,6 +116,7 @@
     }
 
     .back {
+        overflow: hidden;
         position: relative;
         margin: 0;
         width: 100%;
