@@ -44,7 +44,7 @@
         background-color:white;    
         opacity: 0.7;
         height: 250px;
-        width: 400px;
+        width: 320px;
         margin: 0 auto;
         color: red;
         margin-top: -300px;
