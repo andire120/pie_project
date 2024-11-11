@@ -169,8 +169,7 @@
 
         display: flex;
         align-items: center;
-        justify-content: center;
-        gap: 7vw;
+        justify-content: space-around;
         
 
         z-index: 1;
@@ -224,14 +223,14 @@
 
     .Strong {
 
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
         z-index: 1;
 
-        font-size: 45px;
+        font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
@@ -262,14 +261,14 @@
 
     .middle {
 
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
         z-index: 1;
 
-        font-size: 45px;
+        font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
@@ -298,14 +297,14 @@
     }
 
     .park {
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
         z-index: 1;
 
-        font-size: 45px;
+        font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
@@ -335,14 +334,14 @@
 
 
     .butter {
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
         z-index: 1;
 
-        font-size: 45px;
+        font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
@@ -372,14 +371,14 @@
     }
     
     .margarine {
-        width: 25vh;
-        height: 10vh;
+        width: 30vh;
+        height: 15vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
         z-index: 1;
 
-        font-size: 45px;
+        font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
