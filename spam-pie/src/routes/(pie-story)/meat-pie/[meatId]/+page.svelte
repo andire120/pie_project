@@ -51,20 +51,26 @@
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </button>
     <div class="textbox">
-        {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
-        <div class="textsim">
+        <p class="textsim">
             {stories[meatId - 1].simtext}
-        </div>
+        </p>
+        <p class="textmal">
+            {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
+        </p>
+        
     </div>
 {:else if stories[meatId - 1]}
     <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </button>
     <div class="textbox">
-        {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
-        <div class="simtext">
+        <p class="simtext">
             {stories[meatId - 1].simtext}
-        </div>
+        </p>
+        <p class="textmal">
+            {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
+        </p>
+        
     </div>
 {:else}
     존재하지 않는 페이지
@@ -109,7 +115,32 @@
 
         display: flex;
         align-items: center;
+
+        position: absolute;
+        z-index: 2;
+    }
+
+    .textmal{
+        width: 85%;
+        height: 9vh;
+        margin-right: 10%;
+
+        color: white;
+        text-align: center;
+        font-size: x-large;
+        overflow: hidden;
+        font-family: "Jua", sans-serif;
+        
+        display: flex;
         justify-content: center;
+        align-items: center;
+
+        
+    }
+    .simtext{
+        width: 15%;
+        height: 9vh;
+        margin-bottom: 7%;
 
         color: white;
         text-align: center;
@@ -117,8 +148,8 @@
         overflow: hidden;
         font-family: "Jua", sans-serif;
 
-        position: absolute;
-        z-index: 2;
+        display: flex;
     }
+
 
 </style>
