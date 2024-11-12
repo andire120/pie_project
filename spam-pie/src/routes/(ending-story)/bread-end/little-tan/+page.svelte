@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
 <div>
-    <botten class="end" style="cursor:pointer" on:click={()=>goto('/main_menu')}><img class="end" src={end} alt="진엔딩"></botten>
+    <botten class="end" style="cursor:pointer" ><img class="end" src={end} alt="엔딩"></botten>
 </div>
 
 <div class="caption" style="cursor:pointer;" >
