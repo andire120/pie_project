@@ -6,7 +6,7 @@
     let count = 1;
 
     import story1 from "/src/public/illustration/미사용/심사배경.png";
-    import pie from "/src/public/element/빵/정상적인빵/블루베리빵.ng";
+    import pie from "/src/public/element/bread/normal-bread/blueberry-bread.png";
 
 
 
@@ -27,7 +27,13 @@
     <div class="textbox">
         이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라.<br>넌 탈락이야.
     </div>
-{/if}
+    
+   
+
+{/if} 
+
+<img src={pie} alt="블루베리빵" class="pie">
+
 
 <style>
     .story{
@@ -83,4 +89,11 @@
         z-index: 2;
     }
 
+
+
+    .pie{
+        
+        position:absolute;
+        margin : 0;
+    }
 </style>
