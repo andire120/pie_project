@@ -65,7 +65,8 @@
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
             text: "",
-            textimg: "/src/public/illustration/pie-ending/고기 파이 엔딩.png"
+            textimg: "/src/public/illustration/pie-ending/고기 파이 엔딩.png",
+            tu:"/src/public/illustration/미사용/투명.png"
         }
     ];
 
@@ -99,7 +100,7 @@
         </p>
     </div>
 {:else if meatId == 8}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button2">
         <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
     </button>
     <div>
@@ -136,6 +137,7 @@
 {/if}
 
 <style>
+
     .story {
         margin: 0;
         padding: 0;
@@ -164,6 +166,36 @@
         z-index: 3;
     }
 
+    .textbox2{
+        margin: 0;
+        padding: 0;
+        
+        width: 90vw;
+        height: 90vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        z-index: 4;
+    }
+
+
+    .button2{
+        margin: 0;
+        padding: 0;
+
+        width: 100%;
+        height: 90vh;
+        
+        pointer-events : none;
+
+        background-color: black;
+        position: absolute;
+        z-index: 4;
+
+    }
 
 
     .textbox {
