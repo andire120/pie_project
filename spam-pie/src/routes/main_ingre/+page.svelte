@@ -26,6 +26,10 @@
         document.querySelector('.bowl').src = ingred[ingredient];
     }
 
+    function go()  {
+        window.location.href = ("make_sheet2");
+        console.log("500");
+    }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,12 +37,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
     <img src={background1} alt="메인보드" class="paochai">
-    <button onclick={ch()} class= "bugton">
+    
+    <div class="sidebar"></div>
+    <img class="pan" src={ganpan} alt="간판">
+    <img class="bowl" src={bowl} alt="뚝배기">
+
+    <button  onclick={go()} class= "bugton">
         <img src={next_button} alt="버튼" class="buten"/>
     </button>
-        <div class="sidebar"></div>
-        <img class="pan" src={ganpan} alt="간판">
-    <img class="bowl" src={bowl} alt="뚝배기">
 
     <div class="Button">
         <button
@@ -93,11 +99,21 @@
     gap: 2vh;
     z-index: 3; 
     }
-
+    .bugton {
+        position: absolute;
+        top: 50%;
+        left: 85%;
+        z-index: 1;
+    }
 
     .buten{
-        width: auto;
-        height: auto;
+        position: absolute;
+        z-index: 3;
+        width: 10vh;
+        height: 10vh;
+        top: -500%;
+        left: -300%;
+        z-index: 2;
     }
 
     .paochai{
@@ -117,11 +133,12 @@
         left: 40vh;
     }
     .pan{
-            position: absolute;
-    top: 25%;
-    transform: translate(-50%, -50%);
+        position: absolute;
+        top: 25%;
+        transform: translate(-50%, -50%);
         position: absolute;
         width: 15%;
+        left: 9%;
 
     }
 
