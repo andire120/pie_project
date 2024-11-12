@@ -13,7 +13,7 @@
     function handleClick(e) {
         count++;
         if (count == 2) {
-            goto("/bread-end/little-cook");
+            goto("/");
         }
         console.log(count);
         console.log(e);
@@ -32,7 +32,11 @@
 
 {/if} 
 
-<img src={pie} alt="블루베리빵" class="pie">
+<div class="pies">
+<img src={pie} alt="블루베리빵" class="pie1">
+<img src={pie} alt="블루베리빵" class="pie2">
+<img src={pie} alt="블루베리빵" class="pie3">
+</div>
 
 
 <style>
@@ -91,9 +95,16 @@
 
 
 
-    .pie{
-        
-        position:absolute;
+    .pies{
+     display: flex;
+     justify-content: center;
+     gap: 1px;
+    }
+
+    .pie1,.pie2,.pie3{
         margin : 0;
+        width: 15%;
+        z-index: 1;
+        margin-top: 430px;
     }
 </style>
