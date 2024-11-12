@@ -2,12 +2,12 @@
   const background = "/src/public/element/otherthing/otherelement/background.png";
   const next = "/src/public/element/otherthing/otherelement/nextbotten.png";
   const chep = "/src/public/element/otherthing/otherelement/파이굽기 간판.png";
-  const one = "/src/public/element/otherthing/otherelement/1분.png";
-  const onethr = "/src/public/element/otherthing/otherelement/1분30초.png";
-  const eig = "/src/public/element/otherthing/otherelement/8분.png";
-  const thr = "/src/public/element/otherthing/otherelement/30초.png";
-  const oven = "/src/public/element/otherthing/otherelement/오븐.png";
-  const danger = "/src/public/element/otherthing/otherelement/오븐시간 선택x.png";
+  const one = "/src/public/element/otherthing/otherelement/1m.png";
+  const onethr = "/src/public/element/otherthing/otherelement/1m30s.png";
+  const eig = "/src/public/element/otherthing/otherelement/8m.png";
+  const thr = "/src/public/element/otherthing/otherelement/30s.png";
+  const oven = "/src/public/element/otherthing/otherelement/oven.png";
+  const danger = "/src/public/element/otherthing/otherelement/choseoven.png";
 
   let selectedtime = '';
 
@@ -15,35 +15,12 @@
     console.log("Selected time: ", timeId);
     selectedtime = timeId;
   }
-
-
-
-
-
-let nextclick=false;
-function click(){
-   setTimeout(()=>{
-    nextclick=false;
-   },3000);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-
 
 <div class="container">
   <div class="back">
@@ -59,30 +36,28 @@ function click(){
   </div>
 
   <div class="foot">
-    <button id="Thr" on:click={() => select('thr')} class:active={selectedtime === 'thr'} class="thr" type="button">0:30</button>
-    <button id="One" on:click={() => select('one')} class:active={selectedtime === 'one'} class="one" type="button">1:00</button>
-    <button id="OneThr" on:click={() => select('onethr')} class:active={selectedtime === 'onethr'} class="onethr" type="button">1:30</button>
-    <button id="Eig" on:click={() => select('eig')} class:active={selectedtime === 'eig'} class="eig" type="button">8:00</button>
+    <button id="thr" onclick={() => select('thr')} class:active={selectedtime === 'thr'} class="thr" type="button">0:30</button>
+    <button id="one" onclick={() => select('one')} class:active={selectedtime === 'one'} class="one" type="button">1:00</button>
+    <button id="onethr" onclick={() => select('onethr')} class:active={selectedtime === 'onethr'} class="onethr" type="button">1:30</button>
+    <button id="eig" onclick={() => select('eig')} class:active={selectedtime === 'eig'} class="eig" type="button">8:00</button>
   </div>
-<button class="Next">다음</button>
-<div class="dan">
+
+  <button class="Next">다음</button>
+  <div class="dan">
     <img src={danger} alt="경고">
-</div>
+  </div>
   <div class="o">
     <img src={oven} alt="오븐" />
   </div>
 </div>
-
-<div class="selected"></div>
-
-
 
 <style>
   :global(html, body) {
     margin: 0;
     padding: 0;
     height: 100%;
-    overflow: hidden;} 
+    overflow: hidden;
+  }
   * {
     margin: 0;
     padding: 0;
@@ -133,16 +108,15 @@ function click(){
     width: 25vh;
     height: 10vh;
     background-color: #FFD400;
-    margin: 0;
-    padding: 0;
+
     font-size: 55px;
     font-family: "Jua", sans-serif;
     font-style: normal;
     line-height: 1.6;
-    color: #FF7F00;
     text-align: center;
     border-radius: 10px;
     text-shadow: 1px 1px 1px #E89D3A;
+    color: #FF7F00;      
     text-shadow: 5px 2px 3px #FDFECF;
     border: none;
     z-index: 3;
@@ -161,9 +135,10 @@ function click(){
     border: 4px solid yellow;
   }
 
-  .selected {
-    background-color: #FDFECF;
-    border: 4px solid yellow;
+  /* active 클래스가 적용될 스타일 */
+  .active {
+    background-color: #FDFECF !important;
+    border: 4px solid yellow !important;
   }
 
   .n {
@@ -187,7 +162,7 @@ function click(){
     top: 1%;
   }
 
-  .Next{
+  .Next {
     width: 2%;
     height: 4%;
     position: absolute;
@@ -196,10 +171,10 @@ function click(){
     transform: translateY(-50%);
   }
 
-  .dan{
+  .dan {
     position: absolute;
-    top:20%;
-    left:32.5%;
+    top: 20%;
+    left: 32.5%;
     z-index: 10000;
     cursor: pointer;
   }
