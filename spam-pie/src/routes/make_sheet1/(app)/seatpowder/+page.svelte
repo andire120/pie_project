@@ -86,10 +86,10 @@
                     id = "parkbutter";
                 }
                 else {
-                    id = "margarine";
+                    id = "parkmargarine";
                 }
             }
-            window.location.href = (`/main_ingre/${id}`);
+            window.location.href = (`/main_ingre?id=${id}`);
         }
     }
 
