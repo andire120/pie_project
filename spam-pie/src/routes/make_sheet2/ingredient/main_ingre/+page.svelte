@@ -4,9 +4,8 @@
     const next_button = "/src/public/element/otherthing/otherelement/nextbotten.png";
     const bowl = "/src/public/element/otherthing/otherelement/default.png";
     const ganpan ="/src/public/element/otherthing/otherelement/piesokmandulgi.png";
-    const dot1 = "/src/public/element/otherthing/otherelement/nodelete.png";
-    const dot2 = "/src/public/element/otherthing/otherelement/nodelete1.png";
-
+    const dot1 = "/src/public/element/otherthing/otherelement/nodelete1.png";
+    const warn = "/src/public/element/otherthing/otherelement/waring_main.png";
     let ingredient = null;
 
     const ingred = {
@@ -27,9 +26,21 @@
     }
 
     function go()  {
-        window.location.href = ("make_sheet2");
-        console.log("500");
+        if(selectedIngredient == null){
+            document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/waring_main.png";
+            setTimeout(function(){
+                document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
+            }, 1500);
+        }
+        else {
+            window.location.href = ("make_sheet2");
+        }
+        
+
     }
+
+
+    
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,7 +52,7 @@
     <div class="sidebar"></div>
     <img class="pan" src={ganpan} alt="간판">
     <img class="bowl" src={bowl} alt="뚝배기">
-
+    <img src={dot1} alt="노딜리트" class="dot">
     <button  onclick={go()} class= "bugton">
         <img src={next_button} alt="버튼" class="buten"/>
     </button>
@@ -79,6 +90,16 @@
 </div>
 
 <style>
+    .dot{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        z-index: 5;
+    }
+
     .Button2{
     display: flex;
     position: absolute;
@@ -126,6 +147,7 @@
     }/*배경 대각선 그거*/
 
     .bowl{
+        overflow: hidden;
         position: absolute;
         width: 100vh;
         height: 100vh;
