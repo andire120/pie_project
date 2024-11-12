@@ -1,6 +1,7 @@
 <script>
 // @ts-nocheck
 
+
     const imageUrl1 = "/src/public/element/otherthing/otherelement/background.png";
     const imageUrl2 = "/src/public/element/otherthing/otherelement/nextbotten.png";
     const imageUrl3 = "/src/public/element/otherthing/otherelement/fly.png";
