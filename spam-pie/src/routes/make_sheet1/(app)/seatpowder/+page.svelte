@@ -1,6 +1,7 @@
 <script>
 // @ts-nocheck
 
+
     const imageUrl1 = "/src/public/element/otherthing/otherelement/background.png";
     const imageUrl2 = "/src/public/element/otherthing/otherelement/nextbotten.png";
     const imageUrl3 = "/src/public/element/otherthing/otherelement/fly.png";
@@ -131,8 +132,8 @@
     .fly {
         position: absolute;
         margin: 0;
-        top: 10px;
-        left: 10px;
+        top: 10%;
+        left: 10%;
         width: 25vh;
         height: 50vh;
         padding: 0;
@@ -157,7 +158,7 @@
         margin: 0;
         display: grid;
         margin-top: 77vh;
-        gap: 10vh;
+        gap: 9.2%;
         grid-template-rows: 20% 20% 20% 20% 20%;
     }
     .wall {
@@ -225,7 +226,8 @@
         margin: 0;
         padding: 0;
         z-index: 1;
-        margin-left: 75px;
+        margin-left: 20%;
+        margin-right: 20%;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -265,6 +267,8 @@
         margin: 0;
         padding: 0;
         z-index: 1;
+        margin-left: 20%;
+        margin-right: 20%;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -302,6 +306,8 @@
         margin: 0;
         padding: 0;
         z-index: 1;
+        margin-left: 20%;
+        margin-right: 20%;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -340,6 +346,8 @@
         margin: 0;
         padding: 0;
         z-index: 1;
+        margin-left: 20%;
+        margin-right: 20%;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
@@ -378,6 +386,8 @@
         margin: 0;
         padding: 0;
         z-index: 1;
+        margin-left: 20%;
+        margin-right: 20%;
 
         font-size: 55px;
         font-family: "Jua", sans-serif;
