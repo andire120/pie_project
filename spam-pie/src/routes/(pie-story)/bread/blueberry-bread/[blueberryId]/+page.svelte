@@ -6,6 +6,7 @@
     let count = 1;
 
     import story1 from "/src/public/illustration/미사용/심사배경.png";
+    import pie from "/src/public/element/빵/정상적인빵/블루베리빵.ng";
 
 
 
@@ -58,11 +59,11 @@
     }
     .textbox{
         margin-left: 20%;
-        margin-top: 75vh;
+        margin-top: 79vh;
         padding: 5vh;
 
         width: 60%;
-        height: 15vh;
+        height: 10vh;
 
         background-color: black;
         opacity: 0.7;
