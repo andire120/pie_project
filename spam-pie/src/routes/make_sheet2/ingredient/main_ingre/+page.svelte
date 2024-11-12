@@ -2,7 +2,7 @@
 // @ts-nocheck
     const background1 = "/src/public/element/otherthing/otherelement/background.png";
     const next_button = "/src/public/element/otherthing/otherelement/nextbotten.png";
-    const bowl = "/src/public/element/otherthing/otherelement/default.png";
+    const bowl = "/src/public/element/otherthing/otherelement/what.png";
     const ganpan ="/src/public/element/otherthing/otherelement/piesokmandulgi.png";
     const dot1 = "/src/public/element/otherthing/otherelement/nodelete1.png";
     const warn = "/src/public/element/otherthing/otherelement/waring_main.png";
@@ -149,10 +149,10 @@
     .bowl{
         overflow: hidden;
         position: absolute;
-        width: 100vh;
-        height: 100vh;
-        top: -20vh;
-        left: 40vh;
+        width: 70vh;
+        height: 70vh;
+        top: -1vh;
+        left: 55vh;
     }
     .pan{
         position: absolute;
