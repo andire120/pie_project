@@ -6,14 +6,14 @@
     let count = 1;
 
     import story1 from "/src/public/illustration/미사용/심사배경.png";
-    import pie from "/src/public/element/빵/정상적인빵/블루베리빵.ng";
+    import pie from "/src/public/element/bread/little-tan-bread/blueberry-bread.png";
 
 
 
     function handleClick(e) {
         count++;
         if (count == 2) {
-            goto("/bread-end/little-cook");
+            goto("/bread-end/tan");
         }
         console.log(count);
         console.log(e);
@@ -25,9 +25,19 @@
         <img alt="1번스토리" src={story1} class="story"/>
     </button>
     <div class="textbox">
-        이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라.<br>넌 탈락이야.
+        이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라.<br>게다가, 조금 탔잖아? 넌 탈락이야.
     </div>
-{/if}
+    
+   
+
+{/if} 
+
+<div class="pies">
+<img src={pie} alt="블루베리빵" class="pie1">
+<img src={pie} alt="블루베리빵" class="pie2">
+<img src={pie} alt="블루베리빵" class="pie3">
+</div>
+
 
 <style>
     .story{
@@ -83,4 +93,18 @@
         z-index: 2;
     }
 
+
+
+    .pies{
+     display: flex;
+     justify-content: center;
+     gap: 1px;
+    }
+
+    .pie1,.pie2,.pie3{
+        margin : 0;
+        width: 15%;
+        z-index: 1;
+        margin-top: 430px;
+    }
 </style>
