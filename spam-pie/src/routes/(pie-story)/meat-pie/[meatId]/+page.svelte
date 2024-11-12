@@ -65,9 +65,7 @@
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
             text: "",
-            simtext: "",
-            pieimg:"/src/public/illustration/pie-ending/생고기 파이.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            textimg: "/src/public/illustration/미사용/검은사진.jpeg"
         }
     ];
 
@@ -97,7 +95,7 @@
             {stories[meatId - 1].simtext}
         </p>
         <p class="textmal">
-            {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
+            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
 {:else if meatId == 8}
@@ -107,12 +105,9 @@
     <div>
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </div>
-    <div class="textbox">
-        <p class="simtext">
-            {stories[meatId - 1].simtext}
-        </p>
-        <p class="textmal">
-            {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
+    <div class="textbox2">
+        <p class="textmal2">
+            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
 {:else if stories[meatId - 1]}
@@ -135,7 +130,7 @@
             {stories[meatId - 1].simtext}
         </p>
         <p class="textmal">
-            {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
+            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
 {:else}
