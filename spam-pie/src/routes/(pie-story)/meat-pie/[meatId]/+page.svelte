@@ -11,31 +11,63 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "미트 파이가 정말 맛있네요.",
             simtext: "심사위원1",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "어느날 기적적으로 가족들의 병을 치료할 수 있는 신약이 개발되지만, 이 약을 사기 위해 주인공은 막대한 자금이 필요했다.",
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "미투~!",
             simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "평소처럼 야간근무를 끝내고 퇴근하던 어느 날. 주인공은 막대한 상금이 걸려있는 세계적인 요리대회의 인원 모집 공고를 보고. 상금을 얻어 약을 사고자 한다.",
-            simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "심사위원2는 굿바이 선언 포즈를 취했다...",
+            simtext: "",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "집안 대대로 내려져 오던 전설의 파이 레시피를 잘만 사용한다면, 우승 따윈 식은 죽 먹기 일 테지만...",
-            simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: ".",
+            simtext: "",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "어째서인지 파이의 레시피가 잘 기억나지 않는다! 주인공은 과연 끝내 파이의 레시피를 기억해내어 우승을 거머쥘 수 있을까?",
-            simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "...",
+            simtext: "",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "..................",
+            simtext: "",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "싸해진 분위기 속에 고기파이가 식어버렸다...",
+            simtext: "",
+            pieimg:"/src/public/illustration/pie-ending/생고기 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            text: "",
+            simtext: "",
+            pieimg:"/src/public/illustration/pie-ending/생고기 파이.png",
+            tu:"/src/public/illustration/미사용/투명.png"
         }
     ];
 
@@ -51,25 +83,7 @@
 
 
 
-{#if (meatId == 5)}
-    <button on:click|stopPropagation={() => refresh(`/main_menu`)} class="button">
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
-    </button>
-    <div class="pie">
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이2`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이3`} src={stories[meatId - 1].pieimg} class="pie"/>
-    </div>
-    <div class="textbox">
-        <p class="textsim">
-            {stories[meatId - 1].simtext}
-        </p>
-        <p class="textmal">
-            {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
-        </p>
-        
-    </div>
-{:else if stories[meatId - 1]}
+{#if (meatId == 1)}
     <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </button>
@@ -85,7 +99,44 @@
         <p class="textmal">
             {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
         </p>
-        
+    </div>
+{:else if meatId == 8}
+    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
+        <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
+    </button>
+    <div>
+        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+    </div>
+    <div class="textbox">
+        <p class="simtext">
+            {stories[meatId - 1].simtext}
+        </p>
+        <p class="textmal">
+            {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
+        </p>
+    </div>
+{:else if stories[meatId - 1]}
+    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
+        <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
+    </button>
+    <div>
+        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+    </div>
+    <div class="simbox">
+        <img alt={`${meatId}번심사위원`} src={stories[meatId - 1].sim} class="sim"/>
+    </div>
+    <div class="piebox">
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+    </div>
+    <div class="textbox">
+        <p class="simtext">
+            {stories[meatId - 1].simtext}
+        </p>
+        <p class="textmal">
+            {@html stories[meatId - 1].text.replace(/\n/g, "<br>")}
+        </p>
     </div>
 {:else}
     존재하지 않는 페이지
@@ -110,13 +161,17 @@
         width: 100vw;
         height: 100vh;
 
+        background-color: rgba(0, 0, 0, 0);
+
         display: flex;
         align-items: center;
         justify-content: center;
 
         position: absolute;
-        z-index: 1;
+        z-index: 3;
     }
+
+
 
     .textbox {
         margin-left: 20%;
@@ -132,7 +187,7 @@
         align-items: center;
 
         position: absolute;
-        z-index: 2;
+        z-index: 3;
     }
 
     .textmal{
@@ -176,12 +231,39 @@
         
 
         position: absolute;
-        z-index: 2;
+        z-index: 3;
     }
 
     .pie{
         width: 16%;
         height: 25vh;
+    }
+
+    .simbox{
+        width: 100%;
+        height: 10vh;
+        margin-top: 45vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        z-index: 2;
+    }
+
+    .sim{
+        width: 35%;
+        height: 35vh;
+        margin-top: 20vh;
+
+        position: absolute;
+        z-index: 2;
+    }
+
+    .tu{
+        width: 100%;
+        height: 100vh;
     }
 
 
