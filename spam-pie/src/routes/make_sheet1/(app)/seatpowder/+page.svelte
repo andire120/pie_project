@@ -88,7 +88,7 @@
                     id = "margarine";
                 }
             }
-            window.location.href = (`/make_sheet2/${id}`);
+            window.location.href = (`/main_ingre/${id}`);
         }
     }
 
