@@ -12,7 +12,7 @@
 <img class="img" src={mainmenu} alt="메인메뉴">
 <div class="ab" style="font-size: x-large"><a href="/make_sheet1/seatpowder" style="color: red;">●게임시작</a>
     <br><a href="/howtoplay" style="color: red;">●게임방법</a>
-    <br><a href="/"style="color: red;">●레시피</a>
+    <br><a href="/storys/1"style="color: red;">●스토리 다시보기</a>
     <br><a href="/storyss/bad/bad1" style="color: red;">●포기하기</a>
 </div>
 
