@@ -65,7 +65,7 @@
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
             text: "",
-            textimg: "/src/public/illustration/미사용/검은사진.jpeg"
+            textimg: "/src/public/illustration/pie-ending/고기 파이 엔딩.png"
         }
     ];
 
@@ -106,9 +106,7 @@
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </div>
     <div class="textbox2">
-        <p class="textmal2">
-            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
-        </p>
+      <img alt={`${meatId}번글미지`} src={stories[meatId - 1].textimg} class="text2"/>
     </div>
 {:else if stories[meatId - 1]}
     <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
