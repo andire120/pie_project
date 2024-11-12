@@ -10,27 +10,32 @@
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "미트 파이가 정말 맛있네요.",
-            simtext: "심사위원2"
+            simtext: "심사위원1",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "어느날 기적적으로 가족들의 병을 치료할 수 있는 신약이 개발되지만, 이 약을 사기 위해 주인공은 막대한 자금이 필요했다.",
-            simtext: "심사위원2"
+            simtext: "심사위원2",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "평소처럼 야간근무를 끝내고 퇴근하던 어느 날. 주인공은 막대한 상금이 걸려있는 세계적인 요리대회의 인원 모집 공고를 보고. 상금을 얻어 약을 사고자 한다.",
-            simtext: "심사위원2"
+            simtext: "심사위원2",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "집안 대대로 내려져 오던 전설의 파이 레시피를 잘만 사용한다면, 우승 따윈 식은 죽 먹기 일 테지만...",
-            simtext: "심사위원2"
+            simtext: "심사위원2",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "어째서인지 파이의 레시피가 잘 기억나지 않는다! 주인공은 과연 끝내 파이의 레시피를 기억해내어 우승을 거머쥘 수 있을까?",
-            simtext: "심사위원2"
+            simtext: "심사위원2",
+            pieimg:"/src/public/element/pie/goodpie/meatpie.png"
         }
     ];
 
@@ -50,6 +55,11 @@
     <button on:click|stopPropagation={() => refresh(`/main_menu`)} class="button">
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </button>
+    <div class="pie">
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이2`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이3`} src={stories[meatId - 1].pieimg} class="pie"/>
+    </div>
     <div class="textbox">
         <p class="textsim">
             {stories[meatId - 1].simtext}
@@ -63,6 +73,11 @@
     <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </button>
+    <div class="piebox">
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+    </div>
     <div class="textbox">
         <p class="simtext">
             {stories[meatId - 1].simtext}
@@ -149,6 +164,24 @@
         font-family: "Jua", sans-serif;
 
         display: flex;
+    }
+
+    .piebox{
+        width: 100%;
+        height: 38vh;
+        margin-top: 62vh;
+
+        display: flex;
+        justify-content: center;
+        
+
+        position: absolute;
+        z-index: 2;
+    }
+
+    .pie{
+        width: 16%;
+        height: 25vh;
     }
 
 
