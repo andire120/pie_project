@@ -76,7 +76,7 @@
     .Button2{
     display: flex;
     position: absolute;
-    top: 85%; /* 예: 화면 중앙 */
+    top: 85%;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: space-around;
@@ -86,7 +86,7 @@
     .Button {
         display: flex;
     position: absolute;
-    top: 70%; /* 예: 화면 중앙 */
+    top: 70%;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: space-around;
