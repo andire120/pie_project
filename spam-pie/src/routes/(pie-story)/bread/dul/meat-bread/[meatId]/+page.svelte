@@ -105,6 +105,6 @@
         margin : 0;
         width: 15%;
         z-index: 1;
-        margin-top: 550px;
+        margin-top: 60vh;
     }
 </style>
