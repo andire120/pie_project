@@ -1,7 +1,7 @@
 <script >
 	import { goto } from "$app/navigation";
     import end from "/src/public/illustration/미사용/검은사진.jpeg"
-    import caption  from "/src/public/illustration/pie-ending/dul-bread-ending.png"
+    import caption  from "/src/public/illustration/pie-ending/normal-cookie-ending.png"
     
 
 </script>
