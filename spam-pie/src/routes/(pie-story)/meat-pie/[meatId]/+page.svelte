@@ -167,11 +167,9 @@
     }
 
     .textbox2{
-        margin: 0;
-        padding: 0;
         
-        width: 90vw;
-        height: 90vh;
+        width: 100%;
+        height: 100vh;
 
         display: flex;
         align-items: center;
@@ -183,11 +181,8 @@
 
 
     .button2{
-        margin: 0;
-        padding: 0;
-
         width: 100%;
-        height: 90vh;
+        height: 100vh;
         
         pointer-events : none;
 
@@ -288,7 +283,9 @@
 
     .tu{
         width: 100%;
-        height: 100vh;
+        height: 90vh;
+
+        
     }
 
 
