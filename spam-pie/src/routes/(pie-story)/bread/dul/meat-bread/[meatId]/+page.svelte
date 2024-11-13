@@ -6,7 +6,7 @@
     let count = 1;
 
     import story1 from "/src/public/illustration/미사용/심사배경.png";
-    import pie from "/src/public/element/bread/dul-bread/blueberry-bread.png";
+    import pie from "/src/public/element/bread/dul-bread/meat-bread.png";
 
 
 
