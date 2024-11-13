@@ -35,8 +35,6 @@
         else {
             window.location.href = ("make_sheet2");
         }
-        
-
     }
     
 </script>
