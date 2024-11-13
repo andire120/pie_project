@@ -66,7 +66,6 @@
             img: "/src/public/illustration/미사용/검은사진.jpeg",
             text: "",
             textimg: "/src/public/illustration/pie-ending/고기 파이 엔딩.png",
-            tu:"/src/public/illustration/미사용/투명.png"
         }
     ];
 
@@ -100,8 +99,8 @@
         </p>
     </div>
 {:else if meatId == 8}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button2">
-        <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
+    <button on:click={() => refresh(`/main_menu`)} class="bot">
+        <div class="botten">돌아가기</div>
     </button>
     <div>
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
@@ -157,6 +156,7 @@
         height: 100vh;
 
         background-color: rgba(0, 0, 0, 0);
+        border: none;
 
         display: flex;
         align-items: center;
@@ -180,17 +180,6 @@
     }
 
 
-    .button2{
-        width: 100%;
-        height: 100vh;
-        
-        pointer-events : none;
-
-        background-color: black;
-        position: absolute;
-        z-index: 4;
-
-    }
 
 
     .textbox {
@@ -284,8 +273,46 @@
     .tu{
         width: 100%;
         height: 90vh;
+    }
 
-        
+    .botten {
+        display: flex;
+        position: absolute;
+        background-color: #FFD400;
+
+        font-size: 6vb;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.8;
+
+        text-align: center;
+
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        width: 13vw;
+        height: 11vh;
+        z-index: 5;
+
+        margin-top: 10vh;
+        margin-left: 10vw;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .botten:hover {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
+
+    .bot {
+        position: absolute;
+
+        top: 70vh;
+        margin-left: 72%;
     }
 
 
