@@ -51,6 +51,8 @@
     margin-top: -50vh;
     cursor: default;
     color: white;
+    width: 100vw;
+    height: 100px;
     }
 
     .botten {
