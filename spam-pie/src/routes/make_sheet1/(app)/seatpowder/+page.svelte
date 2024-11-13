@@ -89,7 +89,7 @@
                     id = "parkmargarine";
                 }
             }
-            window.location.href = (`/main_ingre?id=${id}`);
+            window.location.href = (`/make_sheet2?id=${id}`);
         }
     }
 
