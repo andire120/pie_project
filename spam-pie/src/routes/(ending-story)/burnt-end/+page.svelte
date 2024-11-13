@@ -14,7 +14,7 @@
 </div>
 
 <div class="caption" style="cursor:pointer" >
-    석탄엔딩
+    석탄 엔딩
 </div>
 
     <botten class="bot" on:click={() => goto('/main_menu')}>

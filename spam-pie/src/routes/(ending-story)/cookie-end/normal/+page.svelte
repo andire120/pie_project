@@ -1,7 +1,6 @@
 <script >
 	import { goto } from "$app/navigation";
     import end from "/src/public/illustration/미사용/검은사진.jpeg"
-    import caption  from "/src/public/illustration/pie-ending/normal-cookie-ending.png"
     
 
 </script>
@@ -14,8 +13,8 @@
     <botten class="end" style="cursor:pointer" ><img class="end" src={end} alt="엔딩"></botten>
 </div>
 
-<div class="caption" style="cursor:pointer;" >
-    <img src={caption} style="cursor: pointer;" alt="자막">
+<div class="caption" style="cursor:pointer" >
+    쿠키 엔딩
 </div>
 
     <botten class="bot" on:click={() => goto('/main_menu')}>
@@ -51,6 +50,12 @@
     overflow: hidden;
     margin-top: -50vh;
     cursor: default;
+    color: white;
+    width: 100vw;
+    height: 100px;
+    font-family: "Jua", sans-serif;
+    font-size: 100px;
+
     }
 
     .botten {
