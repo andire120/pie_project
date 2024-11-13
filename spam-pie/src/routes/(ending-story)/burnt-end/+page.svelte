@@ -13,7 +13,7 @@
     <botten class="end" style="cursor:pointer" ><img class="end" src={end} alt="엔딩"></botten>
 </div>
 
-<div class="caption" style="font-size: xx-large;" >
+<div class="caption" style="cursor:pointer" >
     석탄엔딩
 </div>
 
@@ -53,6 +53,9 @@
     color: white;
     width: 100vw;
     height: 100px;
+    font-family: "Jua", sans-serif;
+    font-size: 100px;
+
     }
 
     .botten {
