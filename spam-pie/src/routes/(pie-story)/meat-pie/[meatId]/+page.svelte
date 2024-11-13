@@ -64,8 +64,7 @@
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
-            text: "",
-            textimg: "/src/public/illustration/pie-ending/고기 파이 엔딩.png",
+            text: "고기 파이 엔딩"
         }
     ];
 
@@ -106,7 +105,9 @@
         <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </div>
     <div class="textbox2">
-      <img alt={`${meatId}번글미지`} src={stories[meatId - 1].textimg} class="text2"/>
+        <div class="text2">
+            {stories[meatId - 1].text}
+        </div>  
     </div>
 {:else if stories[meatId - 1]}
     <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
@@ -177,6 +178,12 @@
 
         position: absolute;
         z-index: 4;
+    }
+
+    .text2{
+        color: white;
+        font-size: 15vh;
+        font-family: "Jua", sans-serif;
     }
 
 
