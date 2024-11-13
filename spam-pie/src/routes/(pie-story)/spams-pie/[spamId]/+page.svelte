@@ -1,74 +1,147 @@
-<script>
-	import { page } from '$app/stores';
+<script lang="ts">
+    import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+    
+    let meatId: number;
 
-	const storyId = $page.params.storyId;
-    let count = 1;
+    $: meatId = +$page.params.meatId;
 
-    import story1 from "/src/public/illustration/game-story/1.png";
-    import story2 from "/src/public/illustration/game-story/2.png";
-    import story3 from "/src/public/illustration/game-story/3.png";
-    import story4 from "/src/public/illustration/game-story/4.png";
-    import story5 from "/src/public/illustration/game-story/6.png";
-
-
-
-    function handleClick(e) {
-        count++;
-        if (count == 6) {
-            goto("/main_menu");
+    const stories = [
+        {
+            img: "/src/public/illustration/미사용/심사위원배경.png",
+            text: "저 파이가 파랑색이라는데에 내 손목을 걸지.",
+            simtext: "심사위원1",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "아니?, 저 파이가 보라색이라는데에 내 말목을 걸겠어.",
+            simtext: "심사위원3",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "안타깝지만, 둘다 틀렸어요.",
+            simtext: "심사위원2",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "이 파이는 #353B5C색 이에요!!!!!!",
+            simtext: "심사위원2",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "...",
+            simtext: "",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "..................",
+            simtext: "",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            text: "싸해진 분위기 속에 고기파이가 식어버렸다...",
+            simtext: "",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            text: "고기 파이 엔딩"
         }
-        else {
-            goto(`/storys/${count}`);
-        }
-        console.log(count);
-        console.log(e);
-    }
+    ];
+
+    const refresh = (url: string) => {
+        goto(url);
+    };
 </script>
 
-{#if count == 1}
-    <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="1번스토리" src={story1} class="story"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+
+
+{#if (meatId == 1)}
+    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
+        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </button>
-    <div class="textbox">
-        치료제가 없는 불치병에 몸서리를 치는 주인공의 가족들.<br>병원비를 지불하는 주인공의 지갑은 점점<br>텅텅 비어가는데...
+    <div class="piebox">
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
     </div>
-{:else if count == 2}
-    <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="2번스토리" src={story2} class="story"/>
+    <div class="textbox">
+        <p class="simtext">
+            {stories[meatId - 1].simtext}
+        </p>
+        <p class="textmal">
+            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
+        </p>
+    </div>
+{:else if meatId == 8}
+    <button on:click={() => refresh(`/main_menu`)} class="bot">
+        <div class="botten">돌아가기</div>
     </button>
-    <div class="textbox">
-        어느날 기적적으로 가족들의 병을 치료할 수 있는<br>신약이 개발되지만,<br>이 약을 사기 위해 주인공은 막대한 자금이 필요했다.
+    <div>
+        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </div>
-{:else if count == 3}
-    <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="3번스토리" src={story3} class="story"/>
+    <div class="textbox2">
+        <div class="text2">
+            {stories[meatId - 1].text}
+        </div>  
+    </div>
+{:else if stories[meatId - 1]}
+    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
+        <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
     </button>
-    <div class="textbox">
-        평소처럼 야간근무를 끝내고 퇴근하던 어느 날.<br>주인공은 막대한 상금이 걸려있는 세계적인 요리대회의<br>인원 모집 공고를 보고. 상금을 얻어 약을 사고자 한다.
+    <div>
+        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
     </div>
-{:else if count == 4}
-    <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="4번스토리" src={story4} class="story"/>
-    </button>
-    <div class="textbox">
-    집안 대대로 내려져 오던 전설의 파이 레시피를 잘만<br>사용한다면, 우승 따윈 식은 죽 먹기 일 테지만...
+    <div class="simbox">
+        <img alt={`${meatId}번심사위원`} src={stories[meatId - 1].sim} class="sim"/>
     </div>
-{:else if count == 5}
-    <button on:click|stopPropagation={e => handleClick('button')} class="button">
-        <img alt="5번스토리" src={story5} class="story"/>
-    </button>
-    <div class="textbox">
-        어째서인지 파이의 레시피가 잘 기억나지 않는다!<br>주인공은 과연 끝내 파이의 레시피를 기억해내어<br>우승을 거머쥘 수 있을까?
+    <div class="piebox">
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
     </div>
+    <div class="textbox">
+        <p class="simtext">
+            {stories[meatId - 1].simtext}
+        </p>
+        <p class="textmal">
+            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
+        </p>
+    </div>
+{:else}
+    존재하지 않는 페이지
 {/if}
 
 <style>
-    .story{
+
+    .story {
         margin: 0;
         padding: 0;
 
-        padding: 0;
         width: 100%;
         height: 100%;
 
@@ -76,45 +149,178 @@
         z-index: 1;
     }
 
-    .button{
+    .button {
         margin: 0;
         padding: 0;
 
         width: 100vw;
         height: 100vh;
 
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+
         display: flex;
-        align-item: center;
+        align-items: center;
         justify-content: center;
 
         position: absolute;
-        z-index: 1;
-
+        z-index: 3;
     }
-    .textbox{
+
+    .textbox2{
+        
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        z-index: 4;
+    }
+
+    .text2{
+        color: white;
+        font-size: 15vh;
+        font-family: "Jua", sans-serif;
+    }
+
+
+
+
+    .textbox {
         margin-left: 20%;
-        margin-top: 75vh;
+        margin-top: 80vh;
         padding: 5vh;
 
         width: 60%;
-        height: 15vh;
+        height: 9vh;
 
         background-color: black;
-        opacity: 0.7;
 
         display: flex;
+        align-items: center;
 
-        display: table-cell;
-        vertical-align: middle;
+        position: absolute;
+        z-index: 3;
+    }
+
+    .textmal{
+        width: 85%;
+        height: 9vh;
+        margin-right: 10%;
 
         color: white;
         text-align: center;
-        justify-content: center;
         font-size: x-large;
+        overflow: hidden;
+        font-family: "Jua", sans-serif;
         
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        
+    }
+    .simtext{
+        width: 15%;
+        height: 9vh;
+        margin-bottom: 7%;
+
+        color: white;
+        text-align: center;
+        font-size: x-large;
+        overflow: hidden;
+        font-family: "Jua", sans-serif;
+
+        display: flex;
+    }
+
+    .piebox{
+        width: 100%;
+        height: 38vh;
+        margin-top: 62vh;
+
+        display: flex;
+        justify-content: center;
+        
+
+        position: absolute;
+        z-index: 3;
+    }
+
+    .pie{
+        width: 16%;
+        height: 25vh;
+    }
+
+    .simbox{
+        width: 100%;
+        height: 10vh;
+        margin-top: 45vh;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         position: absolute;
         z-index: 2;
     }
+
+    .sim{
+        width: 35%;
+        height: 35vh;
+        margin-top: 20vh;
+
+        position: absolute;
+        z-index: 2;
+    }
+
+    .tu{
+        width: 100%;
+        height: 90vh;
+    }
+
+    .botten {
+        display: flex;
+        position: absolute;
+        background-color: #FFD400;
+
+        font-size: 6vb;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.8;
+
+        text-align: center;
+
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        width: 13vw;
+        height: 11vh;
+        z-index: 5;
+
+        margin-top: 10vh;
+        margin-left: 10vw;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .botten:hover {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
+
+    .bot {
+        position: absolute;
+
+        top: 70vh;
+        margin-left: 72%;
+    }
+
 
 </style>

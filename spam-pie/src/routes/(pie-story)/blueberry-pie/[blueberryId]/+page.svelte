@@ -2,63 +2,63 @@
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
     
-    let meatId: number;
+    let blueberryId: number;
 
-    $: meatId = +$page.params.meatId;
+    $: blueberryId = +$page.params.blueberryId;
 
     const stories = [
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "미트 파이가 정말 맛있네요.",
+            text: "저 파이가 파랑색이라는데에 내 손목을 걸지.",
             simtext: "심사위원1",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: "미투~!",
+            img: "/src/public/illustration/미사용/심사위원배경.png",
+            text: "아니?, 저 파이가 보라색이라는데에 내 발목을 걸겠어.",
+            simtext: "심사위원3",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경.png",
+            text: "안타깝지만, 둘다 틀렸어요.",
             simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: "심사위원2는 굿바이 선언 포즈를 취했다...",
+            img: "/src/public/illustration/미사용/심사위원배경.png",
+            text: "이 파이는 #353B5C색 이에요!!!!!!",
+            simtext: "심사위원2",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/2.png",
+            tu:"/src/public/illustration/미사용/투명.png"
+        },
+        {
+            img: "/src/public/illustration/미사용/심사위원배경.png",
+            text: "끼아아아ㅏ아ㅏㅏㅏ-",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/1.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: ".",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: "...",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "..................",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            sim: "/src/public/illustration/미사용/1.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "싸해진 분위기 속에 고기파이가 식어버렸다...",
             simtext: "",
-            pieimg:"/src/public/illustration/pie-ending/생고기 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
@@ -80,56 +80,56 @@
 
 
 
-{#if (meatId == 1)}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+{#if (blueberryId == 5)}
+    <button on:click|stopPropagation={() => refresh(`/blueberry-pie/${blueberryId + 1}`)} class="button">
+        <img alt={`${blueberryId}번스토리`} src={stories[blueberryId - 1].img} class="story"/>
     </button>
     <div class="piebox">
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
+        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
+        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[meatId - 1].simtext}
+            {stories[blueberryId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
+            {stories[blueberryId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
-{:else if meatId == 8}
+    <div class="simbox">
+        <img alt={`${blueberryId}번심사위원`} src={stories[blueberryId - 1].sim} class="sim"/>
+    </div>
+{:else if blueberryId == 8}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
         <div class="botten">돌아가기</div>
     </button>
     <div>
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+        <img alt={`${blueberryId}번스토리`} src={stories[blueberryId - 1].img} class="story"/>
     </div>
     <div class="textbox2">
         <div class="text2">
-            {stories[meatId - 1].text}
+            {stories[blueberryId - 1].text}
         </div>  
     </div>
-{:else if stories[meatId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
-        <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
+{:else if stories[blueberryId - 1]}
+    <button on:click|stopPropagation={() => refresh(`/blueberry-pie/${blueberryId + 1}`)} class="button">
+        <img alt={`${blueberryId}번이미지`} src={stories[blueberryId - 1].tu} class="tu"/>
     </button>
     <div>
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
-    </div>
-    <div class="simbox">
-        <img alt={`${meatId}번심사위원`} src={stories[meatId - 1].sim} class="sim"/>
+        <img alt={`${blueberryId}번스토리`} src={stories[blueberryId - 1].img} class="story"/>
     </div>
     <div class="piebox">
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
+        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
+        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[meatId - 1].simtext}
+            {stories[blueberryId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
+            {stories[blueberryId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
 {:else}
