@@ -6,7 +6,7 @@
     let count = 1;
 
     import story1 from "/src/public/illustration/미사용/심사배경.png";
-    import pie from "/src/public/element/bread/석탄.png";
+    import pie from "/src/public/element/bread/normal-bread/herring-bread.png";
 
 
 
@@ -15,7 +15,7 @@
     function handleClick(e) {
         count++;
         if (count == 2) {
-            goto("/burnt-end");
+            goto("/bread-end/normal");
         }
         console.log(count);
         console.log(e);
@@ -32,7 +32,7 @@
         <img alt="1번스토리" src={story1} class="story"/>
     </button>
     <div class="textbox" style="font-size: xx-large;">
-        이봐, 지금 이걸 지금 먹으라고 주는건가?<br>넌 탈락이야.
+        이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라.<br>넌 탈락이야.
     </div>
     
    
@@ -40,9 +40,9 @@
 {/if} 
 
 <div class="pies">
-<img src={pie} alt="apple" class="pie1">
-<img src={pie} alt="apple" class="pie2">
-<img src={pie} alt="apple" class="pie3">
+<img src={pie} alt="정어리빵" class="pie1">
+<img src={pie} alt="정어리빵" class="pie2">
+<img src={pie} alt="정어리빵" class="pie3">
 </div>
 
 
@@ -114,6 +114,6 @@
         margin : 0;
         width: 15%;
         z-index: 1;
-        margin-top: 61vh;
+        margin-top: 60vh;
     }
 </style>
