@@ -6,7 +6,7 @@
     let count = 1;
 
     import story1 from "/src/public/illustration/미사용/심사배경.png";
-    import pie from "/src/public/element/bread/normal-bread/blueberry-bread.png";
+    import pie from "/src/public/element/bread/normal-bread/apple-bread.png";
 
 
 
@@ -40,9 +40,9 @@
 {/if} 
 
 <div class="pies">
-<img src={pie} alt="블루베리빵" class="pie1">
-<img src={pie} alt="블루베리빵" class="pie2">
-<img src={pie} alt="블루베리빵" class="pie3">
+<img src={pie} alt="사과빵" class="pie1">
+<img src={pie} alt="사과빵" class="pie2">
+<img src={pie} alt="사과빵" class="pie3">
 </div>
 
 

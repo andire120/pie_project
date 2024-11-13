@@ -10,6 +10,8 @@
 
 
 
+    
+
     function handleClick(e) {
         count++;
         if (count == 2) {
@@ -20,11 +22,16 @@
     }
 </script>
 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
 {#if count == 1}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
         <img alt="1번스토리" src={story1} class="story"/>
     </button>
-    <div class="textbox">
+    <div class="textbox" style="font-size: xx-large;">
         이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라.<br>게다가,덜 익었잖아? 넌 탈락이야.
     </div>
     
@@ -33,9 +40,9 @@
 {/if} 
 
 <div class="pies">
-<img src={pie} alt="블루베리빵" class="pie1">
-<img src={pie} alt="블루베리빵" class="pie2">
-<img src={pie} alt="블루베리빵" class="pie3">
+<img src={pie} alt="고기빵" class="pie1">
+<img src={pie} alt="고기빵" class="pie2">
+<img src={pie} alt="고기빵" class="pie3">
 </div>
 
 
@@ -91,6 +98,8 @@
 
         position: absolute;
         z-index: 2;
+
+        font-family: "Jua", sans-serif;
     }
 
 

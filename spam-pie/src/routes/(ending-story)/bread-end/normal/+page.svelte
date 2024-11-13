@@ -1,7 +1,7 @@
 <script >
 	import { goto } from "$app/navigation";
     import end from "/src/public/illustration/미사용/검은사진.jpeg"
-    import caption  from "/src/public/illustration/pie-ending/burn-bread-ending.png"
+    import caption  from "/src/public/illustration/pie-ending/normal-bread-ending.png"
     
 
 </script>
@@ -49,7 +49,7 @@
     opacity: 0.7;
     margin: 0 auto;
     overflow: hidden;
-    margin-top: -390px;
+    margin-top: -50vh;
     cursor: default;
     }
 

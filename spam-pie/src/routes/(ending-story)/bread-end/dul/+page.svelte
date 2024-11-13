@@ -49,7 +49,7 @@
     opacity: 0.7;
     margin: 0 auto;
     overflow: hidden;
-    margin-top: -390px;
+    margin-top: -50vh;
     cursor: default;
     }
 

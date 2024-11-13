@@ -6,9 +6,11 @@
     let count = 1;
 
     import story1 from "/src/public/illustration/미사용/심사배경.png";
-    import pie from "/src/public/element/bread/dul-bread/blueberry-bread.png";
+    import pie from "/src/public/element/bread/dul-bread/blue-bread.png";
 
 
+
+    
 
     function handleClick(e) {
         count++;
@@ -20,11 +22,16 @@
     }
 </script>
 
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
 {#if count == 1}
     <button on:click|stopPropagation={e => handleClick('button')} class="button">
         <img alt="1번스토리" src={story1} class="story"/>
     </button>
-    <div class="textbox">
+    <div class="textbox" style="font-size: xx-large;">
         이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라.<br>게다가,덜 익었잖아? 넌 탈락이야.
     </div>
     
@@ -91,6 +98,8 @@
 
         position: absolute;
         z-index: 2;
+
+        font-family: "Jua", sans-serif;
     }
 
 
@@ -106,5 +115,5 @@
         width: 15%;
         z-index: 1;
         margin-top: 60vh;
-            }
+    }
 </style>
