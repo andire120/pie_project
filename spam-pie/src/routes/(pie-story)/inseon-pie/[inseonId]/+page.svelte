@@ -54,7 +54,7 @@
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
-            text: "호박 파이 엔딩"
+            text: "정어리 파이 엔딩"
         }
     ];
 
