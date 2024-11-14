@@ -10,12 +10,21 @@
   const danger = "/src/public/element/otherthing/otherelement/choseoven.png";
 
   let selectedtime = '';
+  let showWarning = false;
 
   function select(timeId: string) {
     console.log("Selected time: ", timeId);
     selectedtime = timeId;
   }
-  
+
+  function showDan() {
+    if (!selectedtime) {
+      showWarning = true;
+      setTimeout(() => {
+        showWarning = false;
+      }, 3000);
+    }
+  }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,9 +36,10 @@
     <img src={background} alt="배경" />
   </div>
 
-  <div class="n">
+  
+  <button class="n" onclick={showDan}>
     <img src={next} alt="다음" />
-  </div>
+  </button>
 
   <div class="c">
     <img src={chep} alt="단계" />
@@ -42,10 +52,11 @@
     <button id="eig" onclick={() => select('eig')} class:active={selectedtime === 'eig'} class="eig" type="button">8:00</button>
   </div>
 
-  <button class="Next">다음</button>
-  <div class="dan">
+  
+  <div class="dan" class:show={showWarning}>
     <img src={danger} alt="경고">
   </div>
+
   <div class="o">
     <img src={oven} alt="오븐" />
   </div>
@@ -108,7 +119,6 @@
     width: 25vh;
     height: 10vh;
     background-color: #FFD400;
-
     font-size: 55px;
     font-family: "Jua", sans-serif;
     font-style: normal;
@@ -120,7 +130,6 @@
     text-shadow: 5px 2px 3px #FDFECF;
     border: none;
     z-index: 3;
-
     background-image: linear-gradient(
       to top left,
       rgba(0, 0, 0, 0.2),
@@ -135,7 +144,6 @@
     border: 4px solid yellow;
   }
 
-  /* active 클래스가 적용될 스타일 */
   .active {
     background-color: #FDFECF !important;
     border: 4px solid yellow !important;
@@ -143,9 +151,11 @@
 
   .n {
     position: absolute;
-    right: 7%;
+    right: 4%;
     top: 65%;
     transform: translateY(-50%);
+    background-color: #B071CD;
+    border: none;
   }
 
   .o {
@@ -162,20 +172,17 @@
     top: 1%;
   }
 
-  .Next {
-    width: 2%;
-    height: 4%;
-    position: absolute;
-    right: 8%;
-    top: 64.5%;
-    transform: translateY(-50%);
-  }
-
   .dan {
     position: absolute;
     top: 20%;
     left: 32.5%;
-    z-index: 10000;
+    z-index: -1;
     cursor: pointer;
+    transition: z-index 0.5s, opacity 0.5s;
+  }
+
+  .show {
+    z-index: 2000;
+    opacity: 1;
   }
 </style>
