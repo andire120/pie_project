@@ -1,5 +1,7 @@
 <script>
 // @ts-nocheck
+    import { page } from '$app/stores';
+    import { onMount } from 'svelte';   
     const background1 = "/src/public/element/otherthing/otherelement/background.png";
     const next_button = "/src/public/element/otherthing/otherelement/nextbotten.png";
     const bowl = "/src/public/element/otherthing/otherelement/what.png";
@@ -19,14 +21,39 @@
     };
 
     let selectedIngredient = null;
-    
+    let selectedIngredient2 = null;
+    let id;
+    let id_liquid;
+    let id_main;
     function updateIngredientImage(ingredient) {
         selectedIngredient = ingredient;
         document.querySelector('.bowl').src = ingred[ingredient];
     }
 
 
-    
+        onMount(() => {
+    const queryParams = new URLSearchParams($page.url.search);
+    id = queryParams.get('id');
+    id_liquid = queryParams.get('id_liquid');
+    if (id === 'parkmargarine' && id_liquid === 'water') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder3_maga.png";
+        }
+    else if (id === 'parkbutter') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder3_butter.png";
+        }
+    else if (id === 'strongbutter') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder1_butter.png";
+        }
+    else if (id === 'strongmargarine') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder1_maga.png";
+        }
+    else if (id === 'middlebutter') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder2_butter.png";
+        }
+    else if (id === 'middlemargarine') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder2_maga.png";
+        }
+    });
     
 
     function go()  {
@@ -37,10 +64,29 @@
             }, 1500);
         }
         else {
-            window.location.href = ("make_sheet2");
+            window.location.href = (`make_sheet2/ingredient/main_ingre?id=${id}&id_liquid=${id_liquid}&main_ingredient=${id_main}`);
         }
     }
     
+    function send() {
+    if (selectedIngredient != null) {
+        if (selectedIngredient === 'apple') {
+            id_main = "apple";
+        } else if (selectedIngredient === 'inseon') {
+            id_main = "inseon";
+        } else if (selectedIngredient === 'berry') {
+            id_main = "mint";
+        } else if (selectedIngredient === 'bod') {
+            id_main = "vodka";
+        } else if (selectedIngredient === 'juice') {
+            id_main = "juice";
+        } else if (selectedIngredient === 'yorg') {
+            id_main = 'yorg';
+        }
+    }
+}
+
+
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

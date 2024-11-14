@@ -57,7 +57,7 @@ function updateIngredientImage(ingredient) {
     selectedliquid = ingredient;
     document.querySelector('.bowl').src = ingred[ingredient];
 }
-
+//id 보내기 생성
 function send() {
     if (selectedliquid != null) {
         if (selectedliquid === 'ion') {
@@ -137,11 +137,11 @@ function go() {
 
     .dot{
         position: absolute;
-        top: 30vh;
-        left: 100vh;
+        top: 31vh;
+        left: 98vh;
         transform: translate(-50%, -50%);
-        width: 50%;
-        height: 85%;
+        width: 60%;
+        height: 90%;
         z-index: 5;
     }
 
@@ -197,8 +197,8 @@ function go() {
         position: absolute;
         width: 100vh;
         height: 90vh;
-        top: -15vh;
-        left: 52vh;
+        top: -14.5vh;
+        left: 47.5vh;
         z-index: 6;
     }
     .pan{
