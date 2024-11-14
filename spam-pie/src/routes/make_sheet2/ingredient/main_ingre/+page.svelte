@@ -29,55 +29,26 @@
         selectedIngredient = ingredient;
         document.querySelector('.bowl').src = ingred[ingredient];
     }
-
-
+//id를 받아옵시다. 순서: water, milk, juice, 
         onMount(() => {
     const queryParams = new URLSearchParams($page.url.search);
     id = queryParams.get('id');
     id_liquid = queryParams.get('id_liquid');
-    if (id === 'parkmargarine' && id_liquid === 'water') {
-        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder3_maga.png";
-        }
-    else if (id === 'parkbutter') {
-        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder3_butter.png";
-        }
-    else if (id === 'strongbutter') {
-        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder1_butter.png";
-        }
-    else if (id === 'strongmargarine') {
-        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder1_maga.png";
-        }
-    else if (id === 'middlebutter') {
-        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder2_butter.png";
-        }
-    else if (id === 'middlemargarine') {
-        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder2_maga.png";
-        }
     });
+
     
 
-    function go()  {
-        if(selectedIngredient == null){
-            document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/waring_main.png";
-            setTimeout(function(){
-                document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
-            }, 1500);
-        }
-        else {
-            window.location.href = (`make_sheet2/ingredient/main_ingre?id=${id}&id_liquid=${id_liquid}&main_ingredient=${id_main}`);
-        }
-    }
     
-    function send() {
+function send() {
     if (selectedIngredient != null) {
         if (selectedIngredient === 'apple') {
             id_main = "apple";
         } else if (selectedIngredient === 'inseon') {
             id_main = "inseon";
         } else if (selectedIngredient === 'berry') {
-            id_main = "mint";
-        } else if (selectedIngredient === 'bod') {
-            id_main = "vodka";
+            id_main = "blueberry";
+        } else if (selectedIngredient === 'mint') {
+            id_main = "mintchoco";
         } else if (selectedIngredient === 'juice') {
             id_main = "juice";
         } else if (selectedIngredient === 'yorg') {
@@ -86,7 +57,19 @@
     }
 }
 
+    function go()  {
+        send();
 
+        if(selectedIngredient == null){
+            document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/waring_main.png";
+            setTimeout(function(){
+                document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
+            }, 1500);
+        }
+        else {
+            window.location.href = (`/oven?id=${id}?main_ingredient=${id_main}`);
+        }
+    }
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -141,8 +124,6 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: auto;
-        height: auto;
         z-index: 5;
     }
 
@@ -164,7 +145,7 @@
     transform: translate(-50%, -50%);
     justify-content: space-around;
     gap: 2vh;
-    z-index: 3; 
+    z-index: 5; 
     }
     .bugton {
         position: absolute;
