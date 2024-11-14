@@ -57,7 +57,7 @@ function updateIngredientImage(ingredient) {
     selectedliquid = ingredient;
     document.querySelector('.bowl').src = ingred[ingredient];
 }
-
+//id 보내기 생성
 function send() {
     if (selectedliquid != null) {
         if (selectedliquid === 'ion') {
