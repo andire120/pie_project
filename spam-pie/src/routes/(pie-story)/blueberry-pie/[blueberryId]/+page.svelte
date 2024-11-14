@@ -19,7 +19,6 @@
             text: "아니?, 저 파이가 보라색이라는데에 내 발목을 걸겠어.",
             simtext: "심사위원2",
             pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
@@ -27,7 +26,6 @@
             text: "안타깝지만, 둘다 틀렸어요.",
             simtext: "심사위원3",
             pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
@@ -35,23 +33,21 @@
             text: "이 파이는 #353B5C색 이에요!!!!!!",
             simtext: "심사위원3",
             pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: "/src/public/illustration/미사용/심사배경.png",
             text: "꺄아아아ㅏ아ㅏㅏㅏ-",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            simtext: "심사위원1, 심사위원2",
+            pieimg:"/src/public/illustration/pie-ending/날라가버린 블루베리 파이.png",
             sim: "/src/public/illustration/미사용/1.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: "/src/public/illustration/미사용/심사배경.png",
             text: "파이가 날아가 엎어져버렸다...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
+            sim: "/src/public/illustration/미사용/1.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
@@ -79,10 +75,8 @@
     <div>
         <img alt={`${blueberryId}번스토리`} src={stories[blueberryId - 1].img} class="story"/>
     </div>
-    <div class="piebox">
-        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
-        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
-        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
+    <div class="piebox2">
+        <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie2"/>
     </div>
     <div class="textbox">
         <p class="simtext">
@@ -95,7 +89,25 @@
     <div class="simbox">
         <img alt={`${blueberryId}번심사위원`} src={stories[blueberryId - 1].sim} class="sim"/>
     </div>
-{:else if blueberryId == 8}
+{:else if blueberryId == 6}
+    <button on:click|stopPropagation={() => refresh(`/blueberry-pie/${blueberryId + 1}`)} class="button">
+        <img alt={`${blueberryId}번이미지`} src={stories[blueberryId - 1].tu} class="tu"/>
+    </button>
+    <div>
+        <img alt={`${blueberryId}번스토리`} src={stories[blueberryId - 1].img} class="story"/>
+    </div>
+    <div class="textbox">
+        <p class="simtext">
+            {stories[blueberryId - 1].simtext}
+        </p>
+        <p class="textmal">
+            {stories[blueberryId - 1].text.replace(/\n/g, "<br>")}
+        </p>
+    </div>
+    <div class="simbox">
+        <img alt={`${blueberryId}번심사위원`} src={stories[blueberryId - 1].sim} class="sim"/>
+    </div>
+{:else if blueberryId == 7}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
         <div class="botten">돌아가기</div>
     </button>
@@ -204,7 +216,7 @@
     .textmal{
         width: 85%;
         height: 9vh;
-        margin-right: 10%;
+        margin-right: 20%;
 
         color: white;
         text-align: center;
@@ -219,7 +231,7 @@
         
     }
     .simtext{
-        width: 15%;
+        width: 40%;
         height: 9vh;
         margin-bottom: 7%;
 
@@ -232,6 +244,25 @@
         display: flex;
     }
 
+    .piebox2{
+        width: 100%;
+        height: 70vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        position: absolute;
+        z-index: 2;
+    }
+
+    .pie2{
+        width: 25%;
+        height: 35vh;
+        margin-left: 10%;
+    }
+
     .piebox{
         width: 100%;
         height: 38vh;
@@ -242,7 +273,7 @@
         
 
         position: absolute;
-        z-index: 3;
+        z-index: 2;
     }
 
     .pie{
@@ -252,7 +283,7 @@
 
     .simbox{
         width: 100%;
-        height: 10vh;
+        height: 12vh;
         margin-top: 45vh;
         
         display: flex;
@@ -264,8 +295,8 @@
     }
 
     .sim{
-        width: 35%;
-        height: 35vh;
+        width: 60%;
+        height: 60vh;
         margin-top: 20vh;
 
         position: absolute;
