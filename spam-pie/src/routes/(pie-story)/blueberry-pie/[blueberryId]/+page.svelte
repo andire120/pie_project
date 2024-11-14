@@ -17,7 +17,7 @@
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "아니?, 저 파이가 보라색이라는데에 내 발목을 걸겠어.",
-            simtext: "심사위원3",
+            simtext: "심사위원2",
             pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
@@ -25,7 +25,7 @@
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "안타깝지만, 둘다 틀렸어요.",
-            simtext: "심사위원2",
+            simtext: "심사위원3",
             pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
@@ -33,14 +33,14 @@
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "이 파이는 #353B5C색 이에요!!!!!!",
-            simtext: "심사위원2",
+            simtext: "심사위원3",
             pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "끼아아아ㅏ아ㅏㅏㅏ-",
+            text: "꺄아아아ㅏ아ㅏㅏㅏ-",
             simtext: "",
             pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             sim: "/src/public/illustration/미사용/1.png",
@@ -48,15 +48,7 @@
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "..................",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
-            sim: "/src/public/illustration/미사용/1.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "싸해진 분위기 속에 고기파이가 식어버렸다...",
+            text: "파이가 날아가 엎어져버렸다...",
             simtext: "",
             pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
@@ -64,7 +56,7 @@
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
-            text: "고기 파이 엔딩"
+            text: "블루베리 파이 엔딩"
         }
     ];
 
@@ -82,8 +74,11 @@
 
 {#if (blueberryId == 5)}
     <button on:click|stopPropagation={() => refresh(`/blueberry-pie/${blueberryId + 1}`)} class="button">
-        <img alt={`${blueberryId}번스토리`} src={stories[blueberryId - 1].img} class="story"/>
+        <img alt={`${blueberryId}번이미지`} src={stories[blueberryId - 1].tu} class="tu"/>
     </button>
+    <div>
+        <img alt={`${blueberryId}번스토리`} src={stories[blueberryId - 1].img} class="story"/>
+    </div>
     <div class="piebox">
         <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
         <img alt={`${blueberryId}파이`} src={stories[blueberryId - 1].pieimg} class="pie"/>
@@ -164,7 +159,7 @@
         justify-content: center;
 
         position: absolute;
-        z-index: 3;
+        z-index: 4;
     }
 
     .textbox2{
