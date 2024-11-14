@@ -33,14 +33,12 @@
             sujo:"/src/public/illustration/pie-ending/수조.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
-            text: "(풍덩)",
+            img: "/src/public/illustration/pie-ending/야생 마크 화면 1.png",
+            text: "스티브가 호박파이를 훔치고 야생으로 달아나 버렸다...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/정어리 파이.png",
-            tu:"/src/public/illustration/미사용/투명.png",
-            he:"/src/public/illustration/pie-ending/고든램지.png",
-            she:"/src/public/illustration/미사용/대우울.png",
-            sujo:"/src/public/illustration/pie-ending/수조.png"
+            pieimg:"/src/public/element/pie/goodpie/호박 파이.png",
+            steve:"/src/public/illustration/pie-ending/뛰는 스티브.png",
+            tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
@@ -53,14 +51,13 @@
     };
 
     function moveToPositions() {
-        posX.set(500);  // 첫 번째 목표 위치 X
-        posY.set(-400);  // 첫 번째 목표 위치 Y
+        posX.set(500); 
+        posY.set(-400);  
 
-        // 첫 번째 지점에 도달한 후 1초 후에 두 번째 위치로 이동
         setTimeout(() => {
-            posX.set(550);  // 두 번째 목표 위치 X
-            posY.set(-20);  // 두 번째 목표 위치 Y
-        }, 1000);
+            posX.set(550);  
+            posY.set(-20);  
+        }, 500);
     }
 
     $: if (inseonId === 2) {
