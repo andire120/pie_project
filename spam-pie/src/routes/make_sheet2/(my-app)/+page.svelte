@@ -16,7 +16,7 @@
         juice:"/src/public/element/otherthing/otherelement/juice2.png",
         water:"/src/public/element/otherthing/otherelement/water2.PNG",
         milk:"/src/public/element/otherthing/otherelement/milk2.PNG",
-        yorg:"/src/public/element/otherthing/otherelement/yorg2.PNG"
+        yorg:"/src/public/element/otherthing/otherelement/yog2.PNG"
     };
 
     let selectedIngredient = null;
@@ -52,7 +52,6 @@
 
 
     function updateIngredientImage(ingredient) {
-        
         selectedIngredient = ingredient;
         document.querySelector('.bowl').src = ingred[ingredient];
     }
@@ -86,7 +85,6 @@
     <img src={next_button} alt="버튼" class="buten"/>
     </button>
 
-<<<<<<< HEAD
     <div class="Button">
     <button
         class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
@@ -99,19 +97,20 @@
     <button
         class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
         onclick={() => updateIngredientImage('juice')}>주스</button>
-=======
-
-<div class="Button">
-    <button class="ion {selectedIngredient === 'ion' ? 'selected' : ''}" onclick={() => updateIngredientImage('ion')}>이온음료</button>
-    <button class="bod {selectedIngredient === 'bod' ? 'selected' : ''}" onclick={() => updateIngredientImage('bod')}>보드카</button>
-    <button class="juice {selectedIngredient === 'juice' ? 'selected' : ''}" onclick={() => updateIngredientImage('juice')}>주스</button>
->>>>>>> 4be7c012c733142d7a2947dca87cd84ef71c5905
 </div>
 
 <div class="Button2">
-    <button class="water {selectedIngredient === 'water' ? 'selected' : ''}" onclick={() => updateIngredientImage('water')}>물</button>
-    <button class="milk {selectedIngredient === 'milk' ? 'selected' : ''}" onclick={() => updateIngredientImage('milk')}>우유</button>
-    <button class="yorg {selectedIngredient === 'yorg' ? 'selected' : ''}" onclick={() => updateIngredientImage('yorg')}>요구르트</button>
+    <button
+        class="water {selectedIngredient === 'water' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('water')}>물</button>
+
+    <button
+        class="milk {selectedIngredient === 'milk' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('milk')}>우유</button>
+
+    <button
+        class="yorg {selectedIngredient === 'yorg' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('yorg')}>요구르트</button>
 </div>
 
 <style>
@@ -123,16 +122,10 @@
         left: 100vh;
         transform: translate(-50%, -50%);
         width: 50%;
-<<<<<<< HEAD
         height: 85%;
         z-index: 5;
     }
 
-=======
-        height: 100%;
-        z-index: -5;
-    }
->>>>>>> 4be7c012c733142d7a2947dca87cd84ef71c5905
     .Button2{
     display: flex;
     position: absolute;
@@ -157,7 +150,7 @@
         position: absolute;
         top: 50%;
         left: 85%;
-        z-index: -5;
+        z-index: 1;
     }
 
     .buten{
@@ -176,12 +169,7 @@
         height: 99.6%;
         width: 100%;
         background-color: #B475D0;
-<<<<<<< HEAD
         z-index: -100;
-=======
-        z-index: -10;
-        
->>>>>>> 4be7c012c733142d7a2947dca87cd84ef71c5905
     }/*배경 대각선 그거*/
 
     .bowl{
@@ -189,17 +177,10 @@
         overflow: hidden;
         position: absolute;
         width: 100vh;
-<<<<<<< HEAD
         height: 90vh;
         top: -15vh;
         left: 52vh;
         z-index: 6;
-=======
-        height: 100vh;
-        top: -20vh;
-        left: 40vh;
-        z-index: -5;
->>>>>>> 4be7c012c733142d7a2947dca87cd84ef71c5905
     }
     .pan{
         position: absolute;
@@ -237,7 +218,6 @@
         color: #FF7F00;      
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
-        z-index: 5;
         background-image: linear-gradient(
         to top left,
         rgba(0, 0, 0, 0.2),
@@ -246,7 +226,6 @@
         )
     }
     .bod{
-        position: relative;
         width: 35vh;
         height: 10vh;
         background-color: #FFD400;
@@ -262,8 +241,6 @@
         color: #FF7F00;      
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
-        z-index: 5;
-        
 
         background-image: linear-gradient(
         to top left,
@@ -288,7 +265,6 @@
         color: #FF7F00;      
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
-        z-index: 5;
 
         background-image: linear-gradient(
         to top left,
@@ -314,7 +290,6 @@
         color: #FF7F00;      
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
-        z-index: 5;
 
         background-image: linear-gradient(
         to top left,
@@ -340,7 +315,6 @@
         color: #FF7F00;      
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
-        z-index: 5;
 
         background-image: linear-gradient(
         to top left,
@@ -366,7 +340,6 @@
         color: #FF7F00;      
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
-        z-index: 5;
 
         background-image: linear-gradient(
         to top left,
