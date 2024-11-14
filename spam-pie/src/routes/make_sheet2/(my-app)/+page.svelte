@@ -11,9 +11,9 @@
     let ingredient = null;
 
     const ingred = {
-        ion:"/src/public/element/otherthing/otherelement/ion.PNG",
-        bod:"/src/public/element/otherthing/otherelement/bod.PNG",
-        juice:"/src/public/element/otherthing/otherelement/juice.PNG",
+        ion:"/src/public/element/otherthing/otherelement/ion.png",
+        bod:"/src/public/element/otherthing/otherelement/bod.png",
+        juice:"/src/public/element/otherthing/otherelement/juice.png",
         water:"/src/public/element/otherthing/otherelement/water.PNG",
         milk:"/src/public/element/otherthing/otherelement/milk.PNG",
         yorg:"/src/public/element/otherthing/otherelement/yog.PNG"
@@ -25,13 +25,27 @@
 
     let id;
     let showImage = false;
-
-    // 페이지가 마운트될 때 쿼리 파라미터를 확인
+//id 받아오기
     onMount(() => {
     const queryParams = new URLSearchParams($page.url.search);
     id = queryParams.get('id');
     if (id === 'parkmargarine') {
         document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder3_maga.png";
+        }
+    else if (id === 'parkbutter') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder3_butter.png";
+        }
+    else if (id === 'strongbutter') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder1_butter.png";
+        }
+    else if (id === 'strongmargarine') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder1_maga.png";
+        }
+    else if (id === 'middlebutter') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder2_butter.png";
+        }
+    else if (id === 'middlemargarine') {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/bowl_powder2_maga.png";
         }
     });
 
@@ -74,12 +88,12 @@
 
     <div class="Button">
         <button
-        class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('spam')}>이온음료</button>
+    class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
+    onclick={() => updateIngredientImage('ion')}>이온음료</button>
 
     <button
-        class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('bod')}>보드카</button>
+    class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
+    onclick={() => updateIngredientImage('bod')}>보드카</button>
 
     <button
         class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
@@ -111,6 +125,9 @@
         z-index: 5;
     }
 
+    .ingred{
+        
+    }
     .Button2{
     display: flex;
     position: absolute;
@@ -187,14 +204,11 @@
     }
 
     .ion{
-        grid-area: g;
-
-        width: 30vh;
+        width: 35vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-
         font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
@@ -205,7 +219,6 @@
         color: #FF7F00;      
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
-
         background-image: linear-gradient(
         to top left,
         rgba(0, 0, 0, 0.2),
@@ -214,8 +227,7 @@
         )
     }
     .bod{
-        grid-area: a;
-        width: 30vh;
+        width: 35vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
@@ -239,12 +251,11 @@
         )
     }    
     .juice{
-        width: 30vh;
+        width: 35vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
-
         font-size: 55px;
         font-family: "Jua", sans-serif;
         font-style: normal;
@@ -264,7 +275,7 @@
         )
     }   
     .water{
-        width: 30vh;
+        width: 35vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
@@ -290,7 +301,7 @@
     }
 
     .milk{
-        width: 30vh;
+        width: 35vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
@@ -314,7 +325,7 @@
         )
     }
     .yorg{
-        width: 30vh;
+        width: 35vh;
         height: 10vh;
         background-color: #FFD400;
         margin: 0;
