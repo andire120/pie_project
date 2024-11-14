@@ -1,9 +1,13 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
-    import { fly } from 'svelte/transition';
+    import { tweened } from 'svelte/motion';
+    import { cubicOut } from 'svelte/easing';
     
     let inseonId: number;
+
+    const posX = tweened(0, { duration: 600, easing: cubicOut });
+    const posY = tweened(0, { duration: 600, easing: cubicOut });
 
     $: inseonId = +$page.params.inseonId;
 
@@ -15,15 +19,18 @@
             pieimg:"/src/public/element/pie/goodpie/정어리 파이.png",
             tu:"/src/public/illustration/미사용/투명.png",
             he:"/src/public/illustration/pie-ending/고든램지.png",
-            she:"/src/public/illustration/미사용/우울.png"
+            she:"/src/public/illustration/미사용/우울.png",
+            sujo:"/src/public/illustration/pie-ending/수조.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "툭-",
+            img: "/src/public/illustration/미사용/심사배경.png",
+            text: "(풍덩)",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/호박 파이.png",
-            steve:"/src/public/illustration/pie-ending/스티브_정면.png",
+            pieimg:"/src/public/element/pie/goodpie/정어리 파이.png",
             tu:"/src/public/illustration/미사용/투명.png",
+            he:"/src/public/illustration/pie-ending/고든램지.png",
+            she:"/src/public/illustration/미사용/대우울.png",
+            sujo:"/src/public/illustration/pie-ending/수조.png"
         },
         {
             img: "/src/public/illustration/pie-ending/야생 마크 화면 1.png",
@@ -42,6 +49,25 @@
     const refresh = (url: string) => {
         goto(url);
     };
+
+    function moveToPositions() {
+        posX.set(500); 
+        posY.set(-400);  
+
+        setTimeout(() => {
+            posX.set(550);  
+            posY.set(-20);  
+        }, 500);
+    }
+
+    $: if (inseonId === 2) {
+        console.log('Starting moveToPositions for inseonId 2');
+        moveToPositions();
+    } else {
+        posX.set(0);
+        posY.set(0);
+    }
+    console.log(posX);
 </script>
 
 
@@ -58,13 +84,8 @@
     <div>
         <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
     </div>
-    <div class="stevebox">
-        <img alt={`${inseonId}스티브`} src={stories[inseonId - 1].steve} class="steve" transition:fly={{ y: -1000, duration: 500, }}/>
-    </div>
     <div class="piebox">
-        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie"/>
-        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie"/>
-        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie"/>
+        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie" style="transform: translate({$posX}px, {$posY}px);"/>
     </div>
     <div class="textbox">
         <p class="simtext">
@@ -73,6 +94,13 @@
         <p class="textmal">
             {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
         </p>
+    </div>
+    <div class="sujobox">
+        <img alt={`${inseonId}수조`} src={stories[inseonId - 1].sujo} class="sujo"/>
+    </div>
+    <div class="upbar">
+        <img alt={`${inseonId}고든램지`} src={stories[inseonId - 1].he} class="he"/>
+        <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she"/>
     </div>
 {:else if inseonId == 3}
     <button on:click|stopPropagation={() => refresh(`/inseon-pie/${inseonId + 1}`)} class="button">
@@ -122,6 +150,9 @@
             {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
+    <div class="sujobox">
+        <img alt={`${inseonId}수조`} src={stories[inseonId - 1].sujo} class="sujo"/>
+    </div>
     <div class="upbar">
         <img alt={`${inseonId}고든램지`} src={stories[inseonId - 1].he} class="he"/>
         <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she"/>
@@ -131,6 +162,26 @@
 {/if}
 
 <style>
+
+    .sujobox{
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        z-index: 1;
+    }
+
+    .sujo{
+        width: 25%;
+        height: 45vh;
+
+        margin-top: 26vh;
+        margin-left: 75vw;
+    }
 
     .upbar {
         width: 100%;
@@ -157,26 +208,6 @@
         margin-top: 24vh;
     }
 
-    .stevebox {
-        width: 100%;
-        height: 100vh;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        position: absolute;
-        z-index: 3;
-    }
-
-    .steve{
-        width: 20%;
-        height: 30vh;
-        margin-top: 20vh;
-
-        position: absolute;
-        z-index: 3;
-    }
 
     .stevebox2{
         width: 100%;
@@ -190,14 +221,6 @@
         z-index: 3;
     }
 
-    .steve{
-        width: 15%;
-        height: 35vh;
-        margin-top: 20vh;
-
-        position: absolute;
-        z-index: 3;
-    }
 
     .story {
         margin: 0;

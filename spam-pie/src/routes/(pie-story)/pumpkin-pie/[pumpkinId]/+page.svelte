@@ -161,14 +161,6 @@
         z-index: 3;
     }
 
-    .steve{
-        width: 15%;
-        height: 35vh;
-        margin-top: 20vh;
-
-        position: absolute;
-        z-index: 3;
-    }
 
     .story {
         margin: 0;
