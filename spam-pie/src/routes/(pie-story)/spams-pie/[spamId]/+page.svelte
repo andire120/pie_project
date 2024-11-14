@@ -80,8 +80,8 @@
 
 
 
-{#if (spamId == 1)}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${spamId + 1}`)} class="button">
+{#if (spamId == 2)}
+    <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
         <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
     </button>
     <div class="piebox">
@@ -110,7 +110,7 @@
         </div>  
     </div>
 {:else if stories[spamId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${spamId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
         <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>

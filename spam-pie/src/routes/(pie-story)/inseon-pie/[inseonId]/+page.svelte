@@ -20,7 +20,7 @@
             tu:"/src/public/illustration/미사용/투명.png",
             he:"/src/public/illustration/pie-ending/고든램지.png",
             she:"/src/public/illustration/미사용/우울.png",
-            sujo:"/src/public/illustration/pie-ending/수조.png"
+            sujo:"/src/public/illustration/미사용/진짜수조.png"
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
@@ -30,7 +30,7 @@
             tu:"/src/public/illustration/미사용/투명.png",
             he:"/src/public/illustration/pie-ending/고든램지.png",
             she:"/src/public/illustration/미사용/대우울.png",
-            sujo:"/src/public/illustration/pie-ending/수조.png"
+            sujo:"/src/public/illustration/미사용/진짜수조.png"
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
@@ -40,7 +40,7 @@
             tu:"/src/public/illustration/미사용/투명.png",
             he:"/src/public/illustration/pie-ending/고든램지2.png",
             she:"/src/public/illustration/미사용/대우울.png",
-            sujo:"/src/public/illustration/pie-ending/수조.png"
+            sujo:"/src/public/illustration/미사용/진짜수조.png"
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
@@ -50,7 +50,7 @@
             tu:"/src/public/illustration/미사용/투명.png",
             he:"/src/public/illustration/pie-ending/고든램지2.png",
             she:"/src/public/illustration/미사용/킹받.png",
-            sujo:"/src/public/illustration/pie-ending/수조.png"
+            sujo:"/src/public/illustration/미사용/진짜수조.png"
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
@@ -237,7 +237,7 @@
         align-items: center;
 
         position: absolute;
-        z-index: 1;
+        z-index: 2;
     }
 
     .sujo{
