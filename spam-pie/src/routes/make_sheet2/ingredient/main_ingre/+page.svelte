@@ -25,6 +25,10 @@
         document.querySelector('.bowl').src = ingred[ingredient];
     }
 
+
+    
+    
+
     function go()  {
         if(selectedIngredient == null){
             document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/waring_main.png";

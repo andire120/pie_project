@@ -9,6 +9,7 @@
     const dot1 = "/src/public/element/otherthing/otherelement/nodelete1.png";
     const warn = "/src/public/element/otherthing/otherelement/liquid_warn.png";
     let ingredient = null;
+    let selectedliquid = null;
 
     const ingred = {
         ion:"/src/public/element/otherthing/otherelement/ion2.png",
@@ -16,12 +17,12 @@
         juice:"/src/public/element/otherthing/otherelement/juice2.png",
         water:"/src/public/element/otherthing/otherelement/water2.PNG",
         milk:"/src/public/element/otherthing/otherelement/milk2.PNG",
-        yorg:"/src/public/element/otherthing/otherelement/yog2.PNG"
+        yorg:"/src/public/element/otherthing/otherelement/yorg2.PNG"
     };
 
     let selectedIngredient = null;
     let id1 = null;
-
+    let id_liquid;
     let id;
     let showImage = false;
 //id 받아오기
@@ -51,25 +52,43 @@
 
 
 
-    function updateIngredientImage(ingredient) {
-        selectedIngredient = ingredient;
-        document.querySelector('.bowl').src = ingred[ingredient];
-    }
+function updateIngredientImage(ingredient) {
+    selectedIngredient = ingredient;
+    selectedliquid = ingredient;
+    document.querySelector('.bowl').src = ingred[ingredient];
+}
 
-    function go()  {
-        if(selectedIngredient == null){
-            document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/liquid_warn.png";
-            setTimeout(function(){
-                document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
-            }, 1500);
+function send() {
+    if (selectedliquid != null) {
+        if (selectedliquid === 'ion') {
+            id_liquid = "ion";
+        } else if (selectedliquid === 'milk') {
+            id_liquid = "milk";
+        } else if (selectedliquid === 'water') {
+            id_liquid = "water";
+        } else if (selectedliquid === 'bod') {
+            id_liquid = "vodka";
+        } else if (selectedliquid === 'juice') {
+            id_liquid = "juice";
+        } else if (selectedliquid === 'yorg') {
+            id_liquid = 'yorg';
         }
-        else {
-            window.location.href = ("make_sheet2/ingredient/main_ingre");
-        }
     }
+}
+
+function go() {
+    send();
+    if (selectedIngredient == null) {
+        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/liquid_warn.png";
+        setTimeout(function () {
+            document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
+        }, 1500);
+    } else {
+        window.location.href = `make_sheet2/ingredient/main_ingre?id=${id}&id_liquid=${id_liquid}`;
+    }
+}
 
 
-    
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -173,7 +192,7 @@
     }/*배경 대각선 그거*/
 
     .bowl{
-        opacity: 70%;
+        opacity: 80%;
         overflow: hidden;
         position: absolute;
         width: 100vh;
