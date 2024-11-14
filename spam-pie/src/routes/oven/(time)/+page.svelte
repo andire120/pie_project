@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { goto } from '$app/navigation';
+
   const background = "/src/public/element/otherthing/otherelement/background.png";
   const next = "/src/public/element/otherthing/otherelement/nextbotten.png";
   const chep = "/src/public/element/otherthing/otherelement/파이굽기 간판.png";
@@ -17,8 +19,10 @@
     selectedtime = timeId;
   }
 
-  function showDan() {
-    if (!selectedtime) {
+  async function showDan() {
+    if (selectedtime) {
+      await goto('/next-page');
+    } else {
       showWarning = true;
       setTimeout(() => {
         showWarning = false;
@@ -36,7 +40,6 @@
     <img src={background} alt="배경" />
   </div>
 
-  
   <button class="n" onclick={showDan}>
     <img src={next} alt="다음" />
   </button>
@@ -52,7 +55,6 @@
     <button id="eig" onclick={() => select('eig')} class:active={selectedtime === 'eig'} class="eig" type="button">8:00</button>
   </div>
 
-  
   <div class="dan" class:show={showWarning}>
     <img src={danger} alt="경고">
   </div>

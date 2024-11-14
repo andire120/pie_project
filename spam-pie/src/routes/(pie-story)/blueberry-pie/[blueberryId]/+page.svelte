@@ -194,8 +194,6 @@
     }
 
 
-
-
     .textbox {
         margin-left: 20%;
         margin-top: 80vh;
