@@ -29,16 +29,18 @@
             pieimg:"/src/public/element/pie/goodpie/정어리 파이.png",
             tu:"/src/public/illustration/미사용/투명.png",
             he:"/src/public/illustration/pie-ending/고든램지.png",
-            she:"/src/public/illustration/미사용/우울.png",
+            she:"/src/public/illustration/미사용/대우울.png",
             sujo:"/src/public/illustration/pie-ending/수조.png"
         },
         {
-            img: "/src/public/illustration/pie-ending/야생 마크 화면 1.png",
-            text: "스티브가 호박파이를 훔치고 야생으로 달아나 버렸다...",
+            img: "/src/public/illustration/미사용/심사배경.png",
+            text: "(풍덩)",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/호박 파이.png",
-            steve:"/src/public/illustration/pie-ending/뛰는 스티브.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:"/src/public/element/pie/goodpie/정어리 파이.png",
+            tu:"/src/public/illustration/미사용/투명.png",
+            he:"/src/public/illustration/pie-ending/고든램지.png",
+            she:"/src/public/illustration/미사용/대우울.png",
+            sujo:"/src/public/illustration/pie-ending/수조.png"
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
@@ -50,15 +52,24 @@
         goto(url);
     };
 
+    function moveToPositions() {
+        posX.set(500);  // 첫 번째 목표 위치 X
+        posY.set(-400);  // 첫 번째 목표 위치 Y
+
+        // 첫 번째 지점에 도달한 후 1초 후에 두 번째 위치로 이동
+        setTimeout(() => {
+            posX.set(550);  // 두 번째 목표 위치 X
+            posY.set(-20);  // 두 번째 목표 위치 Y
+        }, 1000);
+    }
+
     $: if (inseonId === 2) {
-        posX.set(100);  // 수조 이미지의 가운데 위치 X 좌표
-        posY.set(-300);  // 수조 이미지의 가운데 위치 Y 좌표
+        console.log('Starting moveToPositions for inseonId 2');
+        moveToPositions();
     } else {
-        // 다른 페이지로 이동할 때는 원래 위치로 되돌리기
         posX.set(0);
         posY.set(0);
     }
-
     console.log(posX);
 </script>
 
@@ -321,7 +332,7 @@
         
 
         position: absolute;
-        z-index: 1;
+        z-index: 2;
     }
 
     .pie{
