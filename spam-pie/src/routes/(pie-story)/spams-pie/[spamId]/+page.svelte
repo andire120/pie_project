@@ -8,57 +8,55 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "저 파이가 파랑색이라는데에 내 손목을 걸지.",
+            img: "/src/public/illustration/미사용/심사배경.png",
             simtext: "심사위원1",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: "/src/public/illustration/미사용/심사배경.png",
             text: "아니?, 저 파이가 보라색이라는데에 내 말목을 걸겠어.",
             simtext: "심사위원3",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: "/src/public/illustration/미사용/심사배경2.png",
             text: "안타깝지만, 둘다 틀렸어요.",
             simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: "/src/public/illustration/미사용/심사배경.png",
             text: "이 파이는 #353B5C색 이에요!!!!!!",
             simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: "/src/public/illustration/미사용/심사배경.png",
             text: "...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: "/src/public/illustration/미사용/심사배경.png",
             text: "..................",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: "/src/public/illustration/미사용/심사배경.png",
             text: "싸해진 분위기 속에 고기파이가 식어버렸다...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
@@ -93,9 +91,6 @@
         <p class="simtext">
             {stories[spamId - 1].simtext}
         </p>
-        <p class="textmal">
-            {stories[spamId - 1].text.replace(/\n/g, "<br>")}
-        </p>
     </div>
 {:else if spamId == 8}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
@@ -116,21 +111,14 @@
     <div>
         <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
     </div>
-    <div class="simbox">
-        <img alt={`${spamId}번심사위원`} src={stories[spamId - 1].sim} class="sim"/>
-    </div>
-    <div class="piebox">
-        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
-        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
-        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
-    </div>
     <div class="textbox">
         <p class="simtext">
             {stories[spamId - 1].simtext}
         </p>
-        <p class="textmal">
-            {stories[spamId - 1].text.replace(/\n/g, "<br>")}
-        </p>
+        <div class="chose">
+            <button class="cbutton">yes</button>
+            <button class="cbutton">no</button>
+        </div>
     </div>
 {:else}
     존재하지 않는 페이지
@@ -167,75 +155,44 @@
         z-index: 3;
     }
 
-    .textbox2{
-        
-        width: 100%;
-        height: 100vh;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        position: absolute;
-        z-index: 4;
-    }
-
-    .text2{
-        color: white;
-        font-size: 15vh;
-        font-family: "Jua", sans-serif;
-    }
-
-
-
 
     .textbox {
         margin-left: 20%;
-        margin-top: 80vh;
+        margin-top: 10vh;
         padding: 5vh;
 
         width: 60%;
-        height: 9vh;
+        height: 70vh;
 
         background-color: black;
-
-        display: flex;
-        align-items: center;
 
         position: absolute;
         z-index: 3;
     }
 
-    .textmal{
-        width: 85%;
+    .simtext{
+        width: 100%;
         height: 9vh;
-        margin-right: 10%;
 
         color: white;
         text-align: center;
         font-size: x-large;
         overflow: hidden;
         font-family: "Jua", sans-serif;
-        
+
         display: flex;
         justify-content: center;
-        align-items: center;
-
-        
     }
-    .simtext{
-        width: 15%;
-        height: 9vh;
-        margin-bottom: 7%;
 
-        color: white;
-        text-align: center;
-        font-size: x-large;
-        overflow: hidden;
-        font-family: "Jua", sans-serif;
+    .chose{
+        width: 100%;
+        height: 10vh;
 
         display: flex;
+        justify-content: center;
     }
+
+
 
     .piebox{
         width: 100%;
@@ -253,28 +210,6 @@
     .pie{
         width: 16%;
         height: 25vh;
-    }
-
-    .simbox{
-        width: 100%;
-        height: 10vh;
-        margin-top: 45vh;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        position: absolute;
-        z-index: 2;
-    }
-
-    .sim{
-        width: 35%;
-        height: 35vh;
-        margin-top: 20vh;
-
-        position: absolute;
-        z-index: 2;
     }
 
     .tu{
