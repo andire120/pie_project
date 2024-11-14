@@ -11,15 +11,14 @@
     let ingredient = null;
 
     const ingred = {
-        ion:"/src/public/element/otherthing/otherelement/ion.png",
-        bod:"/src/public/element/otherthing/otherelement/bod.png",
-        juice:"/src/public/element/otherthing/otherelement/juice.png",
-        water:"/src/public/element/otherthing/otherelement/water.PNG",
-        milk:"/src/public/element/otherthing/otherelement/milk.PNG",
-        yorg:"/src/public/element/otherthing/otherelement/yog.PNG"
+        ion:"/src/public/element/otherthing/otherelement/ion2.png",
+        bod:"/src/public/element/otherthing/otherelement/bod2.png",
+        juice:"/src/public/element/otherthing/otherelement/juice2.png",
+        water:"/src/public/element/otherthing/otherelement/water2.PNG",
+        milk:"/src/public/element/otherthing/otherelement/milk2.PNG",
+        yorg:"/src/public/element/otherthing/otherelement/yog2.PNG"
     };
 
-    const parkmagarine = "/src/public/element/otherthing/otherelement/bowl_powder_maga.png";
     let selectedIngredient = null;
     let id1 = null;
 
@@ -87,9 +86,9 @@
     </button>
 
     <div class="Button">
-        <button
-    class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
-    onclick={() => updateIngredientImage('ion')}>이온음료</button>
+    <button
+        class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
+        onclick={() => updateIngredientImage('ion')}>이온음료</button>
 
     <button
     class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
@@ -97,7 +96,7 @@
 
     <button
         class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('')}>주스</button>
+        onclick={() => updateIngredientImage('juice')}>주스</button>
 </div>
 
 <div class="Button2">
@@ -115,23 +114,22 @@
 </div>
 
 <style>
+
+
     .dot{
         position: absolute;
         top: 30vh;
-        left: 90vh;
+        left: 100vh;
         transform: translate(-50%, -50%);
         width: 50%;
-        height: 100%;
+        height: 85%;
         z-index: 5;
     }
 
-    .ingred{
-        
-    }
     .Button2{
     display: flex;
     position: absolute;
-    top: 85%;
+    top: 92%;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: space-around;
@@ -141,7 +139,7 @@
     .Button {
         display: flex;
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     justify-content: space-around;
@@ -171,16 +169,17 @@
         height: 99.6%;
         width: 100%;
         background-color: #B475D0;
-        
+        z-index: -100;
     }/*배경 대각선 그거*/
 
     .bowl{
+        opacity: 70%;
         overflow: hidden;
         position: absolute;
         width: 100vh;
-        height: 100vh;
-        top: -20vh;
-        left: 40vh;
+        height: 90vh;
+        top: -15vh;
+        left: 52vh;
         z-index: 6;
     }
     .pan{
@@ -195,8 +194,8 @@
     .sidebar{
         position: absolute;
         width: 80%;
-        height: 35%;
-        top: 77%;
+        height: 30%;
+        top: 84%;
         left: 50%;
         transform: translate(-50%, -50%);
         background-color: #9744bf;
