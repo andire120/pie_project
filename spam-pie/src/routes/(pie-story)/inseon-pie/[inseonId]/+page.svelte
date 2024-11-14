@@ -44,17 +44,17 @@
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
-            text: "What the fuxxing that!!!!",
+            text: "(촬싹!)",
             simtext: "고든램지",
-            pieimg:"/src/public/illustration/pie-ending/날뛰는_물고기2.png",
+            pieimg:"/src/public/illustration/pie-ending/날뛰는_물고기.png",
             tu:"/src/public/illustration/미사용/투명.png",
             he:"/src/public/illustration/pie-ending/고든램지2.png",
-            she:"/src/public/illustration/미사용/대우울.png",
+            she:"/src/public/illustration/미사용/킹받.png",
             sujo:"/src/public/illustration/pie-ending/수조.png"
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
-            text: "호박 파이 엔딩"
+            text: "정어리 파이 엔딩"
         }
     ];
 
@@ -83,13 +83,8 @@
     }
 
     function moveToPositions3() {
-        posX.set(500); 
-        posY.set(-200);  
-
-        setTimeout(() => {
-            posX.set(-200);  
-            posY.set(70);  
-        }, 500);
+        posX.set(-200);  
+        posY.set(70); 
     }
 
     $: if (inseonId === 2) {
@@ -173,7 +168,7 @@
         <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
     </div>
     <div class="fishbox">
-        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="fish" style="transform: translate({$posX}px, {$posY}px);"/>
+        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="fish2" style="transform: translate({$posX}px, {$posY}px);"/>
     </div>
     <div class="textbox">
         <p class="simtext">
@@ -188,7 +183,7 @@
     </div>
     <div class="upbar2">
         <img alt={`${inseonId}고든램지`} src={stories[inseonId - 1].he} class="he2"/>
-        <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she2"/>
+        <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she3"/>
     </div>
 {:else if inseonId == 5}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
@@ -304,6 +299,12 @@
         margin-right: 18vw;
     }
 
+    .she3{
+        width: 20%;
+        height: 40vh;
+        margin-top: 28vh;
+    }
+
     .story {
         margin: 0;
         padding: 0;
@@ -367,7 +368,7 @@
         align-items: center;
 
         position: absolute;
-        z-index: 3;
+        z-index: 4;
     }
 
     .textmal{
@@ -434,6 +435,12 @@
     .fish{
         width: 15%;
         height: 20vh;
+        margin-top: 46vh;
+    }
+
+    .fish2{
+        width: 20%;
+        height: 23vh;
         margin-top: 46vh;
     }
 

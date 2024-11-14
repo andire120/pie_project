@@ -2,9 +2,9 @@
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
     
-    let meatId: number;
+    let spamId: number;
 
-    $: meatId = +$page.params.meatId;
+    $: spamId = +$page.params.spamId;
 
     const stories = [
         {
@@ -80,56 +80,56 @@
 
 
 
-{#if (meatId == 1)}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+{#if (spamId == 1)}
+    <button on:click|stopPropagation={() => refresh(`/meat-pie/${spamId + 1}`)} class="button">
+        <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
     </button>
     <div class="piebox">
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
+        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
+        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[meatId - 1].simtext}
+            {stories[spamId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
+            {stories[spamId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
-{:else if meatId == 8}
+{:else if spamId == 8}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
         <div class="botten">돌아가기</div>
     </button>
     <div>
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+        <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
     </div>
     <div class="textbox2">
         <div class="text2">
-            {stories[meatId - 1].text}
+            {stories[spamId - 1].text}
         </div>  
     </div>
-{:else if stories[meatId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
-        <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
+{:else if stories[spamId - 1]}
+    <button on:click|stopPropagation={() => refresh(`/meat-pie/${spamId + 1}`)} class="button">
+        <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+        <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
     </div>
     <div class="simbox">
-        <img alt={`${meatId}번심사위원`} src={stories[meatId - 1].sim} class="sim"/>
+        <img alt={`${spamId}번심사위원`} src={stories[spamId - 1].sim} class="sim"/>
     </div>
     <div class="piebox">
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
+        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
+        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[meatId - 1].simtext}
+            {stories[spamId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
+            {stories[spamId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
 {:else}
