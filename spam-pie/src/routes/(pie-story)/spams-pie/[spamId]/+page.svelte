@@ -9,60 +9,22 @@
     const stories = [
         {
             img: "/src/public/illustration/미사용/심사배경.png",
-            simtext: "심사위원1",
+            simtext: "최고의 동아리 SPAM에 가입하시겠습니까?",
+        },
+        {
+            img: "/src/public/illustration/미사용/심사배경.png",
+            simtext: "이 언어들을 모두 공부해 오십시오. 못하시겠습니까?",
+            pro: "/src/public/illustration/pie-ending/스팸 yes.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
-            text: "아니?, 저 파이가 보라색이라는데에 내 말목을 걸겠어.",
-            simtext: "심사위원3",
-            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사배경2.png",
-            text: "안타깝지만, 둘다 틀렸어요.",
-            simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사배경.png",
-            text: "이 파이는 #353B5C색 이에요!!!!!!",
-            simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사배경.png",
-            text: "...",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사배경.png",
-            text: "..................",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사배경.png",
-            text: "싸해진 분위기 속에 고기파이가 식어버렸다...",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/스팸 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
+            simtext: "죽으십시오.",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
-            text: "고기 파이 엔딩"
+            text: "스팸 파이 엔딩"
         }
     ];
 
@@ -80,34 +42,44 @@
 
 {#if (spamId == 2)}
     <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
-        <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
+        <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
-    <div class="piebox">
-        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
-        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
-        <img alt={`${spamId}파이`} src={stories[spamId - 1].pieimg} class="pie"/>
+    <div>
+        <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
     </div>
     <div class="textbox">
-        <p class="simtext">
+        <div>
+            <img alt={`${spamId}프로그래밍`} src={stories[spamId - 1].pro} class="pro"/>
+        </div>
+        <p class="simtext2">
             {stories[spamId - 1].simtext}
         </p>
     </div>
-{:else if spamId == 8}
+{:else if spamId == 3}
+    <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
+        <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
+    </button>
+    <div>
+        <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
+    </div>
+    <div class="textbox2">
+        <p class="simtext3">
+            {stories[spamId - 1].simtext}
+        </p>
+    </div>
+{:else if spamId == 4}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
         <div class="botten">돌아가기</div>
     </button>
     <div>
         <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
     </div>
-    <div class="textbox2">
+    <div class="textbox3">
         <div class="text2">
             {stories[spamId - 1].text}
         </div>  
     </div>
 {:else if stories[spamId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
-        <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
-    </button>
     <div>
         <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
     </div>
@@ -116,8 +88,8 @@
             {stories[spamId - 1].simtext}
         </p>
         <div class="chose">
-            <button class="cbutton">yes</button>
-            <button class="cbutton">no</button>
+            <button on:click={() => refresh(`/spams-pie/2`)} class="cbutton">yes</button>
+            <button on:click={() => refresh(`/spams-pie/3`)} class="cbutton">no</button>
         </div>
     </div>
 {:else}
@@ -125,6 +97,29 @@
 {/if}
 
 <style>
+
+    .textbox3{
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        z-index: 4;
+    }
+
+    .text2{
+        color: white;
+        font-size: 15vh;
+        font-family: "Jua", sans-serif;
+    }
+
+    .pro{
+        width: 100%;
+        height: 50vh;
+    }
 
     .story {
         margin: 0;
@@ -152,17 +147,33 @@
         justify-content: center;
 
         position: absolute;
-        z-index: 3;
+        z-index: 5;
     }
 
 
     .textbox {
         margin-left: 20%;
-        margin-top: 10vh;
-        padding: 5vh;
+        margin-top: 18vh;
 
-        width: 60%;
+        width: 70%;
         height: 70vh;
+
+        background-color: black;
+
+        position: absolute;
+        z-index: 3;
+    }
+
+    .textbox2 {
+        margin-left: 20%;
+        margin-top: 18vh;
+
+        width: 70%;
+        height: 70vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         background-color: black;
 
@@ -172,11 +183,41 @@
 
     .simtext{
         width: 100%;
-        height: 9vh;
+        height: 6vh;
+        margin-top: 10vh;
 
         color: white;
         text-align: center;
-        font-size: x-large;
+        font-size: xx-large;
+        overflow: hidden;
+        font-family: "Jua", sans-serif;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .simtext2{
+        width: 100%;
+        height: 6vh;
+
+        color: white;
+        text-align: center;
+        font-size: xx-large;
+        overflow: hidden;
+        font-family: "Jua", sans-serif;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    .simtext3{
+        width: 100%;
+        height: 30vh;
+        margin-top: 30vh;
+
+        color: white;
+        text-align: center;
+        font-size: 400%;
         overflow: hidden;
         font-family: "Jua", sans-serif;
 
@@ -192,30 +233,21 @@
         justify-content: center;
     }
 
+    .cbutton{
+        width: 40%;
+        height: 40vh;
+        margin-bottom: 15vh;
 
+        background-color: black;
+        border: none;
 
-    .piebox{
-        width: 100%;
-        height: 38vh;
-        margin-top: 62vh;
-
-        display: flex;
-        justify-content: center;
-        
-
-        position: absolute;
-        z-index: 3;
+        color: white;
+        font-size: 15vh;
+        overflow: hidden;
+        font-family: "Jua", sans-serif;
     }
 
-    .pie{
-        width: 16%;
-        height: 25vh;
-    }
 
-    .tu{
-        width: 100%;
-        height: 90vh;
-    }
 
     .botten {
         display: flex;
@@ -255,6 +287,11 @@
 
         top: 70vh;
         margin-left: 72%;
+    }
+
+    .tu{
+        width: 100%;
+        height: 90vh;
     }
 
 
