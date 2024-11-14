@@ -1,70 +1,41 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+    import { fly } from 'svelte/transition';
     
-    let meatId: number;
+    let inseonId: number;
 
-    $: meatId = +$page.params.meatId;
+    $: inseonId = +$page.params.inseonId;
 
     const stories = [
         {
+            img: "/src/public/illustration/미사용/심사배경.png",
+            text: "Fuxx off, It's fuxxing raw! Get out!",
+            simtext: "고든램지",
+            pieimg:"/src/public/element/pie/goodpie/정어리 파이.png",
+            tu:"/src/public/illustration/미사용/투명.png",
+            he:"/src/public/illustration/pie-ending/고든램지.png",
+            she:"/src/public/illustration/미사용/우울.png"
+        },
+        {
             img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "미트 파이가 정말 맛있네요.",
-            simtext: "심사위원1",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: "미투~!",
-            simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: "심사위원2는 굿바이 선언 포즈를 취했다...",
+            text: "툭-",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:"/src/public/element/pie/goodpie/호박 파이.png",
+            steve:"/src/public/illustration/pie-ending/스티브_정면.png",
+            tu:"/src/public/illustration/미사용/투명.png",
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: ".",
+            img: "/src/public/illustration/pie-ending/야생 마크 화면 1.png",
+            text: "스티브가 호박파이를 훔치고 야생으로 달아나 버렸다...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: "...",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: "..................",
-            simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
-        {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
-            text: "싸해진 분위기 속에 고기파이가 식어버렸다...",
-            simtext: "",
-            pieimg:"/src/public/illustration/pie-ending/생고기 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
+            pieimg:"/src/public/element/pie/goodpie/호박 파이.png",
+            steve:"/src/public/illustration/pie-ending/뛰는 스티브.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
-            text: "고기 파이 엔딩"
+            text: "호박 파이 엔딩"
         }
     ];
 
@@ -80,63 +51,153 @@
 
 
 
-{#if (meatId == 1)}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+{#if (inseonId == 2)}
+    <button on:click|stopPropagation={() => refresh(`/inseon-pie/${inseonId + 1}`)} class="button">
+        <img alt={`${inseonId}번이미지`} src={stories[inseonId - 1].tu} class="tu"/>
     </button>
+    <div>
+        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
+    </div>
+    <div class="stevebox">
+        <img alt={`${inseonId}스티브`} src={stories[inseonId - 1].steve} class="steve" transition:fly={{ y: -1000, duration: 500, }}/>
+    </div>
     <div class="piebox">
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie"/>
+        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie"/>
+        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[meatId - 1].simtext}
+            {stories[inseonId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
+            {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
-{:else if meatId == 8}
+{:else if inseonId == 3}
+    <button on:click|stopPropagation={() => refresh(`/inseon-pie/${inseonId + 1}`)} class="button">
+        <img alt={`${inseonId}번이미지`} src={stories[inseonId - 1].tu} class="tu"/>
+    </button>
+    <div class="stevebox2">
+        <img alt={`${inseonId}스티브`} src={stories[inseonId - 1].steve} class="steve2"/>
+    </div>
+    <div>
+        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
+    </div>
+    <div class="textbox">
+        <p class="simtext">
+            {stories[inseonId - 1].simtext}
+        </p>
+        <p class="textmal">
+            {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
+        </p>
+    </div>
+{:else if inseonId == 4}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
         <div class="botten">돌아가기</div>
     </button>
     <div>
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
     </div>
     <div class="textbox2">
         <div class="text2">
-            {stories[meatId - 1].text}
+            {stories[inseonId - 1].text}
         </div>  
     </div>
-{:else if stories[meatId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
-        <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
+{:else if stories[inseonId - 1]}
+    <button on:click|stopPropagation={() => refresh(`/inseon-pie/${inseonId + 1}`)} class="button">
+        <img alt={`${inseonId}번이미지`} src={stories[inseonId - 1].tu} class="tu"/>
     </button>
     <div>
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
-    </div>
-    <div class="simbox">
-        <img alt={`${meatId}번심사위원`} src={stories[meatId - 1].sim} class="sim"/>
+        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
     </div>
     <div class="piebox">
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
-        <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
+        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[meatId - 1].simtext}
+            {stories[inseonId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[meatId - 1].text.replace(/\n/g, "<br>")}
+            {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
         </p>
+    </div>
+    <div class="upbar">
+        <img alt={`${inseonId}고든램지`} src={stories[inseonId - 1].he} class="he"/>
+        <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she"/>
     </div>
 {:else}
     존재하지 않는 페이지
 {/if}
 
 <style>
+
+    .upbar {
+        width: 100%;
+        height: 100vh;
+        gap: 2vw;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        z-index: 2;
+    }
+
+    .he{
+        width: 40%;
+        height: 40vh;
+        margin-top: 24vh;
+    }
+
+    .she{
+        width: 20%;
+        height: 40vh;
+        margin-top: 24vh;
+    }
+
+    .stevebox {
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        z-index: 3;
+    }
+
+    .steve{
+        width: 20%;
+        height: 30vh;
+        margin-top: 20vh;
+
+        position: absolute;
+        z-index: 3;
+    }
+
+    .stevebox2{
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        position: absolute;
+        z-index: 3;
+    }
+
+    .steve{
+        width: 15%;
+        height: 35vh;
+        margin-top: 20vh;
+
+        position: absolute;
+        z-index: 3;
+    }
 
     .story {
         margin: 0;
@@ -164,7 +225,7 @@
         justify-content: center;
 
         position: absolute;
-        z-index: 3;
+        z-index: 4;
     }
 
     .textbox2{
@@ -187,8 +248,6 @@
     }
 
 
-
-
     .textbox {
         margin-left: 20%;
         margin-top: 80vh;
@@ -209,7 +268,7 @@
     .textmal{
         width: 85%;
         height: 9vh;
-        margin-right: 10%;
+        margin-right: 20%;
 
         color: white;
         text-align: center;
@@ -224,7 +283,7 @@
         
     }
     .simtext{
-        width: 15%;
+        width: 40%;
         height: 9vh;
         margin-bottom: 7%;
 
@@ -237,45 +296,25 @@
         display: flex;
     }
 
+
     .piebox{
         width: 100%;
-        height: 38vh;
-        margin-top: 62vh;
+        height: 100vh;
 
         display: flex;
         justify-content: center;
         
 
         position: absolute;
-        z-index: 3;
+        z-index: 2;
     }
 
     .pie{
-        width: 16%;
-        height: 25vh;
+        width: 26%;
+        height: 50vh;
+        margin-top: 46vh;
     }
 
-    .simbox{
-        width: 100%;
-        height: 10vh;
-        margin-top: 45vh;
-        
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        position: absolute;
-        z-index: 2;
-    }
-
-    .sim{
-        width: 35%;
-        height: 35vh;
-        margin-top: 20vh;
-
-        position: absolute;
-        z-index: 2;
-    }
 
     .tu{
         width: 100%;
