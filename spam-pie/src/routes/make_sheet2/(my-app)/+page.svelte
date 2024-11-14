@@ -84,7 +84,7 @@ function go() {
             document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
         }, 1500);
     } else {
-        window.location.href = `make_sheet2/ingredient/main_ingre?id=${id}&id_liquid=${id_liquid}`;
+        window.location.href = `make_sheet2/ingredient/main_ingre?id=${id}?id_liquid=${id_liquid}`;
     }
 }
 
