@@ -97,11 +97,34 @@
     onMount(() => {
         const queryParams = new URLSearchParams($page.url.search);
         id = queryParams.get('id');
-        id_liquid = queryParams.get('id_liquid');
-        id_main = queryParams.get('id_main');
+        main_ingredient = queryParams.get('main_ingredient');
+        selectedtime = queryParams.get('selectedtime');
+
+        if (id === 'strongbutter' || id === 'strongmargarine') {
+        middle_result = 'bread'
+    
+        if(main_ingredient === 'apple') result = 'applebread'
+
+        else if(main_ingredient === 'blueberry') result = 'blueberrybread'
+
+        else if(main_ingredient === 'inseon') result = 'inseonbread'
+
+        else if(main_ingredient === 'meat') result = 'meatbread'
+
+        else if(main_ingredient === 'mintchoco') result = 'mintchocobread'
+
+        else if(main_ingredient === 'pump') result = 'pumpkinbread'
+
+        else if(main_ingredient === 'spam') result = 'spambread'
+
+        if(selectedtime === '0:30') result +='dul';
+
+        else if(selectedtime === '1:00') result += 'good';
+
+        else if(selectedtime === '1:30') result += 'tan';
+
+        else if(selectedtime === '8:00') result += 'burnt';
+    }
     });
-
-
-
 
 </script>
