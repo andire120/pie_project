@@ -49,7 +49,7 @@
 	let result = null; // 최종결과
 
 	// 파이
-
+ 
 	// 쿠키
 
 	onMount(() => {
