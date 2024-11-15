@@ -3,30 +3,94 @@
 	const element = [
 		{
 			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
+			text: '으악~! 덜익은 사과 쿠키가 완성됐잖아..'
+		},
+		{
 			dulblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
+			text: '으악~! 덜익은 블루베리 쿠키가 완성됐잖아..'
+		},
+		{
 			dulspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
+			text: '으악~! 덜익은 스팸 쿠키가 완성됐잖아..'
+		},
+		{
 			dulmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
+			text: '으악~! 덜익은 고기 쿠키가 완성됐잖아..'
+		},
+		{
 			dulinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
+			text: '으악~! 덜익은 정어리 쿠키가 완성됐잖아..'
+		},
+		{
 			dulmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
+			text: '으악~! 덜익은 민트초코 쿠키가 완성됐잖아..'
+		},
+		{
 			dulpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
+			text: '으악~! 덜익은 호박 쿠키가 완성됐잖아..'
+		},
 
-			goodapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			goodblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			goodspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			goodmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			goodmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			goodinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
-			goodpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
+		{
+			goodapplecookie: '/src/public/element/cookie/normal-cookie/apple-cookie.png',
+			text: '우와~! 맛있는 사과 쿠키가 완성됐다!!'
+		},
+		{
+			goodblueberrycookie: '/src/public/element/cookie/normal-cookie/blueberry-cookie.png',
+			text: '우와~! 맛있는 블루베리 쿠키가 완성됐다!!'
+		},
+		{
+			goodspamcookie: '/src/public/element/cookie/normal-cookie/spam-cookie.png',
+			text: '우와~! 맛있는 스팸 쿠키가 완성됐다!!'
+		},
+		{
+			goodmeatcookie: '/src/public/element/cookie/normal-cookie/meat-cookie.png',
+			text: '우와~! 맛있는 고기 쿠키가 완성됐다!!'
+		},
+		{
+			goodmintchococookie: '/src/public/element/cookie/normal-cookie/mincho-cookie.png',
+			text: '우와~! 맛있는 민트초코 쿠키가 완성됐다!!'
+		},
+		{
+			goodinseoncookie: '/src/public/element/cookie/normal-cookie/herring-cookie.png',
+			text: '우와~! 맛있는 정어리 쿠키가 완성됐다!!'
+		},
+		{
+			goodpumpkincookie: '/src/public/element/cookie/normal-cookie/pumpkin-cookie.png',
+			text: '우와~! 맛있는 호박 쿠키가 완성됐다!!'
+		},
 
-			tanapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			tanblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			tanmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			tanspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			tanmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			tanpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
-			taninseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
+		{
+			tanapplecookie: '/src/public/element/cookie/tan-cookie/apple-cookie.png',
+			text: '헉!! 완전히 탄 사과 쿠키가 돼버렸잖아..!'
+		},
+		{
+			tanblueberrycookie: '/src/public/element/cookie/tan-cookie/blueberry-cookie.png',
+			text: '헉!! 완전히 탄 사과 쿠키가 돼버렸잖아..!'
+		},
+		{
+			tanmeatcookie: '/src/public/element/cookie/tan-cookie/meat-cookie.png',
+			text: '헉!! 완전히 탄 사과 쿠키가 돼버렸잖아..!'
+		},
+		{
+			tanspamcookie: '/src/public/element/cookie/tan-cookie/spam-cookie.png',
+			text: '헉!! 완전히 탄 사과 쿠키가 돼버렸잖아..!'
+		},
+		{
+			tanmintchococookie: '/src/public/element/cookie/tan-cookie/mincho-cookie.png',
+			text: '헉!! 완전히 탄 사과 쿠키가 돼버렸잖아..!'
+		},
+		{
+			tanpumpkincookie: '/src/public/element/cookie/tan-cookie/pumpkin-cookie.png',
+			text: '헉!! 완전히 탄 사과 쿠키가 돼버렸잖아..!'
+		},
+		{
+			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie.png',
+			text: '헉!! 완전히 탄 사과 쿠키가 돼버렸잖아..!'
+		},
 
-			burnt: '/src/public/element/cookie/suktan.png'
+		{
+			burnt: '/src/public/element/cookie/suktan.png',
+			text: '헉!! 다 타버려서 석탄이 돼버렸잖아..!'
 		}
 	];
 
@@ -36,6 +100,7 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
+	import { text } from '@sveltejs/kit';
 
 	let id = null; // 빵인지 쿠킨지 파인지
 	let id_liquid = null; // 그 뭐냐 물인지 파워에이드인지 주슨지...등
@@ -150,7 +215,7 @@
 			if (selectedtime === '0:30') result += 'dul';
 			else if (selectedtime === '1:00') result += 'good';
 			else if (selectedtime === '1:30') result += 'tan';
-			else if (selectedtime === '8:00') result = 'burnt';
+			else if (selectedtime === '8:00') result += 'burnt';
 		}
 	});
 </script>
