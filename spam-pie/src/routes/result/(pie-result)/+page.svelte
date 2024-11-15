@@ -31,6 +31,7 @@
 	];
 
 	const bowl = '/src/public/element/otherthing/otherelement/what.png';
+	const next_button = '/src/public/element/otherthing/otherelement/nextbotten.png';
 
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
