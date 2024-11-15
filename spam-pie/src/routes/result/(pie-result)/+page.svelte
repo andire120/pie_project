@@ -155,7 +155,7 @@
 			if (selectedtime === '0:30') result += 'dul';
 			else if (selectedtime === '1:00') result += 'good';
 			else if (selectedtime === '1:30') result += 'tan';
-			else if (selectedtime === '8:00') result += 'burnt';
+			else if (selectedtime === '8:00') result = 'burnt';
 		}
 	});
 </script>
