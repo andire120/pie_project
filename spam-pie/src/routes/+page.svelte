@@ -1,3 +1,17 @@
+<script>
+  import { onMount } from "svelte";
+  import { goto } from "$app/navigation";
+
+  onMount(() => {
+    goto("/storys/1"); 
+  });
+</script>
+
+<main>
+  <h1>Loading...</h1>
+  <p>잠시만 기다려 주세요. 다른 페이지로 이동 중입니다.</p>
+</main>
+
 <div class="flex justify-center">
 <h1>main page입니당!</h1>
 <h1>위에 저거 100퍼 장승원이다 ㅋㅋ</h1>

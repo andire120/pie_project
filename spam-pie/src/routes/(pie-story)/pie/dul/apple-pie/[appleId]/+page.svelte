@@ -31,7 +31,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
 
-
 {#if (appleId == 2)}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
         <div class="botten">돌아가기</div>
