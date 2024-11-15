@@ -190,7 +190,7 @@
 		<img src={next_button} alt="단추" class="botten" />
 	</botten>
 
-	<img src={dulinseoncookie} alt="결과" class="re" />
+	<img src={element[0].dulapplecookie} alt="결과" class="re" />
 
 <style>
 	.container {
