@@ -145,6 +145,10 @@
 </div>
 <img src={bowl} alt="결과" class="re" />
 
+<botten onclick={go()} class="bot">
+	<img src={next_button} alt="단추" class="botten" />
+</botten>
+
 <style>
 	.container {
 		display: flex;
