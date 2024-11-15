@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+  import { onMount } from 'svelte';
 
   const background = "/src/public/element/otherthing/otherelement/background.png";
   const next = "/src/public/element/otherthing/otherelement/nextbotten.png";
@@ -20,20 +21,33 @@
   }
 
   async function showDan() {
-    if (selectedtime) {
-      await goto('/next-page');
-    } else {
-      showWarning = true;
-      setTimeout(() => {
-        showWarning = false;
-      }, 3000);
-    }
+  if (selectedtime) {
+    await goto(`/?id=your_id_value&liquid_id=your_liquid_value&main_ingredient=your_ingredient_value&time=${selectedtime}`);
+  } else {
+    showWarning = true;
+    setTimeout(() => {
+      showWarning = false;
+    }, 3000);
   }
-</script>
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+  let id: string | null = null;
+
+  onMount(() => {
+    const url = new URL(window.location.href);
+
+    const pathId = window.location.pathname.split('/').pop();
+    const queryId = url.searchParams.get('id');
+
+    id = pathId || queryId || 'No ID Provided';
+
+    sessionStorage.setItem('currentURL', window.location.href);
+  });
+
+
+  
+</script>
 
 <div class="container">
   <div class="back">
@@ -56,13 +70,14 @@
   </div>
 
   <div class="dan" class:show={showWarning}>
-    <img src={danger} alt="경고">
+    <img src={danger} alt="경고" />
   </div>
 
   <div class="o">
     <img src={oven} alt="오븐" />
   </div>
 </div>
+
 
 <style>
   :global(html, body) {
