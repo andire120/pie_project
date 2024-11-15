@@ -100,9 +100,6 @@
 			}
 		}
 	});
-	//크래시는 안된다
-
-	// 빵
 
 	onMount(() => {
 		const queryParams = new URLSearchParams($page.url.search);
@@ -124,7 +121,7 @@
 			if (selectedtime === '0:30') result += 'dul';
 			else if (selectedtime === '1:00') result += 'good';
 			else if (selectedtime === '1:30') result += 'tan';
-			else if (selectedtime === '8:00') result += 'burnt';
+			else if (selectedtime === '8:00') result = 'burnt';
 		}
 	});
 </script>

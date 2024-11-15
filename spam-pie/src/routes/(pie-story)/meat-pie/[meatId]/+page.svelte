@@ -82,8 +82,11 @@
 
 {#if (meatId == 1)}
     <button on:click|stopPropagation={() => refresh(`/meat-pie/${meatId + 1}`)} class="button">
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+        <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
     </button>
+    <div>
+        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
+    </div>
     <div class="piebox">
         <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
         <img alt={`${meatId}파이`} src={stories[meatId - 1].pieimg} class="pie"/>
@@ -164,7 +167,7 @@
         justify-content: center;
 
         position: absolute;
-        z-index: 3;
+        z-index: 4;
     }
 
     .textbox2{
