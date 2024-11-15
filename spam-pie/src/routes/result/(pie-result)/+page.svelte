@@ -156,7 +156,6 @@
 		main_ingredient = queryParams.get('main_ingredient');
 		selectedtime = queryParams.get('selectedtime');
 
-<<<<<<< HEAD
 		if(selectedtime != '8:00') {
 			if (id === 'parkbutter' || id === 'parkmargarine') {
             	if (main_ingredient === 'apple') {
@@ -170,11 +169,7 @@
 					else if(selectedtime === '1:30') {
 						imagePath = element1[0].tanapplepie;
 					}
-=======
-		if (id == 'parkbutter' || id == 'parkmargarine') {
-			if (main_ingredient == 'apple') {
-				if (selectedtime == '0:30') {
->>>>>>> 75ae241a5e14350348bef163b2d43749b2d33b8c
+
 				}
 			
 				else if (main_ingredient === 'blueberry') {
@@ -199,6 +194,8 @@
 		}
 		
 	}
+
+
 
 	// 쿠키
 		if (id === 'middlemargarine' || id === 'middlebutter') {
