@@ -1,4 +1,6 @@
 <script>
+// @ts-nocheck
+
 	const background = '/src/public/element/otherthing/otherelement/background.png';
 
 	const element = [
@@ -435,10 +437,7 @@
 		<img src={background} alt="배경" />
 	</div>
 	<img src={imagePath} class="re" alt="결과 이미지" />
-<<<<<<< HEAD
 	<p class = "text">{textpie}</p>
-=======
->>>>>>> 4e7b124f8712f63639c3ffcb45bad70c7ea77cbd
 	<div class="foot"></div>
 </div>
 
