@@ -1,7 +1,7 @@
 <script>
 	const background = '/src/public/element/otherthing/otherelement/background.png';
 	
-	 const element = [
+	const element = [
         {
             dulapplecookie : '/src/public/element/cookie/dul-cookie/apple-cookie.png',
             dulblueberrycookie : '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
@@ -32,7 +32,6 @@
 
     ];
 
-
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
@@ -49,6 +48,42 @@
 	let result = null; // 최종결과
 
 	// 파이
+	onMount(() => {
+		const queryParams = new URLSearchParams($page.url.search);
+		id = queryParams.get('id');
+		main_ingredient = queryParams.get('main_ingredient');
+		selectedtime = queryParams.get('selectedtime');
+
+		if(id == 'parkbutter' || id == 'parkmargarine') {
+			if (main_ingredient == 'apple') {
+				if(selectedtime == '0:30') {
+
+				}
+			}
+			else if (main_ingredient === 'blueberry') {
+
+			}
+			else if (main_ingredient === 'inseon') {
+
+			}
+			else if (main_ingredient === 'meat') {
+
+			}
+			else if (main_ingredient === 'mintchoco') {
+
+			}
+			else if (main_ingredient === 'pump') {
+
+			}
+			else if (main_ingredient === 'spam') {
+
+			}
+		}
+	});
+	
+
+
+	
 
 	// 쿠키
 
@@ -131,7 +166,7 @@
 			if (selectedtime === '0:30') result += 'dul';
 			else if (selectedtime === '1:00') result += 'good';
 			else if (selectedtime === '1:30') result += 'tan';
-			else if (selectedtime === '8:00') result = 'burnt';
+			else if (selectedtime === '8:00') result += 'burnt';
 		}
 	});
 </script>
@@ -143,11 +178,16 @@
 
 	<div class="foot"></div>
 </div>
-<img src={bowl} alt="결과" class="re" />
+	<img src={bowl} alt="결과" class="re" />
+	
+	<botten class="bot">
+		<img src={next_button} alt="단추" class="botten" />
+	</botten>
 
-<botten class="bot">
-	<img src={next_button} alt="단추" class="botten" />
-</botten>
+	<botten class="bot">
+		<img src={next_button} alt="단추" class="botten" />
+	</botten>
+<img src={dulinseoncookie} alt="결과" class="re" />
 
 <style>
 	.container {
@@ -207,5 +247,9 @@
 		width: 10vh;
 		height: 10vh;
 		z-index: 1;
+		display: flex;
+		width: 100vw;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
