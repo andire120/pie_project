@@ -45,7 +45,7 @@
         </div>  
     </div>
 {:else if stories[meatId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/pie/tan/meat-pie/${meatId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/bread/strange/meat-pie/${meatId + 1}`)} class="button">
         <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
     </button>
     <div>
