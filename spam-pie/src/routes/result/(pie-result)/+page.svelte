@@ -44,8 +44,6 @@
 
 	// 파이
 
-	
-
 	// 쿠키
 
 	onMount(() => {
@@ -139,7 +137,7 @@
 
 	<div class="foot"></div>
 </div>
-<img src={dulinseoncookie} alt="결과" class="re" />
+<img src={bowl} alt="결과" class="re" />
 
 <style>
 	.container {
@@ -180,9 +178,11 @@
 	}
 
 	.re {
-		display: flex;
-		width: 100vw;
-		justify-content: center;
-		align-items: center;
+		overflow: hidden;
+		position: absolute;
+		width: 70vh;
+		height: 70vh;
+		top: -1vh;
+		left: 55vh;
 	}
 </style>
