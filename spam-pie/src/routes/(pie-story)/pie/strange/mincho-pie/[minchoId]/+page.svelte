@@ -11,7 +11,7 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "모양은 그럴싸한데 이상한 맛이 나는걸? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/bread/normal-bread/mincho-bread.png",
+            pieimg:"/src/public/element/pie/goodpie/mincho-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
