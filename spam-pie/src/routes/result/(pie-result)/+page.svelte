@@ -250,8 +250,8 @@
 
 		if (selectedtime != '8:00') {
 			if (id === 'parkbutter' || id === 'parkmargarine') {
-<<<<<<< HEAD
-            	if (main_ingredient === 'apple') {
+			}
+				if (main_ingredient === 'apple') {
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulapplepie;
 						textpie = "으악~! 덜익은 사과 파이가 완성됐잖아..";
@@ -264,34 +264,9 @@
 					else if(selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanapplepie;
 						textpie = "헉!! 완전히 탄 사과 파이가 돼버렸잖아..!"
-=======
-				if (main_ingredient === 'apple') {
-					if (selectedtime === '0:30') {
-						// @ts-ignore
-						document.querySelector('.re').src = element1[0].dulapplepie;
-					} else if (selectedtime === '1:00') {
-						imagePath = element1[0].goodapplepie;
-					} else if (selectedtime === '1:30') {
-						imagePath = element1[0].tanapplepie;
 					}
-				} else if (main_ingredient === 'blueberry') {
-					if (selectedtime === '0:30') {
-						imagePath = element1[0].dulblueberrypie;
-					} else if (selectedtime === '1:00') {
-						imagePath = element1[0].goodblueberrypie;
-					} else if (selectedtime === '1:30') {
-						imagePath = element1[0].tanblueberrypie;
->>>>>>> 4e7b124f8712f63639c3ffcb45bad70c7ea77cbd
-					}
-				} else if (main_ingredient === 'inseon') {
-				} else if (main_ingredient === 'meat') {
-				} else if (main_ingredient === 'mintchoco') {
-				} else if (main_ingredient === 'pump') {
-				} else if (main_ingredient === 'spam') {
-				}
-<<<<<<< HEAD
 				else if (main_ingredient === 'blueberry') {
-					if(selectedtime === '0:30') {
+						if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulblueberrypie;
 						textpie = "으악~! 덜익은 블루베리 파이가 완성됐잖아..";
 					}
@@ -380,13 +355,6 @@
 			document.querySelector('.re').src = element1[0].burnt;
 			textpie = "헉!! 다 타버려서 석탄이 돼버렸잖아..!"
 		}
-=======
-			} else {
-				imagePath = element1[0].burnt;
-			}
-		}
->>>>>>> 4e7b124f8712f63639c3ffcb45bad70c7ea77cbd
-
 		// 쿠키
 		if (id === 'middlemargarine' || id === 'middlebutter') {
 			middle_result = 'cookie';
