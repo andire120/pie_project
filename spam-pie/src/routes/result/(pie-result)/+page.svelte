@@ -1,6 +1,5 @@
 <script>
 	const background = '/src/public/element/otherthing/otherelement/background.png';
-<<<<<<< HEAD
 	
 	import dulapplecookie from '/src/public/element/cookie/dul-cookie/apple-cookie.png';
 	import dulblueberrycookie from '/src/public/element/cookie/dul-cookie/blueberry-cookie.png';
@@ -9,40 +8,24 @@
 	import dulinseoncookie from '/src/public/element/cookie/dul-cookie/herring-cookie.png';
 	import dulmintchococookie from '/src/public/element/cookie/dul-cookie/mincho-cookie.png';
 	import dulpumpkincookie from '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png';
-=======
-	const element = [
-		{
-			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			dulblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			dulspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			dulmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			dulinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
-			dulmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			dulpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
->>>>>>> fbb8c33011c42709c557e96c273dcf5a93bda1a7
 
-			goodapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			goodblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			goodspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			goodmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			goodmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			goodinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
-			goodpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
+	import goodapplecookie from '/src/public/element/cookie/dul-cookie/apple-cookie.png';
+	import goodblueberrycookie from '/src/public/element/cookie/dul-cookie/blueberry-cookie.png';
+	import goodspamcookie from '/src/public/element/cookie/dul-cookie/spam-cookie.png';
+	import goodmeatcookie from '/src/public/element/cookie/dul-cookie/meat-cookie.png';
+	import goodmintchococookie from '/src/public/element/cookie/dul-cookie/mincho-cookie.png';
+	import goodinseoncookie from '/src/public/element/cookie/dul-cookie/herring-cookie.png';
+	import goodpumpkincookie from '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png';
 
-			tanapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			tanblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			tanmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			tanspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			tanmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			tanpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
-			taninseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
+	import tanapplecookie from '/src/public/element/cookie/dul-cookie/apple-cookie.png';
+	import tanblueberrycookie from '/src/public/element/cookie/dul-cookie/blueberry-cookie.png';
+	import tanmeatcookie from '/src/public/element/cookie/dul-cookie/meat-cookie.png';
+	import tanspamcookie from '/src/public/element/cookie/dul-cookie/spam-cookie.png';
+	import tanmintchococookie from '/src/public/element/cookie/dul-cookie/mincho-cookie.png';
+	import tanpumpkincookie from '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png';
+	import taninseoncookie from '/src/public/element/cookie/dul-cookie/herring-cookie.png';
 
-			burnt: '/src/public/element/cookie/suktan.png'
-		}
-	];
-
-	const bowl = '/src/public/element/otherthing/otherelement/what.png';
-	const next_button = '/src/public/element/otherthing/otherelement/nextbotten.png';
+	import burnt from '/src/public/element/cookie/suktan.png';
 
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
@@ -60,6 +43,31 @@
 	let result = null; // 최종결과
 
 	// 파이
+	onMount(() => {
+		const piecode = new URLSearchParams($page.url.search);
+		id = piecode.get('id');
+		id_liquid = piecode.get('id_liquid');
+		main_ingredient = piecode.get('main_ingredient');
+		//selectedtime = piecode.get('');
+
+		if(id == 'parkbutter' || id == 'parkmargarine') {
+			if (main_ingredient == 'apple') {
+				if(selectedtime == '0:30') {
+					
+				}
+			}
+			else if (main_ingredient === 'blueberry') 
+			else if (main_ingredient === 'inseon') 
+			else if (main_ingredient === 'meat') 
+			else if (main_ingredient === 'mintchoco') 
+			else if (main_ingredient === 'pump') 
+			else if (main_ingredient === 'spam') 
+		}
+	});
+	
+
+
+	
 
 	// 쿠키
 
@@ -142,7 +150,7 @@
 			if (selectedtime === '0:30') result += 'dul';
 			else if (selectedtime === '1:00') result += 'good';
 			else if (selectedtime === '1:30') result += 'tan';
-			else if (selectedtime === '8:00') result = 'burnt';
+			else if (selectedtime === '8:00') result += 'burnt';
 		}
 	});
 </script>
@@ -154,7 +162,7 @@
 
 	<div class="foot"></div>
 </div>
-<img src={bowl} alt="결과" class="re" />
+<img src={dulinseoncookie} alt="결과" class="re" />
 
 <style>
 	.container {
@@ -195,11 +203,9 @@
 	}
 
 	.re {
-		overflow: hidden;
-		position: absolute;
-		width: 70vh;
-		height: 70vh;
-		top: -1vh;
-		left: 55vh;
+		display: flex;
+		width: 100vw;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
