@@ -1,37 +1,37 @@
 <script>
 	const background = '/src/public/element/otherthing/otherelement/background.png';
-	const element = [
-		{
-			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			dulblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			dulspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			dulmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			dulinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
-			dulmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			dulpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
+	
+	 const element = [
+        {
+            dulapplecookie : '/src/public/element/cookie/dul-cookie/apple-cookie.png',
+            dulblueberrycookie : '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
+            dulspamcookie : '/src/public/element/cookie/dul-cookie/spam-cookie.png',
+            dulmeatcookie : '/src/public/element/cookie/dul-cookie/meat-cookie.png',
+            dulinseoncookie : '/src/public/element/cookie/dul-cookie/herring-cookie.png',
+            dulmintchococookie : '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
+            dulpumpkincookie : '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
 
-			goodapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			goodblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			goodspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			goodmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			goodmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			goodinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
-			goodpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
+            goodapplecookie : '/src/public/element/cookie/dul-cookie/apple-cookie.png',
+            goodblueberrycookie : '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
+            goodspamcookie : '/src/public/element/cookie/dul-cookie/spam-cookie.png',
+            goodmeatcookie : '/src/public/element/cookie/dul-cookie/meat-cookie.png',
+            goodmintchococookie : '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
+            goodinseoncookie : '/src/public/element/cookie/dul-cookie/herring-cookie.png',
+            goodpumpkincookie : '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
 
-			tanapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			tanblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			tanmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			tanspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			tanmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			tanpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
-			taninseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
+            tanapplecookie : '/src/public/element/cookie/dul-cookie/apple-cookie.png',
+            tanblueberrycookie : '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
+            tanmeatcookie : '/src/public/element/cookie/dul-cookie/meat-cookie.png',
+            tanspamcookie : '/src/public/element/cookie/dul-cookie/spam-cookie.png',
+            tanmintchococookie : '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
+            tanpumpkincookie : '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
+            taninseoncookie : '/src/public/element/cookie/dul-cookie/herring-cookie.png',
 
-			burnt: '/src/public/element/cookie/suktan.png'
-		}
-	];
+            burnt : '/src/public/element/cookie/suktan.png',
+        }
 
-	const bowl = '/src/public/element/otherthing/otherelement/what.png';
-	const next_button = '/src/public/element/otherthing/otherelement/nextbotten.png';
+    ];
+
 
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
