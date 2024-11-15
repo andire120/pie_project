@@ -51,31 +51,37 @@
                 else if (selectedtime === '1:00') goto('/apple-cookie-good');
                 else if (selectedtime === '1:30') goto('/apple-cookie-tan');
                 else if (selectedtime === '8:00') goto('/apple-cookie-burnt');
+            
             } else if (result === 'blueberrycookie') {
                 if (selectedtime === '0:30') goto('/blueberry-cookie-dul');
                 else if (selectedtime === '1:00') goto('/blueberry-cookie-good');
                 else if (selectedtime === '1:30') goto('/blueberry-cookie-tan');
                 else if (selectedtime === '8:00') goto('/blueberry-cookie-burnt');
+
             } else if (result === 'inseoncookie') {
                 if (selectedtime === '0:30') goto('/inseon-cookie-dul');
                 else if (selectedtime === '1:00') goto('/inseon-cookie-good');
                 else if (selectedtime === '1:30') goto('/inseon-cookie-tan');
                 else if (selectedtime === '8:00') goto('/inseon-cookie-burnt');
+
             } else if (result === 'meatcookie') {
                 if (selectedtime === '0:30') goto('/meat-cookie-dul');
                 else if (selectedtime === '1:00') goto('/meat-cookie-good');
                 else if (selectedtime === '1:30') goto('/meat-cookie-tan');
                 else if (selectedtime === '8:00') goto('/meat-cookie-burnt');
+
             } else if (result === 'mintchococookie') {
                 if (selectedtime === '0:30') goto('/mintchoco-cookie-dul');
                 else if (selectedtime === '1:00') goto('/mintchoco-cookie-good');
                 else if (selectedtime === '1:30') goto('/mintchoco-cookie-tan');
                 else if (selectedtime === '8:00') goto('/mintchoco-cookie-burnt');
+
             } else if (result === 'pumpkincookie') {
                 if (selectedtime === '0:30') goto('/pumpkin-cookie-dul');
                 else if (selectedtime === '1:00') goto('/pumpkin-cookie-good');
                 else if (selectedtime === '1:30') goto('/pumpkin-cookie-tan');
                 else if (selectedtime === '8:00') goto('/pumpkin-cookie-burnt');
+                
             } else if (result === 'spamcookie') {
                 if (selectedtime === '0:30') goto('/spam-cookie-dul');
                 else if (selectedtime === '1:00') goto('/spam-cookie-good');
