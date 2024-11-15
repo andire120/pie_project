@@ -385,6 +385,7 @@
 		<img src={background} alt="배경" />
 	</div>
 	<img src={imagePath} class="re" alt="결과 이미지" />
+	<p class="text">{element1[0].text}</p>
 	<div class="foot"></div>
 </div>
 
