@@ -122,12 +122,7 @@
 
 		if (id == 'parkbutter' || id == 'parkmargarine') {
 			if (main_ingredient == 'apple') {
-<<<<<<< HEAD
-				if(selectedtime == '0:30') {
-					
-=======
 				if (selectedtime == '0:30') {
->>>>>>> f6878467c993ede1da500ca13d10b1f99b747415
 				}
 			} else if (main_ingredient === 'blueberry') {
 			} else if (main_ingredient === 'inseon') {
@@ -220,7 +215,7 @@
 			if (selectedtime === '0:30') result += 'dul';
 			else if (selectedtime === '1:00') result += 'good';
 			else if (selectedtime === '1:30') result += 'tan';
-			else if (selectedtime === '8:00') result = 'burnt';
+			else if (selectedtime === '8:00') result += 'burnt';
 		}
 	});
 </script>
@@ -245,11 +240,6 @@
 		height: 100vh;
 		background-color: #b071cd;
 		overflow: hidden;
-
-		display: flex;
-		width: 100vw;
-		justify-content: center;
-		align-items: center;
 	}
 
 	.back {
