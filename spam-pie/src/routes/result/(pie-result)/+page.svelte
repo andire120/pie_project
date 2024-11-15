@@ -50,6 +50,13 @@
     // 빵
 
 
+    onMount(() => {
+        const queryParams = new URLSearchParams($page.url.search);
+        id = queryParams.get('id');
+        id_liquid = queryParams.get('id_liquid');
+    });
 
-    
+
+
+
 </script>
