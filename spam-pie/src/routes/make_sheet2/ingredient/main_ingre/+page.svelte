@@ -54,15 +54,13 @@ function send() {
         } else if (selectedIngredient === 'pump') {
             id_main = 'pump';
         } else if (selectedIngredient === 'spam') {
-            id_main = 'spam'
+            id_main = 'spam';
         }
-
     }
 }
 
     function go()  {
         send();
-
         if(selectedIngredient == null){
             document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/waring_main.png";
             setTimeout(function(){
