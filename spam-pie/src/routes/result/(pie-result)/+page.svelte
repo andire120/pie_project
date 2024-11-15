@@ -145,7 +145,7 @@
 </div>
 <img src={bowl} alt="결과" class="re" />
 
-<botten onclick={go()} class="bot">
+<botten class="bot">
 	<img src={next_button} alt="단추" class="botten" />
 </botten>
 
@@ -194,5 +194,18 @@
 		height: 70vh;
 		top: -1vh;
 		left: 55vh;
+	}
+
+	.bot {
+		position: absolute;
+		top: 60vh;
+		left: 164vh;
+	}
+
+	.botten {
+		position: absolute;
+		width: 10vh;
+		height: 10vh;
+		z-index: 1;
 	}
 </style>
