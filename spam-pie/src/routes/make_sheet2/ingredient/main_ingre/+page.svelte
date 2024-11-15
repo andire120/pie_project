@@ -49,11 +49,14 @@ function send() {
             id_main = "blueberry";
         } else if (selectedIngredient === 'mint') {
             id_main = "mintchoco";
-        } else if (selectedIngredient === 'juice') {
-            id_main = "juice";
-        } else if (selectedIngredient === 'yorg') {
-            id_main = 'yorg';
+        } else if (selectedIngredient === 'meat') {
+            id_main = "meat";
+        } else if (selectedIngredient === 'pump') {
+            id_main = 'pump';
+        } else if (selectedIngredient === 'spam') {
+            id_main = 'spam'
         }
+
     }
 }
 
