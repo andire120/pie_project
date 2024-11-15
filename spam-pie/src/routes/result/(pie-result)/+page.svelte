@@ -1,10 +1,8 @@
 <script>
-	
 	const background = '/src/public/element/otherthing/otherelement/background.png';
-	
+
 	const element = [
 		{
-			
 			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
 			text: '으악~! 덜익은 사과 쿠키가 완성됐잖아..'
 		},
@@ -99,7 +97,6 @@
 
 	const element1 = [
 		{
-			
 			dulapplepie: '/src/public/element/pie/dul-pie/apple-pie.png',
 			dulblueberrypie: '/src/public/element/pie/dul-pie/blueberry-pie.png',
 			dulspampie: '/src/public/element/pie/dul-pie/spam-pie.png',
@@ -141,7 +138,7 @@
 	let main_ingredient = null; // 주재료
 	let middle_result = null; //이건 빵인지 쿠키인지 파이인지 볼려고 만든거(강력분,중력분,박력분)
 	let selectedtime = null; //구운시간
-	
+
 	let imagePath = bowl;
 
 	/**
@@ -156,48 +153,37 @@
 		main_ingredient = queryParams.get('main_ingredient');
 		selectedtime = queryParams.get('selectedtime');
 
-		if(selectedtime != '8:00') {
+		if (selectedtime != '8:00') {
 			if (id === 'parkbutter' || id === 'parkmargarine') {
-            	if (main_ingredient === 'apple') {
-					if(selectedtime === '0:30') {
-                		// @ts-ignore
-                		document.querySelector('.re').src = element1[0].dulapplepie;
-					}
-					else if(selectedtime === '1:00') {
-                		imagePath = element1[0].goodapplepie;
-					}
-					else if(selectedtime === '1:30') {
+				if (main_ingredient === 'apple') {
+					if (selectedtime === '0:30') {
+						// @ts-ignore
+						document.querySelector('.re').src = element1[0].dulapplepie;
+					} else if (selectedtime === '1:00') {
+						imagePath = element1[0].goodapplepie;
+					} else if (selectedtime === '1:30') {
 						imagePath = element1[0].tanapplepie;
 					}
-
-				}
-			
-				else if (main_ingredient === 'blueberry') {
-					if(selectedtime === '0:30') {
-                		imagePath = element1[0].dulblueberrypie;
-					}
-					else if(selectedtime === '1:00') {
-                		imagePath = element1[0].goodblueberrypie;
-					}
-					else if(selectedtime === '1:30') {
+				} else if (main_ingredient === 'blueberry') {
+					if (selectedtime === '0:30') {
+						imagePath = element1[0].dulblueberrypie;
+					} else if (selectedtime === '1:00') {
+						imagePath = element1[0].goodblueberrypie;
+					} else if (selectedtime === '1:30') {
 						imagePath = element1[0].tanblueberrypie;
 					}
+				} else if (main_ingredient === 'inseon') {
+				} else if (main_ingredient === 'meat') {
+				} else if (main_ingredient === 'mintchoco') {
+				} else if (main_ingredient === 'pump') {
+				} else if (main_ingredient === 'spam') {
 				}
-				else if (main_ingredient === 'inseon') {}
-				else if (main_ingredient === 'meat') {}
-				else if (main_ingredient === 'mintchoco') {}
-				else if (main_ingredient === 'pump') {}
-				else if (main_ingredient === 'spam') {} 
+			} else {
+				imagePath = element1[0].burnt;
 			}
-		else {
-			imagePath = element1[0].burnt;
 		}
-		
-	}
 
-
-
-	// 쿠키
+		// 쿠키
 		if (id === 'middlemargarine' || id === 'middlebutter') {
 			middle_result = 'cookie';
 
@@ -246,9 +232,9 @@
 				else if (selectedtime === '8:00') result = 'burnt';
 			}
 		}
-			//크래시는 안된다
+		//크래시는 안된다
 
-	// 빵
+		// 빵
 		if (id === 'strongbutter' || id === 'strongmargarine') {
 			middle_result = 'bread';
 
@@ -275,7 +261,6 @@
 	<img src={imagePath} class="re" alt="결과 이미지" />
 	<div class="foot"></div>
 </div>
-
 
 <botten class="bot">
 	<img src={next_button} alt="단추" class="botten" />
