@@ -49,31 +49,6 @@
 	let result = null; // 최종결과
 
 	// 파이
-	onMount(() => {
-		const piecode = new URLSearchParams($page.url.search);
-		id = piecode.get('id');
-		id_liquid = piecode.get('id_liquid');
-		main_ingredient = piecode.get('main_ingredient');
-		//selectedtime = piecode.get('');
-
-		if(id == 'parkbutter' || id == 'parkmargarine') {
-			if (main_ingredient == 'apple') {
-				if(selectedtime == '0:30') {
-					
-				}
-			}
-			else if (main_ingredient === 'blueberry') 
-			else if (main_ingredient === 'inseon') 
-			else if (main_ingredient === 'meat') 
-			else if (main_ingredient === 'mintchoco') 
-			else if (main_ingredient === 'pump') 
-			else if (main_ingredient === 'spam') 
-		}
-	});
-	
-
-
-	
 
 	// 쿠키
 
@@ -156,7 +131,7 @@
 			if (selectedtime === '0:30') result += 'dul';
 			else if (selectedtime === '1:00') result += 'good';
 			else if (selectedtime === '1:30') result += 'tan';
-			else if (selectedtime === '8:00') result += 'burnt';
+			else if (selectedtime === '8:00') result = 'burnt';
 		}
 	});
 </script>
@@ -168,7 +143,7 @@
 
 	<div class="foot"></div>
 </div>
-<img src={dulinseoncookie} alt="결과" class="re" />
+<img src={bowl} alt="결과" class="re" />
 
 <botten onclick={go()} class="bot">
 	<img src={next_button} alt="단추" class="botten" />
@@ -213,9 +188,11 @@
 	}
 
 	.re {
-		display: flex;
-		width: 100vw;
-		justify-content: center;
-		align-items: center;
+		overflow: hidden;
+		position: absolute;
+		width: 70vh;
+		height: 70vh;
+		top: -1vh;
+		left: 55vh;
 	}
 </style>
