@@ -1,19 +1,5 @@
 <script>
 	const background = '/src/public/element/otherthing/otherelement/background.png';
-<<<<<<< HEAD
-	
-	const element = [
-        {
-            dulapplecookie : '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-            dulblueberrycookie : '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-            dulspamcookie : '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-            dulmeatcookie : '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-            dulinseoncookie : '/src/public/element/cookie/dul-cookie/herring-cookie.png',
-            dulmintchococookie : '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-            dulpumpkincookie : '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
-=======
->>>>>>> 502414b130c37d6a1ac3bec93c8ba309ff42cef1
-
 	const element = [
 		{
 			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
@@ -44,12 +30,10 @@
 		}
 	];
 
-<<<<<<< HEAD
-=======
 	const next_button = '/src/public/element/otherthing/otherelement/nextbotten.png';
 	const bowl = '/src/public/element/otherthing/otherelement/what.png';
 
->>>>>>> 502414b130c37d6a1ac3bec93c8ba309ff42cef1
+
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
@@ -205,7 +189,8 @@
 	<botten class="bot">
 		<img src={next_button} alt="단추" class="botten" />
 	</botten>
-<img src={dulinseoncookie} alt="결과" class="re" />
+
+	<img src={dulinseoncookie} alt="결과" class="re" />
 
 <style>
 	.container {
