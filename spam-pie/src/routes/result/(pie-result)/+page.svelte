@@ -100,6 +100,9 @@
 			}
 		}
 	});
+	//크래시는 안된다
+
+	// 빵
 
 	onMount(() => {
 		const queryParams = new URLSearchParams($page.url.search);
@@ -121,7 +124,7 @@
 			if (selectedtime === '0:30') result += 'dul';
 			else if (selectedtime === '1:00') result += 'good';
 			else if (selectedtime === '1:30') result += 'tan';
-			else if (selectedtime === '8:00') result = 'burnt';
+			else if (selectedtime === '8:00') result += 'burnt';
 		}
 	});
 </script>
@@ -132,18 +135,12 @@
 	</div>
 
 	<div class="foot"></div>
-
-	<div class="o">
-		<img src={dulinseoncookie} alt="결과" class="re" />
-	</div>
 </div>
+<img src={dulinseoncookie} alt="결과" class="re" />
 
 <style>
 	.container {
 		display: flex;
-		justify-content: center;
-		align-items: center;
-		position: relative;
 		width: 100vw;
 		height: 100vh;
 		background-color: #b071cd;
@@ -179,10 +176,10 @@
 		bottom: 5%;
 	}
 
-	.o {
-		position: absolute;
-		z-index: 1;
-		bottom: 15%;
-		left: 20%;
+	.re {
+		display: flex;
+		width: 100vw;
+		justify-content: center;
+		align-items: center;
 	}
 </style>
