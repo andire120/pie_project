@@ -95,6 +95,100 @@
 		}
 	];
 
+	const element2 = [
+		{
+			dulapplebread: '/src/public/element/bread/dul-bread/apple-bread.png',
+			text: '으악~! 덜익은 사과 빵이 완성됐잖아..'
+		},
+		{
+			dulblueberrybread: '/src/public/element/bread/dul-bread/blueberry-bread.png',
+			text: '으악~! 덜익은 블루베리 빵이 완성됐잖아..'
+		},
+		{
+			dulspambread: '/src/public/element/bread/dul-bread/spam-bread.png',
+			text: '으악~! 덜익은 스팸 빵이 완성됐잖아..'
+		},
+		{
+			dulmeatbread: '/src/public/element/bread/dul-bread/meat-bread.png',
+			text: '으악~! 덜익은 고기 빵이 완성됐잖아..'
+		},
+		{
+			dulinseonbread: '/src/public/element/bread/dul-bread/herring-bread.png',
+			text: '으악~! 덜익은 정어리 빵이 완성됐잖아..'
+		},
+		{
+			dulmintchocobread: '/src/public/element/bread/dul-bread/mincho-bread.png',
+			text: '으악~! 덜익은 민트초코 빵이 완성됐잖아..'
+		},
+		{
+			dulpumpkinbread: '/src/public/element/bread/dul-bread/pumpkin-bread.png',
+			text: '으악~! 덜익은 호박 빵이 완성됐잖아..'
+		},
+
+		{
+			goodapplebread: '/src/public/element/bread/normal-bread/apple-bread.png',
+			text: '우와~! 맛있는 사과 빵이 완성됐다!!'
+		},
+		{
+			goodblueberrybread: '/src/public/element/bread/normal-bread/blueberry-bread.png',
+			text: '우와~! 맛있는 블루베리 빵이 완성됐다!!'
+		},
+		{
+			goodspambread: '/src/public/element/bread/normal-bread/spam-bread.png',
+			text: '우와~! 맛있는 스팸 빵이 완성됐다!!'
+		},
+		{
+			goodmeatbread: '/src/public/element/bread/normal-bread/meat-bread.png',
+			text: '우와~! 맛있는 고기 빵이 완성됐다!!'
+		},
+		{
+			goodmintchocobread: '/src/public/element/bread/normal-bread/mincho-bread.png',
+			text: '우와~! 맛있는 민트초코 빵이 완성됐다!!'
+		},
+		{
+			goodinseonbread: '/src/public/element/bread/normal-bread/herring-bread.png',
+			text: '우와~! 맛있는 정어리 빵이 완성됐다!!'
+		},
+		{
+			goodpumpkinbread: '/src/public/element/bread/normal-bread/pumpkin-bread.png',
+			text: '우와~! 맛있는 호박 빵이 완성됐다!!'
+		},
+
+		{
+			tanapplebread: '/src/public/element/bread/tan-bread/apple-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanblueberrybread: '/src/public/element/bread/tan-bread/blueberry-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanmeatbread: '/src/public/element/bread/tan-bread/meat-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanspambread: '/src/public/element/bread/tan-bread/spam-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanmintchocobread: '/src/public/element/bread/tan-bread/mincho-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanpumpkinbread: '/src/public/element/bread/tan-bread/pumpkin-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			taninseonbread: '/src/public/element/bread/tan-bread/herring-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+
+		{
+			burnt: '/src/public/element/bread/suktan.png',
+			text: '헉!! 다 타버려서 석탄이 돼버렸잖아..!'
+		}
+	];
+
 	const element1 = [
 		{
 			dulapplepie: '/src/public/element/pie/dul-pie/apple-pie.png',
