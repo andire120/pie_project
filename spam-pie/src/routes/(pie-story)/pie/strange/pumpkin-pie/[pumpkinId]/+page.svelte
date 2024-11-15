@@ -11,7 +11,7 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "모양은 그럴싸한데 이상한 맛이 나는걸? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/bread/normal-bread/pumpkin-bread.png",
+            pieimg:"/src/public/element/pie/goodpie/pumpkin-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
@@ -45,7 +45,7 @@
         </div>  
     </div>
 {:else if stories[pumpkinId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/pie/tan/pumpkin-pie/${pumpkinId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/pie/trange/pumpkin-pie/${pumpkinId + 1}`)} class="button">
         <img alt={`${pumpkinId}번이미지`} src={stories[pumpkinId - 1].tu} class="tu"/>
     </button>
     <div>

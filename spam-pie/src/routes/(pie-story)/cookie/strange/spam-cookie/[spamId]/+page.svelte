@@ -45,7 +45,7 @@
         </div>  
     </div>
 {:else if stories[spamId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/pie/tan/spam-pie/${spamId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/cookie/strange/spam-pie/${spamId + 1}`)} class="button">
         <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>
