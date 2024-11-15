@@ -65,6 +65,7 @@
         const queryParams = new URLSearchParams($page.url.search);
         id = queryParams.get('id');
         id_liquid = queryParams.get('id_liquid');
+        id_main = queryParams.get('id_main');
     });
 
 
