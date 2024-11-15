@@ -1,10 +1,4 @@
 <script>
-<<<<<<< HEAD
-=======
-// @ts-nocheck
-
-	
->>>>>>> 70274df30d6505116d22a50e193e77a840ec6721
 	const background = '/src/public/element/otherthing/otherelement/background.png';
 
 	const element = [
@@ -104,94 +98,30 @@
 	const element1 = [
 		{
 			dulapplepie: '/src/public/element/pie/dul-pie/apple-pie.png',
-			text: '으악~! 덜익은 사과 파이가 완성됐잖아..'
-		},
-		{
 			dulblueberrypie: '/src/public/element/pie/dul-pie/blueberry-pie.png',
-			text: '으악~! 덜익은 블루베리 파이가 완성됐잖아..'
-		},
-		{
 			dulspampie: '/src/public/element/pie/dul-pie/spam-pie.png',
-			text: '으악~! 덜익은 스팸 파이가 완성됐잖아..'
-		},
-		{
 			dulmeatpie: '/src/public/element/pie/dul-pie/meat-pie.png',
-			text: '으악~! 덜익은 고기 파이가 완성됐잖아..'
-		},
-		{
 			dulinseonpie: '/src/public/element/pie/dul-pie/herring-pie.png',
-			text: '으악~! 덜익은 정어리 파이가 완성됐잖아..'
-		},
-		{
 			dulmintchocopie: '/src/public/element/pie/dul-pie/mincho-pie.png',
-			text: '으악~! 덜익은 민트초코 파이가 완성됐잖아..'
-		},
-		{
 			dulpumpkinpie: '/src/public/element/pie/dul-pie/pumpkin-pie.png',
-			text: '으악~! 덜익은 호박 파이가 완성됐잖아..'
-		},
 
-		{
 			goodapplepie: '/src/public/element/pie/goodpie/apple-pie.png',
-			text: '우와~! 맛있는 사과 파이가 완성됐다!!'
-		},
-		{
 			goodblueberrypie: '/src/public/element/pie/goodpie/blueberry-pie.png',
-			text: '우와~! 맛있는 블루베리 파이가 완성됐다!!'
-		},
-		{
 			goodspampie: '/src/public/element/pie/goodpie/spam-pie.png',
-			text: '우와~! 맛있는 스팸 파이가 완성됐다!!'
-		},
-		{
 			goodmeatpie: '/src/public/element/pie/goodpie/meat-pie.png',
-			text: '우와~! 맛있는 고기 파이가 완성됐다!!'
-		},
-		{
 			goodmintchocopie: '/src/public/element/pie/goodpie/mincho-pie.png',
-			text: '우와~! 맛있는 민트초코 파이가 완성됐다!!'
-		},
-		{
 			goodinseonpie: '/src/public/element/pie/goodpie/herring-pie.png',
-			text: '우와~! 맛있는 정어리 파이가 완성됐다!!'
-		},
-		{
 			goodpumpkinpie: '/src/public/element/pie/goodpie/pumpkin-pie.png',
-			text: '우와~! 맛있는 호박 파이가 완성됐다!!'
-		},
 
-		{
 			tanapplepie: '/src/public/element/pie/little-pie/apple-pie.png',
-			text: '헉!! 완전히 탄 사과 파이가 돼버렸잖아..!'
-		},
-		{
 			tanblueberrypie: '/src/public/element/pie/little-pie/blueberry-pie.png',
-			text: '헉!! 완전히 탄 블루베리 파이가 돼버렸잖아..!'
-		},
-		{
 			tanmeatpie: '/src/public/element/pie/little-pie/meat-pie.png',
-			text: '헉!! 완전히 탄 고기 파이가 돼버렸잖아..!'
-		},
-		{
 			tanspampie: '/src/public/element/pie/little-pie/spam-pie.png',
-			text: '헉!! 완전히 탄 스팸 파이가 돼버렸잖아..!'
-		},
-		{
 			tanmintchocopie: '/src/public/element/pie/little-pie/mincho-pie.png',
-			text: '헉!! 완전히 탄 민트초코 파이가 돼버렸잖아..!'
-		},
-		{
 			tanpumpkinpie: '/src/public/element/pie/little-pie/pumpkin-pie.png',
-			text: '헉!! 완전히 탄 호박 파이가 돼버렸잖아..!'
-		},
-		{
 			taninseonpie: '/src/public/element/pie/little-pie/herring-pie.png',
-			text: '헉!! 완전히 탄 정어리 파이가 돼버렸잖아..!'
-		},
 
-		{
-			burnt: '/src/public/element/pie/suktan.png',
-			text: '헉!! 다 타버려서 석탄이 돼버렸잖아..!'
+			burnt: '/src/public/element/pie/suktan.png'
 		}
 	];
 
@@ -225,7 +155,6 @@
 
 		if (selectedtime != '8:00') {
 			if (id === 'parkbutter' || id === 'parkmargarine') {
-<<<<<<< HEAD
 				if (main_ingredient === 'apple') {
 					if (selectedtime === '0:30') {
 						// @ts-ignore
@@ -242,28 +171,6 @@
 						imagePath = element1[0].goodblueberrypie;
 					} else if (selectedtime === '1:30') {
 						imagePath = element1[0].tanblueberrypie;
-=======
-            	if (main_ingredient === 'apple') {
-					if(selectedtime === '0:30') {
-                		document.querySelector('.re').src = element1[0].dulapplepie;
-					}
-					else if(selectedtime === '1:00') {
-                		document.querySelector('.re').src = element1[0].goodapplepie;
-					}
-					else if(selectedtime === '1:30') {
-						document.querySelector('.re').src = element1[0].tanapplepie;
-					}
-				}
-				else if (main_ingredient === 'blueberry') {
-					if(selectedtime === '0:30') {
-                		document.querySelector('.re').src = element1[0].dulblueberrypie;
-					}
-					else if(selectedtime === '1:00') {
-                		document.querySelector('.re').src = element1[0].goodblueberrypie;
-					}
-					else if(selectedtime === '1:30') {
-						document.querySelector('.re').src = element1[0].tanblueberrypie;
->>>>>>> 70274df30d6505116d22a50e193e77a840ec6721
 					}
 				} else if (main_ingredient === 'inseon') {
 				} else if (main_ingredient === 'meat') {
@@ -271,73 +178,10 @@
 				} else if (main_ingredient === 'pump') {
 				} else if (main_ingredient === 'spam') {
 				}
-<<<<<<< HEAD
 			} else {
 				imagePath = element1[0].burnt;
 			}
 		}
-=======
-				else if (main_ingredient === 'inseon') {
-					if(selectedtime === '0:30') {
-                		document.querySelector('.re').src = element1[0].dulinseonpie;
-					}
-					else if(selectedtime === '1:00') {
-                		document.querySelector('.re').src = element1[0].goodinseonpie;
-					}
-					else if(selectedtime === '1:30') {
-						document.querySelector('.re').src = element1[0].taninseonpie;
-					}
-				}
-				else if (main_ingredient === 'meat') {
-					if(selectedtime === '0:30') {
-                		document.querySelector('.re').src = element1[0].dulmeatpie;
-					}
-					else if(selectedtime === '1:00') {
-                		document.querySelector('.re').src = element1[0].goodmeatpie;
-					}
-					else if(selectedtime === '1:30') {
-						document.querySelector('.re').src = element1[0].tanmeatpie;
-					}
-				}
-				else if (main_ingredient === 'mintchoco') {
-					if(selectedtime === '0:30') {
-                		document.querySelector('.re').src = element1[0].dulmintchocopie;
-					}
-					else if(selectedtime === '1:00') {
-                		document.querySelector('.re').src = element1[0].goodmintchocopie;
-					}
-					else if(selectedtime === '1:30') {
-						document.querySelector('.re').src = element1[0].tanmintchocopie;
-					}
-				}
-				else if (main_ingredient === 'pump') {
-					if(selectedtime === '0:30') {
-                		document.querySelector('.re').src = element1[0].dulpumpkinpie;
-					}
-					else if(selectedtime === '1:00') {
-                		document.querySelector('.re').src = element1[0].goodpumpkinpie;
-					}
-					else if(selectedtime === '1:30') {
-						document.querySelector('.re').src = element1[0].tanpumpkinpie;
-					}
-				}
-				else if (main_ingredient === 'spam') {
-					if(selectedtime === '0:30') {
-                		document.querySelector('.re').src = element1[0].dulspampie;
-					}
-					else if(selectedtime === '1:00') {
-                		document.querySelector('.re').src = element1[0].goodspampie;
-					}
-					else if(selectedtime === '1:30') {
-						document.querySelector('.re').src = element1[0].tanspampie;
-					}
-				} 
-			}
-		}
-		else if(selectedtime === '8:00') {
-			document.querySelector('.re').src = element1[0].burnt;
-		}
->>>>>>> 70274df30d6505116d22a50e193e77a840ec6721
 
 		// 쿠키
 		if (id === 'middlemargarine' || id === 'middlebutter') {
@@ -415,7 +259,6 @@
 		<img src={background} alt="배경" />
 	</div>
 	<img src={imagePath} class="re" alt="결과 이미지" />
-	<p class="text">{element1[0].text}</p>
 	<div class="foot"></div>
 </div>
 
@@ -464,10 +307,10 @@
 	.re {
 		overflow: hidden;
 		position: absolute;
-		width: 110vh;
-		height: 110vh;
-		top: -16vh;
-		left: 32vh;
+		width: 70vh;
+		height: 70vh;
+		top: -1vh;
+		left: 55vh;
 	}
 
 	.bot {
