@@ -1,12 +1,8 @@
 <script>
-// @ts-nocheck
-
-	
 	const background = '/src/public/element/otherthing/otherelement/background.png';
-	
+
 	const element = [
 		{
-			
 			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
 			text: '으악~! 덜익은 사과 쿠키가 완성됐잖아..'
 		},
@@ -99,6 +95,100 @@
 		}
 	];
 
+	const element2 = [
+		{
+			dulapplebread: '/src/public/element/bread/dul-bread/apple-bread.png',
+			text: '으악~! 덜익은 사과 빵이 완성됐잖아..'
+		},
+		{
+			dulblueberrybread: '/src/public/element/bread/dul-bread/blueberry-bread.png',
+			text: '으악~! 덜익은 블루베리 빵이 완성됐잖아..'
+		},
+		{
+			dulspambread: '/src/public/element/bread/dul-bread/spam-bread.png',
+			text: '으악~! 덜익은 스팸 빵이 완성됐잖아..'
+		},
+		{
+			dulmeatbread: '/src/public/element/bread/dul-bread/meat-bread.png',
+			text: '으악~! 덜익은 고기 빵이 완성됐잖아..'
+		},
+		{
+			dulinseonbread: '/src/public/element/bread/dul-bread/herring-bread.png',
+			text: '으악~! 덜익은 정어리 빵이 완성됐잖아..'
+		},
+		{
+			dulmintchocobread: '/src/public/element/bread/dul-bread/mincho-bread.png',
+			text: '으악~! 덜익은 민트초코 빵이 완성됐잖아..'
+		},
+		{
+			dulpumpkinbread: '/src/public/element/bread/dul-bread/pumpkin-bread.png',
+			text: '으악~! 덜익은 호박 빵이 완성됐잖아..'
+		},
+
+		{
+			goodapplebread: '/src/public/element/bread/normal-bread/apple-bread.png',
+			text: '우와~! 맛있는 사과 빵이 완성됐다!!'
+		},
+		{
+			goodblueberrybread: '/src/public/element/bread/normal-bread/blueberry-bread.png',
+			text: '우와~! 맛있는 블루베리 빵이 완성됐다!!'
+		},
+		{
+			goodspambread: '/src/public/element/bread/normal-bread/spam-bread.png',
+			text: '우와~! 맛있는 스팸 빵이 완성됐다!!'
+		},
+		{
+			goodmeatbread: '/src/public/element/bread/normal-bread/meat-bread.png',
+			text: '우와~! 맛있는 고기 빵이 완성됐다!!'
+		},
+		{
+			goodmintchocobread: '/src/public/element/bread/normal-bread/mincho-bread.png',
+			text: '우와~! 맛있는 민트초코 빵이 완성됐다!!'
+		},
+		{
+			goodinseonbread: '/src/public/element/bread/normal-bread/herring-bread.png',
+			text: '우와~! 맛있는 정어리 빵이 완성됐다!!'
+		},
+		{
+			goodpumpkinbread: '/src/public/element/bread/normal-bread/pumpkin-bread.png',
+			text: '우와~! 맛있는 호박 빵이 완성됐다!!'
+		},
+
+		{
+			tanapplebread: '/src/public/element/bread/tan-bread/apple-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanblueberrybread: '/src/public/element/bread/tan-bread/blueberry-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanmeatbread: '/src/public/element/bread/tan-bread/meat-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanspambread: '/src/public/element/bread/tan-bread/spam-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanmintchocobread: '/src/public/element/bread/tan-bread/mincho-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanpumpkinbread: '/src/public/element/bread/tan-bread/pumpkin-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			taninseonbread: '/src/public/element/bread/tan-bread/herring-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+
+		{
+			burnt: '/src/public/element/bread/suktan.png',
+			text: '헉!! 다 타버려서 석탄이 돼버렸잖아..!'
+		}
+	];
+
 	const element1 = [
 		{
 			dulapplepie: '/src/public/element/pie/dul-pie/apple-pie.png',
@@ -142,7 +232,7 @@
 	let main_ingredient = null; // 주재료
 	let middle_result = null; //이건 빵인지 쿠키인지 파이인지 볼려고 만든거(강력분,중력분,박력분)
 	let selectedtime = null; //구운시간
-	
+
 	let imagePath = bowl;
 	let textpie = "";
 
@@ -158,8 +248,9 @@
 		main_ingredient = queryParams.get('main_ingredient');
 		selectedtime = queryParams.get('selectedtime');
 
-		if(selectedtime != '8:00') {
+		if (selectedtime != '8:00') {
 			if (id === 'parkbutter' || id === 'parkmargarine') {
+<<<<<<< HEAD
             	if (main_ingredient === 'apple') {
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulapplepie;
@@ -173,8 +264,32 @@
 					else if(selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanapplepie;
 						textpie = "헉!! 완전히 탄 사과 파이가 돼버렸잖아..!"
+=======
+				if (main_ingredient === 'apple') {
+					if (selectedtime === '0:30') {
+						// @ts-ignore
+						document.querySelector('.re').src = element1[0].dulapplepie;
+					} else if (selectedtime === '1:00') {
+						imagePath = element1[0].goodapplepie;
+					} else if (selectedtime === '1:30') {
+						imagePath = element1[0].tanapplepie;
 					}
+				} else if (main_ingredient === 'blueberry') {
+					if (selectedtime === '0:30') {
+						imagePath = element1[0].dulblueberrypie;
+					} else if (selectedtime === '1:00') {
+						imagePath = element1[0].goodblueberrypie;
+					} else if (selectedtime === '1:30') {
+						imagePath = element1[0].tanblueberrypie;
+>>>>>>> 4e7b124f8712f63639c3ffcb45bad70c7ea77cbd
+					}
+				} else if (main_ingredient === 'inseon') {
+				} else if (main_ingredient === 'meat') {
+				} else if (main_ingredient === 'mintchoco') {
+				} else if (main_ingredient === 'pump') {
+				} else if (main_ingredient === 'spam') {
 				}
+<<<<<<< HEAD
 				else if (main_ingredient === 'blueberry') {
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulblueberrypie;
@@ -265,10 +380,14 @@
 			document.querySelector('.re').src = element1[0].burnt;
 			textpie = "헉!! 다 타버려서 석탄이 돼버렸잖아..!"
 		}
+=======
+			} else {
+				imagePath = element1[0].burnt;
+			}
+		}
+>>>>>>> 4e7b124f8712f63639c3ffcb45bad70c7ea77cbd
 
-
-
-	// 쿠키
+		// 쿠키
 		if (id === 'middlemargarine' || id === 'middlebutter') {
 			middle_result = 'cookie';
 
@@ -317,9 +436,9 @@
 				else if (selectedtime === '8:00') result = 'burnt';
 			}
 		}
-			//크래시는 안된다
+		//크래시는 안된다
 
-	// 빵
+		// 빵
 		if (id === 'strongbutter' || id === 'strongmargarine') {
 			middle_result = 'bread';
 
@@ -348,10 +467,12 @@
 		<img src={background} alt="배경" />
 	</div>
 	<img src={imagePath} class="re" alt="결과 이미지" />
+<<<<<<< HEAD
 	<p class = "text">{textpie}</p>
+=======
+>>>>>>> 4e7b124f8712f63639c3ffcb45bad70c7ea77cbd
 	<div class="foot"></div>
 </div>
-
 
 <botten class="bot">
 	<img src={next_button} alt="단추" class="botten" />
@@ -425,10 +546,10 @@
 	.re {
 		overflow: hidden;
 		position: absolute;
-		width: 110vh;
-		height: 110vh;
-		top: -16vh;
-		left: 32vh;
+		width: 70vh;
+		height: 70vh;
+		top: -1vh;
+		left: 55vh;
 	}
 
 	.bot {
