@@ -33,7 +33,6 @@
 	const next_button = '/src/public/element/otherthing/otherelement/nextbotten.png';
 	const bowl = '/src/public/element/otherthing/otherelement/what.png';
 
-
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { goto } from '$app/navigation';
@@ -56,36 +55,24 @@
 		main_ingredient = queryParams.get('main_ingredient');
 		selectedtime = queryParams.get('selectedtime');
 
-		if(id == 'parkbutter' || id == 'parkmargarine') {
+		if (id == 'parkbutter' || id == 'parkmargarine') {
 			if (main_ingredient == 'apple') {
+<<<<<<< HEAD
 				if(selectedtime == '0:30') {
 					
+=======
+				if (selectedtime == '0:30') {
+>>>>>>> f6878467c993ede1da500ca13d10b1f99b747415
 				}
-			}
-			else if (main_ingredient === 'blueberry') {
-
-			}
-			else if (main_ingredient === 'inseon') {
-
-			}
-			else if (main_ingredient === 'meat') {
-
-			}
-			else if (main_ingredient === 'mintchoco') {
-
-			}
-			else if (main_ingredient === 'pump') {
-
-			}
-			else if (main_ingredient === 'spam') {
-
+			} else if (main_ingredient === 'blueberry') {
+			} else if (main_ingredient === 'inseon') {
+			} else if (main_ingredient === 'meat') {
+			} else if (main_ingredient === 'mintchoco') {
+			} else if (main_ingredient === 'pump') {
+			} else if (main_ingredient === 'spam') {
 			}
 		}
 	});
-	
-
-
-	
 
 	// 쿠키
 
@@ -180,17 +167,11 @@
 
 	<div class="foot"></div>
 </div>
-	<img src={bowl} alt="결과" class="re" />
-	
-	<botten class="bot">
-		<img src={next_button} alt="단추" class="botten" />
-	</botten>
+<img src={bowl} alt="결과" class="re" />
 
-	<botten class="bot">
-		<img src={next_button} alt="단추" class="botten" />
-	</botten>
-
-	<img src={dulinseoncookie} alt="결과" class="re" />
+<botten class="bot">
+	<img src={next_button} alt="단추" class="botten" />
+</botten>
 
 <style>
 	.container {
@@ -199,6 +180,11 @@
 		height: 100vh;
 		background-color: #b071cd;
 		overflow: hidden;
+
+		display: flex;
+		width: 100vw;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.back {
@@ -250,9 +236,5 @@
 		width: 10vh;
 		height: 10vh;
 		z-index: 1;
-		display: flex;
-		width: 100vw;
-		justify-content: center;
-		align-items: center;
 	}
 </style>
