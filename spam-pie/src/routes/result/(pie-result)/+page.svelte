@@ -59,7 +59,7 @@
 		if(id == 'parkbutter' || id == 'parkmargarine') {
 			if (main_ingredient == 'apple') {
 				if(selectedtime == '0:30') {
-
+					
 				}
 			}
 			else if (main_ingredient === 'blueberry') {
