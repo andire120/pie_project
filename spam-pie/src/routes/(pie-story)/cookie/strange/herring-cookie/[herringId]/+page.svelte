@@ -45,7 +45,7 @@
         </div>  
     </div>
 {:else if stories[herringId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/pie/strange/herring-pie/${herringId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/cookie/strange/herring-pie/${herringId + 1}`)} class="button">
         <img alt={`${herringId}번이미지`} src={stories[herringId - 1].tu} class="tu"/>
     </button>
     <div>
