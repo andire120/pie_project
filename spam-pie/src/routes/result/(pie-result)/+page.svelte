@@ -1,5 +1,6 @@
 <script>
 	const background = '/src/public/element/otherthing/otherelement/background.png';
+	
 	import dulapplecookie from '/src/public/element/cookie/dul-cookie/apple-cookie.png';
 	import dulblueberrycookie from '/src/public/element/cookie/dul-cookie/blueberry-cookie.png';
 	import dulspamcookie from '/src/public/element/cookie/dul-cookie/spam-cookie.png';
