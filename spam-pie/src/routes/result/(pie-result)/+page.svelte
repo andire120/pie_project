@@ -3,7 +3,7 @@
     import { onMount } from 'svelte';
 
     let id = null; // 빵인지 쿠킨지 파인지
-    let id_liquid; // 그 뭐냐 물인지 파워에이드인지 주슨지...등
+    let id_liquid = null; // 그 뭐냐 물인지 파워에이드인지 주슨지...등
     let main_ingredient = null; // 주재료
     let middle_result = null; //이건 빵인지 쿠키인지 파이인지 볼려고 만든거(강력분,중력분,박력분)
     let selectedtime = null;//구운시간
