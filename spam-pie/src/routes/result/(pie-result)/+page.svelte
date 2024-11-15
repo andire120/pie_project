@@ -145,6 +145,7 @@
 	
 	let imagePath = bowl;
 	let textpie = "";
+	let condition = "";
 
 	/**
 	 * @type {string | null} //저도 이게 뭔지 모르겠어요 없으면 코드가 실행이 안됨;
@@ -164,6 +165,7 @@
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulapplepie;
 						textpie = "으악~! 덜익은 사과 파이가 완성됐잖아..";
+						condition = "dul";
 					}
 					else if(selectedtime === '1:00') {
                 		document.querySelector('.re').src = element1[0].goodapplepie;
@@ -179,6 +181,7 @@
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulblueberrypie;
 						textpie = "으악~! 덜익은 블루베리 파이가 완성됐잖아..";
+						condition = "dul";
 					}
 					else if(selectedtime === '1:00') {
                 		document.querySelector('.re').src = element1[0].goodblueberrypie;
@@ -193,6 +196,7 @@
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulinseonpie;
 						textpie = "으악~! 덜익은 정어리 파이가 완성됐잖아..";
+						condition = "dul";
 					}
 					else if(selectedtime === '1:00') {
                 		document.querySelector('.re').src = element1[0].goodinseonpie;
@@ -207,6 +211,7 @@
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulmeatpie;
 						textpie = "으악~! 덜익은 고기 파이가 완성됐잖아..";
+						condition = "dul";
 					}
 					else if(selectedtime === '1:00') {
                 		document.querySelector('.re').src = element1[0].goodmeatpie;
@@ -221,6 +226,7 @@
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulmintchocopie;
 						textpie = "으악~! 덜익은 민트초코 파이가 완성됐잖아..";
+						condition = "dul";
 					}
 					else if(selectedtime === '1:00') {
                 		document.querySelector('.re').src = element1[0].goodmintchocopie;
@@ -235,6 +241,7 @@
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulpumpkinpie;
 						textpie = "으악~! 덜익은 호박 파이가 완성됐잖아..";
+						condition = "dul";
 					}
 					else if(selectedtime === '1:00') {
                 		document.querySelector('.re').src = element1[0].goodpumpkinpie;
@@ -249,6 +256,7 @@
 					if(selectedtime === '0:30') {
                 		document.querySelector('.re').src = element1[0].dulspampie;
 						textpie = "으악~! 덜익은 스팸 파이가 완성됐잖아..";
+						condition = "dul";
 					}
 					else if(selectedtime === '1:00') {
                 		document.querySelector('.re').src = element1[0].goodspampie;
@@ -336,6 +344,12 @@
 			else if (selectedtime === '8:00') result += 'burnt';
 		}
 	});
+
+	function go() {
+		if(condition === "dul") {
+			window.location.href = ("/");
+		}
+	}
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -353,7 +367,7 @@
 
 
 <botten class="bot">
-	<img src={next_button} alt="단추" class="botten" />
+	<img onclick = {go()} src={next_button} alt="단추" class="botten" />
 </botten>
 
 <style>
