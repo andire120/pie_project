@@ -520,6 +520,7 @@
 	function go() {
 		if (condition == 'dul') {
 			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/dul/${josou}/1`;
+			if(id == 'strongbutter' || id == 'strongmargarine') window.location.href = `/bread/dul/${josou}/1`;
 		}
 
 		else if (condition == 'good') {
@@ -535,12 +536,27 @@
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
 		}
+		else if (condition == 'normal') {
+			if(id == 'strongbutter') {
+				if(id_liquid == 'water') {
+					window.location.href = `/bread/nomal/${josou}/1`;
+				}
+				else if(id_liquid != 'water') {
+					window.location.href = `/bread/strange/${josou}/1`;
+				}
+			}
+			else if(id == 'strongmargarine'){
+				window.location.href = `/bread/strange/${josou}/1`;
+			}
+		}
 		else if(condition == 'tan') {
-			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/tan/${josou}/1`;
+			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/bread/tan/${josou}/1`;
 		}
 		else if(condition === 'verytan') {
 			window.location.href = `/burnt-end`; 
 		}
+
+		
 	}
 
 </script>
