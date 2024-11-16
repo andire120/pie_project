@@ -16,7 +16,7 @@
         },
         {
             img: "/src/public/illustration/미사용/검은사진.jpeg",
-            text: "탄 파이 엔딩"
+            text: "이상한 엔딩"
         }
     ];
 
