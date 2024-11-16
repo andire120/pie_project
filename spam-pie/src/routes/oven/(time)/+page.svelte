@@ -1,6 +1,10 @@
 <script lang="ts">
+<<<<<<< HEAD
   import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
+=======
+  import { page } from '$app/navigation';
+>>>>>>> 6a844d886be7ea23b6d339df8a1b3a4464729b5c
   import { onMount } from 'svelte';
 
   const background = "/src/public/element/otherthing/otherelement/background.png";
@@ -13,6 +17,12 @@
   const oven = "/src/public/element/otherthing/otherelement/oven.png";
   const danger = "/src/public/element/otherthing/otherelement/choseoven.png";
 
+
+
+
+
+  
+
   let selectedtime = '';
   let showWarning = false;
 
@@ -21,6 +31,20 @@
     selectedtime = timeId;
   }
 
+<<<<<<< HEAD
+=======
+  async function showDan() {
+  if (selectedtime) {
+    const selectedpowder = 
+    await page(`&id=${selectedpowder}${selectedbutter}&id_liquid=${selectedliquid}&main_ingredient=${selectedIngredient}&time=${selectedtime}`);
+  } else {
+    showWarning = true;
+    setTimeout(() => {
+      showWarning = false;
+    }, 3000);
+  }
+}
+>>>>>>> 6a844d886be7ea23b6d339df8a1b3a4464729b5c
 
   let id = null;
   let id_liquid = null;
@@ -35,6 +59,10 @@
     id = pathId || queryId || 'No ID Provided';
 
     sessionStorage.setItem('currentURL', window.location.href);
+
+    const queryParams = new URLSearchParams($page.url.search);
+    id = queryParams.get('id');
+    id_liquid = queryParams.get('id_liquid');
   });
 
  async function showDan() {
