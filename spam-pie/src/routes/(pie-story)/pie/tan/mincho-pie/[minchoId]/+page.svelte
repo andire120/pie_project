@@ -11,7 +11,7 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "너무 탔잖아? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/조금 탄 파이/조금 탄 민초 파이.png",
+            pieimg:"src/public/element/pie/little-pie/mincho-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
