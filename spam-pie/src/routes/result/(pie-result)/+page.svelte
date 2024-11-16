@@ -578,24 +578,23 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 
+
 <div class="container">
 	<div class="back">
 		<img src={background} alt="배경" />
 	</div>
-
 	<img src={imagePath} class="re" alt="결과 이미지" />
 	<div class="foot">
 		<p class="text">{textpie}</p>
 	</div>
 
-	<button onclick={go} class="bot">
-		<img onclick={go} src="{next_button}" alt="단추" class="botten" />
+	<button type="button" class="bot" onclick={go()}>
+		<img src={next_button} alt="단추" class="botten" />
 	</button>
-
 </div>
 
-<style>
 
+<style>
 	.container {
 		width: 100vw;
 		height: 100vh;
@@ -664,6 +663,15 @@
 		width: 10vh;
 		height: 10vh;
 
+		margin-top: 35vh;
+		margin-left: 80vw;
+
+		display: flex;
+		justify-content: center;
+
+		background-color: rgba(0, 0, 0, 0);
+        border: none;
+
 		position: absolute;
 		z-index: 10000;
 		cursor: pointer; 
@@ -677,4 +685,5 @@
 		position: absolute;
 		z-index: 1500;	
 	}
+
 </style>
