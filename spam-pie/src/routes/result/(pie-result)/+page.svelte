@@ -516,7 +516,7 @@
 			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/tan/${josou}/1`;
 		}
 		else if(condition === 'verytan') {
-			window.location.href = `/tan/1`;  //석탄엔딩 링크로 나중에 바꾸셈
+			window.location.href = `/burnt-end`;  //석탄엔딩 링크로 나중에 바꾸셈
 		}
 	}
 </script>
