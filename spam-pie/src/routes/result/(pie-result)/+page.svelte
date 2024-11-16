@@ -282,7 +282,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'spam') {
-					josou = 'spam-pie';
+					josou = 'spams-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulspampie;
 						textpie = '으악~! 덜익은 스팸 파이가 완성됐잖아..';
