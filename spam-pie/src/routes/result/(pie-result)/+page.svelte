@@ -618,7 +618,7 @@
 	.bot {
 		position: absolute;
 		top: 60vh;
-		left: 160vh;
+		left: 164vh;
 		z-index: 10000;
 		cursor: pointer; 
 	}
