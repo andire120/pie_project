@@ -271,6 +271,7 @@
 						textpie = '우와~! 맛있는 스팸 파이가 완성됐다!!';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanspampie;
+						textpie = "헉!! 완전히 탄 스팸 파이가 돼버렸잖아..!"
 					}
 				}
 			}
