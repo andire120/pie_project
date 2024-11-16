@@ -563,7 +563,8 @@
 			}
 		}
 		else if(condition == 'tan') {
-			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/bread/tan/${josou}/1`;
+			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/tan/${josou}/1`;
+			if(id == 'strongbutter' || id == 'strongmargarine') window.location.href = `/bread/tan/${josou}/1`;
 		}
 		else if(condition === 'verytan') {
 			window.location.href = `/burnt-end`; 
