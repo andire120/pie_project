@@ -594,13 +594,15 @@
 	.bot {
 		position: absolute;
 		top: 60vh;
-		left: 164vh;
+		left: 160vh;
+		z-index: 10000;
+		cursor: pointer; 
 	}
 
 	.botten {
 		position: absolute;
 		width: 10vh;
 		height: 10vh;
-		z-index: 1;
+		z-index: 1500;	
 	}
 </style>
