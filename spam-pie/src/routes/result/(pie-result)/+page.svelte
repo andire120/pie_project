@@ -525,9 +525,6 @@
 		} else if (condition === 'verytan') {
 			window.location.href = `/burnt-end`;
 		}
-		
-
-		
 	}
 </script>
 
