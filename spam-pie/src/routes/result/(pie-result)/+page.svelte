@@ -39,87 +39,100 @@
 			text: '으악~! 덜익은 사과 빵이 완성됐잖아..'
 		},
 		{
-			dulblueberrybread: '/src/public/element/bread/dul-bread/blueberry-bread.png',
-			text: '으악~! 덜익은 블루베리 빵이 완성됐잖아..'
-		},
-		{
-			dulspambread: '/src/public/element/bread/dul-bread/spam-bread.png',
-			text: '으악~! 덜익은 스팸 빵이 완성됐잖아..'
-		},
-		{
-			dulmeatbread: '/src/public/element/bread/dul-bread/meat-bread.png',
-			text: '으악~! 덜익은 고기 빵이 완성됐잖아..'
-		},
-		{
-			dulinseonbread: '/src/public/element/bread/dul-bread/herring-bread.png',
-			text: '으악~! 덜익은 정어리 빵이 완성됐잖아..'
-		},
-		{
-			dulmintchocobread: '/src/public/element/bread/dul-bread/mincho-bread.png',
-			text: '으악~! 덜익은 민트초코 빵이 완성됐잖아..'
-		},
-		{
-			dulpumpkinbread: '/src/public/element/bread/dul-bread/pumpkin-bread.png',
-			text: '으악~! 덜익은 호박 빵이 완성됐잖아..'
-		}, //6
-
-		{
 			goodapplebread: '/src/public/element/bread/normal-bread/apple-bread.png',
 			text: '우와~! 맛있는 사과 빵이 완성됐다!!'
+		},
+		{
+			tanapplebread: '/src/public/element/bread/tan-bread/apple-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+
+		
+		{
+			dulblueberrybread: '/src/public/element/bread/dul-bread/blueberry-bread.png',
+			text: '으악~! 덜익은 블루베리 빵이 완성됐잖아..'
 		},
 		{
 			goodblueberrybread: '/src/public/element/bread/normal-bread/blueberry-bread.png',
 			text: '우와~! 맛있는 블루베리 빵이 완성됐다!!'
 		},
 		{
-			goodspambread: '/src/public/element/bread/normal-bread/spam-bread.png',
-			text: '우와~! 맛있는 스팸 빵이 완성됐다!!'
+			tanblueberrybread: '/src/public/element/bread/tan-bread/blueberry-bread.png',
+			text: '헉!! 완전히 탄 블루베리 빵이 돼버렸잖아..!'
 		},
+		
+
 		{
-			goodmeatbread: '/src/public/element/bread/normal-bread/meat-bread.png',
-			text: '우와~! 맛있는 고기 빵이 완성됐다!!'
-		},
-		{
-			goodmintchocobread: '/src/public/element/bread/normal-bread/mincho-bread.png',
-			text: '우와~! 맛있는 민트초코 빵이 완성됐다!!'
+			
+			dulinseonbread: '/src/public/element/bread/dul-bread/herring-bread.png',
+			text: '으악~! 덜익은 정어리 빵이 완성됐잖아..'
 		},
 		{
 			goodinseonbread: '/src/public/element/bread/normal-bread/herring-bread.png',
 			text: '우와~! 맛있는 정어리 빵이 완성됐다!!'
 		},
 		{
-			goodpumpkinbread: '/src/public/element/bread/normal-bread/pumpkin-bread.png',
-			text: '우와~! 맛있는 호박 빵이 완성됐다!!'
-		}, //13
+			taninseonbread: '/src/public/element/bread/tan-bread/herring-bread.png',
+			text: '헉!! 완전히 탄 정어리 빵이 돼버렸잖아..!'
+		},
+
 
 		{
-			tanapplebread: '/src/public/element/bread/tan-bread/apple-bread.png',
-			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+			dulmeatbread: '/src/public/element/bread/dul-bread/meat-bread.png',
+			text: '으악~! 덜익은 고기 빵이 완성됐잖아..'
 		},
 		{
-			tanblueberrybread: '/src/public/element/bread/tan-bread/blueberry-bread.png',
-			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+			goodmeatbread: '/src/public/element/bread/normal-bread/meat-bread.png',
+			text: '우와~! 맛있는 고기 빵이 완성됐다!!'
 		},
 		{
 			tanmeatbread: '/src/public/element/bread/tan-bread/meat-bread.png',
-			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+			text: '헉!! 완전히 탄 고기 빵이 돼버렸잖아..!'
+		},
+
+
+		
+		{
+			dulmintchocobread: '/src/public/element/bread/dul-bread/mincho-bread.png',
+			text: '으악~! 덜익은 민트초코 빵이 완성됐잖아..'
 		},
 		{
-			tanspambread: '/src/public/element/bread/tan-bread/spam-bread.png',
-			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+			goodmintchocobread: '/src/public/element/bread/normal-bread/mincho-bread.png',
+			text: '우와~! 맛있는 민트초코 빵이 완성됐다!!'
 		},
 		{
 			tanmintchocobread: '/src/public/element/bread/tan-bread/mincho-bread.png',
-			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+			text: '헉!! 완전히 탄 민트초코 빵이 돼버렸잖아..!'
+		},
+
+
+		{
+			dulpumpkinbread: '/src/public/element/bread/dul-bread/pumpkin-bread.png',
+			text: '으악~! 덜익은 호박 빵이 완성됐잖아..'
+		},
+		{
+			goodpumpkinbread: '/src/public/element/bread/normal-bread/pumpkin-bread.png',
+			text: '우와~! 맛있는 호박 빵이 완성됐다!!'
 		},
 		{
 			tanpumpkinbread: '/src/public/element/bread/tan-bread/pumpkin-bread.png',
-			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+			text: '헉!! 완전히 탄 호박 빵이 돼버렸잖아..!'
+		},
+
+
+		{
+			dulspambread: '/src/public/element/bread/dul-bread/spam-bread.png',
+			text: '으악~! 덜익은 스팸 빵이 완성됐잖아..'
 		},
 		{
-			taninseonbread: '/src/public/element/bread/tan-bread/herring-bread.png',
-			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
-		}, //20
+			goodspambread: '/src/public/element/bread/normal-bread/spam-bread.png',
+			text: '우와~! 맛있는 스팸 빵이 완성됐다!!'
+		},	
+		{
+			tanspambread: '/src/public/element/bread/tan-bread/spam-bread.png',
+			text: '헉!! 완전히 탄 스팸 빵이 돼버렸잖아..!'
+		},
+		
 
 		{
 			burnt: '/src/public/element/bread/suktan.png',
@@ -411,98 +424,98 @@
 						textpie = element2[0].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[7].goodapplebread;
-						textpie = element2[7].text;
+						document.querySelector('.re').src = element2[1].goodapplebread;
+						textpie = element2[1].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[14].tanapplebread;
-						textpie = element2[14].text;
+						document.querySelector('.re').src = element2[1].tanapplebread;
+						textpie = element2[2].text;
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'blueberry') {
 					josou = 'blueberry-pie';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[1].dulblueberrybread;
-						textpie = element2[1].text;
+						document.querySelector('.re').src = element2[3].dulblueberrybread;
+						textpie = element2[3].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[8].goodblueberrybread;
-						textpie = element2[8].text;
+						document.querySelector('.re').src = element2[4].goodblueberrybread;
+						textpie = element2[4].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[15].tanblueberrybread;
-						textpie = element2[15].text;
+						document.querySelector('.re').src = element2[5].tanblueberrybread;
+						textpie = element2[5].text;
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'inseon') {
 					josou = 'herring-pie';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[2].dulinseonbread;
-						textpie = element2[2].text;
+						document.querySelector('.re').src = element2[6].dulinseonbread;
+						textpie = element2[6].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[9].goodinseonbread;
-						textpie = element2[9].text;
+						document.querySelector('.re').src = element2[7].goodinseonbread;
+						textpie = element2[7].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[16].taninseonbread;
-						textpie = element2[16].text;
+						document.querySelector('.re').src = element2[8].taninseonbread;
+						textpie = element2[8].text;
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'meat') {
 					josou = 'meat-pie';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[3].dulmeatpie;
-						textpie = element2[3].text;
+						document.querySelector('.re').src = element2[9].dulmeatpie;
+						textpie = element2[9].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element2[10].goodmeatpie;
 						textpie = element2[10].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[17].tanmeatpie;
-						textpie = element2[17].text;
+						document.querySelector('.re').src = element2[11].tanmeatpie;
+						textpie = element2[11].text;
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'mintchoco') {
 					josou = 'mincho-pie';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[4].dulmintchocobread;
-						textpie = element2[4].text;
+						document.querySelector('.re').src = element2[12].dulmintchocobread;
+						textpie = element2[12].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[11].goodmintchocobread;
-						textpie = element2[11].text;
+						document.querySelector('.re').src = element2[13].goodmintchocobread;
+						textpie = element2[13].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[18].tanmintchocobread;
-						textpie = element2[18].text;
+						document.querySelector('.re').src = element2[14].tanmintchocobread;
+						textpie = element2[14].text;
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'pump') {
 					josou = 'pumpkin-pie';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[5].dulpumpkinbread;
-						textpie = element2[5].text;
+						document.querySelector('.re').src = element2[15].dulpumpkinbread;
+						textpie = element2[15].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[12].goodpumpkinbread;
-						textpie = element2[12].text;
+						document.querySelector('.re').src = element2[16].goodpumpkinbread;
+						textpie = element2[16].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[19].tanpumpkinbread;
-						textpie = element2[19].text;
+						document.querySelector('.re').src = element2[17].tanpumpkinbread;
+						textpie = element2[17].text;
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'spam') {
 					josou = 'spam-pie';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[6].dulspambread;
-						textpie = element2[6].text;
+						document.querySelector('.re').src = element2[18].dulspambread;
+						textpie = element2[18].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[13].goodspambread;
-						textpie = element2[13].text;
+						document.querySelector('.re').src = element2[19].goodspambread;
+						textpie = element2[19].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element2[20].tanspambread;
