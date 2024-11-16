@@ -174,6 +174,7 @@
 	let imagePath = bowl;
 	let textpie = '';
 	let condition = '';
+	let josou = '';
 
 	/**
 	 * @type {string | null} //저도 이게 뭔지 모르겠어요 없으면 코드가 실행이 안됨;
@@ -191,6 +192,7 @@
 		if (selectedtime != '8:00') {
 			if (id === 'parkbutter' || id === 'parkmargarine') {
 				if (main_ingredient === 'apple') {
+					josou = 'apple-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulapplepie;
 						textpie = '으악~! 덜익은 사과 파이가 완성됐잖아..';
@@ -198,11 +200,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element1[0].goodapplepie;
 						textpie = '우와~! 맛있는 사과 파이가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanapplepie;
 						textpie = '헉!! 완전히 탄 사과 파이가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'blueberry') {
+					josou = 'blueberry-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulblueberrypie;
 						textpie = '으악~! 덜익은 블루베리 파이가 완성됐잖아..';
@@ -210,11 +215,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element1[0].goodblueberrypie;
 						textpie = '우와~! 맛있는 블루베리 파이가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanblueberrypie;
 						textpie = '헉!! 완전히 탄 블루베리 파이가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'inseon') {
+					josou = 'herring-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulinseonpie;
 						textpie = '으악~! 덜익은 정어리 파이가 완성됐잖아..';
@@ -222,11 +230,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element1[0].goodinseonpie;
 						textpie = '우와~! 맛있는 정어리 파이가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].taninseonpie;
 						textpie = '헉!! 완전히 탄 정어리 파이가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'meat') {
+					josou = 'meat-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulmeatpie;
 						textpie = '으악~! 덜익은 고기 파이가 완성됐잖아..';
@@ -234,11 +245,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element1[0].goodmeatpie;
 						textpie = '우와~! 맛있는 고기 파이가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanmeatpie;
 						textpie = '헉!! 완전히 탄 고기 파이가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'mintchoco') {
+					josou = 'mintcho-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulmintchocopie;
 						textpie = '으악~! 덜익은 민트초코 파이가 완성됐잖아..';
@@ -246,11 +260,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element1[0].goodmintchocopie;
 						textpie = '우와~! 맛있는 민트초코 파이가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanmintchocopie;
 						textpie = '헉!! 완전히 탄 민트초코 파이가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'pump') {
+					josou = 'pumpkin-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulpumpkinpie;
 						textpie = '으악~! 덜익은 호박 파이가 완성됐잖아..';
@@ -258,11 +275,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element1[0].goodpumpkinpie;
 						textpie = '우와~! 맛있는 호박 파이가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanpumpkinpie;
 						textpie = '헉!! 완전히 탄 호박 파이가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'spam') {
+					josou = 'spam-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulspampie;
 						textpie = '으악~! 덜익은 스팸 파이가 완성됐잖아..';
@@ -270,8 +290,11 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element1[0].goodspampie;
 						textpie = '우와~! 맛있는 스팸 파이가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanspampie;
+						textpie = '헉!! 완전히 탄 스팸 파이가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				}
 			}
@@ -279,6 +302,7 @@
 		else if (selectedtime == '8:00') {
 			document.querySelector('.re').src = element1[0].burnt1;
 			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
+			condition = 'verytan';
 		}
 
 		// 쿠키
