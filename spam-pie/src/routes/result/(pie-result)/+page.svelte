@@ -135,7 +135,7 @@
 		
 
 		{
-			burnt: '/src/public/element/bread/suktan.png',
+			burnt: '/src/public/element/pie/suktan.png',
 			text: '헉!! 다 타버려서 석탄이 돼버렸잖아..!'
 		}
 	];
@@ -417,7 +417,7 @@
 
 		if (selectedtime != '8:00') {
 			if (id === 'strongbutter' || id === 'strongmargarine') {
-				josou = 'apple-pie';
+				josou = 'apple-bread';
 				if (main_ingredient === 'apple') {
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element2[0].dulapplepie;
@@ -433,7 +433,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'blueberry') {
-					josou = 'blueberry-pie';
+					josou = 'blueberry-bread';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element2[3].dulblueberrybread;
 						textpie = element2[3].text;
@@ -448,7 +448,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'inseon') {
-					josou = 'herring-pie';
+					josou = 'herring-bread';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element2[6].dulinseonbread;
 						textpie = element2[6].text;
@@ -463,7 +463,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'meat') {
-					josou = 'meat-pie';
+					josou = 'meat-bread';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element2[9].dulmeatpie;
 						textpie = element2[9].text;
@@ -478,7 +478,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'mintchoco') {
-					josou = 'mincho-pie';
+					josou = 'mincho-bread';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element2[12].dulmintchocobread;
 						textpie = element2[12].text;
@@ -493,7 +493,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'pump') {
-					josou = 'pumpkin-pie';
+					josou = 'pumpkin-bread';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element2[15].dulpumpkinbread;
 						textpie = element2[15].text;
@@ -508,7 +508,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'spam') {
-					josou = 'spam-pie';
+					josou = 'spam-bread';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element2[18].dulspambread;
 						textpie = element2[18].text;
@@ -552,7 +552,7 @@
 		else if (condition == 'normal') {
 			if(id == 'strongbutter') {
 				if(id_liquid == 'water') {
-					window.location.href = `/bread/nomal/${josou}/1`;
+					window.location.href = `/bread/normal/${josou}/1`;
 				}
 				else if(id_liquid != 'water') {
 					window.location.href = `/bread/strange/${josou}/1`;
@@ -582,31 +582,33 @@
 	<div class="back">
 		<img src={background} alt="배경" />
 	</div>
+
 	<img src={imagePath} class="re" alt="결과 이미지" />
 	<p class="text">{textpie}</p>
 	<div class="foot"></div>
+
+	<button type="button" class="bot" onclick={go()}>
+		<img src={next_button} alt="단추" class="botten" />
+	</button>
+
 </div>
 
-<botten class="bot">
-	<img onclick={go()} src={next_button} alt="단추" class="botten" />
-</botten>
-
 <style>
+
 	.container {
-		display: flex;
 		width: 100vw;
 		height: 100vh;
 		background-color: #b071cd;
 		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
 	.back {
-		width: 90%;
-		height: 80%;
-		position: absolute;
-		top: 0;
-		left: 0;
-		margin-left: 5%;
+		width: 100vw;
+		height: 100vh;
 	}
 
 	.back img {
