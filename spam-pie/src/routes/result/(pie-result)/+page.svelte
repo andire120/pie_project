@@ -256,7 +256,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'mintchoco') {
-					josou = 'mintcho-pie';
+					josou = 'mincho-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulmintchocopie;
 						textpie = '으악~! 덜익은 민트초코 파이가 완성됐잖아..';
@@ -534,10 +534,14 @@
 				} else if (id_liquid != 'water') {
 					window.location.href = `/pie/strange/${josou}/1`;
 				}
-
 			} else if (id == 'parkmargarine') {
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
+		} else if(condition == 'tan') {
+			if(id == 'parkbutter' || id == 'parkmargarine') 
+				window.location.href = `pie/tan/${josou}/1`;
+		} else if(condition == 'verytan') {
+			window.location.href = '/burnt-end';
 		}
 	}
 </script>

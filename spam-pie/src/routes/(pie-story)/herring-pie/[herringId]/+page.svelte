@@ -4,12 +4,12 @@
     import { tweened } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
     
-    let inseonId: number;
+    let herringId: number;
 
     const posX = tweened(0, { duration: 600, easing: cubicOut });
     const posY = tweened(0, { duration: 600, easing: cubicOut });
 
-    $: inseonId = +$page.params.inseonId;
+    $: herringId = +$page.params.herringId;
 
     const stories = [
         {
@@ -87,13 +87,13 @@
         posY.set(70); 
     }
 
-    $: if (inseonId === 2) {
+    $: if (herringId === 2) {
         moveToPositions();
     }
-    else if (inseonId === 3){
+    else if (herringId === 3){
         moveToPositions2();
     }
-    else if(inseonId === 4){
+    else if(herringId === 4){
         moveToPositions3();
     }
     else {
@@ -110,117 +110,117 @@
 
 
 
-{#if (inseonId == 2)}
-    <button on:click|stopPropagation={() => refresh(`/inseon-pie/${inseonId + 1}`)} class="button">
-        <img alt={`${inseonId}번이미지`} src={stories[inseonId - 1].tu} class="tu"/>
+{#if (herringId == 2)}
+    <button on:click|stopPropagation={() => refresh(`/herring-pie/${herringId + 1}`)} class="button">
+        <img alt={`${herringId}번이미지`} src={stories[herringId - 1].tu} class="tu"/>
     </button>
     <div>
-        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
+        <img alt={`${herringId}번스토리`} src={stories[herringId - 1].img} class="story"/>
     </div>
     <div class="piebox">
-        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie" style="transform: translate({$posX}px, {$posY}px);"/>
+        <img alt={`${herringId}파이`} src={stories[herringId - 1].pieimg} class="pie" style="transform: translate({$posX}px, {$posY}px);"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[inseonId - 1].simtext}
+            {stories[herringId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
+            {stories[herringId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
     <div class="sujobox">
-        <img alt={`${inseonId}수조`} src={stories[inseonId - 1].sujo} class="sujo"/>
+        <img alt={`${herringId}수조`} src={stories[herringId - 1].sujo} class="sujo"/>
     </div>
     <div class="upbar">
-        <img alt={`${inseonId}고든램지`} src={stories[inseonId - 1].he} class="he"/>
-        <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she"/>
+        <img alt={`${herringId}고든램지`} src={stories[herringId - 1].he} class="he"/>
+        <img alt={`${herringId}쥔공`} src={stories[herringId - 1].she} class="she"/>
     </div>
-{:else if inseonId == 3}
-    <button on:click|stopPropagation={() => refresh(`/inseon-pie/${inseonId + 1}`)} class="button">
-        <img alt={`${inseonId}번이미지`} src={stories[inseonId - 1].tu} class="tu"/>
+{:else if herringId == 3}
+    <button on:click|stopPropagation={() => refresh(`/herring-pie/${herringId + 1}`)} class="button">
+        <img alt={`${herringId}번이미지`} src={stories[herringId - 1].tu} class="tu"/>
     </button>
     <div>
-        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
+        <img alt={`${herringId}번스토리`} src={stories[herringId - 1].img} class="story"/>
     </div>
     <div class="fishbox">
-        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="fish" style="transform: translate({$posX}px, {$posY}px);"/>
+        <img alt={`${herringId}파이`} src={stories[herringId - 1].pieimg} class="fish" style="transform: translate({$posX}px, {$posY}px);"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[inseonId - 1].simtext}
+            {stories[herringId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
+            {stories[herringId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
     <div class="sujobox">
-        <img alt={`${inseonId}수조`} src={stories[inseonId - 1].sujo} class="sujo"/>
+        <img alt={`${herringId}수조`} src={stories[herringId - 1].sujo} class="sujo"/>
     </div>
     <div class="upbar2">
-        <img alt={`${inseonId}고든램지`} src={stories[inseonId - 1].he} class="he2"/>
-        <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she2"/>
+        <img alt={`${herringId}고든램지`} src={stories[herringId - 1].he} class="he2"/>
+        <img alt={`${herringId}쥔공`} src={stories[herringId - 1].she} class="she2"/>
     </div>
-{:else if inseonId == 4}
-    <button on:click|stopPropagation={() => refresh(`/inseon-pie/${inseonId + 1}`)} class="button">
-        <img alt={`${inseonId}번이미지`} src={stories[inseonId - 1].tu} class="tu"/>
+{:else if herringId == 4}
+    <button on:click|stopPropagation={() => refresh(`/herring-pie/${herringId + 1}`)} class="button">
+        <img alt={`${herringId}번이미지`} src={stories[herringId - 1].tu} class="tu"/>
     </button>
     <div>
-        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
+        <img alt={`${herringId}번스토리`} src={stories[herringId - 1].img} class="story"/>
     </div>
     <div class="fishbox">
-        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="fish2" style="transform: translate({$posX}px, {$posY}px);"/>
+        <img alt={`${herringId}파이`} src={stories[herringId - 1].pieimg} class="fish2" style="transform: translate({$posX}px, {$posY}px);"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[inseonId - 1].simtext}
+            {stories[herringId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
+            {stories[herringId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
     <div class="sujobox">
-        <img alt={`${inseonId}수조`} src={stories[inseonId - 1].sujo} class="sujo"/>
+        <img alt={`${herringId}수조`} src={stories[herringId - 1].sujo} class="sujo"/>
     </div>
     <div class="upbar2">
-        <img alt={`${inseonId}고든램지`} src={stories[inseonId - 1].he} class="he2"/>
-        <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she3"/>
+        <img alt={`${herringId}고든램지`} src={stories[herringId - 1].he} class="he2"/>
+        <img alt={`${herringId}쥔공`} src={stories[herringId - 1].she} class="she3"/>
     </div>
-{:else if inseonId == 5}
+{:else if herringId == 5}
     <button on:click={() => refresh(`/main_menu`)} class="bot">
         <div class="botten">돌아가기</div>
     </button>
     <div>
-        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
+        <img alt={`${herringId}번스토리`} src={stories[herringId - 1].img} class="story"/>
     </div>
     <div class="textbox2">
         <div class="text2">
-            {stories[inseonId - 1].text}
+            {stories[herringId - 1].text}
         </div>  
     </div>
-{:else if stories[inseonId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/inseon-pie/${inseonId + 1}`)} class="button">
-        <img alt={`${inseonId}번이미지`} src={stories[inseonId - 1].tu} class="tu"/>
+{:else if stories[herringId - 1]}
+    <button on:click|stopPropagation={() => refresh(`/herring-pie/${herringId + 1}`)} class="button">
+        <img alt={`${herringId}번이미지`} src={stories[herringId - 1].tu} class="tu"/>
     </button>
     <div>
-        <img alt={`${inseonId}번스토리`} src={stories[inseonId - 1].img} class="story"/>
+        <img alt={`${herringId}번스토리`} src={stories[herringId - 1].img} class="story"/>
     </div>
     <div class="piebox">
-        <img alt={`${inseonId}파이`} src={stories[inseonId - 1].pieimg} class="pie"/>
+        <img alt={`${herringId}파이`} src={stories[herringId - 1].pieimg} class="pie"/>
     </div>
     <div class="textbox">
         <p class="simtext">
-            {stories[inseonId - 1].simtext}
+            {stories[herringId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[inseonId - 1].text.replace(/\n/g, "<br>")}
+            {stories[herringId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
     <div class="sujobox">
-        <img alt={`${inseonId}수조`} src={stories[inseonId - 1].sujo} class="sujo"/>
+        <img alt={`${herringId}수조`} src={stories[herringId - 1].sujo} class="sujo"/>
     </div>
     <div class="upbar">
-        <img alt={`${inseonId}고든램지`} src={stories[inseonId - 1].he} class="he"/>
-        <img alt={`${inseonId}쥔공`} src={stories[inseonId - 1].she} class="she"/>
+        <img alt={`${herringId}고든램지`} src={stories[herringId - 1].he} class="he"/>
+        <img alt={`${herringId}쥔공`} src={stories[herringId - 1].she} class="she"/>
     </div>
 {:else}
     존재하지 않는 페이지
