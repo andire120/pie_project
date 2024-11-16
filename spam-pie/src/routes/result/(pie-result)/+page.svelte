@@ -312,6 +312,7 @@
 		if (selectedtime != '8:00') {
 			if (id === 'middlebutter' || id === 'middlemargarine') {
 				if (main_ingredient === 'apple') {
+					josou = 'apple';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element[0].dulapplecookie;
 						textpie = '으악~! 덜익은 사과 쿠키가 완성됐잖아..';
@@ -319,11 +320,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element[0].goodapplecookie;
 						textpie = '우와~! 맛있는 사과 쿠키가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element[0].tanapplecookie;
 						textpie = '헉!! 완전히 탄 사과 쿠키가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'blueberry') {
+					josou = 'blueberry';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element[0].dulblueberrycookie;
 						textpie = '으악~! 덜익은 블루베리 쿠키가 완성됐잖아..';
@@ -331,11 +335,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element[0].goodblueberrycookie;
 						textpie = '우와~! 맛있는 블루베리 쿠키가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element[0].tanblueberrycookie;
 						textpie = '헉!! 완전히 탄 블루베리 쿠키가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'inseon') {
+					josou = 'herring';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element[0].dulinseoncookie;
 						textpie = '으악~! 덜익은 정어리 쿠키가 완성됐잖아..';
@@ -343,11 +350,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element[0].goodinseoncookie;
 						textpie = '우와~! 맛있는 정어리 쿠키가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element[0].taninseoncookie;
 						textpie = '헉!! 완전히 탄 정어리 쿠키가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'meat') {
+					josou = 'meat';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element[0].dulmeatcookie;
 						textpie = '으악~! 덜익은 고기 쿠키가 완성됐잖아..';
@@ -355,11 +365,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element[0].goodmeatcookie;
 						textpie = '우와~! 맛있는 고기 쿠키가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element[0].tanmeatcookie;
 						textpie = '헉!! 완전히 탄 고기 쿠키가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'mintchoco') {
+					josou = 'mincho';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element[0].dulmintchococookie;
 						textpie = '으악~! 덜익은 민트초코 쿠키가 완성됐잖아..';
@@ -367,11 +380,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element[0].goodmintchococookie;
 						textpie = '우와~! 맛있는 민트초코 쿠키가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element[0].tanmintchococookie;
 						textpie = '헉!! 완전히 탄 민트초코 쿠키가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'pump') {
+					josou = 'pumpkin';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element[0].dulpumpkincookie;
 						textpie = '으악~! 덜익은 호박 쿠키가 완성됐잖아..';
@@ -379,11 +395,14 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element[0].goodpumpkincookie;
 						textpie = '우와~! 맛있는 호박 쿠키가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element[0].tanpumpkincookie;
 						textpie = '헉!! 완전히 탄 호박 쿠키가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'spam') {
+					josou = 'spam';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element[0].dulspamcookie;
 						textpie = '으악~! 덜익은 스팸 쿠키가 완성됐잖아..';
@@ -391,15 +410,18 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element[0].goodspamcookie;
 						textpie = '우와~! 맛있는 스팸 쿠키가 완성됐다!!';
+						condition = 'good';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element[0].tanspamcookie;
 						textpie = '헉!! 완전히 탄 스팸 쿠키가 돼버렸잖아..!';
+						condition = 'tan';
 					}
 				}
 			}
 		} else if (selectedtime === '8:00') {
 			document.querySelector('.re').src = element[0].burnt;
 			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
+			condition = 'verytan';
 		}
 		//크래시는 안된다
 
@@ -526,6 +548,8 @@
 			if (id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/dul/${josou}/1`;
 			if (id == 'strongbutter' || id == 'strongmargarine')
 				window.location.href = `/bread/dul/${josou}/1`;
+			if (id == 'middlebutter' || id == 'middlemargarine')
+				window.location.href = `/cookie/dul/${josou}-cookie/1`;
 		} else if (condition == 'good') {
 			if (id == 'parkbutter') {
 				if (id_liquid == 'water') {
@@ -536,10 +560,14 @@
 			} else if (id == 'parkmargarine') {
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
-		} else if(condition == 'tan') {
-			if(id == 'parkbutter' || id == 'parkmargarine') 
-				window.location.href = `pie/tan/${josou}/1`;
-		} else if(condition == 'verytan') {
+			if (id == 'middlebutter' || id == 'middlemargarine') {
+				window.location.href = `/cookie/normal/${josou}-cookie/1`;
+			}
+		} else if (condition == 'tan') {
+			if (id == 'parkbutter' || id == 'parkmargarine') window.location.href = `pie/tan/${josou}/1`;
+			else if (id == 'middlebutter' || id == 'middlemargarine')
+				window.location.href = `/cookie/tan/${josou}-cookie/1`;
+		} else if (condition == 'verytan') {
 			window.location.href = '/burnt-end';
 		}
 	}
