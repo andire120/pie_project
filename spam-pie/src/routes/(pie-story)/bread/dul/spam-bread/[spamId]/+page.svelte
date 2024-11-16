@@ -9,15 +9,11 @@
     const stories = [
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "덜 익었잖아? 넌 탈락이야.",
+            text: "이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라. 게다가,덜 익었잖아? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/덜익은 파이/덜익은 스팸 파이.png",
+            pieimg:"/src/public/element/bread/dul-bread/spam-bread.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
-        {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
-            text: "탄 파이 엔딩"
-        }
     ];
 
     const refresh = (url: string) => {
@@ -32,20 +28,8 @@
 
 
 
-{#if (spamId == 2)}
-    <button on:click={() => refresh(`/main_menu`)} class="bot">
-        <div class="botten">돌아가기</div>
-    </button>
-    <div>
-        <img alt={`${spamId}번스토리`} src={stories[spamId - 1].img} class="story"/>
-    </div>
-    <div class="textbox2">
-        <div class="text2">
-            {stories[spamId - 1].text}
-        </div>  
-    </div>
-{:else if stories[spamId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/pie/dul/spam-pie/${spamId + 1}`)} class="button">
+{#if stories[spamId - 1]}
+    <button on:click|stopPropagation={() => refresh(`/storyss/bad/bad1`)} class="button">
         <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>
@@ -97,25 +81,6 @@
 
         position: absolute;
         z-index: 4;
-    }
-
-    .textbox2{
-        
-        width: 100%;
-        height: 100vh;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        position: absolute;
-        z-index: 4;
-    }
-
-    .text2{
-        color: white;
-        font-size: 15vh;
-        font-family: "Jua", sans-serif;
     }
 
 
@@ -192,45 +157,6 @@
         height: 90vh;
     }
 
-    .botten {
-        display: flex;
-        position: absolute;
-        background-color: #FFD400;
-
-        font-size: 6vb;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.8;
-
-        text-align: center;
-
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        width: 13vw;
-        height: 11vh;
-        z-index: 5;
-
-        margin-top: 10vh;
-        margin-left: 10vw;
-
-        align-items: center;
-        justify-content: center;
-    }
-    .botten:hover {
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-
-    .bot {
-        position: absolute;
-
-        top: 70vh;
-        margin-left: 72%;
-    }
 
 
 </style>
