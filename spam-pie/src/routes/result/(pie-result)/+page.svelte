@@ -413,9 +413,11 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element2[7].goodapplebread;
 						textpie = element2[7].text;
+						condition = 'normal';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element2[14].tanapplebread;
 						textpie = element2[14].text;
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'blueberry') {
 					josou = 'blueberry-pie';
@@ -426,9 +428,11 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element2[8].goodblueberrybread;
 						textpie = element2[8].text;
+						condition = 'normal';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element2[15].tanblueberrybread;
 						textpie = element2[15].text;
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'inseon') {
 					josou = 'herring-pie';
@@ -439,9 +443,11 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element2[9].goodinseonbread;
 						textpie = element2[9].text;
+						condition = 'normal';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element2[16].taninseonbread;
 						textpie = element2[16].text;
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'meat') {
 					josou = 'meat-pie';
@@ -452,9 +458,11 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element2[10].goodmeatpie;
 						textpie = element2[10].text;
+						condition = 'normal';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element2[17].tanmeatpie;
 						textpie = element2[17].text;
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'mintchoco') {
 					josou = 'mincho-pie';
@@ -465,9 +473,11 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element2[11].goodmintchocobread;
 						textpie = element2[11].text;
+						condition = 'normal';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element2[18].tanmintchocobread;
 						textpie = element2[18].text;
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'pump') {
 					josou = 'pumpkin-pie';
@@ -478,9 +488,11 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element2[12].goodpumpkinbread;
 						textpie = element2[12].text;
+						condition = 'normal';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element2[19].tanpumpkinbread;
 						textpie = element2[19].text;
+						condition = 'tan';
 					}
 				} else if (main_ingredient === 'spam') {
 					josou = 'spam-pie';
@@ -491,9 +503,11 @@
 					} else if (selectedtime === '1:00') {
 						document.querySelector('.re').src = element2[13].goodspambread;
 						textpie = element2[13].text;
+						condition = 'normal';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element2[20].tanspambread;
 						textpie = element2[20].text;
+						condition = 'tan';
 					}
 				}
 			}
