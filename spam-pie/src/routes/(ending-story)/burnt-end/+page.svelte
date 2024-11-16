@@ -17,7 +17,7 @@
     석탄 엔딩
 </div>
 
-    <botten class="bot" on:click={() => goto('/main_menu')}>
+    <botten class="bot" onclick={() => goto('/main_menu')}>
             <div class="botten">돌아가기</div>
     </botten>
 
@@ -93,7 +93,7 @@
     .bot {
         position: absolute;
         top: 60vh;
-        left: 164vh;
+        left: 140vh;
     }
 
 </style>
