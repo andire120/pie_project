@@ -1,5 +1,6 @@
 <script lang="ts">
   import { goto } from '$app/navigation';
+	import { page } from '$app/stores';
   import { onMount } from 'svelte';
 
   const background = "/src/public/element/otherthing/otherelement/background.png";
@@ -20,19 +21,10 @@
     selectedtime = timeId;
   }
 
-  async function showDan() {
-  if (selectedtime) {
-    await goto(`/?id=your_id_value&liquid_id=your_liquid_value&main_ingredient=your_ingredient_value&time=${selectedtime}`);
-  } else {
-    showWarning = true;
-    setTimeout(() => {
-      showWarning = false;
-    }, 3000);
-  }
-}
 
-
-  let id: string | null = null;
+  let id = null;
+  let id_liquid = null;
+  let main_ingredient = null;
 
   onMount(() => {
     const url = new URL(window.location.href);
@@ -45,7 +37,31 @@
     sessionStorage.setItem('currentURL', window.location.href);
   });
 
+ async function showDan() {
+  const queryParams = new URLSearchParams($page.url.search);
+    id = queryParams.get('id');
+    id_liquid = queryParams.get('id_liquid');
+    main_ingredient = queryParams.get('main_ingredient');
 
+  if (selectedtime == 'thr') {
+    await goto(`result?id=${id}&id_liquid=${id_liquid}&main_ingredient=${main_ingredient}&selectedtime=0:30`);
+  } 
+  else if(selectedtime == 'one') {
+    await goto(`result?id=${id}&id_liquid=${id_liquid}&main_ingredient=${main_ingredient}&selectedtime=1:00`);
+  }
+  else if(selectedtime == 'onethr') {
+    await goto(`result?id=${id}&id_liquid=${id_liquid}&main_ingredient=${main_ingredient}&selectedtime=1:30`);
+  }
+  else if(selectedtime == 'eig') {
+    await goto(`result?id=${id}&id_liquid=${id_liquid}&main_ingredient=${main_ingredient}&selectedtime=8:00`);
+  }
+  else {
+    showWarning = true;
+    setTimeout(() => {
+      showWarning = false;
+    }, 3000);
+  }
+}
   
 </script>
 
