@@ -29,7 +29,7 @@
 			tanpumpkincookie: '/src/public/element/cookie/tan-cookie/pumpkin-cookie.png',
 			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie.png',
 
-			burnt: '/src/public/element/cookie/suktan.png'
+			burnt: '/src/public/element/pie/suktan.png'
 		}
 	];
 
