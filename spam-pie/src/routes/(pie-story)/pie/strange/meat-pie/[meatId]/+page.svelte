@@ -31,21 +31,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
 
-
-{#if (meatId == 2)}
-    <button on:click={() => refresh(`/main_menu`)} class="bot">
-        <div class="botten">돌아가기</div>
-    </button>
-    <div>
-        <img alt={`${meatId}번스토리`} src={stories[meatId - 1].img} class="story"/>
-    </div>
-    <div class="textbox2">
-        <div class="text2">
-            {stories[meatId - 1].text}
-        </div>  
-    </div>
-{:else if stories[meatId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/pie/strange/meat-pie/${meatId + 1}`)} class="button">
+{#if stories[meatId - 1]}
+    <button on:click|stopPropagation={() => refresh(`/storyss/bad/bad1`)} class="button">
         <img alt={`${meatId}번이미지`} src={stories[meatId - 1].tu} class="tu"/>
     </button>
     <div>
@@ -97,25 +84,6 @@
 
         position: absolute;
         z-index: 4;
-    }
-
-    .textbox2{
-        
-        width: 100%;
-        height: 100vh;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        position: absolute;
-        z-index: 4;
-    }
-
-    .text2{
-        color: white;
-        font-size: 15vh;
-        font-family: "Jua", sans-serif;
     }
 
 
@@ -190,46 +158,6 @@
     .tu{
         width: 100%;
         height: 90vh;
-    }
-
-    .botten {
-        display: flex;
-        position: absolute;
-        background-color: #FFD400;
-
-        font-size: 6vb;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.8;
-
-        text-align: center;
-
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        width: 13vw;
-        height: 11vh;
-        z-index: 5;
-
-        margin-top: 10vh;
-        margin-left: 10vw;
-
-        align-items: center;
-        justify-content: center;
-    }
-    .botten:hover {
-        background-color: #FDFECF;
-        border: 4px solid yellow;
-    }
-
-    .bot {
-        position: absolute;
-
-        top: 70vh;
-        margin-left: 72%;
     }
 
 
