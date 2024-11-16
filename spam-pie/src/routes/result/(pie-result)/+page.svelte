@@ -171,10 +171,11 @@
 	let middle_result = null; //이건 빵인지 쿠키인지 파이인지 볼려고 만든거(강력분,중력분,박력분)
 	let selectedtime = null; //구운시간
 
-	let imagePath = bowl;
-	let textpie = '';
-	let condition = '';
+	let imagePath = bowl;  //변환 되기 전 이미지
+	let textpie = ''; //파이 밑에 나오는 텍스트
+	let condition = '';  //덜익 / 익 / 안익
 
+	
 	/**
 	 * @type {string | null} //저도 이게 뭔지 모르겠어요 없으면 코드가 실행이 안됨;
 	 */
@@ -472,7 +473,7 @@
 
 	function go() {
 		if (condition === 'dul') {
-			window.location.href = '/';
+			window.location.href = '';
 		}
 	}
 </script>
