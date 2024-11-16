@@ -27,10 +27,11 @@
 			tanspamcookie: '/src/public/element/cookie/tan-cookie/spam-cookie.png',
 			tanmintchococookie: '/src/public/element/cookie/tan-cookie/mincho-cookie.png',
 			tanpumpkincookie: '/src/public/element/cookie/tan-cookie/pumpkin-cookie.png',
-			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie.png'
+			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie.png',
+
+			burnt: '/src/public/element/cookie/suktan.png'
 		}
 	];
-	const burnt = '/src/public/element/cookie/suktan.png';
 
 	const element2 = [
 		{
@@ -279,10 +280,7 @@
 		}
 
 		// 쿠키
-		if (selectedtime === '8:00') {
-			document.querySelector('.re').src = burnt;
-			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
-		} else if (selectedtime != '8:00') {
+		if (selectedtime != '8:00') {
 			if (id === 'middlebutter' || id === 'middlemargarine') {
 				if (main_ingredient === 'apple') {
 					if (selectedtime === '0:30') {
@@ -370,6 +368,9 @@
 					}
 				}
 			}
+		} else if (selectedtime === '8:00') {
+			document.querySelector('.re').src = element[0].burnt;
+			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
 		}
 		//크래시는 안된다
 
@@ -562,7 +563,7 @@
 		position: absolute;
 		width: 110vh;
 		height: 110vh;
-		top: -19vh;
+		top: -20vh;
 		left: 55vh;
 	}
 
