@@ -584,11 +584,12 @@
 	</div>
 
 	<img src={imagePath} class="re" alt="결과 이미지" />
-	<p class="text">{textpie}</p>
-	<div class="foot"></div>
+	<div class="foot">
+		<p class="text">{textpie}</p>
+	</div>
 
-	<button type="button" class="bot" onclick={go()}>
-		<img src={next_button} alt="단추" class="botten" />
+	<button onclick={go} class="bot">
+		<img onclick={go} src="{next_button}" alt="단추" class="botten" />
 	</button>
 
 </div>
@@ -611,35 +612,32 @@
 		height: 100vh;
 	}
 
-	.back img {
-		width: 100%;
-		height: 100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
 
 	.foot {
 		width: 100vw;
 		height: 20vh;
+
 		background-color: #9744bf;
 		z-index: 1000;
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
 		position: absolute;
-		bottom: 5%;
+		margin-top: 70vh;
 	}
 
 	.text {
 		width: 100vw;
 		height: 20vh;
-		z-index: 1001;
+		
 		display: flex;
 		justify-content: center;
 		align-items: center;
+
 		position: absolute;
-		bottom: -1%;
+		z-index: 1001;
 
 		font-size: 55px;
 		font-family: 'Jua', sans-serif;
@@ -647,39 +645,36 @@
 		line-height: 1.6;
 		text-align: center;
 		border-radius: 10px;
+
 		color: white;
 		border: none;
-
-		background-image: linear-gradient(
-			to top left,
-			rgba(0, 0, 0, 0.2),
-			rgba(0, 0, 0, 0.2) 30%,
-			rgba(0, 0, 0, 0)
-		);
 	}
 
 	.re {
 		overflow: hidden;
+		width: 100vh;
+		height: 100vh;
+		margin-bottom: 20vh;
+
 		position: absolute;
-		width: 110vh;
-		height: 110vh;
-		top: -20vh;
-		left: 55vh;
 		z-index: 1002;
 	}
 
 	.bot {
+		width: 10vh;
+		height: 10vh;
+
 		position: absolute;
-		top: 60vh;
-		left: 164vh;
 		z-index: 10000;
 		cursor: pointer; 
+
 	}
 
 	.botten {
-		position: absolute;
 		width: 10vh;
 		height: 10vh;
+		
+		position: absolute;
 		z-index: 1500;	
 	}
 </style>
