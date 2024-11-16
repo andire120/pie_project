@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
+  import { page } from '$app/navigation';
   import { onMount } from 'svelte';
 
   const background = "/src/public/element/otherthing/otherelement/background.png";
@@ -12,6 +12,12 @@
   const oven = "/src/public/element/otherthing/otherelement/oven.png";
   const danger = "/src/public/element/otherthing/otherelement/choseoven.png";
 
+
+
+
+
+  
+
   let selectedtime = '';
   let showWarning = false;
 
@@ -22,7 +28,8 @@
 
   async function showDan() {
   if (selectedtime) {
-    await goto(`/?id=your_id_value&liquid_id=your_liquid_value&main_ingredient=your_ingredient_value&time=${selectedtime}`);
+    const selectedpowder = 
+    await page(`&id=${selectedpowder}${selectedbutter}&id_liquid=${selectedliquid}&main_ingredient=${selectedIngredient}&time=${selectedtime}`);
   } else {
     showWarning = true;
     setTimeout(() => {
@@ -43,6 +50,10 @@
     id = pathId || queryId || 'No ID Provided';
 
     sessionStorage.setItem('currentURL', window.location.href);
+
+    const queryParams = new URLSearchParams($page.url.search);
+    id = queryParams.get('id');
+    id_liquid = queryParams.get('id_liquid');
   });
 
 
