@@ -521,12 +521,11 @@
 	});
 
 	function go() {
-		if (condition == 'dul') { //커밋
-			if (id == 'parkbutter' || id == 'parkmargarine') 
-				window.location.href = `/pie/dul/${josou}/1`;
+		if (condition == 'dul') {
+			//커밋
+			if (id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/dul/${josou}/1`;
 			if (id == 'strongbutter' || id == 'strongmargarine')
 				window.location.href = `/bread/dul/${josou}/1`;
-
 		} else if (condition == 'good') {
 			if (id == 'parkbutter') {
 				if (id_liquid == 'water') {
@@ -534,7 +533,6 @@
 				} else if (id_liquid != 'water') {
 					window.location.href = `/pie/strange/${josou}/1`;
 				}
-
 			} else if (id == 'parkmargarine') {
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
