@@ -432,7 +432,7 @@
 				josou = 'apple-bread';
 				if (main_ingredient === 'apple') {
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[0].dulapplepie;
+						document.querySelector('.re').src = element2[0].dulapplebread;
 						textpie = element2[0].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
@@ -477,15 +477,15 @@
 				} else if (main_ingredient === 'meat') {
 					josou = 'meat-bread';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[9].dulmeatpie;
+						document.querySelector('.re').src = element2[9].dulmeatbread;
 						textpie = element2[9].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[10].goodmeatpie;
+						document.querySelector('.re').src = element2[10].goodmeatbread;
 						textpie = element2[10].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[11].tanmeatpie;
+						document.querySelector('.re').src = element2[11].tanmeatbread;
 						textpie = element2[11].text;
 						condition = 'tan';
 					}
