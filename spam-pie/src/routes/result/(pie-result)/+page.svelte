@@ -29,7 +29,7 @@
 			tanpumpkincookie: '/src/public/element/cookie/tan-cookie/pumpkin-cookie.png',
 			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie.png',
 
-			burnt: '/src/public/element/pie/suktan.png'
+			burnt: '/src/public/element/cookie/suktan.png'
 		}
 	];
 
@@ -39,103 +39,90 @@
 			text: '으악~! 덜익은 사과 빵이 완성됐잖아..'
 		},
 		{
-			goodapplebread: '/src/public/element/bread/normal-bread/apple-bread.png',
-			text: '우와~! 맛있는 사과 빵이 완성됐다!!'
-		},
-		{
-			tanapplebread: '/src/public/element/bread/tan-bread/apple-bread.png',
-			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
-		},
-
-		
-		{
 			dulblueberrybread: '/src/public/element/bread/dul-bread/blueberry-bread.png',
 			text: '으악~! 덜익은 블루베리 빵이 완성됐잖아..'
+		},
+		{
+			dulspambread: '/src/public/element/bread/dul-bread/spam-bread.png',
+			text: '으악~! 덜익은 스팸 빵이 완성됐잖아..'
+		},
+		{
+			dulmeatbread: '/src/public/element/bread/dul-bread/meat-bread.png',
+			text: '으악~! 덜익은 고기 빵이 완성됐잖아..'
+		},
+		{
+			dulinseonbread: '/src/public/element/bread/dul-bread/herring-bread.png',
+			text: '으악~! 덜익은 정어리 빵이 완성됐잖아..'
+		},
+		{
+			dulmintchocobread: '/src/public/element/bread/dul-bread/mincho-bread.png',
+			text: '으악~! 덜익은 민트초코 빵이 완성됐잖아..'
+		},
+		{
+			dulpumpkinbread: '/src/public/element/bread/dul-bread/pumpkin-bread.png',
+			text: '으악~! 덜익은 호박 빵이 완성됐잖아..'
+		}, //6
+
+		{
+			goodapplebread: '/src/public/element/bread/normal-bread/apple-bread.png',
+			text: '우와~! 맛있는 사과 빵이 완성됐다!!'
 		},
 		{
 			goodblueberrybread: '/src/public/element/bread/normal-bread/blueberry-bread.png',
 			text: '우와~! 맛있는 블루베리 빵이 완성됐다!!'
 		},
 		{
-			tanblueberrybread: '/src/public/element/bread/tan-bread/blueberry-bread.png',
-			text: '헉!! 완전히 탄 블루베리 빵이 돼버렸잖아..!'
-		},
-		
-
-		{
-			
-			dulinseonbread: '/src/public/element/bread/dul-bread/herring-bread.png',
-			text: '으악~! 덜익은 정어리 빵이 완성됐잖아..'
-		},
-		{
-			goodinseonbread: '/src/public/element/bread/normal-bread/herring-bread.png',
-			text: '우와~! 맛있는 정어리 빵이 완성됐다!!'
-		},
-		{
-			taninseonbread: '/src/public/element/bread/tan-bread/herring-bread.png',
-			text: '헉!! 완전히 탄 정어리 빵이 돼버렸잖아..!'
-		},
-
-
-		{
-			dulmeatbread: '/src/public/element/bread/dul-bread/meat-bread.png',
-			text: '으악~! 덜익은 고기 빵이 완성됐잖아..'
+			goodspambread: '/src/public/element/bread/normal-bread/spam-bread.png',
+			text: '우와~! 맛있는 스팸 빵이 완성됐다!!'
 		},
 		{
 			goodmeatbread: '/src/public/element/bread/normal-bread/meat-bread.png',
 			text: '우와~! 맛있는 고기 빵이 완성됐다!!'
 		},
 		{
-			tanmeatbread: '/src/public/element/bread/tan-bread/meat-bread.png',
-			text: '헉!! 완전히 탄 고기 빵이 돼버렸잖아..!'
-		},
-
-
-		
-		{
-			dulmintchocobread: '/src/public/element/bread/dul-bread/mincho-bread.png',
-			text: '으악~! 덜익은 민트초코 빵이 완성됐잖아..'
-		},
-		{
 			goodmintchocobread: '/src/public/element/bread/normal-bread/mincho-bread.png',
 			text: '우와~! 맛있는 민트초코 빵이 완성됐다!!'
 		},
 		{
-			tanmintchocobread: '/src/public/element/bread/tan-bread/mincho-bread.png',
-			text: '헉!! 완전히 탄 민트초코 빵이 돼버렸잖아..!'
-		},
-
-
-		{
-			dulpumpkinbread: '/src/public/element/bread/dul-bread/pumpkin-bread.png',
-			text: '으악~! 덜익은 호박 빵이 완성됐잖아..'
+			goodinseonbread: '/src/public/element/bread/normal-bread/herring-bread.png',
+			text: '우와~! 맛있는 정어리 빵이 완성됐다!!'
 		},
 		{
 			goodpumpkinbread: '/src/public/element/bread/normal-bread/pumpkin-bread.png',
 			text: '우와~! 맛있는 호박 빵이 완성됐다!!'
+		}, //13
+
+		{
+			tanapplebread: '/src/public/element/bread/tan-bread/apple-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanblueberrybread: '/src/public/element/bread/tan-bread/blueberry-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanmeatbread: '/src/public/element/bread/tan-bread/meat-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanspambread: '/src/public/element/bread/tan-bread/spam-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		},
+		{
+			tanmintchocobread: '/src/public/element/bread/tan-bread/mincho-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
 		},
 		{
 			tanpumpkinbread: '/src/public/element/bread/tan-bread/pumpkin-bread.png',
-			text: '헉!! 완전히 탄 호박 빵이 돼버렸잖아..!'
-		},
-
-
-		{
-			dulspambread: '/src/public/element/bread/dul-bread/spam-bread.png',
-			text: '으악~! 덜익은 스팸 빵이 완성됐잖아..'
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
 		},
 		{
-			goodspambread: '/src/public/element/bread/normal-bread/spam-bread.png',
-			text: '우와~! 맛있는 스팸 빵이 완성됐다!!'
-		},	
-		{
-			tanspambread: '/src/public/element/bread/tan-bread/spam-bread.png',
-			text: '헉!! 완전히 탄 스팸 빵이 돼버렸잖아..!'
-		},
-		
+			taninseonbread: '/src/public/element/bread/tan-bread/herring-bread.png',
+			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
+		}, //20
 
 		{
-			burnt: '/src/public/element/pie/suktan.png',
+			burnt: '/src/public/element/bread/suktan.png',
 			text: '헉!! 다 타버려서 석탄이 돼버렸잖아..!'
 		}
 	];
@@ -295,7 +282,7 @@
 						condition = 'tan';
 					}
 				} else if (main_ingredient === 'spam') {
-					josou = 'spam-pie';
+					josou = 'spams-pie';
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element1[0].dulspampie;
 						textpie = '으악~! 덜익은 스팸 파이가 완성됐잖아..';
@@ -429,116 +416,94 @@
 
 		if (selectedtime != '8:00') {
 			if (id === 'strongbutter' || id === 'strongmargarine') {
-				josou = 'apple-bread';
 				if (main_ingredient === 'apple') {
 					if (selectedtime === '0:30') {
 						document.querySelector('.re').src = element2[0].dulapplepie;
 						textpie = element2[0].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[1].goodapplebread;
-						textpie = element2[1].text;
-						condition = 'normal';
+						document.querySelector('.re').src = element2[7].goodapplebread;
+						textpie = element2[7].text;
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[1].tanapplebread;
-						textpie = element2[2].text;
-						condition = 'tan';
+						document.querySelector('.re').src = element2[14].tanapplebread;
+						textpie = element2[14].text;
 					}
 				} else if (main_ingredient === 'blueberry') {
-					josou = 'blueberry-bread';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[3].dulblueberrybread;
-						textpie = element2[3].text;
+						document.querySelector('.re').src = element2[1].dulblueberrybread;
+						textpie = element2[1].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[4].goodblueberrybread;
-						textpie = element2[4].text;
-						condition = 'normal';
+						document.querySelector('.re').src = element2[0].goodblueberrybread;
+						textpie = '우와~! 맛있는 블루베리 빵이 완성됐다!!';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[5].tanblueberrybread;
-						textpie = element2[5].text;
-						condition = 'tan';
+						document.querySelector('.re').src = element2[0].tanblueberrybread;
+						textpie = '헉!! 완전히 탄 블루베리 빵이 돼버렸잖아..!';
 					}
 				} else if (main_ingredient === 'inseon') {
-					josou = 'herring-bread';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[6].dulinseonbread;
-						textpie = element2[6].text;
+						document.querySelector('.re').src = element2[0].dulinseonbread;
+						textpie = '으악~! 덜익은 정어리 빵이 완성됐잖아..';
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[7].goodinseonbread;
-						textpie = element2[7].text;
-						condition = 'normal';
+						document.querySelector('.re').src = element2[0].goodinseonbread;
+						textpie = '우와~! 맛있는 정어리 빵이 완성됐다!!';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[8].taninseonbread;
-						textpie = element2[8].text;
-						condition = 'tan';
+						document.querySelector('.re').src = element2[0].taninseonbread;
+						textpie = '헉!! 완전히 탄 정어리 빵이 돼버렸잖아..!';
 					}
 				} else if (main_ingredient === 'meat') {
-					josou = 'meat-bread';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[9].dulmeatpie;
-						textpie = element2[9].text;
+						document.querySelector('.re').src = element2[0].dulmeatpie;
+						textpie = '으악~! 덜익은 고기 빵이 완성됐잖아..';
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[10].goodmeatpie;
-						textpie = element2[10].text;
-						condition = 'normal';
+						document.querySelector('.re').src = element2[0].goodmeatpie;
+						textpie = '우와~! 맛있는 고기 빵이 완성됐다!!';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[11].tanmeatpie;
-						textpie = element2[11].text;
-						condition = 'tan';
+						document.querySelector('.re').src = element2[0].tanmeatpie;
+						textpie = '헉!! 완전히 탄 고기 빵이 돼버렸잖아..!';
 					}
 				} else if (main_ingredient === 'mintchoco') {
-					josou = 'mincho-bread';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[12].dulmintchocobread;
-						textpie = element2[12].text;
+						document.querySelector('.re').src = element2[0].dulmintchocobread;
+						textpie = '으악~! 덜익은 민트초코 빵이 완성됐잖아..';
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[13].goodmintchocobread;
-						textpie = element2[13].text;
-						condition = 'normal';
+						document.querySelector('.re').src = element2[0].goodmintchocobread;
+						textpie = '우와~! 맛있는 민트초코 빵이 완성됐다!!';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[14].tanmintchocobread;
-						textpie = element2[14].text;
-						condition = 'tan';
+						document.querySelector('.re').src = element2[0].tanmintchocobread;
+						textpie = '헉!! 완전히 탄 민트초코 빵이 돼버렸잖아..!';
 					}
 				} else if (main_ingredient === 'pump') {
-					josou = 'pumpkin-bread';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[15].dulpumpkinbread;
-						textpie = element2[15].text;
+						document.querySelector('.re').src = element2[0].dulpumpkinbread;
+						textpie = '으악~! 덜익은 호박 빵이 완성됐잖아..';
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[16].goodpumpkinbread;
-						textpie = element2[16].text;
-						condition = 'normal';
+						document.querySelector('.re').src = element2[0].goodpumpkinbread;
+						textpie = '우와~! 맛있는 호박 빵이 완성됐다!!';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[17].tanpumpkinbread;
-						textpie = element2[17].text;
-						condition = 'tan';
+						document.querySelector('.re').src = element2[0].tanpumpkinbread;
+						textpie = '헉!! 완전히 탄 호박 빵이 돼버렸잖아..!';
 					}
 				} else if (main_ingredient === 'spam') {
-					josou = 'spam-bread';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[18].dulspambread;
-						textpie = element2[18].text;
+						document.querySelector('.re').src = element2[0].dulspambread;
+						textpie = '으악~! 덜익은 스팸 빵이 완성됐잖아..';
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[19].goodspambread;
-						textpie = element2[19].text;
-						condition = 'normal';
+						document.querySelector('.re').src = element2[0].goodspambread;
+						textpie = '우와~! 맛있는 스팸 빵이 완성됐다!!';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[20].tanspambread;
-						textpie = element2[20].text;
-						condition = 'tan';
+						document.querySelector('.re').src = element2[0].tanspambread;
 					}
 				}
 			}
 		} else if (selectedtime === '8:00') {
-			document.querySelector('.re').src = element2[21].burnt;
-			textpie = element2[21].text;
+			document.querySelector('.re').src = element2[0].burnt;
+			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
 		}
 	});
 
@@ -570,65 +535,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 
-
 <div class="container">
 	<div class="back">
 		<img src={background} alt="배경" />
 	</div>
 	<img src={imagePath} class="re" alt="결과 이미지" />
-	<div class="foot">
-		<p class="text">{textpie}</p>
-	</div>
-
-	<button type="button" class="bot" onclick={go()}>
-		<img src={next_button} alt="단추" class="botten" />
-	</button>
+	<p class="text">{textpie}</p>
+	<div class="foot"></div>
 </div>
 
+<botten class="bot">
+	<img onclick={go()} src={next_button} alt="단추" class="botten" />
+</botten>
 
 <style>
 	.container {
+		display: flex;
 		width: 100vw;
 		height: 100vh;
 		background-color: #b071cd;
 		overflow: hidden;
+	}
 
+	.back {
+		width: 90%;
+		height: 80%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		margin-left: 5%;
+	}
+
+	.back img {
+		width: 100%;
+		height: 100%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
-
-	.back {
-		width: 100vw;
-		height: 100vh;
-	}
-
 
 	.foot {
 		width: 100vw;
 		height: 20vh;
-
 		background-color: #9744bf;
 		z-index: 1000;
-
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 		position: absolute;
-		margin-top: 70vh;
+		bottom: 5%;
 	}
 
 	.text {
 		width: 100vw;
 		height: 20vh;
-		
+		z-index: 1001;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-
 		position: absolute;
-		z-index: 1001;
+		bottom: -1%;
 
 		font-size: 55px;
 		font-family: 'Jua', sans-serif;
@@ -636,54 +602,39 @@
 		line-height: 1.6;
 		text-align: center;
 		border-radius: 10px;
-
 		color: white;
 		border: none;
+
+		background-image: linear-gradient(
+			to top left,
+			rgba(0, 0, 0, 0.2),
+			rgba(0, 0, 0, 0.2) 30%,
+			rgba(0, 0, 0, 0)
+		);
 	}
 
 	.re {
 		overflow: hidden;
-		width: 100vh;
-		height: 100vh;
-		margin-bottom: 20vh;
-
 		position: absolute;
+		width: 110vh;
+		height: 110vh;
+		top: -20vh;
+		left: 55vh;
 		z-index: 1002;
 	}
 
 	.bot {
-		width: 10vh;
-		height: 10vh;
-
-		margin-top: 35vh;
-		margin-left: 80vw;
-
-		display: flex;
-		justify-content: center;
-
-		background-color: rgba(0, 0, 0, 0);
-        border: none;
-
 		position: absolute;
+		top: 60vh;
+		left: 164vh;
 		z-index: 10000;
-<<<<<<< HEAD
 		cursor: pointer;
-=======
-		cursor: pointer; 
-
->>>>>>> 5f48f36ecd992f6c22b821cba86155e4cce74307
 	}
 
 	.botten {
+		position: absolute;
 		width: 10vh;
 		height: 10vh;
-<<<<<<< HEAD
 		z-index: 1500;
-=======
-		
-		position: absolute;
-		z-index: 1500;	
->>>>>>> 5f48f36ecd992f6c22b821cba86155e4cce74307
 	}
-
 </style>
