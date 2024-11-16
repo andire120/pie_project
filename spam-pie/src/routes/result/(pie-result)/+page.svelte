@@ -10,7 +10,7 @@
 			dulspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
 			dulmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
 			dulinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
-			dulmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie2.png',
+			dulmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
 			dulpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
 
 			goodapplecookie: '/src/public/element/cookie/normal-cookie/apple-cookie.png',
@@ -18,7 +18,7 @@
 			goodspamcookie: '/src/public/element/cookie/normal-cookie/spam-cookie.png',
 			goodmeatcookie: '/src/public/element/cookie/normal-cookie/meat-cookie.png',
 			goodmintchococookie: '/src/public/element/cookie/normal-cookie/mincho-cookie.png',
-			goodinseoncookie: '/src/public/element/cookie/normal-cookie/herring-cookie2.png',
+			goodinseoncookie: '/src/public/element/cookie/normal-cookie/herring-cookie.png',
 			goodpumpkincookie: '/src/public/element/cookie/normal-cookie/pumpkin-cookie.png',
 
 			tanapplecookie: '/src/public/element/cookie/tan-cookie/apple-cookie.png',
@@ -47,7 +47,6 @@
 			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
 		},
 
-		
 		{
 			dulblueberrybread: '/src/public/element/bread/dul-bread/blueberry-bread.png',
 			text: '으악~! 덜익은 블루베리 빵이 완성됐잖아..'
@@ -60,10 +59,8 @@
 			tanblueberrybread: '/src/public/element/bread/tan-bread/blueberry-bread.png',
 			text: '헉!! 완전히 탄 블루베리 빵이 돼버렸잖아..!'
 		},
-		
 
 		{
-			
 			dulinseonbread: '/src/public/element/bread/dul-bread/herring-bread.png',
 			text: '으악~! 덜익은 정어리 빵이 완성됐잖아..'
 		},
@@ -75,7 +72,6 @@
 			taninseonbread: '/src/public/element/bread/tan-bread/herring-bread.png',
 			text: '헉!! 완전히 탄 정어리 빵이 돼버렸잖아..!'
 		},
-
 
 		{
 			dulmeatbread: '/src/public/element/bread/dul-bread/meat-bread.png',
@@ -90,8 +86,6 @@
 			text: '헉!! 완전히 탄 고기 빵이 돼버렸잖아..!'
 		},
 
-
-		
 		{
 			dulmintchocobread: '/src/public/element/bread/dul-bread/mincho-bread.png',
 			text: '으악~! 덜익은 민트초코 빵이 완성됐잖아..'
@@ -104,7 +98,6 @@
 			tanmintchocobread: '/src/public/element/bread/tan-bread/mincho-bread.png',
 			text: '헉!! 완전히 탄 민트초코 빵이 돼버렸잖아..!'
 		},
-
 
 		{
 			dulpumpkinbread: '/src/public/element/bread/dul-bread/pumpkin-bread.png',
@@ -119,7 +112,6 @@
 			text: '헉!! 완전히 탄 호박 빵이 돼버렸잖아..!'
 		},
 
-
 		{
 			dulspambread: '/src/public/element/bread/dul-bread/spam-bread.png',
 			text: '으악~! 덜익은 스팸 빵이 완성됐잖아..'
@@ -127,12 +119,11 @@
 		{
 			goodspambread: '/src/public/element/bread/normal-bread/spam-bread.png',
 			text: '우와~! 맛있는 스팸 빵이 완성됐다!!'
-		},	
+		},
 		{
 			tanspambread: '/src/public/element/bread/tan-bread/spam-bread.png',
 			text: '헉!! 완전히 탄 스팸 빵이 돼버렸잖아..!'
 		},
-		
 
 		{
 			burnt: '/src/public/element/pie/suktan.png',
@@ -311,8 +302,7 @@
 					}
 				}
 			}
-		} 
-		else if (selectedtime == '8:00') {
+		} else if (selectedtime == '8:00') {
 			document.querySelector('.re').src = element1[0].burnt1;
 			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
 			condition = 'verytan';
@@ -532,31 +522,26 @@
 
 	function go() {
 		if (condition == 'dul') {
-			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/dul/${josou}/1`;
-			if(id == 'strongbutter' || id == 'strongmargarine') window.location.href = `/bread/dul/${josou}/1`;
-		}
-
-		else if (condition == 'good') {
-			if(id == 'parkbutter') {
-				if(id_liquid == 'water') {
+			if (id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/dul/${josou}/1`;
+			if (id == 'strongbutter' || id == 'strongmargarine')
+				window.location.href = `/bread/dul/${josou}/1`;
+		} else if (condition == 'good') {
+			if (id == 'parkbutter') {
+				if (id_liquid == 'water') {
 					window.location.href = `/${josou}/1`;
-				}
-				else if(id_liquid != 'water') {
+				} else if (id_liquid != 'water') {
 					window.location.href = `/pie/strange/${josou}/1`;
 				}
-			}
-			else if(id == 'parkmargarine'){
+			} else if (id == 'parkmargarine') {
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
 		}
 	}
-
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
-
 
 <div class="container">
 	<div class="back">
@@ -571,8 +556,6 @@
 		<img src={next_button} alt="단추" class="botten" />
 	</button>
 </div>
-
-
 
 <style>
 	.container {
@@ -590,7 +573,6 @@
 		width: 100vw;
 		height: 100vh;
 	}
-
 
 	.foot {
 		width: 100vw;
@@ -610,7 +592,7 @@
 	.text {
 		width: 100vw;
 		height: 20vh;
-		
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -650,20 +632,18 @@
 		justify-content: center;
 
 		background-color: rgba(0, 0, 0, 0);
-        border: none;
+		border: none;
 
 		position: absolute;
 		z-index: 10000;
-		cursor: pointer; 
-
+		cursor: pointer;
 	}
 
 	.botten {
 		width: 10vh;
 		height: 10vh;
-		
-		position: absolute;
-		z-index: 1500;	
-	}
 
+		position: absolute;
+		z-index: 1500;
+	}
 </style>
