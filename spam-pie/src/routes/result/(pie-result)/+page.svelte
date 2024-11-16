@@ -549,31 +549,6 @@
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
 		}
-<<<<<<< HEAD
-=======
-		else if (condition == 'normal') {
-			if(id == 'strongbutter') {
-				if(id_liquid == 'water') {
-					window.location.href = `/bread/normal/${josou}/1`;
-				}
-				else if(id_liquid != 'water') {
-					window.location.href = `/bread/strange/${josou}/1`;
-				}
-			}
-			else if(id == 'strongmargarine'){
-				window.location.href = `/bread/strange/${josou}/1`;
-			}
-		}
-		else if(condition == 'tan') {
-			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/tan/${josou}/1`;
-			if(id == 'strongbutter' || id == 'strongmargarine') window.location.href = `/bread/tan/${josou}/1`;
-		}
-		else if(condition === 'verytan') {
-			window.location.href = `/burnt-end`; 
-		}
-
-		
->>>>>>> c99b8584de1ca6960caf0baf95b389c8b8d0de1c
 	}
 
 </script>
