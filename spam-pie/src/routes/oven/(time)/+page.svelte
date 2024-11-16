@@ -1,14 +1,7 @@
 <script lang="ts">
-<<<<<<< HEAD
 	import { goto } from '$app/navigation';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-=======
-  
-  import { goto } from '$app/navigation';
-	import { page } from '$app/stores';
-  import { onMount } from 'svelte';
->>>>>>> 8e4c25bd35ecd4d3a41637d79a9c3da80bef7015
 
 	const background = '/src/public/element/otherthing/otherelement/background.png';
 	const next = '/src/public/element/otherthing/otherelement/nextbotten.png';
@@ -23,7 +16,6 @@
 	let selectedtime = '';
 	let showWarning = false;
 
-<<<<<<< HEAD
 	function select(timeId: string) {
 		console.log('Selected time: ', timeId);
 		selectedtime = timeId;
@@ -40,14 +32,9 @@
 		const queryId = url.searchParams.get('id');
 
 		id = pathId || queryId || 'No ID Provided';
-=======
-  let selectedtime = '';
-  let showWarning = false;
->>>>>>> 8e4c25bd35ecd4d3a41637d79a9c3da80bef7015
 
 		sessionStorage.setItem('currentURL', window.location.href);
 
-<<<<<<< HEAD
 		const queryParams = new URLSearchParams($page.url.search);
 		id = queryParams.get('id');
 		id_liquid = queryParams.get('id_liquid');
@@ -58,11 +45,6 @@
 		id = queryParams.get('id');
 		id_liquid = queryParams.get('id_liquid');
 		main_ingredient = queryParams.get('main_ingredient');
-=======
-  let id = null;
-  let id_liquid = null;
-  let main_ingredient = null;
->>>>>>> 8e4c25bd35ecd4d3a41637d79a9c3da80bef7015
 
 		if (selectedtime == 'thr') {
 			await goto(
