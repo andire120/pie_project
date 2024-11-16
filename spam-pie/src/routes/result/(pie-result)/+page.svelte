@@ -153,7 +153,7 @@
 			tanpumpkinpie: '/src/public/element/pie/little-pie/pumpkin-pie.png',
 			taninseonpie: '/src/public/element/pie/little-pie/herring-pie.png',
 
-			burnt: '/src/public/element/pie/suktan.png'
+			burnt1: '/src/public/element/pie/suktan.png'
 		}
 	];
 
@@ -188,6 +188,7 @@
 		id = queryParams.get('id');
 		main_ingredient = queryParams.get('main_ingredient');
 		selectedtime = queryParams.get('selectedtime');
+		id_liquid = queryParams.get('id_liquid');
 
 		if (selectedtime != '8:00') {
 			if (id === 'parkbutter' || id === 'parkmargarine') {
@@ -298,8 +299,9 @@
 					}
 				}
 			}
-		} else if (selectedtime === '8:00') {
-			document.querySelector('.re').src = element1[0].burnt;
+		} 
+		else if (selectedtime == '8:00') {
+			document.querySelector('.re').src = element1[0].burnt1;
 			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
 			condition = 'verytan'
 		}
@@ -496,15 +498,16 @@
 	});
 
 	function go() {
-		if (condition === 'dul') {
+		if (condition == 'dul') {
 			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/dul/${josou}/1`;
 		}
-		else if (condition === 'good') {
+
+		else if (condition == 'good') {
 			if(id == 'parkbutter') {
-				if(id_liquid === 'water') {
+				if(id_liquid == 'water') {
 					window.location.href = `/${josou}/1`;
 				}
-				else {
+				else if(id_liquid != 'water') {
 					window.location.href = `/pie/strange/${josou}/1`;
 				}
 			}
@@ -512,11 +515,11 @@
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
 		}
-		else if(condition === 'tan') {
+		else if(condition == 'tan') {
 			if(id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/tan/${josou}/1`;
 		}
 		else if(condition === 'verytan') {
-			window.location.href = `/burnt-end`;  //석탄엔딩 링크로 나중에 바꾸셈
+			window.location.href = `/burnt-end`; 
 		}
 	}
 </script>
@@ -610,6 +613,7 @@
 		height: 110vh;
 		top: -17vh;
 		left: 55vh;
+		z-index: 1002;
 	}
 
 	.bot {
