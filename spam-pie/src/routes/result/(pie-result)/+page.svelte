@@ -27,11 +27,10 @@
 			tanspamcookie: '/src/public/element/cookie/tan-cookie/spam-cookie.png',
 			tanmintchococookie: '/src/public/element/cookie/tan-cookie/mincho-cookie.png',
 			tanpumpkincookie: '/src/public/element/cookie/tan-cookie/pumpkin-cookie.png',
-			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie.png',
-
-			burnt: '/src/public/element/cookie/suktan.png'
+			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie.png'
 		}
 	];
+	const burnt = '/src/public/element/cookie/suktan.png';
 
 	const element2 = [
 		{
@@ -171,11 +170,10 @@
 	let middle_result = null; //이건 빵인지 쿠키인지 파이인지 볼려고 만든거(강력분,중력분,박력분)
 	let selectedtime = null; //구운시간
 
-	let imagePath = bowl;  //변환 되기 전 이미지
-	let textpie = ''; //파이 밑에 나오는 텍스트
-	let condition = '';  //덜익 / 익 / 안익
+	let imagePath = bowl;
+	let textpie = '';
+	let condition = '';
 
-	
 	/**
 	 * @type {string | null} //저도 이게 뭔지 모르겠어요 없으면 코드가 실행이 안됨;
 	 */
@@ -272,7 +270,6 @@
 						textpie = '우와~! 맛있는 스팸 파이가 완성됐다!!';
 					} else if (selectedtime === '1:30') {
 						document.querySelector('.re').src = element1[0].tanspampie;
-						textpie = "헉!! 완전히 탄 스팸 파이가 돼버렸잖아..!"
 					}
 				}
 			}
@@ -282,7 +279,10 @@
 		}
 
 		// 쿠키
-		if (selectedtime != '8:00') {
+		if (selectedtime === '8:00') {
+			document.querySelector('.re').src = burnt;
+			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
+		} else if (selectedtime != '8:00') {
 			if (id === 'middlebutter' || id === 'middlemargarine') {
 				if (main_ingredient === 'apple') {
 					if (selectedtime === '0:30') {
@@ -370,9 +370,6 @@
 					}
 				}
 			}
-		} else if (selectedtime === '8:00') {
-			document.querySelector('.re').src = element[0].burnt;
-			textpie = '헉!! 다 타버려서 석탄이 돼버렸잖아..!';
 		}
 		//크래시는 안된다
 
@@ -473,7 +470,7 @@
 
 	function go() {
 		if (condition === 'dul') {
-			window.location.href = '';
+			window.location.href = '/';
 		}
 	}
 </script>
@@ -565,7 +562,7 @@
 		position: absolute;
 		width: 110vh;
 		height: 110vh;
-		top: -17vh;
+		top: -19vh;
 		left: 55vh;
 	}
 
