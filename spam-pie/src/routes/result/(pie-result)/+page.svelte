@@ -549,6 +549,8 @@
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
 		}
+<<<<<<< HEAD
+=======
 		else if (condition == 'normal') {
 			if(id == 'strongbutter') {
 				if(id_liquid == 'water') {
@@ -571,6 +573,7 @@
 		}
 
 		
+>>>>>>> c99b8584de1ca6960caf0baf95b389c8b8d0de1c
 	}
 
 </script>
