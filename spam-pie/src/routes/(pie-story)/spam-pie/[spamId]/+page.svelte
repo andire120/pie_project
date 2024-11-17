@@ -10,7 +10,8 @@
         {
             img: "/src/public/illustration/미사용/심사배경.png",
             simtext: "최고의 동아리 SPAM에 가입하시겠습니까?",
-            he: "최고의 동아리 SPAM에 가입하시겠습니까?",
+            he: "/src/public/illustration/미사용/요한 선배님.png",
+            he2: "/src/public/illustration/미사용/요한 선배님2.png",
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
@@ -91,6 +92,10 @@
         <div class="chose">
             <button on:click={() => refresh(`/spam-pie/2`)} class="cbutton">yes</button>
             <button on:click={() => refresh(`/spam-pie/3`)} class="cbutton">no</button>
+        </div>
+        <div class="hebox">
+            <img alt={`${spamId}요한 선배님`} src={stories[spamId - 1].he} class="he"/>
+            <img alt={`${spamId}반전 요한 선배님`} src={stories[spamId - 1].he2} class="he2"/>
         </div>
     </div>
 {:else}
@@ -291,6 +296,11 @@
     }
 
     .tu{
+        width: 100%;
+        height: 90vh;
+    }
+
+    .hebox{
         width: 100%;
         height: 90vh;
     }
