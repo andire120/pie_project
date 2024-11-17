@@ -173,6 +173,7 @@
 		height: 20vh;
 		background-color: #9744bf;
 		z-index: 1000;
+		top: 77vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
