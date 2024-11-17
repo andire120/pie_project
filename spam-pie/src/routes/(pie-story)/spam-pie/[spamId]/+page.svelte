@@ -158,7 +158,7 @@
 
 
     .textbox {
-        margin-left: 20%;
+        margin-left: 15%;
         margin-top: 18vh;
 
         width: 70%;
@@ -171,7 +171,7 @@
     }
 
     .textbox2 {
-        margin-left: 20%;
+        margin-left: 15%;
         margin-top: 18vh;
 
         width: 70%;
