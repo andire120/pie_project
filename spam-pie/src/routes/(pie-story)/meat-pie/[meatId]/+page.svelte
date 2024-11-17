@@ -11,14 +11,14 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "미트 파이가 정말 맛있네요.",
             simtext: "심사위원1",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경2.png",
             text: "미투~!",
             simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
@@ -26,7 +26,7 @@
             img: "/src/public/illustration/미사용/심사위원배경2.png",
             text: "심사위원2는 굿바이 선언 포즈를 취했다...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
@@ -34,7 +34,7 @@
             img: "/src/public/illustration/미사용/심사위원배경2.png",
             text: ".",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
@@ -42,7 +42,7 @@
             img: "/src/public/illustration/미사용/심사위원배경2.png",
             text: "...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
@@ -50,7 +50,7 @@
             img: "/src/public/illustration/미사용/심사위원배경2.png",
             text: "..................",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meatpie.png",
+            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
             sim: "/src/public/illustration/미사용/2.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
