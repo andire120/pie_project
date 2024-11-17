@@ -303,8 +303,8 @@
     .hebox{
         width: 100%;
         height: 40vh;
-        gap: 40vh;
-        margin-top: 20vh;
+        gap: 42vh;
+        margin-top: 60vh;
 
         display: flex;
         align-items: center;
