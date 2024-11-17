@@ -93,11 +93,11 @@
             <button on:click={() => refresh(`/spam-pie/2`)} class="cbutton">yes</button>
             <button on:click={() => refresh(`/spam-pie/3`)} class="cbutton">no</button>
         </div>
-        <div class="hebox">
-            <img alt={`${spamId}요한 선배님`} src={stories[spamId - 1].he} class="he"/>
-            <img alt={`${spamId}반전 요한 선배님`} src={stories[spamId - 1].he2} class="he2"/>
-        </div>
     </div>
+    <div class="hebox">
+            <img alt={`${spamId}반전 요한 선배님`} src={stories[spamId - 1].he2} class="he2"/>
+            <img alt={`${spamId}요한 선배님`} src={stories[spamId - 1].he} class="he"/>
+        </div>
 {:else}
     존재하지 않는 페이지
 {/if}
@@ -302,7 +302,25 @@
 
     .hebox{
         width: 100%;
-        height: 90vh;
+        height: 40vh;
+        gap: 40vh;
+        margin-top: 20vh;
+
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        z-index: 4;
+    }
+
+    .he{
+        width: 40%;
+        height: 40vh;
+    }
+
+    .he2{
+        width: 40%;
+        height: 40vh;
     }
 
 
