@@ -211,8 +211,11 @@
         position: absolute;
         z-index: 2;
     }
+
     .on1 {
         margin-bottom: 20vh;
+        margin-right: 5vh;
+        width: 50%;
         position: absolute;
         z-index: 3;
     }
