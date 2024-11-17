@@ -19,17 +19,17 @@
         },
         {
             img: "/src/public/illustration/game-story/3.png",
-            text: "평소처럼 야간근무를 끝내고 퇴근하던 어느 날.\n 주인공은 막대한 상금이 걸려있는 세계적인 요리대회의 인원 모집 공고를 보고.\n 상금을 얻어 약을 사고자 한다.",
+            text: "평소처럼 야간근무를 끝내고 퇴근하던 어느 날.\n 주인공은 막대한 상금이 걸려있는 세계적인 요리대회의\n 인원 모집 공고를 보고. 상금을 얻어 약을 사고자 한다.",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/game-story/4.png",
-            text: "집안 대대로 내려져 오던 전설의 파이 레시피를 잘만 사용한다면, 우승 따윈 식은 죽 먹기 일 테지만...",
+            text: "집안 대대로 내려져 오던 전설의 파이 레시피를 잘만 사용한다면,\n 우승 따윈 식은 죽 먹기 일 테지만...",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/game-story/6.png",
-            text: "어째서인지 파이의 레시피가 잘 기억나지 않는다! 주인공은 과연 끝내 파이의 레시피를 기억해내어 우승을 거머쥘 수 있을까?",
+            text: "어째서인지 파이의 레시피가 잘 기억나지 않는다!\n 주인공은 과연 끝내 파이의 레시피를 기억해내어\n 우승을 거머쥘 수 있을까?",
             tu:"/src/public/illustration/미사용/투명.png"
         }
     ];
