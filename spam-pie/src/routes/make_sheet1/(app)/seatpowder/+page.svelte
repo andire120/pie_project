@@ -102,7 +102,7 @@
 <div style="display: flex; justify-content: center; align-items: position: relative; width: 100%; height: 100%; overflow:hidden">  
     <img src={imageUrl1} alt="배경 이미지" class="back" />
 
-    <div style="position: absolute; top: 20px; left: 10px; width: 90%; max-width: 1200px; height: 90%; transform: translate(-50%, -50%) display: flex align-items: center;">  
+    <div style="position: absolute; top: 20px; left: 10px; width: 100%; max-width: 1650px; height: 90%; transform: translate(-50%, -50%) display: flex align-items: center;">  
         <img src={imageUrl3} alt="현수막" class="fly" />
 
         <div class="wall"></div>
@@ -132,8 +132,10 @@
     .fly {
         position: absolute;
         margin: 0;
-        width: 25%;
+        width: 15%;
         height: 50%;
+        top: 20px;
+        left: 20px;
         margin-bottom: 20px;
         padding: 0;
         z-index: 1;
@@ -158,7 +160,7 @@
         justify-content: space-between;
         align-items: center; 
         padding: 10px; 
-        width: 23%; 
+        width: 17%; 
         margin: 0;
         margin-top: 76vh;
         margin-right: 180%;
@@ -169,7 +171,7 @@
         margin: 0;
         margin-top: 74vh;
         margin-left: 15px;
-        width: 137%;
+        width: 100%;
         height: 18%;
         border-radius: 10px;
         z-index: 1;
@@ -187,7 +189,7 @@
     .bot {
         position: absolute;
         top: 68%;
-        left: 127%;
+        left: 94%;
     }
 
     .default {
@@ -215,14 +217,14 @@
 
     .on2 {
         position: absolute;
-        width: 20vh;
+        width: 100vh;
         max-width: 80%;
-        height: auto;
+        height: 60vh;
         margin: 10px 0;
         padding: 0;
         z-index: 3;
-        top: 15vh;
-        left: 51vh;
+        top: 5vh;
+        left: 48vh;
     }
 
     .Strong {
