@@ -42,7 +42,7 @@
 
 
 {#if (spamId == 2)}
-    <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/spam-pie/${spamId + 1}`)} class="button">
         <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>
@@ -57,7 +57,7 @@
         </p>
     </div>
 {:else if spamId == 3}
-    <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/spam-pie/${spamId + 1}`)} class="button">
         <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>
@@ -89,8 +89,8 @@
             {stories[spamId - 1].simtext}
         </p>
         <div class="chose">
-            <button on:click={() => refresh(`/spams-pie/2`)} class="cbutton">yes</button>
-            <button on:click={() => refresh(`/spams-pie/3`)} class="cbutton">no</button>
+            <button on:click={() => refresh(`/spam-pie/2`)} class="cbutton">yes</button>
+            <button on:click={() => refresh(`/spam-pie/3`)} class="cbutton">no</button>
         </div>
     </div>
 {:else}
