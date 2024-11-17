@@ -12,14 +12,14 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "호박 파이가 참 특이하게 생겼...",
             simtext: "심사위원3",
-            pieimg:"/src/public/element/pie/goodpie/호박 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/pumpkin-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "툭-",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/호박 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/pumpkin-pie.png",
             steve:"/src/public/illustration/pie-ending/스티브_정면.png",
             tu:"/src/public/illustration/미사용/투명.png",
         },
@@ -27,7 +27,7 @@
             img: "/src/public/illustration/pie-ending/야생 마크 화면 1.png",
             text: "스티브가 호박파이를 훔치고 야생으로 달아나 버렸다...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/호박 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/pumpkin-pie.png",
             steve:"/src/public/illustration/pie-ending/뛰는 스티브.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },

@@ -68,7 +68,7 @@ function send() {
             }, 1500);
         }
         else {
-            window.location.href = (`/oven?id=${id}?main_ingredient=${id_main}`);
+            window.location.href = (`/oven?id=${id}&id_liquid=${id_liquid}&main_ingredient=${id_main}`);
         }
     }
 </script>

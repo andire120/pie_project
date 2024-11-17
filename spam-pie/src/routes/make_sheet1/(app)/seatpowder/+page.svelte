@@ -150,17 +150,21 @@
         background-color: #B475D0;
         padding: 0;
         z-index: -1; 
-        display: grid;
+        display: flex;
 
     }
     .background {
         position: absolute;
-        margin: 0;
-        display: grid;
-        margin-top: 77vh;
-        gap: 9.2%;
-        grid-template-rows: 20% 20% 20% 20% 20%;
-    }
+        display: flex; 
+        justify-content: space-between; 
+        align-items: center; 
+        gap: 122px;
+        padding: 10px; 
+        width: 78%; 
+        top: 76vh;
+        left: 3vh;
+        margin: 0 auto;
+}
     .wall {
         position: absolute;
         background-color: #9744BF;
@@ -169,7 +173,6 @@
         left: 10px;
         width: 179vh;
         height: 18vh;
-        padding: 0;
         z-index: 1;
     }
 
@@ -178,6 +181,9 @@
         width: 10vh;
         height: 10vh;
         z-index: 1;
+        gap: 10px;
+        justify-content: space-around;
+        align-items: center;
     }
 
     .bot {
@@ -219,9 +225,14 @@
     }
 
     .Strong {
+        position: relative;
 
-        width: 25vh;
-        height: 10vh;
+        flex: 0 1 auto; 
+        min-width: 24vh; 
+        height: 10vh; 
+        padding: 10px 20px;
+        white-space: nowrap; 
+
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -260,9 +271,15 @@
 
 
     .middle {
+        position: relative;
 
-        width: 25vh;
-        height: 10vh;
+        flex: 0 1 auto; 
+        min-width: 24vh; 
+        height: 10vh; 
+        padding: 10px 20px;
+        white-space: nowrap; 
+        overflow: hidden; 
+
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -300,8 +317,15 @@
     }
 
     .park {
-        width: 25vh;
-        height: 10vh;
+        position: relative;
+
+        flex: 0 1 auto; 
+        min-width: 24vh; 
+        height: 10vh; 
+        padding: 10px 20px;
+        white-space: nowrap; 
+        overflow: hidden; 
+
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -340,8 +364,15 @@
 
 
     .butter {
-        width: 25vh;
-        height: 10vh;
+        position: relative;
+
+        flex: 0 1 auto; 
+        min-width: 24vh; 
+        height: 10vh; 
+        padding: 10px 20px;
+        white-space: nowrap; 
+        overflow: hidden; 
+
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -380,8 +411,15 @@
     }
     
     .margarine {
-        width: 25vh;
-        height: 10vh;
+        position: relative;
+        
+        flex: 0 1 auto; 
+        min-width: 24vh; 
+        height: 10vh;  
+        padding: 10px 20px;
+        white-space: nowrap; 
+        overflow: hidden; 
+
         background-color: #FFD400;
         margin: 0;
         padding: 0;

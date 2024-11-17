@@ -16,7 +16,7 @@
     <div style="position: absolute; top: 20px; left: 10px; transform: translate(-50%, -50%)">  
         <img src={imageUrl3} alt="현수막" class="fly" />
 
-        <bo tten class="bot" on:click={() => goto('/main_menu')}>
+        <bo tten class="bot" onclick={() => goto('/main_menu')}>
             <div class="botten">돌아가기</div>
         </bo>
     </div>
@@ -99,8 +99,8 @@
         width: 180px;
         height: 11vh;
         z-index: 1;
-        margin-top: 80px;
-        margin-left: 80px;
+        margin-top: 230px;
+        margin-left: -50px;
 
         align-items: center;
         justify-content: center;

@@ -11,7 +11,7 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "덜 익었잖아? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/덜익은 파이/덜익은 스팸 파이.png",
+            pieimg:"src/public/element/pie/dul-pie/spam-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
@@ -45,7 +45,7 @@
         </div>  
     </div>
 {:else if stories[spamId - 1]}
-    <button on:click|stopPropagation={() => refresh(`/pie/tan/spam-pie/${spamId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/pie/dul/spam-pie/${spamId + 1}`)} class="button">
         <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>

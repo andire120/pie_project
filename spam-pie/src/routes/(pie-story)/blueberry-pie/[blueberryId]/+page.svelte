@@ -11,28 +11,28 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "저 파이가 파랑색이라는데에 내 손목을 걸지.",
             simtext: "심사위원1",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "아니?, 저 파이가 보라색이라는데에 내 발목을 걸겠어.",
             simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "안타깝지만, 둘다 틀렸어요.",
             simtext: "심사위원3",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "이 파이는 #353B5C색 이에요!!!!!!",
             simtext: "심사위원3",
-            pieimg:"/src/public/element/pie/goodpie/블루베리 파이.png",
+            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
