@@ -9,7 +9,7 @@
     const stories = [
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라. 게다가,덜 익었잖아? 넌 탈락이야.",
+            text: "이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라.\n 게다가,덜 익었잖아? 넌 탈락이야.",
             simtext: "심사위원",
             pieimg:"/src/public/element/bread/dul-bread/apple-bread.png",
             tu:"/src/public/illustration/미사용/투명.png"
