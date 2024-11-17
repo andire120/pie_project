@@ -99,10 +99,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<div style="position: relative; width: 100%; height: 100%; overflow:hidden">  
+<div style="display: flex; justify-content: center; align-items: position: relative; width: 100%; height: 100%; overflow:hidden">  
     <img src={imageUrl1} alt="배경 이미지" class="back" />
 
-    <div style="position: absolute; top: 20px; left: 10px; transform: translate(-50%, -50%)">  
+    <div style="position: absolute; top: 20px; left: 10px; width: 90%; max-width: 1200px; height: 90%; transform: translate(-50%, -50%) display: flex align-items: center;">  
         <img src={imageUrl3} alt="현수막" class="fly" />
 
         <div class="wall"></div>
@@ -132,10 +132,9 @@
     .fly {
         position: absolute;
         margin: 0;
-        top: 10%;
-        left: 10%;
-        width: 25vh;
-        height: 50vh;
+        width: 25%;
+        height: 50%;
+        margin-bottom: 20px;
         padding: 0;
         z-index: 1;
         
@@ -150,29 +149,29 @@
         background-color: #B475D0;
         padding: 0;
         z-index: -1; 
+        object-fit: cover;
         display: flex;
 
     }
     .background {
-        position: absolute;
         display: flex; 
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: center; 
-        gap: 122px;
         padding: 10px; 
-        width: 78%; 
-        top: 76vh;
-        left: 3vh;
-        margin: 0 auto;
+        width: 23%; 
+        margin: 0;
+        margin-top: 76vh;
+        margin-right: 180%;
 }
     .wall {
         position: absolute;
         background-color: #9744BF;
         margin: 0;
-        top: 73vh;
-        left: 10px;
-        width: 179vh;
-        height: 18vh;
+        margin-top: 74vh;
+        margin-left: 15px;
+        width: 137%;
+        height: 18%;
+        border-radius: 10px;
         z-index: 1;
     }
 
@@ -180,23 +179,23 @@
         position: absolute;
         width: 10vh;
         height: 10vh;
+        margin-left: 10%;
         z-index: 1;
-        gap: 10px;
-        justify-content: space-around;
         align-items: center;
     }
 
     .bot {
         position: absolute;
-        top: 60vh;
-        left: 164vh;
+        top: 68%;
+        left: 127%;
     }
 
     .default {
         position: absolute;
-        margin: 0;
         width: 100vh;
-        height: 100vh;
+        max-width: 80%;
+        height: auto;
+        margin: 10px 0;
         padding: 0;
         z-index: 2;
         top: -20vh;
@@ -204,9 +203,10 @@
     }
     .on1 {
         position: absolute;
-        margin: 0;
         width: 100vh;
-        height: 100vh;
+        max-width: 80%;
+        height: auto;
+        margin: 10px 0;
         padding: 0;
         z-index: 3;
         top: -20vh;
@@ -215,9 +215,10 @@
 
     .on2 {
         position: absolute;
-        margin: 0;
-        width: 80vh;
-        height: 45vh;
+        width: 20vh;
+        max-width: 80%;
+        height: auto;
+        margin: 10px 0;
         padding: 0;
         z-index: 3;
         top: 15vh;
