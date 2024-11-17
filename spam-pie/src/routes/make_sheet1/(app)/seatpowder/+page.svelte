@@ -170,7 +170,7 @@
     }
     
     .wall {
-        width: 90%;
+        width: 85%;
         height: 20%;
         margin-top: 70vh;
         
@@ -226,8 +226,8 @@
     .Strong {
         position: relative;
 
-        min-width: 30vh; 
-        height: 15vh;   
+        min-width: 26vh; 
+        height: 13vh;   
         white-space: nowrap; 
 
         background-color: #FFD400;
@@ -239,7 +239,7 @@
 
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
+        color: #FF7F00;
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
 
@@ -265,8 +265,8 @@
     .middle {
         position: relative;
 
-        min-width: 30vh; 
-        height: 15vh;  
+        min-width: 26vh; 
+        height: 13vh;   
         white-space: nowrap; 
 
         background-color: #FFD400;
@@ -303,8 +303,8 @@
     .park {
         position: relative;
 
-        min-width: 30vh; 
-        height: 15vh;  
+        min-width: 26vh; 
+        height: 13vh;   
         white-space: nowrap; 
 
         background-color: #FFD400;
@@ -342,8 +342,8 @@
     .butter {
         position: relative;
 
-        min-width: 30vh; 
-        height: 15vh;  
+        min-width: 26vh; 
+        height: 13vh;   
         white-space: nowrap; 
 
         background-color: #FFD400;
@@ -381,8 +381,8 @@
     .margarine {
         position: relative;
         
-        min-width: 30vh; 
-        height: 15vh;  
+        min-width: 26vh; 
+        height: 13vh;  
         white-space: nowrap; 
         overflow: hidden; 
 
