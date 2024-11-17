@@ -7,6 +7,7 @@
     const bowl = "/src/public/element/otherthing/otherelement/nodelete.png";
     const ganpan ="/src/public/element/otherthing/otherelement/piesokmandulgi.png";
     const dot1 = "/src/public/element/otherthing/otherelement/nodelete1.png";
+    const dot2 = "/src/public/element/otherthing/otherelement/nodelete1.png";
     const warn = "/src/public/element/otherthing/otherelement/liquid_warn.png";
     let ingredient = null;
     let selectedliquid = null;
@@ -79,9 +80,9 @@ function send() {
 function go() {
     send();
     if (selectedIngredient == null) {
-        document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/liquid_warn.png";
+        document.querySelector('.dot2').src = "/src/public/element/otherthing/otherelement/liquid_warn.png";
         setTimeout(function () {
-            document.querySelector('.dot').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
+            document.querySelector('.dot2').src = "/src/public/element/otherthing/otherelement/nodelete1.png";
         }, 1500);
     } else {
         window.location.href = `make_sheet2/ingredient/main_ingre?id=${id}?id_liquid=${id_liquid}`;
@@ -100,6 +101,7 @@ function go() {
     <img class="pan" src={ganpan} alt="간판">
     <img class="bowl" src={bowl} alt="뚝배기">
     <img src={dot1} alt="노딜리트" class="dot">
+    <img src={dot2} alt="노딜리트2" class="dot2">
     <button  onclick={go()} class= "bugton">
     <img src={next_button} alt="버튼" class="buten"/>
     </button>
@@ -134,7 +136,15 @@ function go() {
 
 <style>
 
-
+    .dot2{
+        position: absolute;
+        top: 31vh;
+        left: 98vh;
+        transform: translate(-50%, -50%);
+        width: 50%;
+        height: 60%;
+        z-index: 5;
+    }
     .dot{
         position: absolute;
         top: 31vh;
