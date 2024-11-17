@@ -99,13 +99,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<div style="display: flex; justify-content: center; align-items: position: relative; width: 100%; height: 100%; overflow:hidden">  
-    <img src={imageUrl1} alt="배경 이미지" class="back" />
+<div class="allbox">  
+    <div class="back">
+		<img src={imageUrl1} alt="배경" />
+	</div>
 
-    <div style="overflow: hidden; position: absolute; top: 20px; left: 10px; width: 100%; max-width: 1680px; height: 90%; transform: translate(-50%, -50%) display: flex align-items: center; justify-content: center;">  
+    <div class="box">  
         <img src={imageUrl3} alt="현수막" class="fly" />
-
-        <div class="wall"></div>
         
         <botten onclick={go()} class="bot">
             <img src={imageUrl2} alt="단추" class="botten" />
@@ -115,7 +115,7 @@
         <img src={imageUrl6} alt="점2" class="on2" />
         <img src={imageUrl4} alt="그릇" class="default" />
         
-        <div class="background">
+        <div class="wall">
             <button id="Strong" onclick={() => selectpowder('strong')}   class:active={selectedpowder === 'strong'} class="Strong" type="button">강력분</button>
             <button id="middle"onclick={() => selectpowder('middle')} class:active={selectedpowder === 'middle'} class="middle" type="button">중력분</button>
             <button id="park" onclick={() => selectpowder('park')}   class:active={selectedpowder === 'park'} class="park" type="button">박력분</button>
@@ -129,9 +129,36 @@
 <slot />
 
 <style>
+    .allbox{
+        width: 100vw;
+		height: 100vh;
+		background-color: #b071cd;
+		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    }
+
+    .back {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+    }
+
+
     .fly {
         position: absolute;
-        margin: 0;
         width: 15%;
         height: 50%;
         top: 20px;
@@ -141,40 +168,24 @@
         z-index: 1;
         
     }
-
-    .back {
-        overflow: hidden;
-        position: relative;
-        margin: 0;
-        width: 100%;
-        height: 99.6%;
-        background-color: #B475D0;
-        padding: 0;
-        z-index: -1; 
-        object-fit: cover;
-        display: flex;
-
-    }
-    .background {
-        display: flex; 
-        justify-content: space-between;
-        align-items: center; 
-        padding: 10px; 
-        width: 17%; 
-        margin: 0;
-        margin-top: 76vh;
-        margin-right: 180%;
-}
+    
     .wall {
-        position: absolute;
+        width: 90%;
+        height: 20%;
+        margin-top: 70vh;
+        
         background-color: #9744BF;
-        margin: 0;
-        margin-top: 74vh;
-        margin-left: 15px;
-        width: 100%;
-        height: 18%;
-        z-index: 1;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        position: absolute;
+        z-index: 4;
     }
+
+    
 
     .botten {
         position: absolute;
@@ -186,67 +197,46 @@
     }
 
     .bot {
+        margin-left: 70vw;
+        margin-top: 20vh;
         position: absolute;
-        top: 68%;
-        left: 94%;
+        z-index: 5;
     }
 
     .default {
+        width: 50vw;
+        height: 100vh;
+        margin-bottom: 20vh;
+        
         position: absolute;
-        width: 100vh;
-        max-width: 80%;
-        height: auto;
-        margin: 10px 0;
-        padding: 0;
         z-index: 2;
-        top: -20vh;
-        left: 40vh;
     }
     .on1 {
+        margin-bottom: 20vh;
         position: absolute;
-        width: 100vh;
-        max-width: 80%;
-        height: auto;
-        margin: 10px 0;
-        padding: 0;
         z-index: 3;
-        top: -20vh;
-        left: 40vh;
     }
 
     .on2 {
+        margin-bottom: 20vh;
         position: absolute;
-        width: 100vh;
-        max-width: 80%;
-        height: 60vh;
-        margin: 10px 0;
-        padding: 0;
         z-index: 3;
-        top: 5vh;
-        left: 48vh;
     }
 
     .Strong {
         position: relative;
 
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh; 
-        padding: 10px 20px;
+        min-width: 30vh; 
+        height: 15vh;   
         white-space: nowrap; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
         color: #FF7F00;      
@@ -275,25 +265,17 @@
     .middle {
         position: relative;
 
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh; 
-        padding: 10px 20px;
+        min-width: 30vh; 
+        height: 15vh;  
         white-space: nowrap; 
-        overflow: hidden; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
         color: #FF7F00;      
@@ -321,25 +303,17 @@
     .park {
         position: relative;
 
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh; 
-        padding: 10px 20px;
+        min-width: 30vh; 
+        height: 15vh;  
         white-space: nowrap; 
-        overflow: hidden; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
         color: #FF7F00;      
@@ -368,25 +342,17 @@
     .butter {
         position: relative;
 
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh; 
-        padding: 10px 20px;
+        min-width: 30vh; 
+        height: 15vh;  
         white-space: nowrap; 
-        overflow: hidden; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
         color: #FF7F00;      
@@ -415,21 +381,14 @@
     .margarine {
         position: relative;
         
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh;  
-        padding: 10px 20px;
+        min-width: 30vh; 
+        height: 15vh;  
         white-space: nowrap; 
         overflow: hidden; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
