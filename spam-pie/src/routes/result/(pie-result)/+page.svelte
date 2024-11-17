@@ -1,6 +1,6 @@
 <script>
 	// @ts-nocheck
-
+	//커밋
 	const background = '/src/public/element/otherthing/otherelement/background.png';
 
 	const element = [
