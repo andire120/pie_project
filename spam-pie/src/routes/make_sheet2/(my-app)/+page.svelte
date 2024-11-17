@@ -91,50 +91,91 @@ function go() {
 
 
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
+<div class="allbox">
     <img src={background1} alt="메인보드" class="paochai">
-    
-    <div class="sidebar"></div>
-    <img class="pan" src={ganpan} alt="간판">
-    <img class="bowl" src={bowl} alt="뚝배기">
-    <img src={dot1} alt="노딜리트" class="dot">
-    <img src={dot2} alt="노딜리트2" class="dot2">
-    <button  onclick={go()} class= "bugton">
-    <img src={next_button} alt="버튼" class="buten"/>
-    </button>
 
-    <div class="Button">
+    <div class="sidebar">
+        
+    </div>
+</div>
+
+
+<div class="sidebar"></div>
+<img class="pan" src={ganpan} alt="간판">
+<img class="bowl" src={bowl} alt="뚝배기">
+<img src={dot1} alt="노딜리트" class="dot">
+<img src={dot2} alt="노딜리트2" class="dot2">
+<button  onclick={go()} class= "bugton">
+<img src={next_button} alt="버튼" class="buten"/>
+</button>
+
+<div class="Button">
     <button
         class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('ion')}>이온음료</button>
+        onclick={() => updateIngredientImage('ion')}>이온음료
+    </button>
 
     <button
     class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
-    onclick={() => updateIngredientImage('bod')}>보드카</button>
+    onclick={() => updateIngredientImage('bod')}
+    >보드카</button>
 
     <button
         class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('juice')}>주스</button>
+        onclick={() => updateIngredientImage('juice')}
+        >주스</button>
 </div>
 
 <div class="Button2">
     <button
         class="water {selectedIngredient === 'water' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('water')}>물</button>
+        onclick={() => updateIngredientImage('water')}
+        >물</button>
 
     <button
         class="milk {selectedIngredient === 'milk' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('milk')}>우유</button>
+        onclick={() => updateIngredientImage('milk')}
+        >우유</button>
 
     <button
         class="yorg {selectedIngredient === 'yorg' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('yorg')}>요구르트</button>
+        onclick={() => updateIngredientImage('yorg')}
+        >요구르트</button>
 </div>
 
 <style>
+
+    .allbox{
+        width: 100vw;
+		height: 100vh;
+		background-color: #b071cd;
+		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    }
+
+    .paochai{
+        height: 100%;
+        width: 100%;
+    }/*배경 대각선 그거*/
+    
+    .sidebar{
+        position: absolute;
+        width: 80%;
+        height: 30%;
+        top: 84%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #9744bf;
+        z-index: 2;
+    }
 
     .dot2{
         position: absolute;
@@ -145,6 +186,7 @@ function go() {
         height: 60%;
         z-index: 5;
     }
+
     .dot{
         position: absolute;
         top: 31vh;
@@ -156,24 +198,25 @@ function go() {
     }
 
     .Button2{
-    display: flex;
-    position: absolute;
-    top: 92%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: space-around;
-    gap: 18vh;
-    z-index: 3; 
+        display: flex;
+        position: absolute;
+        top: 92%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: space-around;
+        gap: 18vh;
+        z-index: 3; 
     }
+
     .Button {
         display: flex;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: space-around;
-    gap: 18vh;
-    z-index: 3; 
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: space-around;
+        gap: 18vh;
+        z-index: 3; 
     }
     .bugton {
         position: absolute;
@@ -192,14 +235,7 @@ function go() {
         z-index: 2;
     }
 
-    .paochai{
-        overflow: hidden;
-        position: relative;
-        height: 99.6%;
-        width: 100%;
-        background-color: #B475D0;
-        z-index: -100;
-    }/*배경 대각선 그거*/
+    
 
     .bowl{
         opacity: 80%;
@@ -211,6 +247,7 @@ function go() {
         left: 47.5vh;
         z-index: 6;
     }
+    
     .pan{
         position: absolute;
         top: 25%;
@@ -220,16 +257,7 @@ function go() {
         left: 9%;
     }
 
-    .sidebar{
-        position: absolute;
-        width: 80%;
-        height: 30%;
-        top: 84%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #9744bf;
-        z-index: 2;
-    }
+    
 
     .ion{
         width: 35vh;
@@ -254,6 +282,7 @@ function go() {
         rgba(0, 0, 0, 0)
         )
     }
+
     .bod{
         width: 35vh;
         height: 10vh;
@@ -277,7 +306,8 @@ function go() {
         rgba(0, 0, 0, 0.2) 30%,
         rgba(0, 0, 0, 0)
         )
-    }    
+    }
+
     .juice{
         width: 35vh;
         height: 10vh;
