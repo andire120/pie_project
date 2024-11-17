@@ -10,6 +10,7 @@
         {
             img: "/src/public/illustration/미사용/심사배경.png",
             simtext: "최고의 동아리 SPAM에 가입하시겠습니까?",
+            he: "최고의 동아리 SPAM에 가입하시겠습니까?",
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
