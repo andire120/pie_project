@@ -595,7 +595,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 <div class="container">
 	<div class="back">
-		<img src={background} alt="배경" />
+		<img class="background" src={background} alt="배경" />
 	</div>
 	<img src={imagePath} class="re" alt="결과 이미지" />
 	<div class="foot">
@@ -620,8 +620,12 @@
 	}
 
 	.back {
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
+	}
+	.background {
+		width: 100%;
+		height: auto;
 	}
 
 	.foot {
