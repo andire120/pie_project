@@ -5,8 +5,8 @@
 	const storyId = $page.params.storyId;
 	let count = 1;
 
-	import story1 from '/src/public/illustration/미사용/심사배경.png';
-	import pie from '/src/public/element/bread/석탄.png';
+	import story1 from '/src/public/illustration/미사용/심사위원배경.png';
+	import pie from '/src/public/element/pie/suktan.png';
 
 	function handleClick(e) {
 		count++;
