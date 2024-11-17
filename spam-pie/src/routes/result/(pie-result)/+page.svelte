@@ -5,29 +5,29 @@
 
 	const element = [
 		{
-			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie.png',
-			dulblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie.png',
-			dulspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie.png',
-			dulmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie.png',
-			dulinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie.png',
-			dulmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie.png',
-			dulpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie.png',
+			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie2.png',
+			dulblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie2.png',
+			dulspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie2.png',
+			dulmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie2.png',
+			dulinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie2.png',
+			dulmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie2.png',
+			dulpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie2.png',
 
-			goodapplecookie: '/src/public/element/cookie/normal-cookie/apple-cookie.png',
-			goodblueberrycookie: '/src/public/element/cookie/normal-cookie/blueberry-cookie.png',
-			goodspamcookie: '/src/public/element/cookie/normal-cookie/spam-cookie.png',
-			goodmeatcookie: '/src/public/element/cookie/normal-cookie/meat-cookie.png',
-			goodmintchococookie: '/src/public/element/cookie/normal-cookie/mincho-cookie.png',
-			goodinseoncookie: '/src/public/element/cookie/normal-cookie/herring-cookie.png',
-			goodpumpkincookie: '/src/public/element/cookie/normal-cookie/pumpkin-cookie.png',
+			goodapplecookie: '/src/public/element/cookie/normal-cookie/apple-cookie2.png',
+			goodblueberrycookie: '/src/public/element/cookie/normal-cookie/blueberry-cookie2.png',
+			goodspamcookie: '/src/public/element/cookie/normal-cookie/spam-cookie2.png',
+			goodmeatcookie: '/src/public/element/cookie/normal-cookie/meat-cookie2.png',
+			goodmintchococookie: '/src/public/element/cookie/normal-cookie/mincho-cookie2.png',
+			goodinseoncookie: '/src/public/element/cookie/normal-cookie/herring-cookie2.png',
+			goodpumpkincookie: '/src/public/element/cookie/normal-cookie/pumpkin-cookie2.png',
 
-			tanapplecookie: '/src/public/element/cookie/tan-cookie/apple-cookie.png',
-			tanblueberrycookie: '/src/public/element/cookie/tan-cookie/blueberry-cookie.png',
-			tanmeatcookie: '/src/public/element/cookie/tan-cookie/meat-cookie.png',
-			tanspamcookie: '/src/public/element/cookie/tan-cookie/spam-cookie.png',
-			tanmintchococookie: '/src/public/element/cookie/tan-cookie/mincho-cookie.png',
-			tanpumpkincookie: '/src/public/element/cookie/tan-cookie/pumpkin-cookie.png',
-			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie.png',
+			tanapplecookie: '/src/public/element/cookie/tan-cookie/apple-cookie2.png',
+			tanblueberrycookie: '/src/public/element/cookie/tan-cookie/blueberry-cookie2.png',
+			tanmeatcookie: '/src/public/element/cookie/tan-cookie/meat-cookie2.png',
+			tanspamcookie: '/src/public/element/cookie/tan-cookie/spam-cookie2.png',
+			tanmintchococookie: '/src/public/element/cookie/tan-cookie/mincho-cookie2.png',
+			tanpumpkincookie: '/src/public/element/cookie/tan-cookie/pumpkin-cookie2.png',
+			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie2.png',
 
 			burnt: '/src/public/element/pie/suktan.png'
 		}
@@ -432,7 +432,7 @@
 				josou = 'apple-bread';
 				if (main_ingredient === 'apple') {
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[0].dulapplepie;
+						document.querySelector('.re').src = element2[0].dulapplebread;
 						textpie = element2[0].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
@@ -477,15 +477,15 @@
 				} else if (main_ingredient === 'meat') {
 					josou = 'meat-bread';
 					if (selectedtime === '0:30') {
-						document.querySelector('.re').src = element2[9].dulmeatpie;
+						document.querySelector('.re').src = element2[9].dulmeatbread;
 						textpie = element2[9].text;
 						condition = 'dul';
 					} else if (selectedtime === '1:00') {
-						document.querySelector('.re').src = element2[10].goodmeatpie;
+						document.querySelector('.re').src = element2[10].goodmeatbread;
 						textpie = element2[10].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[11].tanmeatpie;
+						document.querySelector('.re').src = element2[11].tanmeatbread;
 						textpie = element2[11].text;
 						condition = 'tan';
 					}
@@ -543,17 +543,13 @@
 		}
 	});
 
-	function go() {
+		function go() {
 		if (condition == 'dul') {
 			//커밋
 			if (id == 'parkbutter' || id == 'parkmargarine') window.location.href = `/pie/dul/${josou}/1`;
-			if (id == 'strongbutter' || id == 'strongmargarine')
-				window.location.href = `/bread/dul/${josou}/1`;
-			if (id == 'middlebutter' || id == 'middlemargarine')
-				window.location.href = `/cookie/dul/${josou}-cookie/1`;
-		} else if (condition == 'good') {
-			if (id == 'strongbutter' || id == 'strongmargarine')
-				window.location.href = `/bread/dul/${josou}/1`;
+			if (id == 'strongbutter' || id == 'strongmargarine')window.location.href = `/bread/dul/${josou}/1`;
+		} 
+		else if (condition == 'good') {
 			if (id == 'parkbutter') {
 				if (id_liquid == 'water') {
 					window.location.href = `/${josou}/1`;
@@ -563,28 +559,27 @@
 			} else if (id == 'parkmargarine') {
 				window.location.href = `/pie/strange/${josou}/1`;
 			}
-			if (id == 'middlebutter' || id == 'middlemargarine') {
-				window.location.href = `/cookie/normal/${josou}-cookie/1`;
-			}
-		} else if (condition == 'tan') {
-			if (id == 'parkbutter' || id == 'parkmargarine') window.location.href = `pie/tan/${josou}/1`;
-			if (id == 'strongbutter' || id == 'strongmargarine')
-				window.location.href = `/bread/tan/${josou}/1`;
-			if (id == 'middlebutter' || id == 'middlemargarine')
-				window.location.href = `/cookie/tan/${josou}-cookie/1`;
-		} else if (condition == 'normal') {
-			if (id == 'strongbutter') {
-				if (id_liquid == 'water') {
+		}
+		else if (condition == 'normal') {
+			if(id == 'strongbutter') {
+				if(id_liquid == 'water') {
 					window.location.href = `/bread/normal/${josou}/1`;
-				} else if (id_liquid != 'water') {
+				}
+				else if(id_liquid != 'water') {
 					window.location.href = `/bread/strange/${josou}/1`;
 				}
-			} else if (id == 'strongmargarine') {
+			}
+			else if(id == 'strongmargarine'){
 				window.location.href = `/bread/strange/${josou}/1`;
 			}
-		} else if (condition == 'tan') {
-			if (id == 'parkbutter' || id == 'parkmargarine') window.location.href = `pie/tan/${josou}/1`;
-		} else if (condition == 'verytan') {
+		}
+		else if(condition == 'tan') {
+			if(id == 'parkbutter' || id == 'parkmargarine') 
+				window.location.href = `pie/tan/${josou}/1`;
+			if(id == 'strongbutter' || id == 'strongmargarine') window.location.href = `/bread/tan/${josou}/1`;
+
+		}
+		else if(condition == 'verytan') {
 			window.location.href = '/burnt-end';
 		}
 	}
