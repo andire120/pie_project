@@ -14,18 +14,22 @@
         },
         {
             img: "/src/public/illustration/엔딩/괴식엔딩-2.png",
-            text: "이 파이에 모든 심사위원들은 경악에 혹평을 하지만, 단 한명의 심사위원만이 이 파이를 마음에 들어한다.",
+            text: "이 파이에 모든 심사위원들은 경악에 혹평을 하지만,\n 단 한명의 심사위원만이 이 파이를 마음에 들어한다.",
             tu:"/src/public/illustration/미사용/투명.png",
         },
         {
             img: "/src/public/illustration/엔딩/괴식엔딩-3.png",
-            text: "알고보니 그 심사위원은 그런 괴상한 파이가 취향이었고, 이에 그런 주인공에게 지원금과 일자리를 내어준다.",
+            text: "알고보니 그 심사위원은 그런 괴상한 파이가 취향이었고,\n 이에 그런 주인공에게 지원금과 일자리를 내어준다.",
             tu:"/src/public/illustration/미사용/투명.png",
         },
         {
             img: "/src/public/illustration/엔딩/괴식엔딩-4.png",
-            text: "새 직장에서 번 돈으로 신약을 구입하여 아픈 가족들을 치료해내고, 심사위원과 동업하며 무난하게 살게 된다.",
+            text: "새 직장에서 번 돈으로 신약을 구입하여 아픈 가족들을 치료해내고,\n 심사위원과 동업하며 무난하게 살게 된다.",
             tu:"/src/public/illustration/미사용/투명.png",
+        },
+        {
+            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            text: "히든 엔딩"
         }
     ];
 
@@ -42,7 +46,7 @@
 
 
 {#if (minchoId == 4)}
-    <button on:click|stopPropagation={() => refresh(`/main_menu`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/mincho-pie/${minchoId + 1}`)} class="button">
         <img alt={`${minchoId}번이미지`} src={stories[minchoId - 1].tu} class="tu"/>
     </button>
     <div>
@@ -50,6 +54,18 @@
     </div>
     <div class="textbox">
         {@html stories[minchoId - 1].text.replace(/\n/g, "<br>")}
+    </div>
+{:else if minchoId == 5}
+    <button on:click={() => refresh(`/main_menu`)} class="bot">
+        <div class="botten">돌아가기</div>
+    </button>
+    <div>
+        <img alt={`${minchoId}번스토리`} src={stories[minchoId - 1].img} class="story"/>
+    </div>
+    <div class="textbox3">
+        <div class="text2">
+            {stories[minchoId - 1].text}
+        </div>  
     </div>
 {:else if stories[minchoId - 1]}
     <button on:click|stopPropagation={() => refresh(`/mincho-pie/${minchoId + 1}`)} class="button">
@@ -126,5 +142,64 @@
         z-index: 2;
 
         
+    }
+
+    .botten {
+        display: flex;
+        position: absolute;
+        background-color: #FFD400;
+
+        font-size: 6vb;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.8;
+
+        text-align: center;
+
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        width: 13vw;
+        height: 11vh;
+        z-index: 5;
+
+        margin-top: 10vh;
+        margin-left: 10vw;
+
+        align-items: center;
+        justify-content: center;
+    }
+    .botten:hover {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
+
+    .bot {
+        position: absolute;
+
+        top: 70vh;
+        margin-left: 72%;
+    }
+    
+
+    .textbox3{
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        z-index: 4;
+    }
+
+    .text2{
+        color: white;
+        font-size: 15vh;
+        font-family: "Jua", sans-serif;
     }
 </style>

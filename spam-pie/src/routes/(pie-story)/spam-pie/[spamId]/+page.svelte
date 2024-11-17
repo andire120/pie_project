@@ -89,6 +89,8 @@
         <p class="simtext">
             {stories[spamId - 1].simtext}
         </p>
+    </div>
+    <div class="ctextbox">
         <div class="chose">
             <button on:click={() => refresh(`/spam-pie/2`)} class="cbutton">yes</button>
             <button on:click={() => refresh(`/spam-pie/3`)} class="cbutton">no</button>
@@ -167,6 +169,19 @@
         background-color: black;
 
         position: absolute;
+        z-index: 2;
+    }
+
+    .ctextbox {
+        margin-left: 15%;
+        margin-top: 18vh;
+
+        width: 70%;
+        height: 70vh;
+
+        background-color: rgba(0, 0, 0, 0);
+
+        position: absolute;
         z-index: 3;
     }
 
@@ -184,7 +199,7 @@
         background-color: black;
 
         position: absolute;
-        z-index: 3;
+        z-index: 4;
     }
 
     .simtext{
@@ -237,20 +252,24 @@
 
         display: flex;
         justify-content: center;
+
+
     }
 
     .cbutton{
         width: 40%;
         height: 40vh;
-        margin-bottom: 15vh;
+        margin-top: 20vh;
 
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0);
         border: none;
 
         color: white;
         font-size: 15vh;
         overflow: hidden;
         font-family: "Jua", sans-serif;
+
+        
     }
 
 
@@ -311,7 +330,7 @@
         justify-content: center;
 
         position: absolute;
-        z-index: 4;
+        z-index: 2;
     }
 
     .he{

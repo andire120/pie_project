@@ -11,7 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
 <div>
-    <button class="best2" style="cursor:pointer" on:click={()=>goto('/main_menu')}><img class="img" src={beststory2} alt="진엔딩-2"></button>
+    <button class="best2" style="cursor:pointer" on:click={()=>goto('/storyss/best/best3')}><img class="img" src={beststory2} alt="진엔딩-2"></button>
     <div class="caption" style="font-size: xx-large;">상금으로 신약을 얻어 가족들을 치료후,<br>유명한 파이 가게 창립에 까지 성공하여<br>출세를 하게 되었다!</div>
 </div>
 

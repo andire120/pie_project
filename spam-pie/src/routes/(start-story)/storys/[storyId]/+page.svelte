@@ -9,17 +9,17 @@
     const stories = [
         {
             img: "/src/public/illustration/game-story/1.png",
-            text: "치료제가 없는 불치병에 몸서리를 치는 주인공의 가족들. 병원비를 지불하는 주인공의 지갑은 점점 텅텅 비어가는데...",
+            text: "치료제가 없는 불치병에 몸서리를 치는 주인공의 가족들.\n 병원비를 지불하는 주인공의 지갑은 점점\n 텅텅 비어가는데...",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/game-story/2.png",
-            text: "어느날 기적적으로 가족들의 병을 치료할 수 있는 신약이 개발되지만, 이 약을 사기 위해 주인공은 막대한 자금이 필요했다.",
+            text: "어느날 기적적으로 가족들의 병을 치료할 수 있는 신약이 개발되지만,\n 이 약을 사기 위해 주인공은 막대한 자금이 필요했다.",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
             img: "/src/public/illustration/game-story/3.png",
-            text: "평소처럼 야간근무를 끝내고 퇴근하던 어느 날. 주인공은 막대한 상금이 걸려있는 세계적인 요리대회의 인원 모집 공고를 보고. 상금을 얻어 약을 사고자 한다.",
+            text: "평소처럼 야간근무를 끝내고 퇴근하던 어느 날.\n 주인공은 막대한 상금이 걸려있는 세계적인 요리대회의 인원 모집 공고를 보고.\n 상금을 얻어 약을 사고자 한다.",
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
