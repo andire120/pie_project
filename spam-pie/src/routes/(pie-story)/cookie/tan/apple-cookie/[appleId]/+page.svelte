@@ -28,6 +28,7 @@
 
 
 
+
 {#if stories[appleId - 1]}
     <button on:click|stopPropagation={() => refresh(`/storyss/bad/bad1`)} class="button">
         <img alt={`${appleId}번이미지`} src={stories[appleId - 1].tu} class="tu"/>
