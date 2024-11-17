@@ -10,7 +10,8 @@
         {
             img: "/src/public/illustration/미사용/심사배경.png",
             simtext: "최고의 동아리 SPAM에 가입하시겠습니까?",
-            he: "최고의 동아리 SPAM에 가입하시겠습니까?",
+            he: "/src/public/illustration/미사용/요한 선배님.png",
+            he2: "/src/public/illustration/미사용/요한 선배님2.png",
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
@@ -93,6 +94,10 @@
             <button on:click={() => refresh(`/spam-pie/3`)} class="cbutton">no</button>
         </div>
     </div>
+    <div class="hebox">
+            <img alt={`${spamId}반전 요한 선배님`} src={stories[spamId - 1].he2} class="he2"/>
+            <img alt={`${spamId}요한 선배님`} src={stories[spamId - 1].he} class="he"/>
+        </div>
 {:else}
     존재하지 않는 페이지
 {/if}
@@ -293,6 +298,29 @@
     .tu{
         width: 100%;
         height: 90vh;
+    }
+
+    .hebox{
+        width: 100%;
+        height: 40vh;
+        gap: 42vh;
+        margin-top: 60vh;
+
+        display: flex;
+        align-items: center;
+
+        position: absolute;
+        z-index: 4;
+    }
+
+    .he{
+        width: 40%;
+        height: 40vh;
+    }
+
+    .he2{
+        width: 40%;
+        height: 40vh;
     }
 
 
