@@ -102,7 +102,7 @@
 <div style="display: flex; justify-content: center; align-items: position: relative; width: 100%; height: 100%; overflow:hidden">  
     <img src={imageUrl1} alt="배경 이미지" class="back" />
 
-    <div style="position: absolute; top: 20px; left: 10px; width: 100%; max-width: 1650px; height: 90%; transform: translate(-50%, -50%) display: flex align-items: center;">  
+    <div style="overflow: hidden; position: absolute; top: 20px; left: 10px; width: 100%; max-width: 1680px; height: 90%; transform: translate(-50%, -50%) display: flex align-items: center; justify-content: center;">  
         <img src={imageUrl3} alt="현수막" class="fly" />
 
         <div class="wall"></div>
@@ -173,7 +173,6 @@
         margin-left: 15px;
         width: 100%;
         height: 18%;
-        border-radius: 10px;
         z-index: 1;
     }
 
