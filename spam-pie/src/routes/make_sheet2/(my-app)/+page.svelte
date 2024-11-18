@@ -115,6 +115,7 @@ function go() {
     class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
     onclick={() => updateIngredientImage('bod')}>보드카</button>
 
+    
     <button
         class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
         onclick={() => updateIngredientImage('juice')}>주스</button>
