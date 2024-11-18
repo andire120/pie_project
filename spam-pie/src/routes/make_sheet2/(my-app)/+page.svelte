@@ -265,7 +265,7 @@ function go() {
         position: absolute;
         width: 15%;
         height: 50%;
-        top: 0px;
+        top: 20px;
         left: 20px;
         margin-bottom: 20px;
         padding: 0;
