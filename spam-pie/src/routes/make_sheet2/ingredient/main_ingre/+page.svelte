@@ -210,11 +210,13 @@ bowl
 
     .pan{
         position: absolute;
-        top: 30%;
-        transform: translate(-50%, -50%);
-        position: absolute;
         width: 15%;
-        left: 9%;
+        height: 50%;
+        top: 20px;
+        left: 20px;
+        margin-bottom: 20px;
+        padding: 0;
+        z-index: 1;
     }
 
     
