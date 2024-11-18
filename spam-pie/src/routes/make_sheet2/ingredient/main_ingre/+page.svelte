@@ -179,7 +179,7 @@ function send() {
         position: absolute;
         width: 70vh;
         height: 70vh;
-        top: -1vh;
+        top: -5vh;
         left: 55vh;
     }
     .pan{

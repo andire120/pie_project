@@ -43,7 +43,7 @@
         position: absolute;
         background-color: white;
         margin: 0;
-        top: 15vh;
+        top: 10vh;
         left: 37vh;
         width: 130vh;
         height: 70vh;
@@ -99,8 +99,8 @@
         width: 180px;
         height: 11vh;
         z-index: 1;
-        margin-top: 230px;
-        margin-left: -50px;
+        margin-top: 200px;
+        margin-left: -70px;
 
         align-items: center;
         justify-content: center;
