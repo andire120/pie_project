@@ -440,7 +440,7 @@
 						textpie = element2[1].text;
 						condition = 'normal';
 					} else if (selectedtime === '1:30') {
-						document.querySelector('.re').src = element2[1].tanapplebread;
+						document.querySelector('.re').src = element2[2].tanapplebread;
 						textpie = element2[2].text;
 						condition = 'tan';
 					}
