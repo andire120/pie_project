@@ -193,7 +193,7 @@ function go() {
 
     .dot2 {
         position: absolute;
-        z-index: 3;
+        z-index: 7;
     }
     
     .sidebar {
