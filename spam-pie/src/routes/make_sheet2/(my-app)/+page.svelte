@@ -175,9 +175,9 @@ function go() {
     
     
     .bowl {
-        width: 50%;
+        width: 45%;
         height: 100%;
-        margin-bottom: 35vh;
+        margin-bottom: 17%;
 
         opacity: 0.8;
         
@@ -186,8 +186,8 @@ function go() {
     }
     
     .dot {
-        width: 55%;
-        margin-bottom: 35vh;
+        width: 50%;
+        margin-bottom: 18%;
         position: absolute;
         z-index: 3;
     }
@@ -231,7 +231,7 @@ function go() {
     .ion, .bod, .juice, .water, .milk, .yorg {
         position: relative;
 
-        min-width: 26vh; 
+        min-width: 25%; 
         height: 13vh;   
         white-space: nowrap; 
 
@@ -262,38 +262,51 @@ function go() {
 
     
 
-    
-
     .pan {
         position: absolute;
-        top: 25%;
-        left: 9%;
-        transform: translate(-50%, -50%);
         width: 15%;
+        height: 50%;
+        top: 0px;
+        left: 20px;
+        margin-bottom: 20px;
+        padding: 0;
+        z-index: 1;
     }
 
     
 
     .bugton {
+        margin-left: 60vw;
+
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+
         position: absolute;
-        z-index: 1;
+        z-index: 5;
     }
 
     .buten {
-        position: absolute;
         width: 10vh;
         height: 10vh;
-        z-index: 2;
+
+        display: flex;  
+        align-items: center;
+
+        position: absolute;
+        z-index: 1;
+        
     }
+
+
 /*버튼 반짝*/
-.ion:hover, .bod:hover, .milk:hover, .water:hover, .juice:hover, .yorg:hover,
-.ion:active, .bod:active, .milk:active, .water:active, .juice:active, .yorg:active 
-{
-    background-color: #FDFECF;
-    border: 4px solid yellow;
-}
-.selected {
-    background-color: #FDFECF;
-    border: 4px solid yellow;
-}
+    .ion:hover, .bod:hover, .milk:hover, .water:hover, .juice:hover, .yorg:hover,
+    .ion:active, .bod:active, .milk:active, .water:active, .juice:active, .yorg:active 
+    {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
+    .selected {
+        background-color: #FDFECF;
+        border: 4px solid yellow;
+    }
 </style>
