@@ -79,7 +79,7 @@ bowl
 
 <div class="main_box">
     <img class="pan" src={ganpan} alt="간판">
-    
+
     <img src={background1} alt="메인보드" class="paochai">
     
     
@@ -134,6 +134,13 @@ bowl
 		justify-content: center;
 		align-items: center;
     }
+    
+    /*배경 대각선 그거*/
+    .paochai{
+        height: 100%;
+        width: 100%;
+        
+    }
 
     .dot{
         position: absolute;
@@ -142,26 +149,35 @@ bowl
         transform: translate(-50%, -50%);
         z-index: 2;
     }
+    
+    .sidebar{
+        width: 75%;
+        height: 35%;
+        margin-top: 60vh;
+
+        background-color: #9744bf;
+        border-radius: 10px;
+
+        position: absolute;
+        z-index: 4;
+    }
 
     .Button2{
-    display: flex;
-    position: absolute;
-    top: 85%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: space-around;
-    gap: 2vh;
-    z-index: 3; 
+        width: 100%;
+        height: 50%;
+
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
     }
+
     .Button {
-    display: flex;
-    position: absolute;
-    top: 70%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: space-around;
-    gap: 2vh;
-    z-index: 5; 
+        width: 100%;
+        height: 50%;
+
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
     }/*재료 버튼*/
 
 /*next 버튼*/
@@ -181,15 +197,7 @@ bowl
         z-index: 1;
     }
 
-    /*배경 대각선 그거*/
-    .paochai{
-        overflow: hidden;
-        height: 100%;
-        width: 100%;
-        background-color: #B475D0;
-        
-    }
-
+    
     .main{
         overflow: hidden;
         position: absolute;
@@ -198,6 +206,7 @@ bowl
         top: -5vh;
         left: 55vh;
     }
+
     .pan{
         position: absolute;
         top: 30%;
@@ -207,109 +216,25 @@ bowl
         left: 9%;
     }
 
-    .sidebar{
-        position: absolute;
-        width: 80%;
-        height: 35%;
-        top: 77%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #9744bf;
-        z-index: 2;
-    }
+    
 
-    .spam{
-        grid-area: g;
+    .spam,.apple,.mincho,.meat,.berry,.inseon,.pump{
+        position: relative;
 
-        width: 25vh;
-        height: 12vh;
+        min-width: 15%; 
+        height: 13vh;   
+        white-space: nowrap; 
+
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }
-    .apple{
-        grid-area: a;
-        width: 25vh;
-        height: 12vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }    
-    .mincho{
-        width: 25vh;
-        height: 12vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }   
-    .meat{
-        width: 25vh;
-        height: 12vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
+        color: #FF7F00;
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
 
@@ -321,80 +246,6 @@ bowl
         )
     }
 
-    .berry{
-        width: 25vh;
-        height: 12vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }
-    .inseon{
-        width: 25vh;
-        height: 12vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }
-    .pump{
-        width: 25vh;
-        height: 12vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }
 /*버튼 반짝*/
 .apple:hover, .inseon:hover, .berry:hover, .pump:hover, .meat:hover, .mincho:hover, .spam:hover,
 .apple:active, .inseon:active, .berry:active, .pump:active, .meat:active, .mincho:active, .spam:active 
