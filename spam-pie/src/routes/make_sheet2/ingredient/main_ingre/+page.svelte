@@ -27,7 +27,7 @@
     let id_main;
     function updateIngredientImage(ingredient) {
         selectedIngredient = ingredient;
-        document.querySelector('.bowl').src = ingred[ingredient];
+        document.querySelector('.main').src = ingred[ingredient];
     }
 //id를 받아옵시다. 순서: water, milk, juice, 
         onMount(() => {
@@ -58,7 +58,7 @@ function send() {
         }
     }
 }
-
+bowl
     function go()  {
         send();
         if(selectedIngredient == null){
@@ -76,56 +76,64 @@ function send() {
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-
+    <div class="main_box">
     <img src={background1} alt="메인보드" class="paochai">
     
     <div class="sidebar"></div>
     <img class="pan" src={ganpan} alt="간판">
-    <img class="bowl" src={bowl} alt="뚝배기">
+    <img class="main" src={bowl} alt="메인재료">
     <img src={dot1} alt="노딜리트" class="dot">
+
     <button  onclick={go()} class= "bugton">
-        <img src={next_button} alt="버튼" class="buten"/>
+        <img src={next_button} alt="버튼" class="buton"/>
     </button>
 
     <div class="Button">
         <button
-        class="spam {selectedIngredient === 'spam' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('spam')}>스팸</button>
+            class="spam {selectedIngredient === 'spam' ? 'selected' : ''}"
+            onclick={() => updateIngredientImage('spam')}>스팸</button>
+        <button
+            class="apple {selectedIngredient === 'apple' ? 'selected' : ''}"
+            onclick={() => updateIngredientImage('apple')}>사과</button>
+        <button
+            class="berry {selectedIngredient === 'berry' ? 'selected' : ''}"
+            onclick={() => updateIngredientImage('berry')}>베리</button>
 
-    <button
-        class="apple {selectedIngredient === 'apple' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('apple')}>사과</button>
-
-    <button
-        class="berry {selectedIngredient === 'berry' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('berry')}>베리</button>
-
-    <button
-        class="inseon {selectedIngredient === 'inseon' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('inseon')}>정어리</button>
+        <button
+                class="inseon {selectedIngredient === 'inseon' ? 'selected' : ''}"
+                onclick={() => updateIngredientImage('inseon')}>정어리</button>
+        </div>
+    <div class="Button2">
+        <button
+            class="mincho {selectedIngredient === 'mint' ? 'selected' : ''}"
+            onclick={() => updateIngredientImage('mint')}>민초</button>
+        <button
+            class="meat {selectedIngredient === 'meat' ? 'selected' : ''}"
+            onclick={() => updateIngredientImage('meat')}>고기</button>
+        <button
+            class="pump {selectedIngredient === 'pump' ? 'selected' : ''}"
+            onclick={() => updateIngredientImage('pump')}>호박</button>
+    </div>
 </div>
-
-<div class="Button2">
-    <button
-        class="mincho {selectedIngredient === 'mint' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('mint')}>민초</button>
-
-    <button
-        class="meat {selectedIngredient === 'meat' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('meat')}>고기</button>
-
-    <button
-        class="pump {selectedIngredient === 'pump' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('pump')}>호박</button>
-</div>
-
 <style>
+
+    .main_box{
+        width: 100vw;
+		height: 100vh;
+		background-color: #b071cd;
+		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    }
+
     .dot{
         position: absolute;
-        top: 50%;
+        top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
-        z-index: 8;
+        z-index: 2;
     }
 
     .Button2{
@@ -139,7 +147,7 @@ function send() {
     z-index: 3; 
     }
     .Button {
-        display: flex;
+    display: flex;
     position: absolute;
     top: 70%;
     left: 50%;
@@ -147,49 +155,49 @@ function send() {
     justify-content: space-around;
     gap: 2vh;
     z-index: 5; 
-    }
-    .bugton {
+    }/*재료 버튼*/
+
+/*next 버튼*/
+    .bugton {        
+        display: flex;
+        margin-left: 70vw;
+        margin-top: 2vw;
         position: absolute;
-        top: 50%;
-        left: 85%;
+        z-index: 5;
+        align-items: center;
+        justify-content: center;
+    }
+    .buton{
+        position: absolute;
+        width: 10vh;
+        height: 10vh;
         z-index: 1;
     }
 
-    .buten{
-        position: absolute;
-        z-index: 3;
-        width: 10vh;
-        height: 10vh;
-        top: -500%;
-        left: -300%;
-        z-index: 2;
-    }
-
+    /*배경 대각선 그거*/
     .paochai{
         overflow: hidden;
-        position: relative;
-        height: 99.6%;
+        height: 100%;
         width: 100%;
         background-color: #B475D0;
         
-    }/*배경 대각선 그거*/
+    }
 
-    .bowl{
+    .main{
         overflow: hidden;
         position: absolute;
         width: 70vh;
         height: 70vh;
         top: -1vh;
-        left: 55vh;
+        left: 70vh;
     }
     .pan{
         position: absolute;
-        top: 25%;
+        top: 30%;
         transform: translate(-50%, -50%);
         position: absolute;
         width: 15%;
         left: 9%;
-
     }
 
     .sidebar{
@@ -207,7 +215,7 @@ function send() {
         grid-area: g;
 
         width: 25vh;
-        height: 10vh;
+        height: 12vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -233,7 +241,7 @@ function send() {
     .apple{
         grid-area: a;
         width: 25vh;
-        height: 10vh;
+        height: 12vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -257,7 +265,7 @@ function send() {
     }    
     .mincho{
         width: 25vh;
-        height: 10vh;
+        height: 12vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -282,7 +290,7 @@ function send() {
     }   
     .meat{
         width: 25vh;
-        height: 10vh;
+        height: 12vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -308,7 +316,7 @@ function send() {
 
     .berry{
         width: 25vh;
-        height: 10vh;
+        height: 12vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -332,7 +340,7 @@ function send() {
     }
     .inseon{
         width: 25vh;
-        height: 10vh;
+        height: 12vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -357,7 +365,7 @@ function send() {
     }
     .pump{
         width: 25vh;
-        height: 10vh;
+        height: 12vh;
         background-color: #FFD400;
         margin: 0;
         padding: 0;
@@ -380,7 +388,6 @@ function send() {
         rgba(0, 0, 0, 0)
         )
     }
-
 /*버튼 반짝*/
 .apple:hover, .inseon:hover, .berry:hover, .pump:hover, .meat:hover, .mincho:hover, .spam:hover,
 .apple:active, .inseon:active, .berry:active, .pump:active, .meat:active, .mincho:active, .spam:active 
