@@ -185,7 +185,6 @@
         z-index: 4;
     }
 
-    
 
     .botten {
         position: absolute;

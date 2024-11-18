@@ -98,55 +98,64 @@ function go() {
 
 <div class="allbox">
     <img src={background1} alt="메인보드" class="paochai">
-    <div class="sidebar">
-        
-    </div>
-</div>
 
 
-<div class="sidebar"></div>
-<img class="pan" src={ganpan} alt="간판">
-<img class="bowl" src={bowl} alt="액체">
-<img src={dot1} alt="노딜리트" class="dot">
-<img src={dot2} alt="노딜리트2" class="dot2">
-<button  onclick={go()} class= "bugton">
-<img src={next_button} alt="버튼" class="buten"/>
-</button>
+    <img class="bowl" src={bowl} alt="액체">
+    <img src={dot1} alt="노딜리트" class="dot">
+    <img src={dot2} alt="노딜리트2" class="dot2">
 
-<div class="Button">
-    <button
-        class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('ion')}>이온음료
+    <button  onclick={go()} class= "bugton">
+        <img src={next_button} alt="버튼" class="buten"/>
     </button>
 
-    <button
-    class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
-    onclick={() => updateIngredientImage('bod')}
-    >보드카</button>
+
+    <div class="sidebar">
+        <div class="Button">
+            <button
+                class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
+                onclick={() => updateIngredientImage('ion')}>이온음료
+            </button>
+
+            <button
+            class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
+            onclick={() => updateIngredientImage('bod')}
+            >보드카</button>
 
 
-    <button
-        class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('juice')}
-        >주스</button>
+            <button
+                class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
+                onclick={() => updateIngredientImage('juice')}
+                >주스</button>
+        </div>
+
+        <div class="Button2">
+            <button
+                class="yorg {selectedIngredient === 'yorg' ? 'selected' : ''}"
+                onclick={() => updateIngredientImage('yorg')}
+                >요구르트</button>
+
+            <button
+                class="water {selectedIngredient === 'water' ? 'selected' : ''}"
+                onclick={() => updateIngredientImage('water')}
+                >물</button>
+
+            <button
+                class="milk {selectedIngredient === 'milk' ? 'selected' : ''}"
+                onclick={() => updateIngredientImage('milk')}
+                >우유</button>
+    
+        </div>
+
+    </div>
+    
+
+
 </div>
 
-<div class="Button2">
-    <button
-        class="water {selectedIngredient === 'water' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('water')}
-        >물</button>
 
-    <button
-        class="milk {selectedIngredient === 'milk' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('milk')}
-        >우유</button>
 
-    <button
-        class="yorg {selectedIngredient === 'yorg' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('yorg')}
-        >요구르트</button>
-</div>
+<img class="pan" src={ganpan} alt="간판">
+
 
 <style>
     .allbox{
@@ -159,61 +168,85 @@ function go() {
 		justify-content: center;
 		align-items: center;
     }
+    .paochai {
+        width: 100%;
+        height: 100%;
+    }
+    
+    
+    .bowl {
+        width: 50%;
+        height: 100%;
+        margin-bottom: 35vh;
+
+        opacity: 0.8;
+        
+        position: absolute;
+        z-index: 4;
+    }
+    
+    .dot {
+        width: 55%;
+        margin-bottom: 35vh;
+        position: absolute;
+        z-index: 3;
+    }
 
     .dot2 {
         position: absolute;
-        top: 31vh;
-        left: 98vh;
-        transform: translate(-50%, -50%);
-        width: 50%;
-        height: 60%;
-        z-index: 5;
+        z-index: 3;
     }
-    .dot {
+    
+    .sidebar {
+        width: 75%;
+        height: 35%;
+        margin-top: 60vh;
+
+        background-color: #9744bf;
+        border-radius: 10px;
+
         position: absolute;
-        display: flex;
-        justify-content: center;
-        top: 31vh;
-        left: 98vh;
-        transform: translate(-50%, -50%);
-        width: 45%;
-        height: 90%;
-        z-index: 5;
+        z-index: 4;
+    }
+    
+
+    .Button {
+        width: 100%;
+        height: 50%;
+
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
     }
 
-    .Button {        display: flex; 
-        justify-content: center;
-        align-items: center; 
-        gap: 2rem; 
-        position: absolute;
-        width: 100%; 
-        top: 80%; 
-    }
     .Button2 {
-                display: flex; 
-        justify-content: center;
-        align-items: center; 
-        gap: 2rem; 
-        position: absolute;
-        width: 100%; 
-        top: 92%;
+        width: 100%;
+        height: 50%;
+
+        display: flex; 
+        justify-content: space-around;
+        align-items: center;
     }
 
     .ion, .bod, .juice, .water, .milk, .yorg {
-        width: 15rem;
-        height: 4rem;
+        position: relative;
+
+        min-width: 26vh; 
+        height: 13vh;   
+        white-space: nowrap; 
+
         background-color: #FFD400;
-        font-size: 55px;
+
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
+        color: #FF7F00;
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
-        z-index: 9;
 
         background-image: linear-gradient(
         to top left,
@@ -227,21 +260,9 @@ function go() {
         border: 4px solid yellow;
     }
 
-    .paochai {
-        width: 100%;
-        height: 100%;
-    }
+    
 
-    .bowl {
-        position: absolute;
-        width: 100vh;
-        height: 90vh;
-        top: -14.5vh;
-        left: 50%;
-        transform: translateX(-50%);
-        opacity: 0.8;
-        z-index: 6;
-    }
+    
 
     .pan {
         position: absolute;
@@ -251,21 +272,10 @@ function go() {
         width: 15%;
     }
 
-    .sidebar {
-        position: absolute;
-        width: 80%;
-        height: 30%;
-        top: 84%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #9744bf;
-        z-index: 8;
-    }
+    
 
     .bugton {
         position: absolute;
-        top: 50%;
-        left: 85%;
         z-index: 1;
     }
 
@@ -273,8 +283,6 @@ function go() {
         position: absolute;
         width: 10vh;
         height: 10vh;
-        top: -500%;
-        left: -300%;
         z-index: 2;
     }
 /*버튼 반짝*/
