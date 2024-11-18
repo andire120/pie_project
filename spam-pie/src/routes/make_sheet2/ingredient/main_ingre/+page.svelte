@@ -76,11 +76,13 @@ bowl
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
-    <div class="main_box">
+
+<div class="main_box">
+    <img class="pan" src={ganpan} alt="간판">
+    
     <img src={background1} alt="메인보드" class="paochai">
     
-    <div class="sidebar"></div>
-    <img class="pan" src={ganpan} alt="간판">
+    
     <img class="main" src={bowl} alt="메인재료">
     <img src={dot1} alt="노딜리트" class="dot">
 
@@ -88,32 +90,37 @@ bowl
         <img src={next_button} alt="버튼" class="buton"/>
     </button>
 
-    <div class="Button">
-        <button
-            class="spam {selectedIngredient === 'spam' ? 'selected' : ''}"
-            onclick={() => updateIngredientImage('spam')}>스팸</button>
-        <button
-            class="apple {selectedIngredient === 'apple' ? 'selected' : ''}"
-            onclick={() => updateIngredientImage('apple')}>사과</button>
-        <button
-            class="berry {selectedIngredient === 'berry' ? 'selected' : ''}"
-            onclick={() => updateIngredientImage('berry')}>베리</button>
 
-        <button
-                class="inseon {selectedIngredient === 'inseon' ? 'selected' : ''}"
-                onclick={() => updateIngredientImage('inseon')}>정어리</button>
-        </div>
-    <div class="Button2">
-        <button
-            class="mincho {selectedIngredient === 'mint' ? 'selected' : ''}"
-            onclick={() => updateIngredientImage('mint')}>민초</button>
-        <button
-            class="meat {selectedIngredient === 'meat' ? 'selected' : ''}"
-            onclick={() => updateIngredientImage('meat')}>고기</button>
-        <button
-            class="pump {selectedIngredient === 'pump' ? 'selected' : ''}"
-            onclick={() => updateIngredientImage('pump')}>호박</button>
+    <div class="sidebar">
+        <div class="Button">
+                <button
+                    class="spam {selectedIngredient === 'spam' ? 'selected' : ''}"
+                    onclick={() => updateIngredientImage('spam')}>스팸</button>
+                <button
+                    class="apple {selectedIngredient === 'apple' ? 'selected' : ''}"
+                    onclick={() => updateIngredientImage('apple')}>사과</button>
+                <button
+                    class="berry {selectedIngredient === 'berry' ? 'selected' : ''}"
+                    onclick={() => updateIngredientImage('berry')}>베리</button>
+
+                <button
+                        class="inseon {selectedIngredient === 'inseon' ? 'selected' : ''}"
+                        onclick={() => updateIngredientImage('inseon')}>정어리</button>
+                </div>
+            <div class="Button2">
+                <button
+                    class="mincho {selectedIngredient === 'mint' ? 'selected' : ''}"
+                    onclick={() => updateIngredientImage('mint')}>민초</button>
+                <button
+                    class="meat {selectedIngredient === 'meat' ? 'selected' : ''}"
+                    onclick={() => updateIngredientImage('meat')}>고기</button>
+                <button
+                    class="pump {selectedIngredient === 'pump' ? 'selected' : ''}"
+                    onclick={() => updateIngredientImage('pump')}>호박</button>
+            </div>
+
     </div>
+    
 </div>
 <style>
 
