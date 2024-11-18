@@ -175,8 +175,7 @@ function go() {
     
     
     .bowl {
-        width: 45%;
-        height: 100%;
+        width: 44%;
         margin-bottom: 17%;
 
         opacity: 0.8;
@@ -186,15 +185,15 @@ function go() {
     }
     
     .dot {
-        width: 50%;
-        margin-bottom: 18%;
+        width: 45%;
+        margin-bottom: 17%;
         position: absolute;
         z-index: 3;
     }
 
     .dot2 {
         position: absolute;
-        z-index: 3;
+        z-index: 7;
     }
     
     .sidebar {
