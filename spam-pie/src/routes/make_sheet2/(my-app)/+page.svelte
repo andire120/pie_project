@@ -91,53 +91,98 @@ function go() {
 
 
 </script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
+<div class="allbox">
     <img src={background1} alt="메인보드" class="paochai">
-    
-    <div class="sidebar"></div>
-    <img class="pan" src={ganpan} alt="간판">
-    <img class="bowl" src={bowl} alt="뚝배기">
-    <img src={dot1} alt="노딜리트" class="dot">
-    <img src={dot2} alt="노딜리트2" class="dot2">
-    <button  onclick={go()} class= "bugton">
-    <img src={next_button} alt="버튼" class="buten"/>
-    </button>
 
-    <div class="Button">
+    <div class="sidebar">
+        
+    </div>
+</div>
+
+
+<div class="sidebar"></div>
+<img class="pan" src={ganpan} alt="간판">
+<img class="bowl" src={bowl} alt="뚝배기">
+<img src={dot1} alt="노딜리트" class="dot">
+<img src={dot2} alt="노딜리트2" class="dot2">
+<button  onclick={go()} class= "bugton">
+<img src={next_button} alt="버튼" class="buten"/>
+</button>
+
+<div class="Button">
     <button
         class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('ion')}>이온음료</button>
+        onclick={() => updateIngredientImage('ion')}>이온음료
+    </button>
 
     <button
     class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
-    onclick={() => updateIngredientImage('bod')}>보드카</button>
+    onclick={() => updateIngredientImage('bod')}
+    >보드카</button>
 
 
     <button
         class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('juice')}>주스</button>
+        onclick={() => updateIngredientImage('juice')}
+        >주스</button>
 </div>
 
 <div class="Button2">
     <button
         class="water {selectedIngredient === 'water' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('water')}>물</button>
+        onclick={() => updateIngredientImage('water')}
+        >물</button>
 
     <button
         class="milk {selectedIngredient === 'milk' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('milk')}>우유</button>
+        onclick={() => updateIngredientImage('milk')}
+        >우유</button>
 
     <button
         class="yorg {selectedIngredient === 'yorg' ? 'selected' : ''}"
-        onclick={() => updateIngredientImage('yorg')}>요구르트</button>
+        onclick={() => updateIngredientImage('yorg')}
+        >요구르트</button>
 </div>
 
 <style>
 
+<<<<<<< HEAD
     .dot2 {
+=======
+    .allbox{
+        width: 100vw;
+		height: 100vh;
+		background-color: #b071cd;
+		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    }
+
+    .paochai{
+        height: 100%;
+        width: 100%;
+    }/*배경 대각선 그거*/
+    
+    .sidebar{
+        position: absolute;
+        width: 80%;
+        height: 30%;
+        top: 84%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #9744bf;
+        z-index: 2;
+    }
+
+    .dot2{
+>>>>>>> 8f8cbb86c656056f0b8a4dd63252a3205a28136a
         position: absolute;
         top: 31vh;
         left: 98vh;
@@ -146,7 +191,12 @@ function go() {
         height: 60%;
         z-index: 5;
     }
+<<<<<<< HEAD
     .dot {
+=======
+
+    .dot{
+>>>>>>> 8f8cbb86c656056f0b8a4dd63252a3205a28136a
         position: absolute;
         top: 31vh;
         left: 98vh;
@@ -156,6 +206,7 @@ function go() {
         z-index: 5;
     }
 
+<<<<<<< HEAD
     .Button, .Button2 {
         display: flex; 
         justify-content: center;
@@ -163,9 +214,32 @@ function go() {
         gap: 2rem; 
         position: absolute;
         width: 100%;
+=======
+    .Button2{
+        display: flex;
+        position: absolute;
+        top: 92%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: space-around;
+        gap: 18vh;
+        z-index: 3; 
+>>>>>>> 8f8cbb86c656056f0b8a4dd63252a3205a28136a
     }
+
     .Button {
+<<<<<<< HEAD
         top: 75%;
+=======
+        display: flex;
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: space-around;
+        gap: 18vh;
+        z-index: 3; 
+>>>>>>> 8f8cbb86c656056f0b8a4dd63252a3205a28136a
     }
     .Button2 {
         top: 89%; 
@@ -248,6 +322,183 @@ function go() {
         left: -300%;
         z-index: 2;
     }
+<<<<<<< HEAD
+=======
+
+    
+
+    .bowl{
+        opacity: 80%;
+        overflow: hidden;
+        position: absolute;
+        width: 100vh;
+        height: 90vh;
+        top: -14.5vh;
+        left: 47.5vh;
+        z-index: 6;
+    }
+    
+    .pan{
+        position: absolute;
+        top: 25%;
+        transform: translate(-50%, -50%);
+        position: absolute;
+        width: 15%;
+        left: 9%;
+    }
+
+    
+
+    .ion{
+        width: 35vh;
+        height: 10vh;
+        background-color: #FFD400;
+        margin: 0;
+        padding: 0;
+        font-size: 55px;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: center;
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+        background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0)
+        )
+    }
+
+    .bod{
+        width: 35vh;
+        height: 10vh;
+        background-color: #FFD400;
+        margin: 0;
+        padding: 0;
+        font-size: 55px;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: center;
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0)
+        )
+    }
+
+    .juice{
+        width: 35vh;
+        height: 10vh;
+        background-color: #FFD400;
+        margin: 0;
+        padding: 0;
+        font-size: 55px;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: center;
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0)
+        )
+    }   
+    .water{
+        width: 35vh;
+        height: 10vh;
+        background-color: #FFD400;
+        margin: 0;
+        padding: 0;
+
+        font-size: 55px;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: center;
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0)
+        )
+    }
+
+    .milk{
+        width: 35vh;
+        height: 10vh;
+        background-color: #FFD400;
+        margin: 0;
+        padding: 0;
+        font-size: 55px;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: center;
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0)
+        )
+    }
+    .yorg{
+        width: 35vh;
+        height: 10vh;
+        background-color: #FFD400;
+        margin: 0;
+        padding: 0;
+
+        font-size: 55px;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: center;
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0)
+        )
+    }
+
+>>>>>>> 8f8cbb86c656056f0b8a4dd63252a3205a28136a
 /*버튼 반짝*/
 .ion:hover, .bod:hover, .milk:hover, .water:hover, .juice:hover, .yorg:hover,
 .ion:active, .bod:active, .milk:active, .water:active, .juice:active, .yorg:active 

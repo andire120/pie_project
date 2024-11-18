@@ -173,6 +173,7 @@
 		height: 20vh;
 		background-color: #9744bf;
 		z-index: 1000;
+		top: 77vh;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -235,10 +236,12 @@
 
 	.o {
 		position: absolute;
-		left: 10.35%;
-		top: 50%;
-		transform: translateY(-50%);
-		margin-left: 12.5%;
+		width: 100%;
+		height: 100%;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
 	}
 
 	.c {

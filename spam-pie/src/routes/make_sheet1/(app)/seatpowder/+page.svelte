@@ -99,13 +99,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<div style="position: relative; width: 100%; height: 100%; overflow:hidden">  
-    <img src={imageUrl1} alt="배경 이미지" class="back" />
+<div class="allbox">  
+    <div class="back">
+		<img src={imageUrl1} alt="배경" />
+	</div>
 
-    <div style="position: absolute; top: 20px; left: 10px; transform: translate(-50%, -50%)">  
+    <div class="box">  
         <img src={imageUrl3} alt="현수막" class="fly" />
-
-        <div class="wall"></div>
         
         <botten onclick={go()} class="bot">
             <img src={imageUrl2} alt="단추" class="botten" />
@@ -115,7 +115,7 @@
         <img src={imageUrl6} alt="점2" class="on2" />
         <img src={imageUrl4} alt="그릇" class="default" />
         
-        <div class="background">
+        <div class="wall">
             <button id="Strong" onclick={() => selectpowder('strong')}   class:active={selectedpowder === 'strong'} class="Strong" type="button">강력분</button>
             <button id="middle"onclick={() => selectpowder('middle')} class:active={selectedpowder === 'middle'} class="middle" type="button">중력분</button>
             <button id="park" onclick={() => selectpowder('park')}   class:active={selectedpowder === 'park'} class="park" type="button">박력분</button>
@@ -129,125 +129,120 @@
 <slot />
 
 <style>
+    .allbox{
+        width: 100vw;
+		height: 100vh;
+		background-color: #b071cd;
+		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+    }
+
+    .back {
+        width: 100%;
+        height: 100%;
+    }
+
+    .box{
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+    }
+
+
     .fly {
         position: absolute;
-        margin: 0;
-        top: 10%;
-        left: 10%;
-        width: 25vh;
-        height: 50vh;
+        width: 15%;
+        height: 50%;
+        top: 20px;
+        left: 20px;
+        margin-bottom: 20px;
         padding: 0;
         z-index: 1;
         
     }
-
-    .back {
-        overflow: hidden;
-        position: relative;
-        margin: 0;
-        width: 100%;
-        height: 99.6%;
-        background-color: #B475D0;
-        padding: 0;
-        z-index: -1; 
-        display: flex;
-
-    }
-    .background {
-        position: absolute;
-        display: flex; 
-        justify-content: space-between; 
-        align-items: center; 
-        gap: 122px;
-        padding: 10px; 
-        width: 78%; 
-        top: 76vh;
-        left: 3vh;
-        margin: 0 auto;
-}
+    
     .wall {
-        position: absolute;
+        width: 85%;
+        height: 20%;
+        margin-top: 70vh;
+        
         background-color: #9744BF;
-        margin: 0;
-        top: 73vh;
-        left: 10px;
-        width: 179vh;
-        height: 18vh;
-        z-index: 1;
+        border-radius: 10px;
+
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        
+        position: absolute;
+        z-index: 4;
     }
+
+    
 
     .botten {
         position: absolute;
         width: 10vh;
         height: 10vh;
+        margin-left: 10%;
         z-index: 1;
-        gap: 10px;
-        justify-content: space-around;
         align-items: center;
     }
 
     .bot {
+        margin-left: 70vw;
+        margin-top: 20vh;
         position: absolute;
-        top: 60vh;
-        left: 164vh;
+        z-index: 5;
     }
 
     .default {
-        position: absolute;
-        margin: 0;
-        width: 100vh;
+        width: 50vw;
         height: 100vh;
-        padding: 0;
+        margin-bottom: 20vh;
+        
+        position: absolute;
         z-index: 2;
-        top: -20vh;
-        left: 40vh;
     }
+
     .on1 {
+        margin-bottom: 20vh;
+        margin-right: 5vh;
+        width: 50%;
         position: absolute;
-        margin: 0;
-        width: 100vh;
-        height: 100vh;
-        padding: 0;
         z-index: 3;
-        top: -20vh;
-        left: 40vh;
     }
 
     .on2 {
+        margin-bottom: 20vh;
         position: absolute;
-        margin: 0;
-        width: 80vh;
-        height: 45vh;
-        padding: 0;
         z-index: 3;
-        top: 15vh;
-        left: 51vh;
     }
 
     .Strong {
         position: relative;
 
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh; 
-        padding: 10px 20px;
+        min-width: 26vh; 
+        height: 13vh;   
         white-space: nowrap; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
+        color: #FF7F00;
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
 
@@ -273,25 +268,17 @@
     .middle {
         position: relative;
 
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh; 
-        padding: 10px 20px;
+        min-width: 26vh; 
+        height: 13vh;   
         white-space: nowrap; 
-        overflow: hidden; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
         color: #FF7F00;      
@@ -319,25 +306,17 @@
     .park {
         position: relative;
 
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh; 
-        padding: 10px 20px;
+        min-width: 26vh; 
+        height: 13vh;   
         white-space: nowrap; 
-        overflow: hidden; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
         color: #FF7F00;      
@@ -366,25 +345,17 @@
     .butter {
         position: relative;
 
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh; 
-        padding: 10px 20px;
+        min-width: 26vh; 
+        height: 13vh;   
         white-space: nowrap; 
-        overflow: hidden; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;
-        text-align: center;
+
         border-radius: 10px;
         text-shadow: 1px 1px 1px #E89D3A;
         color: #FF7F00;      
@@ -413,21 +384,14 @@
     .margarine {
         position: relative;
         
-        flex: 0 1 auto; 
-        min-width: 24vh; 
-        height: 10vh;  
-        padding: 10px 20px;
+        min-width: 26vh; 
+        height: 13vh;  
         white-space: nowrap; 
         overflow: hidden; 
 
         background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        z-index: 1;
-        margin-left: 20%;
-        margin-right: 20%;
 
-        font-size: 55px;
+        font-size: 65px;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.6;

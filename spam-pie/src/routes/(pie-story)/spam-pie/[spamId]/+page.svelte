@@ -10,6 +10,8 @@
         {
             img: "/src/public/illustration/미사용/심사배경.png",
             simtext: "최고의 동아리 SPAM에 가입하시겠습니까?",
+            he: "/src/public/illustration/미사용/요한 선배님.png",
+            he2: "/src/public/illustration/미사용/요한 선배님2.png",
         },
         {
             img: "/src/public/illustration/미사용/심사배경.png",
@@ -41,7 +43,7 @@
 
 
 {#if (spamId == 2)}
-    <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/spam-pie/${spamId + 1}`)} class="button">
         <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>
@@ -56,7 +58,7 @@
         </p>
     </div>
 {:else if spamId == 3}
-    <button on:click|stopPropagation={() => refresh(`/spams-pie/${spamId + 1}`)} class="button">
+    <button on:click|stopPropagation={() => refresh(`/spam-pie/${spamId + 1}`)} class="button">
         <img alt={`${spamId}번이미지`} src={stories[spamId - 1].tu} class="tu"/>
     </button>
     <div>
@@ -87,11 +89,17 @@
         <p class="simtext">
             {stories[spamId - 1].simtext}
         </p>
+    </div>
+    <div class="ctextbox">
         <div class="chose">
-            <button on:click={() => refresh(`/spams-pie/2`)} class="cbutton">yes</button>
-            <button on:click={() => refresh(`/spams-pie/3`)} class="cbutton">no</button>
+            <button on:click={() => refresh(`/spam-pie/2`)} class="cbutton">yes</button>
+            <button on:click={() => refresh(`/spam-pie/3`)} class="cbutton">no</button>
         </div>
     </div>
+    <div class="hebox">
+            <img alt={`${spamId}반전 요한 선배님`} src={stories[spamId - 1].he2} class="he2"/>
+            <img alt={`${spamId}요한 선배님`} src={stories[spamId - 1].he} class="he"/>
+        </div>
 {:else}
     존재하지 않는 페이지
 {/if}
@@ -152,7 +160,7 @@
 
 
     .textbox {
-        margin-left: 20%;
+        margin-left: 15%;
         margin-top: 18vh;
 
         width: 70%;
@@ -161,11 +169,24 @@
         background-color: black;
 
         position: absolute;
+        z-index: 2;
+    }
+
+    .ctextbox {
+        margin-left: 15%;
+        margin-top: 18vh;
+
+        width: 70%;
+        height: 70vh;
+
+        background-color: rgba(0, 0, 0, 0);
+
+        position: absolute;
         z-index: 3;
     }
 
     .textbox2 {
-        margin-left: 20%;
+        margin-left: 15%;
         margin-top: 18vh;
 
         width: 70%;
@@ -178,7 +199,7 @@
         background-color: black;
 
         position: absolute;
-        z-index: 3;
+        z-index: 4;
     }
 
     .simtext{
@@ -231,20 +252,24 @@
 
         display: flex;
         justify-content: center;
+
+
     }
 
     .cbutton{
         width: 40%;
         height: 40vh;
-        margin-bottom: 15vh;
+        margin-top: 20vh;
 
-        background-color: black;
+        background-color: rgba(0, 0, 0, 0);
         border: none;
 
         color: white;
         font-size: 15vh;
         overflow: hidden;
         font-family: "Jua", sans-serif;
+
+        
     }
 
 
@@ -292,6 +317,30 @@
     .tu{
         width: 100%;
         height: 90vh;
+    }
+
+    .hebox{
+        width: 100%;
+        height: 40vh;
+        gap: 40vh;
+        margin-top: 60vh;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        z-index: 2;
+    }
+
+    .he{
+        width: 40%;
+        height: 40vh;
+    }
+
+    .he2{
+        width: 40%;
+        height: 40vh;
     }
 
 
