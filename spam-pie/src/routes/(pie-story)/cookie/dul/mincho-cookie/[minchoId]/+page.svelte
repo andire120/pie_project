@@ -45,7 +45,7 @@
             {stories[minchoId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[minchoId - 1].text.replace(/\n/g, "<br>")}
+            {@html stories[minchoId - 1].text.replace(/\n/g, "<br>")}        
         </p>
     </div>
 {:else}

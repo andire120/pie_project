@@ -45,7 +45,7 @@
             {stories[pumpkinId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[pumpkinId - 1].text.replace(/\n/g, "<br>")}
+            {@html stories[pumpkinId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
 {:else}
