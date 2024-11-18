@@ -115,7 +115,7 @@ function go() {
     class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
     onclick={() => updateIngredientImage('bod')}>보드카</button>
 
-    
+
     <button
         class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
         onclick={() => updateIngredientImage('juice')}>주스</button>
@@ -137,7 +137,7 @@ function go() {
 
 <style>
 
-    .dot2{
+    .dot2 {
         position: absolute;
         top: 31vh;
         left: 98vh;
@@ -146,7 +146,7 @@ function go() {
         height: 60%;
         z-index: 5;
     }
-    .dot{
+    .dot {
         position: absolute;
         top: 31vh;
         left: 98vh;
@@ -156,26 +156,83 @@ function go() {
         z-index: 5;
     }
 
-    .Button2{
-    display: flex;
-    position: absolute;
-    top: 92%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: space-around;
-    gap: 18vh;
-    z-index: 3; 
+    .Button, .Button2 {
+        display: flex; 
+        justify-content: center;
+        align-items: center; 
+        gap: 2rem; 
+        position: absolute;
+        width: 100%;
     }
     .Button {
-        display: flex;
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    justify-content: space-around;
-    gap: 18vh;
-    z-index: 3; 
+        top: 75%;
     }
+    .Button2 {
+        top: 89%; 
+    }
+
+    .ion, .bod, .juice, .water, .milk, .yorg {
+        height: 10vh;
+        width: 30vh;
+        background-color: #FFD400;
+        font-size: 40px;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+        text-align: center;
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;      
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0)
+        );
+
+    }
+
+    .paochai {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        background-color: #B475D0;
+        z-index: -100;
+    }
+
+    .bowl {
+        position: absolute;
+        width: 100vh;
+        height: 90vh;
+        top: -14.5vh;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.8;
+        z-index: 6;
+    }
+
+    .pan {
+        position: absolute;
+        top: 25%;
+        left: 9%;
+        transform: translate(-50%, -50%);
+        width: 15%;
+    }
+
+    .sidebar {
+        position: absolute;
+        width: 70%;
+        height: 32%;
+        top: 84%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #9744bf;
+        z-index: -7;
+    }
+
     .bugton {
         position: absolute;
         top: 50%;
@@ -183,202 +240,14 @@ function go() {
         z-index: 1;
     }
 
-    .buten{
+    .buten {
         position: absolute;
-        z-index: 3;
         width: 10vh;
         height: 10vh;
         top: -500%;
         left: -300%;
         z-index: 2;
     }
-
-    .paochai{
-        overflow: hidden;
-        position: relative;
-        height: 99.6%;
-        width: 100%;
-        background-color: #B475D0;
-        z-index: -100;
-    }/*배경 대각선 그거*/
-
-    .bowl{
-        opacity: 80%;
-        overflow: hidden;
-        position: absolute;
-        width: 100vh;
-        height: 90vh;
-        top: -14.5vh;
-        left: 47.5vh;
-        z-index: 6;
-    }
-    .pan{
-        position: absolute;
-        top: 25%;
-        transform: translate(-50%, -50%);
-        position: absolute;
-        width: 15%;
-        left: 9%;
-    }
-
-    .sidebar{
-        position: absolute;
-        width: 80%;
-        height: 30%;
-        top: 84%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #9744bf;
-        z-index: 2;
-    }
-
-    .ion{
-        width: 35vh;
-        height: 10vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }
-    .bod{
-        width: 35vh;
-        height: 10vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }    
-    .juice{
-        width: 35vh;
-        height: 10vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }   
-    .water{
-        width: 35vh;
-        height: 10vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }
-
-    .milk{
-        width: 35vh;
-        height: 10vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }
-    .yorg{
-        width: 35vh;
-        height: 10vh;
-        background-color: #FFD400;
-        margin: 0;
-        padding: 0;
-
-        font-size: 55px;
-        font-family: "Jua", sans-serif;
-        font-style: normal;
-        line-height: 1.6;
-        text-align: center;
-        border-radius: 10px;
-        text-shadow: 1px 1px 1px #E89D3A;
-        color: #FF7F00;      
-        text-shadow: 5px 2px 3px #FDFECF;
-        border: none;
-
-        background-image: linear-gradient(
-        to top left,
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2) 30%,
-        rgba(0, 0, 0, 0)
-        )
-    }
-
 /*버튼 반짝*/
 .ion:hover, .bod:hover, .milk:hover, .water:hover, .juice:hover, .yorg:hover,
 .ion:active, .bod:active, .milk:active, .water:active, .juice:active, .yorg:active 
