@@ -151,7 +151,7 @@ bowl
     }
     
     .sidebar{
-        width: 75%;
+        width: 60%;
         height: 35%;
         margin-top: 60vh;
 
@@ -218,11 +218,38 @@ bowl
 
     
 
-    .spam,.apple,.mincho,.meat,.berry,.inseon,.pump{
+    .spam,.apple,.mincho{
         position: relative;
 
-        min-width: 15%; 
+        min-width: 20%; 
         height: 13vh;   
+        white-space: nowrap; 
+
+        background-color: #FFD400;
+
+        font-size: 65px;
+        font-family: "Jua", sans-serif;
+        font-style: normal;
+        line-height: 1.6;
+
+        border-radius: 10px;
+        text-shadow: 1px 1px 1px #E89D3A;
+        color: #FF7F00;
+        text-shadow: 5px 2px 3px #FDFECF;
+        border: none;
+
+        background-image: linear-gradient(
+        to top left,
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2) 30%,
+        rgba(0, 0, 0, 0)
+        )
+    }
+    .meat,.berry,.inseon,.pump{
+        position: relative;
+
+        min-width: 20%; 
+        height: 13vh;  
         white-space: nowrap; 
 
         background-color: #FFD400;
