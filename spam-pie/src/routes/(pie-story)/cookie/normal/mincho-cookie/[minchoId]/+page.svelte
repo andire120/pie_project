@@ -9,7 +9,7 @@
     const stories = [
         {
             img: "/src/public/illustration/미사용/심사위원배경.png",
-            text: "이봐, 대회 규정 좀 읽어봐. 파이라니까, 쿠키가 아니라. 넌 탈락이야.",
+            text: "이봐, 대회 규정 좀 읽어봐. 파이라니까, 쿠키가 아니라. \n 넌 탈락이야.",
             simtext: "심사위원",
             pieimg:"/src/public/element/cookie/normal-cookie/mincho-cookie.png",
             tu:"/src/public/illustration/미사용/투명.png"
@@ -45,7 +45,7 @@
             {stories[minchoId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[minchoId - 1].text.replace(/\n/g, "<br>")}
+            {@html stories[minchoId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
 {:else}

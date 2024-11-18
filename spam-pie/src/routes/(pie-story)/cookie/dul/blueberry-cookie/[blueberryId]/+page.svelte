@@ -45,7 +45,7 @@
             {stories[blueberryId - 1].simtext}
         </p>
         <p class="textmal">
-            {stories[blueberryId - 1].text.replace(/\n/g, "<br>")}
+            {@html stories[blueberryId - 1].text.replace(/\n/g, "<br>")}
         </p>
     </div>
 {:else}

@@ -11,7 +11,7 @@
             img: "/src/public/illustration/미사용/심사위원배경.png",
             text: "덜 익었잖아? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"src/public/element/pie/dul-pie/spam-pie.png",
+            pieimg:"/src/public/element/pie/dul-pie/spam-pie.png",            
             tu:"/src/public/illustration/미사용/투명.png"
         },
         {
