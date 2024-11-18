@@ -188,8 +188,8 @@ bowl
         position: absolute;
         width: 70vh;
         height: 70vh;
-        top: -1vh;
-        left: 70vh;
+        top: -5vh;
+        left: 55vh;
     }
     .pan{
         position: absolute;

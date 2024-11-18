@@ -17,9 +17,26 @@
 	let showWarning = false;
 
 	function select(timeId: string) {
-		console.log('Selected time: ', timeId);
-		selectedtime = timeId;
-	}
+    console.log('Selected time: ', timeId);
+    selectedtime = timeId;
+
+    const ovenElement = document.querySelector('.oven');
+
+    if (ovenElement instanceof HTMLImageElement) {
+        if (timeId == 'thr') {
+            ovenElement.src = '/src/public/element/otherthing/otherelement/oven1.png';
+        } 
+		else if (timeId == 'one') {
+            ovenElement.src = '/src/public/element/otherthing/otherelement/oven2.png';
+        } 
+		else if (timeId == 'onethr') {
+            ovenElement.src = '/src/public/element/otherthing/otherelement/oven3.png';
+        } 
+		else if (timeId == 'eig') {
+            ovenElement.src = '/src/public/element/otherthing/otherelement/oven4.png';
+        }
+    }
+}
 
 	let id = null;
 	let id_liquid = null;
@@ -69,6 +86,8 @@
 			}, 3000);
 		}
 	}
+
+
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -85,8 +104,8 @@
 	</button>
 
 	<div class="c">
-		<img src={chep} alt="단계" />
-	</div>
+		<img src={chep} alt="단계" /> 
+	</div> 
 
 	<div class="foot">
 		<button
@@ -124,7 +143,7 @@
 	</div>
 
 	<div class="o">
-		<img src={oven} alt="오븐" />
+		<img src={oven} alt="오븐" id="oven" class="oven" />
 	</div>
 </div>
 
@@ -232,6 +251,7 @@
 		transform: translateY(-50%);
 		background-color: #b071cd;
 		border: none;
+		z-index: 100;
 	}
 
 	.o {
@@ -247,7 +267,7 @@
 	.c {
 		position: absolute;
 		left: 2.5%;
-		top: 1%;
+		top: 4%;
 	}
 
 	.dan {
