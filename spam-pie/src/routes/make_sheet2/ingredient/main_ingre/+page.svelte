@@ -144,14 +144,11 @@ bowl
 
     .dot{
         position: absolute;
-        top: 30%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 2;
+        z-index: 7;
     }
     
     .sidebar{
-        width: 60%;
+        width: 67%;
         height: 35%;
         margin-top: 60vh;
 
@@ -165,9 +162,10 @@ bowl
     .Button2{
         width: 100%;
         height: 50%;
+        gap: 3%;
 
         display: flex; 
-        justify-content: space-around;
+        justify-content: center;
         align-items: center;
     }
 
@@ -182,18 +180,22 @@ bowl
 
 /*next 버튼*/
     .bugton {        
-        display: flex;
-        margin-left: 70vw;
-        margin-top: 2vw;
+        margin-left: 55vw;
+
+        background-color: rgba(0, 0, 0, 0);
+        border: none;
+
         position: absolute;
         z-index: 5;
-        align-items: center;
-        justify-content: center;
     }
     .buton{
-        position: absolute;
         width: 10vh;
         height: 10vh;
+
+        display: flex;  
+        align-items: center;
+
+        position: absolute;
         z-index: 1;
     }
 
@@ -201,10 +203,9 @@ bowl
     .main{
         overflow: hidden;
         position: absolute;
-        width: 70vh;
-        height: 70vh;
-        top: -5vh;
-        left: 55vh;
+        margin-bottom: 25vh;
+        width: 60vh;
+        height: 60vh;
     }
 
     .pan{
@@ -218,10 +219,10 @@ bowl
 
     
 
-    .spam,.apple,.mincho{
+    .spam,.apple,.berry,.inseon{
         position: relative;
 
-        min-width: 20%; 
+        min-width: 22%; 
         height: 13vh;   
         white-space: nowrap; 
 
@@ -245,10 +246,12 @@ bowl
         rgba(0, 0, 0, 0)
         )
     }
-    .meat,.berry,.inseon,.pump{
+
+    
+    .meat,.mincho,.pump{
         position: relative;
 
-        min-width: 20%; 
+        min-width: 22%; 
         height: 13vh;  
         white-space: nowrap; 
 
