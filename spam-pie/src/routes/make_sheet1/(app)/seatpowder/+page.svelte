@@ -141,7 +141,7 @@
     }
 
     .back {
-        width: 100%;
+        width: 180%;
         height: 100%;
     }
 
