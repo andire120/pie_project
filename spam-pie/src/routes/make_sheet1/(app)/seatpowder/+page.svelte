@@ -101,7 +101,7 @@
 
 <div class="allbox">  
     <div class="back">
-		<img src={imageUrl1} alt="배경" />
+		<img src={imageUrl1} alt="배경" class="pieback"/>
 	</div>
 
     <div class="box">  
@@ -154,6 +154,11 @@
         justify-content: center;
 
         position: absolute;
+    }
+
+    .pieback {
+        width: 100%;
+        height: 100%;
     }
 
 
