@@ -96,15 +96,9 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet" />
 
-<<<<<<< HEAD
 <div class="allbox">
 	<div class="back">
 		<img src={imageUrl1} alt="배경" class="pieback" />
-=======
-<div class="allbox">  
-    <div class="back">
-		<img src={imageUrl1} alt="배경" class="pieback"/>
->>>>>>> c4362eac3265fa2d79b198f4dc838edb491b6cbb
 	</div>
 
 	<div class="box">
@@ -172,17 +166,10 @@
 		align-items: center;
 	}
 
-<<<<<<< HEAD
 	.back {
 		width: 180%;
 		height: 100%;
 	}
-=======
-    .back {
-        width: 180%;
-        height: 100%;
-    }
->>>>>>> c4362eac3265fa2d79b198f4dc838edb491b6cbb
 
 	.box {
 		width: 100%;
@@ -195,7 +182,6 @@
 		position: absolute;
 	}
 
-<<<<<<< HEAD
 	.fly {
 		position: absolute;
 		width: 15%;
@@ -206,13 +192,6 @@
 		padding: 0;
 		z-index: 1;
 	}
-=======
-    .pieback {
-        width: 100%;
-        height: 100%;
-    }
-
->>>>>>> c4362eac3265fa2d79b198f4dc838edb491b6cbb
 
 	.pieback {
 		width: 100%;
