@@ -1,9 +1,13 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
-    import { fly } from 'svelte/transition';
+    import { tweened } from 'svelte/motion';
+	import { cubicOut } from 'svelte/easing';
     
     let pumpkinId: number;
+
+    const posX = tweened(0, { duration: 600, easing: cubicOut });
+    const posY = tweened(0, { duration: 600, easing: cubicOut });
 
     $: pumpkinId = +$page.params.pumpkinId;
 
@@ -40,6 +44,26 @@
     const refresh = (url: string) => {
         goto(url);
     };
+
+    function moveToPositions() {
+        posX.set(0); 
+        posY.set(0);  
+
+        setTimeout(() => {
+            posX.set(0);  
+            posY.set(220);  
+        }, 500);
+    }
+
+    $: if (pumpkinId === 2) {
+        moveToPositions();
+    }
+    else {
+        posX.set(0);
+        posY.set(0);
+    }
+    console.log(posX);
+
 </script>
 
 
@@ -57,7 +81,7 @@
         <img alt={`${pumpkinId}번스토리`} src={stories[pumpkinId - 1].img} class="story"/>
     </div>
     <div class="stevebox">
-        <img alt={`${pumpkinId}스티브`} src={stories[pumpkinId - 1].steve} class="steve" transition:fly={{ y: -1000, duration: 500, }}/>
+        <img alt={`${pumpkinId}스티브`} src={stories[pumpkinId - 1].steve} class="steve" style="transform: translate({$posX}px, {$posY}px);"/>
     </div>
     <div class="piebox">
         <img alt={`${pumpkinId}파이`} src={stories[pumpkinId - 1].pieimg} class="pie"/>
@@ -142,8 +166,8 @@
 
     .steve{
         width: 20%;
-        height: 30vh;
-        margin-top: 20vh;
+        height: 35vh;
+        margin-bottom: 50vh;
 
         position: absolute;
         z-index: 3;
