@@ -10,16 +10,15 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
 
-<div style="position: relative; width: 100%; height: 100%; overflow:hidden">  
+<div class="allbox">  
     <img src={imageUrl1} alt="배경 이미지" class="back" />
 
-    <div style="position: absolute; top: 20px; left: 10px; transform: translate(-50%, -50%)">  
-        <img src={imageUrl3} alt="현수막" class="fly" />
+    <img src={imageUrl3} alt="현수막" class="fly" />
 
-        <bo tten class="bot" onclick={() => goto('/main_menu')}>
-            <div class="botten">돌아가기</div>
-        </bo>
-    </div>
+    <botten class="bot" onclick={() => goto('/main_menu')}>
+        <div class="botten">돌아가기</div>
+    </botten>
+    
     <div class="white">
         <img src={imageUrl4} alt="설명" class="caption"/>
     </div>
@@ -28,26 +27,36 @@
 <slot />
 
 <style>
+    .allbox {
+		width: 100vw;
+		height: 100vh;
+		background-color: #b071cd;
+		overflow: hidden;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+    
+
     .fly {
         position: absolute;
-        margin: 0;
-        top: 10px;
-        left: 10px;
-        width: 27vh;
-        height: 50vh;
-        padding: 0;
-        z-index: 1;
+		width: 15%;
+		height: 50%;
+		top: 20px;
+		left: 20px;
+		margin-bottom: 20px;
+		padding: 0;
+		z-index: 2;
     }
 
     .white {
         position: absolute;
         background-color: white;
-        margin: 0;
-        top: 10vh;
-        left: 37vh;
         width: 130vh;
         height: 70vh;
-        padding: 0;
+        margin-bottom: 5%;
         z-index: 1;
         opacity: 0.7;
         border-radius: 50px;
@@ -67,23 +76,16 @@
     }
 
     .back {
-        overflow: hidden;
-        position: relative;
-        margin: 0;
         width: 100%;
-        height: 99.6%;
-        background-color: #B475D0;
-        padding: 0;
-        z-index: -1;
-        display: grid;
+        height: 100%;
     }
-
+ 
     .botten {
         display: flex;
         position: absolute;
         background-color: #FFD400;
 
-        font-size: 48px;
+        font-size: 6vb;
         font-family: "Jua", sans-serif;
         font-style: normal;
         line-height: 1.8;
@@ -96,11 +98,12 @@
         text-shadow: 5px 2px 3px #FDFECF;
         border: none;
 
-        width: 180px;
+        width: 13vw;
         height: 11vh;
-        z-index: 1;
-        margin-top: 200px;
-        margin-left: -70px;
+        z-index: 5;
+
+        margin-top: 10vh;
+        margin-left: 10vw;
 
         align-items: center;
         justify-content: center;
@@ -112,7 +115,8 @@
 
     .bot {
         position: absolute;
-        top: 60vh;
-        left: 164vh;
+
+        top: 70vh;
+        margin-left: 45%;
     }
 </style>

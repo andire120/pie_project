@@ -264,6 +264,11 @@
 		justify-content: center;
 	}
 
+	.oven {
+        width: 100vw;
+        height: 150vh;
+    }
+
 	.c {
 		position: absolute;
 		left: 2.5%;
