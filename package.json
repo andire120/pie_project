@@ -1,9 +1,8 @@
 {
   "scripts": {
-    "build": "vite build",
-    "dev": "vite",
-    "preview": "vite preview"
+  "build": "npx vite build"
   },
+
   "devDependencies": {
     "vite": "^4.5.5"
   }
