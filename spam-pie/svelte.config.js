@@ -1,13 +1,17 @@
-import adapter from '@sveltejs/adapter-static';
-import sveltePreprocess from 'svelte-preprocess';
+import { defineConfig } from 'vite';
+import path from 'path-browserify';
 
-export default {
-  kit: {
-    adapter: adapter(),
-    target: '#svelte',  // 이 설정이 올바르게 되어 있는지 확인하세요.
-    vite: {
-      // Vite 관련 커스터마이징 설정
+export default defineConfig({
+  resolve: {
+    alias: {
+      path: path,  // 'path' 모듈을 'path-browserify'로 대체
     },
   },
-  preprocess: sveltePreprocess(),
-};
+  root: 'spam-pie',  // 루트 디렉토리 설정
+  build: {
+    outDir: 'build',  // 빌드 결과물은 'build' 폴더에 저장
+    rollupOptions: {
+      input: 'spam-pie/index.html',  // 엔트리 파일 설정
+    },
+  },
+});
