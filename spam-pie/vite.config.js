@@ -4,6 +4,9 @@ import { defineConfig } from 'vite';
 export default defineConfig({
 	plugins: [sveltekit()],
 	build: {
-		outDir: 'dist'
-	  }
+		outDir: 'dist',
+		rollupOptions: {
+			input: 'src/app.html' // SvelteKit의 진입점 파일
+		}
+	}
 });
