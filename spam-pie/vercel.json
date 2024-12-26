@@ -11,7 +11,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "/spam-pie/index.html"
+        "dest": "/index.html"
       }
     ]
   }
