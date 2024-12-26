@@ -7,7 +7,7 @@ export default defineConfig({
     rollupOptions: {
       input: {
         // 템플릿 파일을 지정
-        main: new URL('src/index.html', import.meta.url).pathname, // main.html을 엔트리 파일로 설정
+        main: new URL('index.html', import.meta.url).pathname, // main.html을 엔트리 파일로 설정
       },
     },
   },
