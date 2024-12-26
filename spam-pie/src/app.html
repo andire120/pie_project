@@ -1,12 +1,12 @@
-<!doctype html>
-<html lang="en" style="box-sizing: border-box">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" href="%sveltekit.assets%/favicon.png" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		%sveltekit.head%
-	</head>
-	<body data-sveltekit-preload-data="hover" style="margin: 0; width: 100%vw; height: 100vh">
-		<div style="display: contents">%sveltekit.body%</div>
-	</body>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/favicon.png" /> <!-- 절대 경로로 수정 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    %sveltekit.head% <!-- 이 부분은 SvelteKit에서 자동으로 처리됨 -->
+  </head>
+  <body>
+    <div>%sveltekit.body%</div> <!-- 이 부분도 SvelteKit에서 처리됨 -->
+  </body>
 </html>
