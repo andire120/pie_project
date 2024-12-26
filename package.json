@@ -1,6 +1,6 @@
 {
   "scripts": {
-  "build": "npx vite build"
+    "build": "vite build"
   },
 
   "devDependencies": {
@@ -8,7 +8,8 @@
   },
 
   "engines": {
-  "node": "16.x"
+  "node": "22.x"
+  
 }
 
 }
