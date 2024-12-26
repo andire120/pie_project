@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
   root: 'src',  // 프로젝트의 루트 디렉토리를 src로 설정
-  base: './',
+  base: '/spam-pie',
   build: {
     outDir: '../build', // 빌드 결과물은 build 폴더에 저장
     rollupOptions: {
