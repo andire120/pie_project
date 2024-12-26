@@ -1,7 +1,10 @@
 {
   "scripts": {
-    "build": "vite build",  
-    "dev": "vite", 
-    "preview": "vite preview"  
+    "build": "vite build",
+    "dev": "vite",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.5.5"
   }
 }
