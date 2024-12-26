@@ -1,6 +1,14 @@
 {
-    "rewrites":  [
-    {"source": "/(.*)", "destination": "/"}
+    "builds": [
+      {
+        "src": "src/routes/**/*",
+        "use": "@sveltejs/adapter-static"
+      }
     ],
-    "installCommand": "npm install"
-} 
+    "routes": {
+      "/**": {
+        "dest": "/index.html"
+      }
+    }
+  }
+  
