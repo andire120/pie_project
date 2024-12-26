@@ -1,6 +1,14 @@
 {
- "scripts": {
-  "build": "vite build"
+  "scripts": {
+  "build": "npx vite build"
+  },
+
+  "devDependencies": {
+    "vite": "^4.5.5"
+  },
+
+  "engines": {
+  "node": "16.x"
 }
 
 }
