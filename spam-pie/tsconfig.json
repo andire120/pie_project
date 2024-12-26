@@ -14,5 +14,4 @@
 	"include": [
 	  "vite.config.ts"  // vite.config.ts를 포함하도록 설정
 	]
-  }
-  
+}
