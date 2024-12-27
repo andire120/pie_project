@@ -1,11 +1,11 @@
-import { defineConfig } from 'vite';
+import adapter from '@sveltejs/adapter-vercel';
 
-export default defineConfig({
-  root: 'spam-pie',  // 'spam-pie' 디렉토리로 설정
-  build: {
-    outDir: 'build',  // 빌드 결과물은 'build' 폴더에 저장
-    rollupOptions: {
-      input: 'src/index.html',  // 엔트리 파일로 'spam-pie/index.html' 설정
+export default {
+  kit: {
+    adapter: adapter(),
+    paths: {
+      // URL 경로를 커스터마이징하는 경우 설정 필요
+      base: '/spam-pie', // 기본값: ''
     },
   },
-});
+};
