@@ -1,5 +1,6 @@
 <script >
 	import { goto } from "$app/navigation";
+    import bad3 from "/src/public/illustration/미사용/검은사진.jpeg"
 
      const stories = [
         {
@@ -19,7 +20,7 @@
         <div class="botten">돌아가기</div>
     </button>
     <div>
-        <img alt={`$3번스토리`} src={stories[0].img} class="story"/>
+        <img alt={`$3번스토리`} src={bad3} class="story"/>
     </div>
     <div class="textbox2">
         <div class="text2">
