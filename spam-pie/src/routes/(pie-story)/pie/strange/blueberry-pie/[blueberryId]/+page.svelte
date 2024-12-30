@@ -1,6 +1,11 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import img from "/src/public/illustration/미사용/심사위원배경.png"
+    import pieimg from"/src/public/element/pie/goodpie/blueberry-pie.png"
+    import tu from"/src/public/illustration/미사용/투명.png"
+    import img2 from "/src/public/illustration/미사용/검은사진.jpeg"
     
     let blueberryId: number;
 
@@ -8,14 +13,14 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: img,
             text: "모양은 그럴싸한데 이상한 맛이 나는걸? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg: pieimg,
+            tu: tu
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: img2,
             text: "이상한 엔딩"
         }
     ];
