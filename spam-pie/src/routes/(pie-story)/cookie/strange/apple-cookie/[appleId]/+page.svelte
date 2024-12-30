@@ -1,6 +1,11 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import sro1 from "/src/public/illustration/미사용/심사위원배경.png";
+    import bread from "/src/public/element/cookie/normal-cookie/apple-cookie.png";
+    import wh from "/src/public/illustration/미사용/투명.png";
+    import ba from "/src/public/illustration/미사용/검은사진.jpeg";
     
     let appleId: number;
 
@@ -8,14 +13,14 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "모양은 그럴싸한데 이상한 맛이 나는걸? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/cookie/normal-cookie/apple-cookie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
-        },
+            pieimg:bread,
+            tu:wh
+        }, 
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: ba,
             text: "이상한 엔딩"
         }
     ];
