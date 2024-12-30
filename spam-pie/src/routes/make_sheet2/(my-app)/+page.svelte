@@ -2,24 +2,22 @@
 // @ts-nocheck    
     import { page } from '$app/stores';
     import { onMount } from 'svelte';
-    const background1 = "/src/public/element/otherthing/otherelement/background.png";
-    const next_button = "/src/public/element/otherthing/otherelement/nextbotten.png";
-    const bowl = "/src/public/element/otherthing/otherelement/nodelete.png";
-    const ganpan ="/src/public/element/otherthing/otherelement/piesokmandulgi.png";
-    const dot1 = "/src/public/element/otherthing/otherelement/nodelete1.png";
-    const dot2 = "/src/public/element/otherthing/otherelement/nodelete1.png";
-    const warn = "/src/public/element/otherthing/otherelement/liquid_warn.png";
+    import  background1  from "/src/public/element/otherthing/otherelement/background.png";
+    import  next_button  from "/src/public/element/otherthing/otherelement/nextbotten.png";
+    import  bowl  from "/src/public/element/otherthing/otherelement/nodelete.png";
+    import  ganpan  from "/src/public/element/otherthing/otherelement/piesokmandulgi.png";
+    import  dot1  from "/src/public/element/otherthing/otherelement/nodelete1.png";
+    import  dot2  from "/src/public/element/otherthing/otherelement/nodelete1.png";
+    import  warn  from  "/src/public/element/otherthing/otherelement/liquid_warn.png";
     let ingredient = null;
     let selectedliquid = null;
 
-    const ingred = {
-        ion:"/src/public/element/otherthing/otherelement/ion2.png",
-        bod:"/src/public/element/otherthing/otherelement/bod2.png",
-        juice:"/src/public/element/otherthing/otherelement/juice2.png",
-        water:"/src/public/element/otherthing/otherelement/water2.PNG",
-        milk:"/src/public/element/otherthing/otherelement/milk2.PNG",
-        yorg:"/src/public/element/otherthing/otherelement/yorg2.PNG"
-    };
+    import  ion  from "/src/public/element/otherthing/otherelement/ion2.png";
+    import  bod  from "/src/public/element/otherthing/otherelement/bod2.png";
+    import  juice  from "/src/public/element/otherthing/otherelement/juice2.png";
+    import  water  from "/src/public/element/otherthing/otherelement/water2.PNG";
+    import  milk  from "/src/public/element/otherthing/otherelement/milk2.PNG";
+    import  yorg  from "/src/public/element/otherthing/otherelement/yorg2.PNG";
 
     let selectedIngredient = null;
     let id1 = null;
@@ -56,22 +54,22 @@
 function updateIngredientImage(ingredient) {
     selectedIngredient = ingredient;
     selectedliquid = ingredient;
-    document.querySelector('.bowl').src = ingred[ingredient];
+    document.querySelector('.bowl').src = `/src/public/element/otherthing/otherelement/${ingredient}.png`;
 }
 //id 보내기 생성
 function send() {
     if (selectedliquid != null) {
-        if (selectedliquid === 'ion') {
+        if (selectedliquid === 'ion2') {
             id_liquid = "ion";
-        } else if (selectedliquid === 'milk') {
+        } else if (selectedliquid === 'milk2') {
             id_liquid = "milk";
-        } else if (selectedliquid === 'water') {
+        } else if (selectedliquid === 'water2') {
             id_liquid = "water";
-        } else if (selectedliquid === 'bod') {
+        } else if (selectedliquid === 'bod2') {
             id_liquid = "vodka";
-        } else if (selectedliquid === 'juice') {
+        } else if (selectedliquid === 'juice2') {
             id_liquid = "juice";
-        } else if (selectedliquid === 'yorg') {
+        } else if (selectedliquid === 'yorg2') {
             id_liquid = 'yorg';
         }
     }
@@ -113,35 +111,35 @@ function go() {
         <div class="Button">
             <button
                 class="ion {selectedIngredient === 'ion' ? 'selected' : ''}"
-                onclick={() => updateIngredientImage('ion')}>이온음료
+                onclick={() => updateIngredientImage('ion2')}>이온음료
             </button>
 
             <button
             class="bod {selectedIngredient === 'bod' ? 'selected' : ''}"
-            onclick={() => updateIngredientImage('bod')}
+            onclick={() => updateIngredientImage('bod2')}
             >보드카</button>
 
 
             <button
                 class="juice {selectedIngredient === 'juice' ? 'selected' : ''}"
-                onclick={() => updateIngredientImage('juice')}
+                onclick={() => updateIngredientImage('juice2')}
                 >주스</button>
         </div>
 
         <div class="Button2">
             <button
                 class="yorg {selectedIngredient === 'yorg' ? 'selected' : ''}"
-                onclick={() => updateIngredientImage('yorg')}
+                onclick={() => updateIngredientImage('yorg2')}
                 >요구르트</button>
 
             <button
                 class="water {selectedIngredient === 'water' ? 'selected' : ''}"
-                onclick={() => updateIngredientImage('water')}
+                onclick={() => updateIngredientImage('water2')}
                 >물</button>
 
             <button
                 class="milk {selectedIngredient === 'milk' ? 'selected' : ''}"
-                onclick={() => updateIngredientImage('milk')}
+                onclick={() => updateIngredientImage('milk2')}
                 >우유</button>
     
         </div>

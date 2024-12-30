@@ -3,15 +3,11 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 
-	const background = '/src/public/element/otherthing/otherelement/background.png';
-	const next = '/src/public/element/otherthing/otherelement/nextbotten.png';
-	const chep = '/src/public/element/otherthing/otherelement/파이굽기 간판.png';
-	const one = '/src/public/element/otherthing/otherelement/1m.png';
-	const onethr = '/src/public/element/otherthing/otherelement/1m30s.png';
-	const eig = '/src/public/element/otherthing/otherelement/8m.png';
-	const thr = '/src/public/element/otherthing/otherelement/30s.png';
-	const oven = '/src/public/element/otherthing/otherelement/oven.png';
-	const danger = '/src/public/element/otherthing/otherelement/choseoven.png';
+	import background from "/src/public/element/otherthing/otherelement/background.png";
+	import next from '/src/public/element/otherthing/otherelement/nextbotten.png';
+	import chep  from '/src/public/element/otherthing/otherelement/파이굽기 간판.png';
+	import  oven  from '/src/public/element/otherthing/otherelement/oven.png';
+	import  danger  from '/src/public/element/otherthing/otherelement/choseoven.png';
 
 	let selectedtime = '';
 	let showWarning = false;

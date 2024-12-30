@@ -1,9 +1,9 @@
 <script>
 // @ts-nocheck
     import { goto } from "$app/navigation";
-    const imageUrl1 = "/src/public/element/otherthing/otherelement/background.png";
-    const imageUrl3 = "/src/public/element/otherthing/otherelement/게임방법간판.png";
-    const imageUrl4 = "/src/public/element/otherthing/otherelement/게임방법 설명.png";
+    import { imageUrl1 } from "/src/public/element/otherthing/otherelement/background.png";
+    import { imageUrl3 } from "/src/public/element/otherthing/otherelement/게임방법간판.png";
+    import { imageUrl4 } from"/src/public/element/otherthing/otherelement/게임방법 설명.png";
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">

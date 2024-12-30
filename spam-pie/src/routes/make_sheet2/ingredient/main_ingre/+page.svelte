@@ -2,23 +2,22 @@
 // @ts-nocheck
     import { page } from '$app/stores';
     import { onMount } from 'svelte';   
-    const background1 = "/src/public/element/otherthing/otherelement/background.png";
-    const next_button = "/src/public/element/otherthing/otherelement/nextbotten.png";
-    const bowl = "/src/public/element/otherthing/otherelement/what.png";
-    const ganpan ="/src/public/element/otherthing/otherelement/piesokmandulgi.png";
-    const dot1 = "/src/public/element/otherthing/otherelement/nodelete1.png";
-    const warn = "/src/public/element/otherthing/otherelement/waring_main.png";
+    import  background1  from "/src/public/element/otherthing/otherelement/background.png";
+    import  next_button  from "/src/public/element/otherthing/otherelement/nextbotten.png";
+    import  bowl  from  "/src/public/element/otherthing/otherelement/what.png";
+    import  ganpan  from "/src/public/element/otherthing/otherelement/piesokmandulgi.png";
+    import  dot1  from "/src/public/element/otherthing/otherelement/nodelete1.png";
+    import  warn  from "/src/public/element/otherthing/otherelement/waring_main.png";
     let ingredient = null;
 
-    const ingred = {
-        apple:"/src/public/element/otherthing/otherelement/bowlapple.png",
-        berry:"/src/public/element/otherthing/otherelement/bowlberry.png",
-        mint:"/src/public/element/otherthing/otherelement/bowlmincho.png",
-        inseon:"/src/public/element/otherthing/otherelement/bowlinseon.png",
-        pump:"/src/public/element/otherthing/otherelement/bowlpump.png",
-        spam:"/src/public/element/otherthing/otherelement/bowlspam.png",
-        meat:"/src/public/element/otherthing/otherelement/bowlmeat.png"
-    };
+    import  apple  from "/src/public/element/otherthing/otherelement/bowlapple.png";
+    import  berry  from "/src/public/element/otherthing/otherelement/bowlberry.png";
+    import  mint  from "/src/public/element/otherthing/otherelement/bowlmincho.png";
+    import  inseon  from "/src/public/element/otherthing/otherelement/bowlinseon.png";
+    import  pump  from "/src/public/element/otherthing/otherelement/bowlpump.png";
+    import  spam  from "/src/public/element/otherthing/otherelement/bowlspam.png";
+    import  meat  from "/src/public/element/otherthing/otherelement/bowlmeat.png";
+
 
     let selectedIngredient = null;
     let selectedIngredient2 = null;
@@ -27,7 +26,7 @@
     let id_main;
     function updateIngredientImage(ingredient) {
         selectedIngredient = ingredient;
-        document.querySelector('.main').src = ingred[ingredient];
+        document.querySelector('.main').src = `/src/public/element/otherthing/otherelement/${ingredient}.png`;
     }
 //id를 받아옵시다. 순서: water, milk, juice, 
         onMount(() => {
@@ -41,19 +40,19 @@
     
 function send() {
     if (selectedIngredient != null) {
-        if (selectedIngredient === 'apple') {
+        if (selectedIngredient === 'bowlapple') {
             id_main = "apple";
-        } else if (selectedIngredient === 'inseon') {
+        } else if (selectedIngredient === 'bowlinseon') {
             id_main = "inseon";
-        } else if (selectedIngredient === 'berry') {
+        } else if (selectedIngredient === 'bowlberry') {
             id_main = "blueberry";
-        } else if (selectedIngredient === 'mint') {
+        } else if (selectedIngredient === 'bowlmincho') {
             id_main = "mintchoco";
-        } else if (selectedIngredient === 'meat') {
+        } else if (selectedIngredient === 'bowlmeat') {
             id_main = "meat";
-        } else if (selectedIngredient === 'pump') {
+        } else if (selectedIngredient === 'bowlpump') {
             id_main = 'pump';
-        } else if (selectedIngredient === 'spam') {
+        } else if (selectedIngredient === 'bowlspam') {
             id_main = 'spam';
         }
     }
@@ -95,28 +94,28 @@ bowl
         <div class="Button">
                 <button
                     class="spam {selectedIngredient === 'spam' ? 'selected' : ''}"
-                    onclick={() => updateIngredientImage('spam')}>스팸</button>
+                    onclick={() => updateIngredientImage('bowlspam')}>스팸</button>
                 <button
                     class="apple {selectedIngredient === 'apple' ? 'selected' : ''}"
-                    onclick={() => updateIngredientImage('apple')}>사과</button>
+                    onclick={() => updateIngredientImage('bowlapple')}>사과</button>
                 <button
                     class="berry {selectedIngredient === 'berry' ? 'selected' : ''}"
-                    onclick={() => updateIngredientImage('berry')}>베리</button>
+                    onclick={() => updateIngredientImage('bowlberry')}>베리</button>
 
                 <button
                         class="inseon {selectedIngredient === 'inseon' ? 'selected' : ''}"
-                        onclick={() => updateIngredientImage('inseon')}>정어리</button>
+                        onclick={() => updateIngredientImage('bowlinseon')}>정어리</button>
                 </div>
             <div class="Button2">
                 <button
                     class="mincho {selectedIngredient === 'mint' ? 'selected' : ''}"
-                    onclick={() => updateIngredientImage('mint')}>민초</button>
+                    onclick={() => updateIngredientImage('bowlmincho')}>민초</button>
                 <button
                     class="meat {selectedIngredient === 'meat' ? 'selected' : ''}"
-                    onclick={() => updateIngredientImage('meat')}>고기</button>
+                    onclick={() => updateIngredientImage('bowlmeat')}>고기</button>
                 <button
                     class="pump {selectedIngredient === 'pump' ? 'selected' : ''}"
-                    onclick={() => updateIngredientImage('pump')}>호박</button>
+                    onclick={() => updateIngredientImage('bowlpump')}>호박</button>
             </div>
 
     </div>

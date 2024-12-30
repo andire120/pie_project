@@ -1,22 +1,20 @@
 <script>
 	// @ts-nocheck
 
-	const imageUrl1 = '/src/public/element/otherthing/otherelement/background.png';
-	const imageUrl2 = '/src/public/element/otherthing/otherelement/nextbotten.png';
-	const imageUrl3 = '/src/public/element/otherthing/otherelement/fly.png';
-	const imageUrl4 = '/src/public/element/otherthing/otherelement/default.png';
-	const imageUrl5 = '/src/public/element/otherthing/otherelement/nodelete.png';
-	const imageUrl6 = '/src/public/element/otherthing/otherelement/nodelete1.png';
+	import  imageUrl1  from '/src/public/element/otherthing/otherelement/background.png';
+	import  imageUrl2  from '/src/public/element/otherthing/otherelement/nextbotten.png';
+	import imageUrl3  from '/src/public/element/otherthing/otherelement/fly.png';
+	import  imageUrl4  from '/src/public/element/otherthing/otherelement/default.png';
+	import  imageUrl5  from '/src/public/element/otherthing/otherelement/nodelete.png';
+	import  imageUrl6  from '/src/public/element/otherthing/otherelement/nodelete1.png';
 
-	const bowlImages1 = {
-		strong: '/src/public/element/otherthing/otherelement/strong.png',
-		middle: '/src/public/element/otherthing/otherelement/middle.png',
-		park: '/src/public/element/otherthing/otherelement/park.png'
-	};
-	const bowlImages2 = {
-		butter: '/src/public/element/otherthing/otherelement/butter-nuki.png',
-		margarine: '/src/public/element/otherthing/otherelement/margarine.png'
-	};
+	import  strong  from '/src/public/element/otherthing/otherelement/strong.png';
+	import  middle  from '/src/public/element/otherthing/otherelement/middle.png';
+	import  park  from '/src/public/element/otherthing/otherelement/park.png';
+	
+	import  butter  from '/src/public/element/otherthing/otherelement/butter-nuki.png';
+	import  margarine  from '/src/public/element/otherthing/otherelement/margarine.png';
+	
 
 	let selectedpowder = null;
 	let selectedbutter = null;
@@ -33,15 +31,14 @@
 
 	function selectpowder(powderId) {
 		selectedpowder = powderId;
-
-		updateBowlImage(bowlImages1[powderId]);
+		updateBowlImage(`/src/public/element/otherthing/otherelement/${powderId}.png`);
 	}
 
 	function selectbutter(butterId) {
 		selectedbutter = butterId;
-
-		addBowlImage(bowlImages2[butterId]);
+		addBowlImage(`/src/public/element/otherthing/otherelement/${butterId}.png`);
 	}
+
 
 	function go() {
 		if (selectedbutter == null && selectedpowder == null) {
@@ -136,8 +133,8 @@
 			>
 			<button
 				id="butter"
-				onclick={() => selectbutter('butter')}
-				class:active={selectedbutter === 'butter'}
+				onclick={() => selectbutter('butter-nuki')}
+				class:active={selectedbutter === 'butter-nuki'}
 				class="butter"
 				type="button">버터</button
 			>
