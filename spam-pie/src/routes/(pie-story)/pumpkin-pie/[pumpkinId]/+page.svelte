@@ -3,7 +3,15 @@
     import { goto } from '$app/navigation';
     import { tweened } from 'svelte/motion';
 	import { cubicOut } from 'svelte/easing';
-    
+
+    import  sro1  from "/src/public/illustration/미사용/심사위원배경.png";
+    import  sro3  from "/src/public/illustration/pie-ending/야생 마크 화면 1.png";
+    import pie from "/src/public/element/pie/goodpie/pumpkin-pie.png";
+    import wh from "/src/public/illustration/미사용/투명.png";
+    import ba from "/src/public/illustration/미사용/검은사진.jpeg";
+    import sta from "/src/public/illustration/pie-ending/스티브_정면.png";
+    import sta2 from "/src/public/illustration/pie-ending/뛰는 스티브.png";
+
     let pumpkinId: number;
 
     const posX = tweened(0, { duration: 600, easing: cubicOut });
@@ -13,30 +21,30 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "호박 파이가 참 특이하게 생겼...",
             simtext: "심사위원3",
-            pieimg:"/src/public/element/pie/goodpie/pumpkin-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "툭-",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/pumpkin-pie.png",
-            steve:"/src/public/illustration/pie-ending/스티브_정면.png",
-            tu:"/src/public/illustration/미사용/투명.png",
+            pieimg:pie,
+            steve: sta,
+            tu:wh,
         },
         {
-            img: "/src/public/illustration/pie-ending/야생 마크 화면 1.png",
+            img: sro3,
             text: "스티브가 호박파이를 훔치고 야생으로 달아나 버렸다...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/pumpkin-pie.png",
-            steve:"/src/public/illustration/pie-ending/뛰는 스티브.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            steve:sta2,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: ba,
             text: "호박 파이 엔딩"
         }
     ];

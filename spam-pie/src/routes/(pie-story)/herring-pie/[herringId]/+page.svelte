@@ -3,6 +3,19 @@
     import { goto } from '$app/navigation';
     import { tweened } from 'svelte/motion';
     import { cubicOut } from 'svelte/easing';
+
+    import  sro3  from "/src/public/illustration/미사용/심사배경.png";
+    import pie from "/src/public/element/pie/goodpie/herring-pie.png";
+    import wh from "/src/public/illustration/미사용/투명.png";
+    import ba from "/src/public/illustration/미사용/검은사진.jpeg";
+    import garen from "/src/public/illustration/pie-ending/고든램지.png";
+    import sad from "/src/public/illustration/미사용/우울.png";
+    import wat from "/src/public/illustration/미사용/진짜수조.png";
+    import bigsad from "/src/public/illustration/미사용/대우울.png";
+    import garen2 from "/src/public/illustration/pie-ending/고든램지2.png";
+    import fish2 from "/src/public/illustration/pie-ending/날뛰는_물고기2.png";
+    import fish from "/src/public/illustration/pie-ending/날뛰는_물고기.png";
+    import fu from "/src/public/illustration/미사용/킹받.png";
     
     let herringId: number;
 
@@ -13,47 +26,47 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             text: "Fuxx off, It's fuxxing raw! Get out!",
             simtext: "고든램지",
-            pieimg:"/src/public/element/pie/goodpie/herring-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png",
-            he:"/src/public/illustration/pie-ending/고든램지.png",
-            she:"/src/public/illustration/미사용/우울.png",
-            sujo:"/src/public/illustration/미사용/진짜수조.png"
+            pieimg:pie,
+            tu:wh,
+            he:garen,
+            she:sad,
+            sujo:wat
         },
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             text: "(풍덩)",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/herring-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png",
-            he:"/src/public/illustration/pie-ending/고든램지.png",
-            she:"/src/public/illustration/미사용/대우울.png",
-            sujo:"/src/public/illustration/미사용/진짜수조.png"
+            pieimg:pie,
+            tu:wh,
+            he:garen,
+            she:bigsad,
+            sujo:wat
         },
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             text: "What the fuxxing that!!!!",
             simtext: "고든램지",
-            pieimg:"/src/public/illustration/pie-ending/날뛰는_물고기2.png",
-            tu:"/src/public/illustration/미사용/투명.png",
-            he:"/src/public/illustration/pie-ending/고든램지2.png",
-            she:"/src/public/illustration/미사용/대우울.png",
-            sujo:"/src/public/illustration/미사용/진짜수조.png"
+            pieimg:fish2,
+            tu:wh,
+            he:garen2,
+            she:bigsad,
+            sujo:wat
         },
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             text: "(촬싹!)",
             simtext: "고든램지",
-            pieimg:"/src/public/illustration/pie-ending/날뛰는_물고기.png",
-            tu:"/src/public/illustration/미사용/투명.png",
-            he:"/src/public/illustration/pie-ending/고든램지2.png",
-            she:"/src/public/illustration/미사용/킹받.png",
-            sujo:"/src/public/illustration/미사용/진짜수조.png"
+            pieimg:fish,
+            tu:wh,
+            he:garen2,
+            she:fu,
+            sujo:wat
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: ba,
             text: "정어리 파이 엔딩"
         }
     ];

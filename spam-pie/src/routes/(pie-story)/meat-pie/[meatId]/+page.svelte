@@ -1,6 +1,14 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import  sro1  from "/src/public/illustration/미사용/심사위원배경.png";
+    import  sro3  from "/src/public/illustration/미사용/심사위원배경2.png";
+    import pie from "/src/public/element/pie/goodpie/meat-pie.png";
+    import pie2 from "/src/public/illustration/pie-ending/생고기 파이.png";
+    import wh from "/src/public/illustration/미사용/투명.png";
+    import ba from "/src/public/illustration/미사용/검은사진.jpeg";
+    import no from "/src/public/illustration/미사용/2.png";
     
     let meatId: number;
 
@@ -8,62 +16,62 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "미트 파이가 정말 맛있네요.",
             simtext: "심사위원1",
-            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: sro3,
             text: "미투~!",
             simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            sim: no,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: sro3,
             text: "심사위원2는 굿바이 선언 포즈를 취했다...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            sim: no,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: sro3,
             text: ".",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            sim: no,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: sro3,
             text: "...",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            sim: no,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: sro3,
             text: "..................",
             simtext: "",
-            pieimg:"/src/public/element/pie/goodpie/meat-pie.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            sim: no,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경2.png",
+            img: sro3,
             text: "싸해진 분위기 속에 고기파이가 식어버렸다...",
             simtext: "",
-            pieimg:"/src/public/illustration/pie-ending/생고기 파이.png",
-            sim: "/src/public/illustration/미사용/2.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie2,
+            sim: no,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: ba,
             text: "고기 파이 엔딩"
         }
     ];

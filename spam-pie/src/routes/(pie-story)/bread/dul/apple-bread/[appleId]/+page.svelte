@@ -1,6 +1,10 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import sro1 from "/src/public/illustration/미사용/심사위원배경.png";
+    import bread from "/src/public/element/bread/dul-bread/apple-bread.png";
+    import wh from "/src/public/illustration/미사용/투명.png";
     
     let appleId: number;
 
@@ -8,11 +12,11 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "이봐, 대회 규정 좀 읽어봐. 파이라니까, 빵이 아니라. \n 게다가, 덜 익었잖아? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/bread/dul-bread/apple-bread.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:bread,
+            tu:wh
         },
     ];
 

@@ -1,6 +1,14 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import whpie1 from "/src/public/illustration/엔딩/괴식엔딩-1.png";
+    import whpie2 from "/src/public/illustration/엔딩/괴식엔딩-2.png";
+    import whpie3 from "/src/public/illustration/엔딩/괴식엔딩-3.png";
+    import whpie4 from "/src/public/illustration/엔딩/괴식엔딩-4.png";
+    import ba from "/src/public/illustration/미사용/검은사진.jpeg";
+    import wh from "/src/public/illustration/미사용/투명.png";
+
     
     let minchoId: number;
 
@@ -8,27 +16,27 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/엔딩/괴식엔딩-1.png",
+            img: whpie1,
             text: "정체불명의 식별 불가 괴식 파이를 만든 주인공...",
-            tu:"/src/public/illustration/미사용/투명.png",
+            tu:wh,
         },
         {
-            img: "/src/public/illustration/엔딩/괴식엔딩-2.png",
+            img: whpie2,
             text: "이 파이에 모든 심사위원들은 경악에 혹평을 하지만,\n 단 한명의 심사위원만이 이 파이를 마음에 들어한다.",
-            tu:"/src/public/illustration/미사용/투명.png",
+            tu:wh,
         },
         {
-            img: "/src/public/illustration/엔딩/괴식엔딩-3.png",
+            img: whpie3,
             text: "알고보니 그 심사위원은 그런 괴상한 파이가 취향이었고,\n 이에 그런 주인공에게 지원금과 일자리를 내어준다.",
-            tu:"/src/public/illustration/미사용/투명.png",
+            tu:wh,
         },
         {
-            img: "/src/public/illustration/엔딩/괴식엔딩-4.png",
+            img: whpie4,
             text: "새 직장에서 번 돈으로 신약을 구입하여 아픈 가족들을 치료해내고,\n 심사위원과 동업하며 무난하게 살게 된다.",
-            tu:"/src/public/illustration/미사용/투명.png",
+            tu:wh,
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: ba,
             text: "히든 엔딩"
         }
     ];
