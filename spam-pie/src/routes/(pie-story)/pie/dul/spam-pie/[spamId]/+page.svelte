@@ -1,6 +1,11 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import img1 from '/src/public/illustration/미사용/심사위원배경.png'
+    import img2 from '/src/public/illustration/미사용/검은사진.jpeg'
+    import tu from '/src/public/illustration/미사용/투명.png'
+    import pieimg from '/src/public/element/pie/dul-pie/spam-pie.png'
     
     let spamId: number;
 
@@ -8,14 +13,14 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: img1,
             text: "덜 익었잖아? 넌 탈락이야.",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/dul-pie/spam-pie.png",            
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg: pieimg,            
+            tu: tu
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: img2,
             text: "탄 파이 엔딩"
         }
     ];

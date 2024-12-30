@@ -1,6 +1,11 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import img from '/src/public/illustration/미사용/심사위원배경.png'
+    import pieimg from '/src/public/element/pie/dul-pie/apple-pie.png'
+    import tu from '/src/public/illustration/미사용/투명.png'
+
     
     let appleId: number;
 
@@ -27,15 +32,15 @@
 
 {#if stories[appleId - 1]}
     <button on:click|stopPropagation={() => refresh(`/storyss/bad/bad1`)} class="button">
-        <img alt={`${appleId}번이미지`} src={stories[appleId - 1].tu} class="tu"/>
+        <img alt={`${appleId}번이미지`} src={tu} class="tu"/>
     </button>
     <div>
-        <img alt={`${appleId}번스토리`} src={stories[appleId - 1].img} class="story"/>
+        <img alt={`${appleId}번스토리`} src={img} class="story"/>
     </div>
     <div class="piebox">
-        <img alt={`${appleId}파이`} src={stories[appleId - 1].pieimg} class="pie"/>
-        <img alt={`${appleId}파이`} src={stories[appleId - 1].pieimg} class="pie"/>
-        <img alt={`${appleId}파이`} src={stories[appleId - 1].pieimg} class="pie"/>
+        <img alt={`${appleId}파이`} src={pieimg} class="pie"/>
+        <img alt={`${appleId}파이`} src={pieimg} class="pie"/>
+        <img alt={`${appleId}파이`} src={pieimg} class="pie"/>
     </div>
     <div class="textbox">
         <p class="simtext">
