@@ -5,9 +5,7 @@
         "NODE_VERSION": "18.x"
       }
     },
-    "commands": {
-      "build": "npm run build"
-    },
-    "outputDirectory": "build"
+    "outputDirectory": "build",
+    "packageManager": "pnpm@9.15.2"
   }
   
