@@ -1,6 +1,11 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import  sro1  from "/src/public/illustration/미사용/심사위원배경.png";
+    import  sro3  from "/src/public/illustration/미사용/심사위원배경3.png";
+    import pie from "/src/public/element/pie/goodpie/apple-pie.png";
+    import wh from "/src/public/illustration/미사용/투명.png";
     
     let appleId: number;
 
@@ -8,39 +13,39 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "흠...",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/goodpie/apple-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "흐음?!",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/goodpie/apple-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "이...이 맛은?!?!!!?",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/goodpie/apple-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경3.png",
+            img: sro3,
             text: "할머니가 해주시던 맛이야ㅜㅠㅠ",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/goodpie/apple-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "그래, 이거야말로 레전드 오브 파이!!!",
             simtext: "심사위원",
-            pieimg:"/src/public/element/pie/goodpie/apple-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         }
     ];
 

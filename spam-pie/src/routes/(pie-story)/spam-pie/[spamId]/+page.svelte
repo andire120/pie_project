@@ -1,6 +1,13 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import  sro3  from "/src/public/illustration/미사용/심사배경.png";
+    import wh from "/src/public/illustration/미사용/투명.png";
+    import ba from "/src/public/illustration/미사용/검은사진.jpeg";
+    import yhan from "/src/public/illustration/미사용/요한 선배님.png";
+    import yhan2 from "/src/public/illustration/미사용/요한 선배님2.png";
+    import yes from  "/src/public/illustration/pie-ending/스팸 yes.png";
     
     let spamId: number;
 
@@ -8,24 +15,24 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             simtext: "최고의 동아리 SPAM에 가입하시겠습니까?",
-            he: "/src/public/illustration/미사용/요한 선배님.png",
-            he2: "/src/public/illustration/미사용/요한 선배님2.png",
+            he: yhan,
+            he2: yhan2
         },
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             simtext: "이 언어들을 모두 공부해 오십시오. 못하시겠습니까?",
-            pro: "/src/public/illustration/pie-ending/스팸 yes.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pro: yes,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             simtext: "죽으십시오.",
-            tu:"/src/public/illustration/미사용/투명.png"
+            tu: wh
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: ba,
             text: "스팸 파이 엔딩"
         }
     ];

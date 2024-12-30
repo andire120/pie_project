@@ -1,6 +1,14 @@
 <script lang="ts">
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
+
+    import  sro1  from "/src/public/illustration/미사용/심사위원배경.png";
+    import  sro3  from "/src/public/illustration/미사용/심사배경.png";
+    import pie from "/src/public/element/pie/goodpie/blueberry-pie.png";
+    import pie2 from "/src/public/illustration/pie-ending/날라가버린 블루베리 파이.png";
+    import wh from "/src/public/illustration/미사용/투명.png";
+    import ba from "/src/public/illustration/미사용/검은사진.jpeg";
+    import no from "/src/public/illustration/미사용/1.png";
     
     let blueberryId: number;
 
@@ -8,50 +16,50 @@
 
     const stories = [
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "저 파이가 파랑색이라는데에 내 손목을 걸지.",
             simtext: "심사위원1",
-            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "아니?, 저 파이가 보라색이라는데에 내 발목을 걸겠어.",
             simtext: "심사위원2",
-            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "안타깝지만, 둘다 틀렸어요.",
             simtext: "심사위원3",
-            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사위원배경.png",
+            img: sro1,
             text: "이 파이는 #353B5C색 이에요!!!!!!",
             simtext: "심사위원3",
-            pieimg:"/src/public/element/pie/goodpie/blueberry-pie.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             text: "꺄아아아ㅏ아ㅏㅏㅏ-",
             simtext: "심사위원1, 심사위원2",
-            pieimg:"/src/public/illustration/pie-ending/날라가버린 블루베리 파이.png",
-            sim: "/src/public/illustration/미사용/1.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            pieimg:pie2,
+            sim: no,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/심사배경.png",
+            img: sro3,
             text: "파이가 날아가 엎어져버렸다...",
             simtext: "",
-            sim: "/src/public/illustration/미사용/1.png",
-            tu:"/src/public/illustration/미사용/투명.png"
+            sim: no,
+            tu:wh
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: ba,
             text: "블루베리 파이 엔딩"
         }
     ];

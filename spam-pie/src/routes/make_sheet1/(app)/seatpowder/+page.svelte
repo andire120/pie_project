@@ -64,21 +64,21 @@
 			}, 1000);
 		} else if (selectedbutter != null && selectedpowder != null) {
 			if (selectedpowder === 'strong') {
-				if (selectedbutter === 'butter') {
+				if (selectedbutter === 'butter-nuki') {
 					id = 'strongbutter';
 				} else {
 					id = 'strongmargarine';
 				}
 			}
 			if (selectedpowder === 'middle') {
-				if (selectedbutter === 'butter') {
+				if (selectedbutter === 'butter-nuki') {
 					id = 'middlebutter';
 				} else {
 					id = 'middlemargarine';
 				}
 			}
 			if (selectedpowder === 'park') {
-				if (selectedbutter === 'butter') {
+				if (selectedbutter === 'butter-nuki') {
 					id = 'parkbutter';
 				} else {
 					id = 'parkmargarine';
