@@ -3,7 +3,7 @@
     import { goto } from '$app/navigation';
 
     import img1 from '/src/public/illustration/미사용/심사위원배경.png'
-    import img2 from '/src/public/illustration/미사용/검은은사진.jpeg'
+    import img2 from '/src/public/illustration/미사용/검은사진.jpeg'
     import pieimg from '/src/public/element/pie/goodpie/apple-pie.png'
     import tu from '/src/public/illustration/미사용/투명.png'
     
