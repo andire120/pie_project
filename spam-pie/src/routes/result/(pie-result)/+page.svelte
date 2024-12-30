@@ -83,159 +83,159 @@
 
 	const element = [
 		{
-			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie2.png',
-			dulblueberrycookie: '/src/public/element/cookie/dul-cookie/blueberry-cookie2.png',
-			dulspamcookie: '/src/public/element/cookie/dul-cookie/spam-cookie2.png',
-			dulmeatcookie: '/src/public/element/cookie/dul-cookie/meat-cookie2.png',
-			dulinseoncookie: '/src/public/element/cookie/dul-cookie/herring-cookie2.png',
-			dulmintchococookie: '/src/public/element/cookie/dul-cookie/mincho-cookie2.png',
-			dulpumpkincookie: '/src/public/element/cookie/dul-cookie/pumpkin-cookie2.png',
+			dulapplecookie: dulapplecookie,
+			dulblueberrycookie: dulblueberrycookie,
+			dulspamcookie: dulspamcookie,
+			dulmeatcookie: dulmeatcookie,
+			dulinseoncookie: dulinseoncookie,
+			dulmintchococookie: dulmintchococookie,
+			dulpumpkincookie: dulpumpkincookie,
 
-			goodapplecookie: '/src/public/element/cookie/normal-cookie/apple-cookie2.png',
-			goodblueberrycookie: '/src/public/element/cookie/normal-cookie/blueberry-cookie2.png',
-			goodspamcookie: '/src/public/element/cookie/normal-cookie/spam-cookie2.png',
-			goodmeatcookie: '/src/public/element/cookie/normal-cookie/meat-cookie2.png',
-			goodmintchococookie: '/src/public/element/cookie/normal-cookie/mincho-cookie2.png',
-			goodinseoncookie: '/src/public/element/cookie/normal-cookie/herring-cookie2.png',
-			goodpumpkincookie: '/src/public/element/cookie/normal-cookie/pumpkin-cookie2.png',
+			goodapplecookie: goodapplecookie,
+			goodblueberrycookie: goodblueberrycookie,
+			goodspamcookie: goodspamcookie,
+			goodmeatcookie: goodmeatcookie,
+			goodmintchococookie: goodmintchococookie,
+			goodinseoncookie: goodinseoncookie,
+			goodpumpkincookie: goodpumpkincookie,
 
-			tanapplecookie: '/src/public/element/cookie/tan-cookie/apple-cookie2.png',
-			tanblueberrycookie: '/src/public/element/cookie/tan-cookie/blueberry-cookie2.png',
-			tanmeatcookie: '/src/public/element/cookie/tan-cookie/meat-cookie2.png',
-			tanspamcookie: '/src/public/element/cookie/tan-cookie/spam-cookie2.png',
-			tanmintchococookie: '/src/public/element/cookie/tan-cookie/mincho-cookie2.png',
-			tanpumpkincookie: '/src/public/element/cookie/tan-cookie/pumpkin-cookie2.png',
-			taninseoncookie: '/src/public/element/cookie/tan-cookie/herring-cookie2.png',
+			tanapplecookie: tanapplecookie,
+			tanblueberrycookie: tanblueberrycookie,
+			tanmeatcookie: tanmeatcookie,
+			tanspamcookie: tanspamcookie,
+			tanmintchococookie: tanmintchococookie,
+			tanpumpkincookie: tanpumpkincookie,
+			taninseoncookie: taninseoncookie,
 
-			burnt: '/src/public/element/pie/suktan.png'
+			burnt: burnt
 		}
 	];
 
 	const element2 = [
 		{
-			dulapplebread: '/src/public/element/bread/dul-bread/apple-bread.png',
+			dulapplebread: dulapplebread,
 			text: '으악~! 덜익은 사과 빵이 완성됐잖아..'
 		},
 		{
-			goodapplebread: '/src/public/element/bread/normal-bread/apple-bread.png',
+			goodapplebread: goodapplebread,
 			text: '우와~! 맛있는 사과 빵이 완성됐다!!'
 		},
 		{
-			tanapplebread: '/src/public/element/bread/tan-bread/apple-bread.png',
+			tanapplebread: tanapplebread,
 			text: '헉!! 완전히 탄 사과 빵이 돼버렸잖아..!'
 		},
 
 		{
-			dulblueberrybread: '/src/public/element/bread/dul-bread/blueberry-bread.png',
+			dulblueberrybread: dulblueberrybread,
 			text: '으악~! 덜익은 블루베리 빵이 완성됐잖아..'
 		},
 		{
-			goodblueberrybread: '/src/public/element/bread/normal-bread/blueberry-bread.png',
+			goodblueberrybread: goodblueberrybread,
 			text: '우와~! 맛있는 블루베리 빵이 완성됐다!!'
 		},
 		{
-			tanblueberrybread: '/src/public/element/bread/tan-bread/blueberry-bread.png',
+			tanblueberrybread: tanblueberrybread,
 			text: '헉!! 완전히 탄 블루베리 빵이 돼버렸잖아..!'
 		},
 
 		{
-			dulinseonbread: '/src/public/element/bread/dul-bread/herring-bread.png',
+			dulinseonbread: dulinseonbread,
 			text: '으악~! 덜익은 정어리 빵이 완성됐잖아..'
 		},
 		{
-			goodinseonbread: '/src/public/element/bread/normal-bread/herring-bread.png',
+			goodinseonbread: goodinseonbread,
 			text: '우와~! 맛있는 정어리 빵이 완성됐다!!'
 		},
 		{
-			taninseonbread: '/src/public/element/bread/tan-bread/herring-bread.png',
+			taninseonbread: taninseonbread,
 			text: '헉!! 완전히 탄 정어리 빵이 돼버렸잖아..!'
 		},
 
 		{
-			dulmeatbread: '/src/public/element/bread/dul-bread/meat-bread.png',
+			dulmeatbread: dulmeatbread,
 			text: '으악~! 덜익은 고기 빵이 완성됐잖아..'
 		},
 		{
-			goodmeatbread: '/src/public/element/bread/normal-bread/meat-bread.png',
+			goodmeatbread: goodmeatbread,
 			text: '우와~! 맛있는 고기 빵이 완성됐다!!'
 		},
 		{
-			tanmeatbread: '/src/public/element/bread/tan-bread/meat-bread.png',
+			tanmeatbread: tanmeatbread,
 			text: '헉!! 완전히 탄 고기 빵이 돼버렸잖아..!'
 		},
 
 		{
-			dulmintchocobread: '/src/public/element/bread/dul-bread/mincho-bread.png',
+			dulmintchocobread: dulmintchocobread,
 			text: '으악~! 덜익은 민트초코 빵이 완성됐잖아..'
 		},
 		{
-			goodmintchocobread: '/src/public/element/bread/normal-bread/mincho-bread.png',
+			goodmintchocobread: goodmintchocobread,
 			text: '우와~! 맛있는 민트초코 빵이 완성됐다!!'
 		},
 		{
-			tanmintchocobread: '/src/public/element/bread/tan-bread/mincho-bread.png',
+			tanmintchocobread: tanmintchocobread,
 			text: '헉!! 완전히 탄 민트초코 빵이 돼버렸잖아..!'
 		},
 
 		{
-			dulpumpkinbread: '/src/public/element/bread/dul-bread/pumpkin-bread.png',
+			dulpumpkinbread: dulpumpkinbread,
 			text: '으악~! 덜익은 호박 빵이 완성됐잖아..'
 		},
 		{
-			goodpumpkinbread: '/src/public/element/bread/normal-bread/pumpkin-bread.png',
+			goodpumpkinbread: goodpumpkinbread,
 			text: '우와~! 맛있는 호박 빵이 완성됐다!!'
 		},
 		{
-			tanpumpkinbread: '/src/public/element/bread/tan-bread/pumpkin-bread.png',
+			tanpumpkinbread: tanpumpkinbread,
 			text: '헉!! 완전히 탄 호박 빵이 돼버렸잖아..!'
 		},
 
 		{
-			dulspambread: '/src/public/element/bread/dul-bread/spam-bread.png',
+			dulspambread: dulspambread,
 			text: '으악~! 덜익은 스팸 빵이 완성됐잖아..'
 		},
 		{
-			goodspambread: '/src/public/element/bread/normal-bread/spam-bread.png',
+			goodspambread: goodspambread,
 			text: '우와~! 맛있는 스팸 빵이 완성됐다!!'
 		},
 		{
-			tanspambread: '/src/public/element/bread/tan-bread/spam-bread.png',
+			tanspambread: tanspambread,
 			text: '헉!! 완전히 탄 스팸 빵이 돼버렸잖아..!'
 		},
 
 		{
-			burnt: '/src/public/element/pie/suktan.png',
+			burnt: burnt,
 			text: '헉!! 다 타버려서 석탄이 돼버렸잖아..!'
 		}
 	];
 
 	const element1 = [
 		{
-			dulapplepie: '/src/public/element/pie/dul-pie/apple-pie.png',
-			dulblueberrypie: '/src/public/element/pie/dul-pie/blueberry-pie.png',
-			dulspampie: '/src/public/element/pie/dul-pie/spam-pie.png',
-			dulmeatpie: '/src/public/element/pie/dul-pie/meat-pie.png',
-			dulinseonpie: '/src/public/element/pie/dul-pie/herring-pie.png',
-			dulmintchocopie: '/src/public/element/pie/dul-pie/mincho-pie.png',
-			dulpumpkinpie: '/src/public/element/pie/dul-pie/pumpkin-pie.png',
+			dulapplepie: dulapplepie,
+			dulblueberrypie: dulblueberrypie,
+			dulspampie: dulspampie,
+			dulmeatpie: dulmeatpie,
+			dulinseonpie: dulinseonpie,
+			dulmintchocopie: dulmintchocopie,
+			dulpumpkinpie: dulpumpkinpie,
 
-			goodapplepie: '/src/public/element/pie/goodpie/apple-pie.png',
-			goodblueberrypie: '/src/public/element/pie/goodpie/blueberry-pie.png',
-			goodspampie: '/src/public/element/pie/goodpie/spam-pie.png',
-			goodmeatpie: '/src/public/element/pie/goodpie/meat-pie.png',
-			goodmintchocopie: '/src/public/element/pie/goodpie/mincho-pie.png',
-			goodinseonpie: '/src/public/element/pie/goodpie/herring-pie.png',
-			goodpumpkinpie: '/src/public/element/pie/goodpie/pumpkin-pie.png',
+			goodapplepie: goodapplepie,
+			goodblueberrypie: goodblueberrypie,
+			goodspampie: goodspampie,
+			goodmeatpie: goodmeatpie,
+			goodmintchocopie: goodmintchocopie,
+			goodinseonpie: goodinseonpie,
+			goodpumpkinpie: goodpumpkinpie,
 
-			tanapplepie: '/src/public/element/pie/little-pie/apple-pie.png',
-			tanblueberrypie: '/src/public/element/pie/little-pie/blueberry-pie.png',
-			tanmeatpie: '/src/public/element/pie/little-pie/meat-pie.png',
-			tanspampie: '/src/public/element/pie/little-pie/spam-pie.png',
-			tanmintchocopie: '/src/public/element/pie/little-pie/mincho-pie.png',
-			tanpumpkinpie: '/src/public/element/pie/little-pie/pumpkin-pie.png',
-			taninseonpie: '/src/public/element/pie/little-pie/herring-pie.png',
+			tanapplepie: tanapplepie,
+			tanblueberrypie: tanblueberrypie,
+			tanmeatpie: tanmeatpie,
+			tanspampie: tanspampie,
+			tanmintchocopie: tanmintchocopie,
+			tanpumpkinpie: tanpumpkinpie,
+			taninseonpie: taninseonpie,
 
-			burnt1: '/src/public/element/pie/suktan.png'
+			burnt1: burnt
 		}
 	];
 
