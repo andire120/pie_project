@@ -5,7 +5,6 @@
         "NODE_VERSION": "18.x"
       }
     },
-    "outputDirectory": "build",
-    "packageManager": "pnpm@9.15.2"
+    "outputDirectory": "build"
   }
   
