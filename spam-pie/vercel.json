@@ -5,7 +5,6 @@
         "NODE_VERSION": "18.x"
       }
     },
-    "installCommand": "npm install --legacy-peer-deps",
     "commands": {
       "build": "npm run build"
     },
