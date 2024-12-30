@@ -3,6 +3,84 @@
 	//커밋
 	const background = '/src/public/element/otherthing/otherelement/background.png';
 
+	import dulapplecookie from '/src/public/element/cookie/dul-cookie/apple-cookie2.png'
+	import dulblueberrycookie from '/src/public/element/cookie/dul-cookie/blueberry-cookie2.png'
+	import dulspamcookie from '/src/public/element/cookie/dul-cookie/spam-cookie2.png'
+	import dulmeatcookie from '/src/public/element/cookie/dul-cookie/meat-cookie2.png'
+	import dulinseoncookie from '/src/public/element/cookie/dul-cookie/herring-cookie2.png'
+	import dulmintchococookie from '/src/public/element/cookie/dul-cookie/mincho-cookie2.png'
+	import dulpumpkincookie from '/src/public/element/cookie/dul-cookie/pumpkin-cookie2.png' 
+
+	import goodapplecookie from '/src/public/element/cookie/normal-cookie/apple-cookie2.png'
+	import goodblueberrycookie from '/src/public/element/cookie/normal-cookie/blueberry-cookie2.png'
+	import goodspamcookie from '/src/public/element/cookie/normal-cookie/spam-cookie2.png'
+	import goodmeatcookie from '/src/public/element/cookie/normal-cookie/meat-cookie2.png'
+	import goodmintchococookie from '/src/public/element/cookie/normal-cookie/mincho-cookie2.png'
+	import goodinseoncookie from '/src/public/element/cookie/normal-cookie/herring-cookie2.png'
+	import goodpumpkincookie from '/src/public/element/cookie/normal-cookie/pumpkin-cookie2.png'
+
+	import tanapplecookie from '/src/public/element/cookie/tan-cookie/apple-cookie2.png'
+	import tanblueberrycookie from '/src/public/element/cookie/tan-cookie/blueberry-cookie2.png'
+	import tanmeatcookie from '/src/public/element/cookie/tan-cookie/meat-cookie2.png'
+	import tanspamcookie from '/src/public/element/cookie/tan-cookie/spam-cookie2.png'
+	import tanmintchococookie from '/src/public/element/cookie/tan-cookie/mincho-cookie2.png'
+	import tanpumpkincookie from '/src/public/element/cookie/tan-cookie/pumpkin-cookie2.png'
+	import taninseoncookie from '/src/public/element/cookie/tan-cookie/herring-cookie2.png'
+
+
+	import dulapplepie from '/src/public/element/pie/dul-pie/apple-pie.png'
+	import dulblueberrypie from '/src/public/element/pie/dul-pie/blueberry-pie.png'
+	import dulspampie from '/src/public/element/pie/dul-pie/spam-pie.png'
+	import dulmeatpie from '/src/public/element/pie/dul-pie/meat-pie.png'
+	import dulinseonpie from '/src/public/element/pie/dul-pie/herring-pie.png'
+	import dulmintchocopie from '/src/public/element/pie/dul-pie/mincho-pie.png'
+	import dulpumpkinpie from '/src/public/element/pie/dul-pie/pumpkin-pie.png'
+
+	import goodapplepie from '/src/public/element/pie/goodpie/apple-pie.png'
+	import goodblueberrypie from '/src/public/element/pie/goodpie/blueberry-pie.png'
+	import goodspampie from '/src/public/element/pie/goodpie/spam-pie.png'
+	import goodmeatpie from '/src/public/element/pie/goodpie/meat-pie.png'
+	import goodmintchocopie from '/src/public/element/pie/goodpie/mincho-pie.png'
+	import goodinseonpie from '/src/public/element/pie/goodpie/herring-pie.png'
+	import goodpumpkinpie from '/src/public/element/pie/goodpie/pumpkin-pie.png'
+
+	import tanapplepie from '/src/public/element/pie/little-pie/apple-pie.png'
+	import tanblueberrypie from '/src/public/element/pie/little-pie/blueberry-pie.png'
+	import tanmeatpie from '/src/public/element/pie/little-pie/meat-pie.png'
+	import tanspampie from '/src/public/element/pie/little-pie/spam-pie.png'
+	import tanmintchocopie from '/src/public/element/pie/little-pie/mincho-pie.png'
+	import tanpumpkinpie from '/src/public/element/pie/little-pie/pumpkin-pie.png'
+	import taninseonpie from '/src/public/element/pie/little-pie/herring-pie.png'
+
+	
+	import dulapplebread from '/src/public/element/bread/dul-bread/apple-bread.png'
+	import goodapplebread from '/src/public/element/bread/normal-bread/apple-bread.png'
+	import tanapplebread from '/src/public/element/bread/tan-bread/apple-bread.png'
+	import dulblueberrybread from '/src/public/element/bread/dul-bread/blueberry-bread.png'
+	import goodblueberrybread from '/src/public/element/bread/normal-bread/blueberry-bread.png'
+	import tanblueberrybread from '/src/public/element/bread/tan-bread/blueberry-bread.png'
+	import dulinseonbread from '/src/public/element/bread/dul-bread/herring-bread.png'
+	import goodinseonbread from '/src/public/element/bread/normal-bread/herring-bread.png'
+	import taninseonbread from '/src/public/element/bread/tan-bread/herring-bread.png'
+	import dulmeatbread from '/src/public/element/bread/dul-bread/meat-bread.png'
+	import goodmeatbread from '/src/public/element/bread/normal-bread/meat-bread.png'
+	import tanmeatbread from '/src/public/element/bread/tan-bread/meat-bread.png'
+	import dulmintchocobread from '/src/public/element/bread/dul-bread/mincho-bread.png'
+	import goodmintchocobread from '/src/public/element/bread/normal-bread/mincho-bread.png'
+	import tanmintchocobread from '/src/public/element/bread/tan-bread/mincho-bread.png'
+	import dulpumpkinbread from '/src/public/element/bread/dul-bread/pumpkin-bread.png'
+	import goodpumpkinbread from '/src/public/element/bread/normal-bread/pumpkin-bread.png'
+	import tanpumpkinbread from '/src/public/element/bread/tan-bread/pumpkin-bread.png'
+	import dulspambread from '/src/public/element/bread/dul-bread/spam-bread.png'
+	import goodspambread from '/src/public/element/bread/normal-bread/spam-bread.png'
+	import tanspambread from '/src/public/element/bread/tan-bread/spam-bread.png'
+
+	import burnt from '/src/public/element/pie/suktan.png'
+
+
+	
+
+
 	const element = [
 		{
 			dulapplecookie: '/src/public/element/cookie/dul-cookie/apple-cookie2.png',
