@@ -15,9 +15,9 @@
 
     <img src={imageUrl3} alt="현수막" class="fly" />
 
-    <botten class="bot" onclick={() => goto('/main_menu')}>
+    <button class="bot" onclick={() => goto('/main_menu')}>
         <div class="botten">돌아가기</div>
-    </botten>
+    </button>
     
     <div class="white">
         <img src={imageUrl4} alt="설명" class="caption"/>

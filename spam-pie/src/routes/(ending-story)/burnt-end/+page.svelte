@@ -17,9 +17,9 @@
     석탄 엔딩
 </div>
 
-    <botten class="bot" onclick={() => goto('/main_menu')}>
+    <button class="bot" onclick={() => goto('/main_menu')}>
             <div class="botten">돌아가기</div>
-    </botten>
+    </button>
 
 
 
