@@ -101,9 +101,9 @@
 	<div class="box">
 		<img src={imageUrl3} alt="현수막" class="fly" />
 
-		<butten onclick={go()} class="bot">
-			<img src={imageUrl2} alt="단추" class="butten" />
-		</butten>
+		<button onclick={go()} class="bot">
+			<img src={imageUrl2} alt="단추" class="button" />
+		</button>
 
 		<img src={imageUrl5} alt="점1" class="on1" />
 		<img src={imageUrl6} alt="점2" class="on2" />
@@ -211,7 +211,7 @@
 		z-index: 4;
 	}
 
-	.butten {
+	.button {
 		position: absolute;
 		width: 10vh;
 		height: 10vh;
