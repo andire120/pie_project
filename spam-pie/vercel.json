@@ -1,16 +1,3 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "spam-pie/package.json",
-      "use": "@sveltejs/adapter-vercel"
-    }
-  ],
-  "env": {
-    "NODE_ENV": "production",
-    "NODE_VERSION": "18.x"
-  },
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/" }
-  ]
+  "framework": "sveltekit"
 }
