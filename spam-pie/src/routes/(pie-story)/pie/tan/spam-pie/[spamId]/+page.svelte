@@ -2,9 +2,10 @@
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
 
-    import img from "/src/public/illustration/미사용/심사위원배경.png"
-    import pieimg from"/src/public/element/pie/goodpie/spam-pie.png"
-    import tu from"/src/public/illustration/미사용/투명.png"
+    import img from "/src/public/illustration/미사용/심사위원배경.png";
+    import img2 from "/src/public/illustration/미사용/검은사진.jpeg";
+    import pieimg from"/src/public/element/pie/goodpie/spam-pie.png";
+    import tu from"/src/public/illustration/미사용/투명.png";
     
     let spamId: number;
 
@@ -19,7 +20,7 @@
             tu: tu
         },
         {
-            img: "/src/public/illustration/미사용/검은사진.jpeg",
+            img: img2,
             text: "탄 파이 엔딩"
         }
     ];
