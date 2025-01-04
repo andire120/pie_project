@@ -2,9 +2,9 @@
     import { page } from '$app/stores';
     import { goto } from '$app/navigation';
 
-    import img from '/src/public/illustration/미사용/심사위원배경.png';
-    import pieimg from '/src/public/element/pie/dul-pie/apple-pie.png';
-    import tu from '/src/public/illustration/미사용/투명.png';
+    import img from "/src/public/illustration/미사용/심사위원배경.png";
+    import pieimg from "/src/public/element/pie/dul-pie/apple-pie.png";
+    import tu from "/src/public/illustration/미사용/투명.png";
     
     let appleId: number;
 
