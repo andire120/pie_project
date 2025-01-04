@@ -5,7 +5,7 @@
 	import  imageUrl2  from '/src/public/element/otherthing/otherelement/nextbotten.png';
 	import imageUrl3  from '/src/public/element/otherthing/otherelement/fly.png';
 	import  imageUrl4  from '/src/public/element/otherthing/otherelement/default.png';
-	import  imageUrl5  from '/src/public/element/otherthing/otherelement/nodelete.png';
+	import  imageUrl5  from "/src/public/element/otherthing/otherelement/nodelete.png";
 	import  imageUrl6  from '/src/public/element/otherthing/otherelement/nodelete1.png';
 
 	import  strong  from '/src/public/element/otherthing/otherelement/strong.png';
