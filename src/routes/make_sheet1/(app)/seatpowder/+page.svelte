@@ -1,19 +1,19 @@
 <script>
 	// @ts-nocheck
 
-	import  imageUrl1  from '/element/otherthing/otherelement/background.png';
-	import  imageUrl2  from '/element/otherthing/otherelement/nextbotten.png';
-	import imageUrl3  from '/element/otherthing/otherelement/fly.png';
-	import  imageUrl4  from '/element/otherthing/otherelement/default.png';
-	import  imageUrl5  from "/element/otherthing/otherelement/nodelete.png";
-	import  imageUrl6  from '/element/otherthing/otherelement/nodelete1.png';
+	import  imageUrl1  from '/src/public/element/otherthing/otherelement/background.png';
+	import  imageUrl2  from '/src/public/element/otherthing/otherelement/nextbotten.png';
+	import imageUrl3  from '/src/public/element/otherthing/otherelement/fly.png';
+	import  imageUrl4  from '/src/public/element/otherthing/otherelement/default.png';
+	import  imageUrl5  from "/src/public/element/otherthing/otherelement/nodelete.png";
+	import  imageUrl6  from '/src/public/element/otherthing/otherelement/nodelete1.png';
 
-	import  strong  from '/element/otherthing/otherelement/strong.png';
-	import  middle  from '/element/otherthing/otherelement/middle.png';
-	import  park  from '/element/otherthing/otherelement/park.png';
+	import  strong  from '/src/public/element/otherthing/otherelement/strong.png';
+	import  middle  from '/src/public/element/otherthing/otherelement/middle.png';
+	import  park  from '/src/public/element/otherthing/otherelement/park.png';
 	
-	import  butter  from '/element/otherthing/otherelement/butter-nuki.png';
-	import  margarine  from '/element/otherthing/otherelement/margarine.png';
+	import  butter  from '/src/public/element/otherthing/otherelement/butter-nuki.png';
+	import  margarine  from '/src/public/element/otherthing/otherelement/margarine.png';
 	
 
 	let selectedpowder = null;
@@ -31,36 +31,36 @@
 
 	function selectpowder(powderId) {
 		selectedpowder = powderId;
-		updateBowlImage(`/element/otherthing/otherelement/${powderId}.png`);
+		updateBowlImage(`/src/public/element/otherthing/otherelement/${powderId}.png`);
 	}
 
 	function selectbutter(butterId) {
 		selectedbutter = butterId;
-		addBowlImage(`/element/otherthing/otherelement/${butterId}.png`);
+		addBowlImage(`/src/public/element/otherthing/otherelement/${butterId}.png`);
 	}
 
 
 	function go() {
 		if (selectedbutter == null && selectedpowder == null) {
 			document.querySelector('.on2').src =
-				'/element/otherthing/otherelement/warning1.png';
+				'/src/public/element/otherthing/otherelement/warning1.png';
 			setTimeout(function () {
 				document.querySelector('.on2').src =
-					'/element/otherthing/otherelement/nodelete1.png';
+					'/src/public/element/otherthing/otherelement/nodelete1.png';
 			}, 1000);
 		} else if (selectedbutter != null && selectedpowder == null) {
 			document.querySelector('.on2').src =
-				'/element/otherthing/otherelement/powderwarning.png';
+				'/src/public/element/otherthing/otherelement/powderwarning.png';
 			setTimeout(function () {
 				document.querySelector('.on2').src =
-					'/element/otherthing/otherelement/nodelete1.png';
+					'/src/public/element/otherthing/otherelement/nodelete1.png';
 			}, 1000);
 		} else if (selectedbutter == null && selectedpowder != null) {
 			document.querySelector('.on2').src =
-				'/element/otherthing/otherelement/miiwarning.png';
+				'/src/public/element/otherthing/otherelement/miiwarning.png';
 			setTimeout(function () {
 				document.querySelector('.on2').src =
-					'/element/otherthing/otherelement/nodelete1.png';
+					'/src/public/element/otherthing/otherelement/nodelete1.png';
 			}, 1000);
 		} else if (selectedbutter != null && selectedpowder != null) {
 			if (selectedpowder === 'strong') {
